@@ -8,6 +8,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - cloud-computing.qmd
     - summary.qmd
 
 format:

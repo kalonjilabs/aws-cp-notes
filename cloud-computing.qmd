@@ -1,0 +1,246 @@
+# **Cloud Computing**
+
+Task Statement 1.1: Define the benefits of the AWS Cloud.
+Knowledge of:
+• Value proposition of the AWS Cloud
+Skills in:
+• Understanding the economies of scale (for example, cost savings)
+• Understanding the benefits of global infrastructure (for example, speed of
+deployment, global reach)
+• Understanding the advantages of high availability, elasticity, and agility
+
+## What is cloud computing?
+
+Cloud computing is like a vast library where you can borrow exactly the books (compute power, storage, and applications) you need, whenever you need them, without having to buy or store them yourself. It’s the on-demand delivery of IT resources over the internet with pay-as-you-go pricing. This means you can access as many resources as you need, almost instantly, and only pay for what you use. Amazon Web Services (AWS) maintains the hardware required for these services, allowing you to manage and use resources through a web application as if they were your own.
+
+## **IT Deployment Models**
+
+**Deployment models in cloud computing** can be likened to different types of housing arrangements:
+
+### **On-premises**:
+
+Like owning a gated property—exclusive to one organisation, offering complete control and security for sensitive applications, meeting specific business needs.
+
+Deploying resources on-premises, using virtualization and providing resource management tools does not provide many of the benefits of cloud computing but is sometimes sought for its ability to provide dedicated resources. In most cases, this deployment model is the same as legacy IT infrastructure, while using application management and virtualization technologies to try and increase resource utilisation.
+
+### **Hybrid Cloud**:
+
+It combines elements of both, like owning a home but also renting additional space when needed. This setup allows keeping some servers on-premises while extending other capabilities to the cloud, providing flexibility and control over sensitive assets.
+
+A please visit hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are not located in the cloud. The most common method of hybrid deployment is between the cloud and existing on-premises infrastructure to extend, and grow, an organisation's infrastructure into the cloud while connecting cloud resources to internal systems.
+
+### **Cloud**:
+
+Similar to living in a high-rise apartment, resources are owned and operated by a third-party provider and shared across multiple customers over the internet, offering cost effectiveness and easy scalability.
+
+A cloud-based application is fully deployed in the cloud and all parts of the application run in the cloud. Applications in the cloud have either been created in the cloud or have been migrated from an existing infrastructure to take advantage of the [benefits of cloud computing](https://aws.amazon.com/what-is-cloud-computing/?pg=TOCC). Cloud-based applications can be built on low-level infrastructure pieces or can use higher level services that provide abstraction from the management, architecting, and scaling requirements of core infrastructure.
+
+## **Benefits of AWS Cloud**
+
+1. **Rapid Global Deployment**: AWS boasts a global network of regions, making it possible to deploy applications and services within minutes. This global reach ensures that your resources are closer to your users, reducing latency and enhancing the user experience.
+2. **Agility for Speedy Innovation**: With AWS, you can innovate more quickly and efficiently, allowing your organization to deliver new features and solutions to customers at an accelerated pace. This agility is essential in a rapidly evolving digital landscape.
+3. **Cost Savings Through Economies of Scale**: AWS leverages economies of scale, spreading infrastructure costs across a vast user base. As a result, you benefit from cost-effective solutions without the need for large upfront capital investments.
+4. **No Upfront Costs for Data Center Maintenance**: AWS removes the burden of managing physical data centers. You can focus on your applications and services without worrying about IT infrastructure, as AWS takes care of the maintenance.
+5. **Operational Expenses Over Capital Expenses**: AWS follows an operational expenditure (OpEx) model, enabling you to pay for resources and services as you use them. This eliminates the need for substantial upfront capital expenditures (CapEx), making financial planning more predictable.
+6. **Elastic Capacity**: AWS offers flexible, pay-as-you-go capacity. There's no need to guess your capacity requirements in advance. You can scale resources up or down as needed, ensuring efficient resource utilization.
+
+## **Meeting Non-Functional Requirements in the Public Cloud**
+
+The AWS cloud platform addresses various non-functional requirements effectively, including:
+
+1. **High Availability**: AWS provides redundancy and failover capabilities, ensuring longer uptimes and enhanced reliability for your systems.
+2. **Elasticity**: The ability to dynamically scale resources based on demand optimizes resource utilization and minimizes wastage.
+3. **Agility**: AWS services empower customers to innovate rapidly, reducing time-to-market for new features and applications.
+4. **Durability**: AWS offers data services with long-term data protection and storage, safeguarding your critical data.
+5. **Low Latency**: Low latency, or minimal delay between user requests and responses, is a key advantage, ensuring a smooth user experience.
+
+## The Five Characteristics of Cloud Computing
+
+Cloud computing is defined by five key characteristics:
+
+1. **On-demand self-service**: Users can independently provision resources as needed without interaction from the service provider—think self-service in a cafeteria.
+2. **Broad network access**: Resources are available over the network and can be accessed through various devices—similar to streaming television accessible from any device with internet access.
+3. **Resource pooling and multi-tenancy**: Multiple customers share the same infrastructure and applications, securely and privately, like a shared office space that’s used by different companies.
+4. **Rapid elasticity and scalability**: Resources can be quickly scaled up or down based on demand, much like a hotel that can quickly accommodate more guests when needed.
+5. **Measured service**: Usage is tracked and billed accurately, similar to a pay-as-you-go mobile phone plan.
+
+## Six Advantages of Cloud Computing
+
+Cloud computing transforms traditional IT infrastructure through:
+
+1. **Trading capital expense for operational expense**: Like renting equipment for a construction project instead of buying it.
+2. **Reduced total cost of ownership and operational expenses**: Benefit from massive economies of scale—costs decrease as usage scales up due to the provider’s efficiency.
+3. **Elasticity**: Adjust resources quickly to handle varying loads, much like a utility service that can vary its output based on customer demand.
+4. **Increased speed and agility**: Deploy and improve applications faster, akin to upgrading software on your phone instantly.
+5. **Go global in minutes**: Expand your applications worldwide rapidly, similar to how digital content can be streamed globally.
+6. **Stopping spending on running data centers**: Focus resources on core business rather than infrastructure, akin to outsourcing housekeeping services in a hotel.
+
+### Problems Solved by the Cloud
+
+Cloud computing addresses various traditional IT challenges, including:
+
+- **Flexibility**: Easily change resource types as needed.
+- **Cost-effectiveness**: Only pay for the resources you use, avoiding upfront hardware investments.
+- **Scalability and Elasticity**: Adapt to larger loads or scale back as required.
+- **High availability and fault tolerance**: Maintain operations across distributed data centres.
+- **Agility**: Rapidly develop, test, and launch software applications, speeding up innovation.
+
+## Types of Cloud Computing
+
+The three main types of cloud services are:
+
+**1. Infrastructure as a Service (IaaS)**: 
+
+Provides the basic building blocks for cloud IT, offering the highest level of flexibility—similar to leasing land on which to build whatever structure you need.
+
+ Infrastructure as a Service (IaaS) contains the basic building blocks for cloud IT and typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. Infrastructure as a Service vendors can help you with the highest level of flexibility and management control over your IT resources and are most similar to existing IT resources that many IT departments and developers are familiar with today.
+
+**2. Platform as a Service (PaaS)**: 
+
+Eliminates the need to manage underlying infrastructure, focusing instead on the deployment and management of applications—like leasing a pre-built office space that you can customise.
+
+Platforms as a service (PaaS) vendors remove the need for organisations to manage the underlying infrastructure (usually hardware and operating systems) and this integration allows you to focus on the deployment and management of your applications. This helps you be more efficient, as you don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.
+
+**3. Software as a Service (SaaS)**: 
+
+Delivers a complete product run and managed by the service provider—akin to subscribing to a streaming service.
+
+Software as a Service (SaaS) vendors provide you with software applications that is run and managed by the vendor. In most cases, people referring to Software as a Service are referring to third-party end-user applications. With a SaaS offering you do not have to think about how the service is maintained or how the underlying infrastructure is managed; you only need to think about how you will use that particular piece of software. A common example of a SaaS application is web-based email where you can send and receive email without having to manage feature additions to the email product or maintaining the servers and operating systems that the email program is running on
+
+## Pricing of the Cloud – Quick Overview
+
+AWS employs a pay-as-you-go pricing model, breaking down costs into three primary categories:
+
+- **Compute**: Pay for the compute time you consume.
+- **Storage**: Pay for the storage space your data occupies.
+- **Data Transfer**: Pay for data transferred out of the cloud, while incoming data is free.
+
+### AWS Cloud Use Cases
+
+AWS enables the development of sophisticated, scalable applications suitable for a diverse range of industries. Common use cases include enterprise IT, backup and storage, big data analytics, website hosting, mobile and social apps, and gaming. Each of these demonstrates the flexibility and capacity of AWS to support different technological and business requirements.
+
+This structured overview not only helps you understand the fundamental aspects of cloud computing but also prepares you effectively for your AWS Cloud Practitioner exam by highlighting essential concepts and practical applications.
+
+### Quiz on the topic- What is Cloud Computing?
+
+[MCQ - What is the cloud](https://www.notion.so/MCQ-What-is-the-cloud-67fba072e40f4d99b51b8376d882f339?pvs=21)
+
+# AWS Global Infrastructure
+
+Task Statement 1.2: Identify design principles of the AWS Cloud.
+Knowledge of:
+• AWS Well-Architected Framework
+Skills in:
+• Understanding the pillars of the Well-Architected Framework (for example,
+operational excellence, security, reliability, performance efficiency, cost
+optimization, sustainability)
+• Identifying differences between the pillars of the Well-Architected
+Framework
+
+Imagine AWS Global Infrastructure as the planet Earth. Just like Earth is divided into continents and countries, AWS is divided into geographical areas known as Regions, Availability Zones, and Points of Presence (Edge Locations).
+
+### AWS Regions
+
+Think of **AWS Regions** as different countries on our AWS planet. These are specific locations around the world where AWS clusters data centers. Each region is a separate geographic area, like how the US-East-1 (North Virginia) or EU-West-3 (Paris) represents different parts of the world. Each region is a collection of data centers that AWS uses to host its cloud computing resources.
+
+Regions are crucial because they help in minimizing latency (the delay before a transfer of data begins following an instruction for its transfer), improving fault tolerance, and meeting certain legal or compliance requirements. Services deployed in a specific region will generally stay within that region unless explicitly moved or replicated elsewhere.
+
+## **AWS Regions, Availability Zones, and More**
+
+Amazon EC2 operates in multiple global locations, each with distinct components:
+
+1. **Region**: A region represents a separate geographic area, ensuring redundancy and disaster recovery. Regions are fully independent, with varying services and resources.
+2. **Availability Zone (AZ)**: An AZ comprises one or more data centers with redundant power, networking, and connectivity. These zones provide high availability and fault tolerance.
+3. **Data Center**: Data centers are the building blocks of AZs and come with robust physical and environmental protections.
+4. **Local Zones**: Local Zones extend an AWS Region to geographic proximity, serving users with low-latency communication. They are ideal for latency-sensitive applications.
+5. **Wavelength Zones**: Wavelength Zones are isolated zones within a carrier location, providing low-latency access for specific applications.
+6. **Global Edge Network**: Amazon CloudFront enhances performance and reliability with an extensive network of edge locations, ensuring fast content delivery.
+
+For more information, visit the respective links provided for each component.
+
+## **Leveraging the AWS Well-Architected Framework**
+
+The AWS Well-Architected Framework offers guidance for building robust, efficient, and secure cloud infrastructures. Here are the key pillars of the framework:
+
+1. **Operational Excellence**: Plan for failure, deploy smaller reversible changes, script infrastructure as code, and continuously learn from failures. Utilize tools like AWS CodeCommit for versioning.
+2. **Security**: Automate security tasks, encrypt data in transit and at rest, follow the principle of least privilege, track and audit actions, and ensure security across all layers. Utilize AWS CloudTrail for comprehensive logging.
+3. **Reliability**: Automatically recover from failures, scale horizontally for resilience, avoid guessing capacity needs, automate change management, and test recovery procedures. Consider multi-AZ deployments for high availability.
+4. **Performance Efficiency**: Opt for serverless architectures, explore multi-region deployments, delegate tasks to cloud vendors, and experiment with virtual resources. AWS Lambda is an excellent choice for serverless workloads.
+5. **Cost Optimization**: Implement consumption-based pricing, adopt Cloud Financial Management, measure overall efficiency, and pay only for the resources your applications require. Utilize features like S3 Intelligent Tiering for cost-effective data management.
+6. **Sustainability**: Understand your environmental impact, set sustainability goals, maximize resource utilisation, leverage managed services, and reduce downstream impact. EC2 Auto-scaling can help optimise resource usage.
+
+## How to Choose an AWS Region?
+
+Selecting an AWS region should be strategic, akin to choosing a location for a new branch of a business. Here are the key factors:
+
+- **Compliance and Legal Requirements**: Ensure data residency and sovereignty needs are met. This is like ensuring your business operations comply with local laws.
+- **Proximity to Customers**: Choose a region closest to your users to reduce the time it takes for data to travel, akin to opening a shop closer to your buyers to reduce delivery time.
+- **Available Services and Features**: Not all regions have the same AWS services; newer services might be available in some regions first.
+- **Pricing**: Costs can vary from one region to another, just as the cost of living can vary from one country to another.
+
+### AWS Availability Zones
+
+Within each region, there are multiple **Availability Zones (AZs)**. You can think of each AZ as a state or province within the "country" (region). Each AZ is made up of one or more data centers equipped with independent power, cooling, and networking to ensure fault tolerance and stability. They are interconnected with high-speed networking, enabling businesses to operate production applications and databases that are more highly available, fault tolerant, and scalable than would be possible from a single data center.
+
+### AWS Points of Presence (Edge Locations)
+
+AWS **Points of Presence** or Edge Locations are like local post offices in towns. These are sites deployed in major cities and areas around the world to cache content closer to users, ensuring they receive data as quickly as possible. This system is part of AWS CloudFront, which helps in delivering content with lower latency.
+
+### Tour of the AWS Console
+
+The **AWS Console** is like the dashboard of a car, providing access to all the controls you need to manage your AWS services. It includes:
+
+- **Global Services**: Services that are not specific to any region, like IAM (Identity and Access Management), Route 53 (a DNS web service), and CloudFront (a content delivery network).
+- **Region-scoped Services**: These are services that you can deploy in specific regions, like EC2 (Elastic Compute Cloud) for virtual servers, Lambda for serverless functions, or Elastic Beanstalk for deploying applications.
+
+# Shared Responsibility Model
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7db51216-764d-4b90-a872-4f7e14184ad3/88bfbb1b-3101-4519-aeca-1dbddc21ef55/Untitled.png)
+
+The **Shared Responsibility Model** in AWS is like a co-op building management arrangement. In this model:
+
+- **AWS** is responsible for the security **of** the cloud, which includes physical security, securing the infrastructure that runs all the services offered in the AWS Cloud.
+- **Customer** is responsible for security **in** the cloud, which means customers control the security measures they choose to protect their own content, platform, applications, systems, and networks, just like how residents are responsible for locking their own doors in a co-op.
+
+As an AWS customer, understanding the shared responsibility model is essential. AWS and its customers have distinct roles in ensuring the security and compliance of the cloud environment:
+
+**AWS has the responsibility OF the cloud. The customer has responsibilities IN the cloud.**
+
+**AWS Responsibilities**
+
+As an AWS customer, you are not responsible for the hardware, software, networking, and facilities that support AWS Cloud services across its regions, availability zones (AZs), data centers, and edge locations. AWS shoulders the following key responsibilities:
+
+1. **Inherited Controls (AWS only):**
+    - These are controls fully inherited from AWS, including physical and environmental controls.
+2. **Shared Controls (AWS and Customer):**
+    - Responsibilities shared between AWS and the customer include patch management, configuration management, awareness, and training.
+3. **Customer Controls (Customer only):**
+    - Customer-specific controls encompass service and communications protection, as well as zone security, which may require routing or zoning data within specific security environments.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7db51216-764d-4b90-a872-4f7e14184ad3/b6d63816-876c-4a51-b4aa-f2c37a036c6f/Untitled.png)
+
+**Customer Responsibilities**
+
+Your responsibilities as an AWS customer encompass:
+
+- **Data and Application Security:**
+    - Ensuring the security of your data and applications, including encryption options and proper security configurations.
+- **Identity and Access Management (IAM):**
+    - Managing IAM for application security and controlling identity and access for your systems.
+- **Network Traffic and Firewall Configuration:**
+    - Managing network traffic and configuring group firewall settings.
+- **Patching and Maintenance:**
+    - Regularly patching guest operating systems of EC2 instances and maintaining the security of your AWS resources.
+
+**Report AWS Abuse**
+
+If you suspect any abuse of AWS resources, take the following steps:
+
+1. **Rotate Keys and Change Passwords:** Ensure that your AWS access keys and passwords are up to date and secure.
+2. **Contact the AWS Trust & Safety Team:** Report the abuse to the AWS Trust & Safety team using the [Report Amazon AWS abuse form](https://aws.amazon.com/premiumsupport/knowledge-center/report-aws-abuse/).
+
+By understanding and fulfilling your responsibilities within the AWS shared responsibility model, you can help maintain the security and compliance of your cloud environment.
+
+### Quiz on the topic- AWS Global Infrastructure
+
+[Quiz-AWS Global Infrastructure](https://www.notion.so/Quiz-AWS-Global-Infrastructure-2593bb6574824e688fdf3a8e0f3a5319?pvs=21)
