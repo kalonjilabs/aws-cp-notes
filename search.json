@@ -20,13 +20,123 @@
     ]
   },
   {
+    "objectID": "cloud-computing.html",
+    "href": "cloud-computing.html",
+    "title": "2  Cloud Computing",
+    "section": "",
+    "text": "2.1 What is cloud computing?\nCloud computing is like a vast library where you can borrow exactly the books (compute power, storage, and applications) you need, whenever you need them, without having to buy or store them yourself. It’s the on-demand delivery of IT resources over the internet with pay-as-you-go pricing. This means you can access as many resources as you need, almost instantly, and only pay for what you use. Amazon Web Services (AWS) maintains the hardware required for these services, allowing you to manage and use resources through a web application as if they were your own.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#it-deployment-models",
+    "href": "cloud-computing.html#it-deployment-models",
+    "title": "2  Cloud Computing",
+    "section": "2.2 IT Deployment Models",
+    "text": "2.2 IT Deployment Models\nDeployment models in cloud computing can be likened to different types of housing arrangements:\n\n2.2.1 On-premises:\nLike owning a gated property—exclusive to one organisation, offering complete control and security for sensitive applications, meeting specific business needs.\nDeploying resources on-premises, using virtualization and providing resource management tools does not provide many of the benefits of cloud computing but is sometimes sought for its ability to provide dedicated resources. In most cases, this deployment model is the same as legacy IT infrastructure, while using application management and virtualization technologies to try and increase resource utilisation.\n\n\n2.2.2 Hybrid Cloud:\nIt combines elements of both, like owning a home but also renting additional space when needed. This setup allows keeping some servers on-premises while extending other capabilities to the cloud, providing flexibility and control over sensitive assets.\nA please visit hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are not located in the cloud. The most common method of hybrid deployment is between the cloud and existing on-premises infrastructure to extend, and grow, an organisation’s infrastructure into the cloud while connecting cloud resources to internal systems.\n\n\n2.2.3 Cloud:\nSimilar to living in a high-rise apartment, resources are owned and operated by a third-party provider and shared across multiple customers over the internet, offering cost effectiveness and easy scalability.\nA cloud-based application is fully deployed in the cloud and all parts of the application run in the cloud. Applications in the cloud have either been created in the cloud or have been migrated from an existing infrastructure to take advantage of the benefits of cloud computing. Cloud-based applications can be built on low-level infrastructure pieces or can use higher level services that provide abstraction from the management, architecting, and scaling requirements of core infrastructure.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#benefits-of-aws-cloud",
+    "href": "cloud-computing.html#benefits-of-aws-cloud",
+    "title": "2  Cloud Computing",
+    "section": "2.3 Benefits of AWS Cloud",
+    "text": "2.3 Benefits of AWS Cloud\n\nRapid Global Deployment: AWS boasts a global network of regions, making it possible to deploy applications and services within minutes. This global reach ensures that your resources are closer to your users, reducing latency and enhancing the user experience.\nAgility for Speedy Innovation: With AWS, you can innovate more quickly and efficiently, allowing your organization to deliver new features and solutions to customers at an accelerated pace. This agility is essential in a rapidly evolving digital landscape.\nCost Savings Through Economies of Scale: AWS leverages economies of scale, spreading infrastructure costs across a vast user base. As a result, you benefit from cost-effective solutions without the need for large upfront capital investments.\nNo Upfront Costs for Data Center Maintenance: AWS removes the burden of managing physical data centers. You can focus on your applications and services without worrying about IT infrastructure, as AWS takes care of the maintenance.\nOperational Expenses Over Capital Expenses: AWS follows an operational expenditure (OpEx) model, enabling you to pay for resources and services as you use them. This eliminates the need for substantial upfront capital expenditures (CapEx), making financial planning more predictable.\nElastic Capacity: AWS offers flexible, pay-as-you-go capacity. There’s no need to guess your capacity requirements in advance. You can scale resources up or down as needed, ensuring efficient resource utilization.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#meeting-non-functional-requirements-in-the-public-cloud",
+    "href": "cloud-computing.html#meeting-non-functional-requirements-in-the-public-cloud",
+    "title": "2  Cloud Computing",
+    "section": "2.4 Meeting Non-Functional Requirements in the Public Cloud",
+    "text": "2.4 Meeting Non-Functional Requirements in the Public Cloud\nThe AWS cloud platform addresses various non-functional requirements effectively, including:\n\nHigh Availability: AWS provides redundancy and failover capabilities, ensuring longer uptimes and enhanced reliability for your systems.\nElasticity: The ability to dynamically scale resources based on demand optimizes resource utilization and minimizes wastage.\nAgility: AWS services empower customers to innovate rapidly, reducing time-to-market for new features and applications.\nDurability: AWS offers data services with long-term data protection and storage, safeguarding your critical data.\nLow Latency: Low latency, or minimal delay between user requests and responses, is a key advantage, ensuring a smooth user experience.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#the-five-characteristics-of-cloud-computing",
+    "href": "cloud-computing.html#the-five-characteristics-of-cloud-computing",
+    "title": "2  Cloud Computing",
+    "section": "2.5 The Five Characteristics of Cloud Computing",
+    "text": "2.5 The Five Characteristics of Cloud Computing\nCloud computing is defined by five key characteristics:\n\nOn-demand self-service: Users can independently provision resources as needed without interaction from the service provider—think self-service in a cafeteria.\nBroad network access: Resources are available over the network and can be accessed through various devices—similar to streaming television accessible from any device with internet access.\nResource pooling and multi-tenancy: Multiple customers share the same infrastructure and applications, securely and privately, like a shared office space that’s used by different companies.\nRapid elasticity and scalability: Resources can be quickly scaled up or down based on demand, much like a hotel that can quickly accommodate more guests when needed.\nMeasured service: Usage is tracked and billed accurately, similar to a pay-as-you-go mobile phone plan.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#six-advantages-of-cloud-computing",
+    "href": "cloud-computing.html#six-advantages-of-cloud-computing",
+    "title": "2  Cloud Computing",
+    "section": "2.6 Six Advantages of Cloud Computing",
+    "text": "2.6 Six Advantages of Cloud Computing\nCloud computing transforms traditional IT infrastructure through:\n\nTrading capital expense for operational expense: Like renting equipment for a construction project instead of buying it.\nReduced total cost of ownership and operational expenses: Benefit from massive economies of scale—costs decrease as usage scales up due to the provider’s efficiency.\nElasticity: Adjust resources quickly to handle varying loads, much like a utility service that can vary its output based on customer demand.\nIncreased speed and agility: Deploy and improve applications faster, akin to upgrading software on your phone instantly.\nGo global in minutes: Expand your applications worldwide rapidly, similar to how digital content can be streamed globally.\nStopping spending on running data centers: Focus resources on core business rather than infrastructure, akin to outsourcing housekeeping services in a hotel.\n\n\n2.6.1 Problems Solved by the Cloud\nCloud computing addresses various traditional IT challenges, including:\n\nFlexibility: Easily change resource types as needed.\nCost-effectiveness: Only pay for the resources you use, avoiding upfront hardware investments.\nScalability and Elasticity: Adapt to larger loads or scale back as required.\nHigh availability and fault tolerance: Maintain operations across distributed data centres.\nAgility: Rapidly develop, test, and launch software applications, speeding up innovation.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#types-of-cloud-computing",
+    "href": "cloud-computing.html#types-of-cloud-computing",
+    "title": "2  Cloud Computing",
+    "section": "2.7 Types of Cloud Computing",
+    "text": "2.7 Types of Cloud Computing\nThe three main types of cloud services are:\n1. Infrastructure as a Service (IaaS):\nProvides the basic building blocks for cloud IT, offering the highest level of flexibility—similar to leasing land on which to build whatever structure you need.\nInfrastructure as a Service (IaaS) contains the basic building blocks for cloud IT and typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. Infrastructure as a Service vendors can help you with the highest level of flexibility and management control over your IT resources and are most similar to existing IT resources that many IT departments and developers are familiar with today.\n2. Platform as a Service (PaaS):\nEliminates the need to manage underlying infrastructure, focusing instead on the deployment and management of applications—like leasing a pre-built office space that you can customise.\nPlatforms as a service (PaaS) vendors remove the need for organisations to manage the underlying infrastructure (usually hardware and operating systems) and this integration allows you to focus on the deployment and management of your applications. This helps you be more efficient, as you don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.\n3. Software as a Service (SaaS):\nDelivers a complete product run and managed by the service provider—akin to subscribing to a streaming service.\nSoftware as a Service (SaaS) vendors provide you with software applications that is run and managed by the vendor. In most cases, people referring to Software as a Service are referring to third-party end-user applications. With a SaaS offering you do not have to think about how the service is maintained or how the underlying infrastructure is managed; you only need to think about how you will use that particular piece of software. A common example of a SaaS application is web-based email where you can send and receive email without having to manage feature additions to the email product or maintaining the servers and operating systems that the email program is running on",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#pricing-of-the-cloud-quick-overview",
+    "href": "cloud-computing.html#pricing-of-the-cloud-quick-overview",
+    "title": "2  Cloud Computing",
+    "section": "2.8 Pricing of the Cloud – Quick Overview",
+    "text": "2.8 Pricing of the Cloud – Quick Overview\nAWS employs a pay-as-you-go pricing model, breaking down costs into three primary categories:\n\nCompute: Pay for the compute time you consume.\nStorage: Pay for the storage space your data occupies.\nData Transfer: Pay for data transferred out of the cloud, while incoming data is free.\n\n\n2.8.1 AWS Cloud Use Cases\nAWS enables the development of sophisticated, scalable applications suitable for a diverse range of industries. Common use cases include enterprise IT, backup and storage, big data analytics, website hosting, mobile and social apps, and gaming. Each of these demonstrates the flexibility and capacity of AWS to support different technological and business requirements.\nThis structured overview not only helps you understand the fundamental aspects of cloud computing but also prepares you effectively for your AWS Cloud Practitioner exam by highlighting essential concepts and practical applications.\n\n\n2.8.2 Quiz on the topic- What is Cloud Computing?\nMCQ - What is the cloud",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#aws-regions-availability-zones-and-more",
+    "href": "cloud-computing.html#aws-regions-availability-zones-and-more",
+    "title": "2  Cloud Computing",
+    "section": "3.1 AWS Regions, Availability Zones, and More",
+    "text": "3.1 AWS Regions, Availability Zones, and More\nAmazon EC2 operates in multiple global locations, each with distinct components:\n\nRegion: A region represents a separate geographic area, ensuring redundancy and disaster recovery. Regions are fully independent, with varying services and resources.\nAvailability Zone (AZ): An AZ comprises one or more data centers with redundant power, networking, and connectivity. These zones provide high availability and fault tolerance.\nData Center: Data centers are the building blocks of AZs and come with robust physical and environmental protections.\nLocal Zones: Local Zones extend an AWS Region to geographic proximity, serving users with low-latency communication. They are ideal for latency-sensitive applications.\nWavelength Zones: Wavelength Zones are isolated zones within a carrier location, providing low-latency access for specific applications.\nGlobal Edge Network: Amazon CloudFront enhances performance and reliability with an extensive network of edge locations, ensuring fast content delivery.\n\nFor more information, visit the respective links provided for each component.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#leveraging-the-aws-well-architected-framework",
+    "href": "cloud-computing.html#leveraging-the-aws-well-architected-framework",
+    "title": "2  Cloud Computing",
+    "section": "3.2 Leveraging the AWS Well-Architected Framework",
+    "text": "3.2 Leveraging the AWS Well-Architected Framework\nThe AWS Well-Architected Framework offers guidance for building robust, efficient, and secure cloud infrastructures. Here are the key pillars of the framework:\n\nOperational Excellence: Plan for failure, deploy smaller reversible changes, script infrastructure as code, and continuously learn from failures. Utilize tools like AWS CodeCommit for versioning.\nSecurity: Automate security tasks, encrypt data in transit and at rest, follow the principle of least privilege, track and audit actions, and ensure security across all layers. Utilize AWS CloudTrail for comprehensive logging.\nReliability: Automatically recover from failures, scale horizontally for resilience, avoid guessing capacity needs, automate change management, and test recovery procedures. Consider multi-AZ deployments for high availability.\nPerformance Efficiency: Opt for serverless architectures, explore multi-region deployments, delegate tasks to cloud vendors, and experiment with virtual resources. AWS Lambda is an excellent choice for serverless workloads.\nCost Optimization: Implement consumption-based pricing, adopt Cloud Financial Management, measure overall efficiency, and pay only for the resources your applications require. Utilize features like S3 Intelligent Tiering for cost-effective data management.\nSustainability: Understand your environmental impact, set sustainability goals, maximize resource utilisation, leverage managed services, and reduce downstream impact. EC2 Auto-scaling can help optimise resource usage.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#how-to-choose-an-aws-region",
+    "href": "cloud-computing.html#how-to-choose-an-aws-region",
+    "title": "2  Cloud Computing",
+    "section": "3.3 How to Choose an AWS Region?",
+    "text": "3.3 How to Choose an AWS Region?\nSelecting an AWS region should be strategic, akin to choosing a location for a new branch of a business. Here are the key factors:\n\nCompliance and Legal Requirements: Ensure data residency and sovereignty needs are met. This is like ensuring your business operations comply with local laws.\nProximity to Customers: Choose a region closest to your users to reduce the time it takes for data to travel, akin to opening a shop closer to your buyers to reduce delivery time.\nAvailable Services and Features: Not all regions have the same AWS services; newer services might be available in some regions first.\nPricing: Costs can vary from one region to another, just as the cost of living can vary from one country to another.\n\n\n3.3.1 AWS Availability Zones\nWithin each region, there are multiple Availability Zones (AZs). You can think of each AZ as a state or province within the “country” (region). Each AZ is made up of one or more data centers equipped with independent power, cooling, and networking to ensure fault tolerance and stability. They are interconnected with high-speed networking, enabling businesses to operate production applications and databases that are more highly available, fault tolerant, and scalable than would be possible from a single data center.\n\n\n3.3.2 AWS Points of Presence (Edge Locations)\nAWS Points of Presence or Edge Locations are like local post offices in towns. These are sites deployed in major cities and areas around the world to cache content closer to users, ensuring they receive data as quickly as possible. This system is part of AWS CloudFront, which helps in delivering content with lower latency.\n\n\n3.3.3 Tour of the AWS Console\nThe AWS Console is like the dashboard of a car, providing access to all the controls you need to manage your AWS services. It includes:\n\nGlobal Services: Services that are not specific to any region, like IAM (Identity and Access Management), Route 53 (a DNS web service), and CloudFront (a content delivery network).\nRegion-scoped Services: These are services that you can deploy in specific regions, like EC2 (Elastic Compute Cloud) for virtual servers, Lambda for serverless functions, or Elastic Beanstalk for deploying applications.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
     ]
   }
 ]
