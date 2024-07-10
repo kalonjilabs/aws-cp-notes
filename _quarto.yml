@@ -2,8 +2,8 @@ project:
   type: book
 
 book:
-  title: "aws-cp-notes"
-  author: "Norah Jones"
+  title: "AWS Cloud Practitioner Notes"
+  author: "Kalonji Tshisekedi"
   date: "7/10/2024"
   chapters:
     - index.qmd
