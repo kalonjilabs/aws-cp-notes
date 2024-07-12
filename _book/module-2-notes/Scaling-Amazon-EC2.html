@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kalonji Tshisekedi">
-<meta name="dcterms.date" content="2024-07-10">
 
-<title>AWS Cloud Practitioner Notes</title>
+<title>AWS Cloud Practitioner Notes - 6&nbsp; Scaling Amazon EC2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,23 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./module-1-notes/Introduction.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../module-2-notes/Elastic-Load-Balancing.html" rel="next">
+<link href="../module-2-notes/Amazon-EC2-pricing.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Scaling-Amazon-EC2.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -97,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AWS Cloud Practitioner Notes</a> 
+      <a href="../">AWS Cloud Practitioner Notes</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -109,56 +108,50 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-1-notes/Cloud-Computing.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-1-notes/Cloud-Computing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Amazon-EC2-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Amazon-EC2-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Amazon-EC2-intro</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Amazon-EC2-Instance-Types.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Scaling-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Elastic-Load-Balancing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><strong>Directing Traffic with Elastic Load Balancing</strong></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Messaging-and-Queuing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><strong>Messaging and Queuing</strong></span></span></a>
+  <a href="../module-2-notes/Elastic-Load-Balancing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Elastic-Load-Balancing.html</span></span></a>
   </div>
 </li>
     </ul>
@@ -167,56 +160,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#course-aims" id="toc-course-aims" class="nav-link" data-scroll-target="#course-aims"><strong>Course Aims</strong></a></li>
-  <li><a href="#course-outline" id="toc-course-outline" class="nav-link" data-scroll-target="#course-outline">Course outline</a>
-  <ul class="collapse">
-  <li><a href="#module-1-introduction-to-amazon-web-services" id="toc-module-1-introduction-to-amazon-web-services" class="nav-link" data-scroll-target="#module-1-introduction-to-amazon-web-services">Module 1: Introduction to Amazon Web Services</a></li>
-  <li><a href="#module-2-compute-in-the-cloud" id="toc-module-2-compute-in-the-cloud" class="nav-link" data-scroll-target="#module-2-compute-in-the-cloud">Module 2: Compute in the Cloud</a></li>
-  <li><a href="#module-3-global-infrastructure-and-reliability" id="toc-module-3-global-infrastructure-and-reliability" class="nav-link" data-scroll-target="#module-3-global-infrastructure-and-reliability">Module 3: Global Infrastructure and Reliability</a></li>
-  <li><a href="#module-4-networking" id="toc-module-4-networking" class="nav-link" data-scroll-target="#module-4-networking">Module 4: Networking</a></li>
-  <li><a href="#module-5-storage-and-databases" id="toc-module-5-storage-and-databases" class="nav-link" data-scroll-target="#module-5-storage-and-databases">Module 5: Storage and Databases</a></li>
-  <li><a href="#module-6-security" id="toc-module-6-security" class="nav-link" data-scroll-target="#module-6-security">Module 6: Security</a></li>
-  <li><a href="#module-7-monitoring-and-analytics" id="toc-module-7-monitoring-and-analytics" class="nav-link" data-scroll-target="#module-7-monitoring-and-analytics">Module 7: Monitoring and Analytics</a></li>
-  <li><a href="#module-8-pricing-and-support" id="toc-module-8-pricing-and-support" class="nav-link" data-scroll-target="#module-8-pricing-and-support">Module 8: Pricing and Support</a></li>
-  <li><a href="#module-9-migration-and-innovation" id="toc-module-9-migration-and-innovation" class="nav-link" data-scroll-target="#module-9-migration-and-innovation">Module 9: Migration and Innovation</a></li>
-  <li><a href="#module-10-the-cloud-journey" id="toc-module-10-the-cloud-journey" class="nav-link" data-scroll-target="#module-10-the-cloud-journey">Module 10: The Cloud Journey</a></li>
-  <li><a href="#module-11-aws-certified-cloud-practitioner-basics" id="toc-module-11-aws-certified-cloud-practitioner-basics" class="nav-link" data-scroll-target="#module-11-aws-certified-cloud-practitioner-basics">Module 11: AWS Certified Cloud Practitioner Basics</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AWS Cloud Practitioner Notes</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kalonji Tshisekedi </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 10, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -226,146 +184,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Welcome to your comprehensive online resource for preparing for the AWS Certified Cloud Practitioner exam. This course is meticulously designed for individuals aiming to acquire a fundamental understanding of the Amazon Web Services (AWS) Cloud, transcending specific technical roles. It is an ideal starting point for gaining insights into the essentials of AWS Cloud, including its services, security, architecture, pricing, and support frameworks.</p>
-<section id="course-aims" class="level2">
-<h2 class="anchored" data-anchor-id="course-aims"><strong>Course Aims</strong></h2>
-<p>Through this course, participants will:</p>
-<ul>
-<li>Grasp a foundational understanding of AWS and its operational definitions.</li>
-<li>Compare and contrast various cloud deployment models such as on-premises, hybrid-cloud, and exclusively cloud-based solutions.</li>
-<li>Learn about the AWS global infrastructure and the pivotal role of Availability Zones.</li>
-<li>Understand the six key advantages of leveraging the AWS Cloud.</li>
-<li>Gain knowledge about primary AWS services across computing, networking, databases, and storage.</li>
-<li>Evaluate appropriate AWS solutions for diverse use cases.</li>
-<li>Explore the AWS Well-Architected Framework and the shared responsibility model.</li>
-<li>Dive into the fundamental aspects of AWS security services and cloud migration strategies.</li>
-<li>Discuss the financial implications of using AWS in terms of cost management and billing.</li>
-<li>Utilize AWS pricing tools to make informed, cost-effective decisions.</li>
-</ul>
-</section>
-<section id="course-outline" class="level2">
-<h2 class="anchored" data-anchor-id="course-outline">Course outline</h2>
-<section id="module-1-introduction-to-amazon-web-services" class="level3">
-<h3 class="anchored" data-anchor-id="module-1-introduction-to-amazon-web-services">Module 1: Introduction to Amazon Web Services</h3>
-<ul>
-<li>Summarize the benefits of AWS</li>
-<li>Describe differences between on-demand delivery and cloud deployments</li>
-<li>Summarize the pay-as-you-go pricing model</li>
-</ul>
-</section>
-<section id="module-2-compute-in-the-cloud" class="level3">
-<h3 class="anchored" data-anchor-id="module-2-compute-in-the-cloud">Module 2: Compute in the Cloud</h3>
-<ul>
-<li>Describe the benefits of Amazon Elastic Compute Cloud (Amazon EC2) at a basic level</li>
-<li>Identify the different Amazon EC2 instance types</li>
-<li>Differentiate between the various billing options for Amazon EC2</li>
-<li>Describe the benefits of Amazon EC2 Auto Scaling</li>
-<li>Summarize the benefits of Elastic Load Balancing</li>
-<li>Give an example of the uses for Elastic Load Balancing</li>
-<li>Summarize the differences between Amazon Simple Notification Service (Amazon SNS) and Amazon Simple Queue Services (Amazon SQS)</li>
-<li>Summarize additional AWS compute options</li>
-</ul>
-</section>
-<section id="module-3-global-infrastructure-and-reliability" class="level3">
-<h3 class="anchored" data-anchor-id="module-3-global-infrastructure-and-reliability">Module 3: Global Infrastructure and Reliability</h3>
-<ul>
-<li>Summarize the benefits of the AWS Global Infrastructure</li>
-<li>Describe the basic concept of Availability Zones</li>
-<li>Describe the benefits of Amazon CloudFront and Edge locations</li>
-<li>Compare different methods for provisioning AWS services</li>
-</ul>
-</section>
-<section id="module-4-networking" class="level3">
-<h3 class="anchored" data-anchor-id="module-4-networking">Module 4: Networking</h3>
-<ul>
-<li>Describe the basic concepts of networking</li>
-<li>Describe the difference between public and private networking resources</li>
-<li>Explain a virtual private gateway using a real life scenario</li>
-<li>Explain a virtual private network (VPN) using a real life scenarioDescribe the benefit of AWS Direct Connect</li>
-<li>Describe the benefit of hybrid deployments</li>
-<li>Describe the layers of security used in an IT strategy</li>
-<li>Describe which services are used to interact with the AWS global network</li>
-</ul>
-</section>
-<section id="module-5-storage-and-databases" class="level3">
-<h3 class="anchored" data-anchor-id="module-5-storage-and-databases">Module 5: Storage and Databases</h3>
-<ul>
-<li>Summarize the basic concept of storage and databases</li>
-<li>Describe benefits of Amazon Elastic Block Store (Amazon EBS)</li>
-<li>Describe benefits of Amazon Simple Storage Service (Amazon S3)</li>
-<li>Describe the benefits of Amazon Elastic File System (Amazon EFS)</li>
-<li>Summarize various storage solutions</li>
-<li>Describe the benefits of Amazon Relational Database Service (Amazon RDS)</li>
-<li>Describe the benefits of Amazon DynamoDB</li>
-<li>Summarize various database services</li>
-</ul>
-</section>
-<section id="module-6-security" class="level3">
-<h3 class="anchored" data-anchor-id="module-6-security">Module 6: Security</h3>
-<ul>
-<li>Explain the benefits of the shared responsibility model</li>
-<li>Describe multi-factor authentication (MFA)</li>
-<li>Differentiate between the AWS Identity and Access Management (IAM) security levels</li>
-<li>Describe security policies at a basic level</li>
-<li>Explain the benefits of AWS Organizations</li>
-<li>Summarize the benefits of compliance with AWS</li>
-<li>Explain primary AWS security services at a basic level</li>
-</ul>
-</section>
-<section id="module-7-monitoring-and-analytics" class="level3">
-<h3 class="anchored" data-anchor-id="module-7-monitoring-and-analytics">Module 7: Monitoring and Analytics</h3>
-<ul>
-<li>Summarize approaches to monitoring your AWS environment</li>
-<li>Describe the benefits of Amazon CloudWatch</li>
-<li>Describe the benefits of AWS CloudTrail</li>
-<li>Describe the benefits of AWS Trusted Advisor</li>
-</ul>
-</section>
-<section id="module-8-pricing-and-support" class="level3">
-<h3 class="anchored" data-anchor-id="module-8-pricing-and-support">Module 8: Pricing and Support</h3>
-<ul>
-<li>Understand AWS pricing and support models</li>
-<li>Describe the AWS Free Tier</li>
-<li>Describe key benefits of AWS Organizations and consolidated billing</li>
-<li>Explain the benefits of AWS Budgets</li>
-<li>Explain the benefits of AWS Cost Explorer</li>
-<li>Explain the primary benefits of the AWS Pricing Calculator</li>
-<li>Distinguish between the various AWS Support Plans</li>
-<li>Describe the benefits of AWS Marketplace</li>
-</ul>
-</section>
-<section id="module-9-migration-and-innovation" class="level3">
-<h3 class="anchored" data-anchor-id="module-9-migration-and-innovation">Module 9: Migration and Innovation</h3>
-<ul>
-<li>Understand migration and innovation in the AWS Cloud</li>
-<li>Summarize the AWS Cloud Adoption Framework (AWS CAF)</li>
-<li>Summarize six key factors of a cloud migration strategy</li>
-<li>Describe the benefits of various AWS data migration solutions, such as AWS Snowcone, AWS Snowball, and AWS Snowmobile</li>
-<li>Summarize the broad scope of innovative solutions that AWS offers</li>
-</ul>
-</section>
-<section id="module-10-the-cloud-journey" class="level3">
-<h3 class="anchored" data-anchor-id="module-10-the-cloud-journey">Module 10: The Cloud Journey</h3>
-<ul>
-<li>Summarize the six pillars of the AWS Well-Architected Framework</li>
-<li>Explain the six benefits of cloud computing</li>
-</ul>
-</section>
-<section id="module-11-aws-certified-cloud-practitioner-basics" class="level3">
-<h3 class="anchored" data-anchor-id="module-11-aws-certified-cloud-practitioner-basics">Module 11: AWS Certified Cloud Practitioner Basics</h3>
-<ul>
-<li>Determine resources for preparing for the AWS Certified Cloud Practitioner examination</li>
-<li>Describe benefits of becoming AWS Certified</li>
-</ul>
-<p>Each module is followed by quizzes to test your knowledge and reinforce learning. Ensure you engage with these quizzes and review the material as needed to solidify your understanding.</p>
-<p>This course serves as a pathway to not only prepare you for the AWS Certified Cloud Practitioner exam but also to instil a robust foundation in AWS Cloud, empowering you to navigate and utilize the cloud more effectively in your professional journey.</p>
+<p>Scalability is the process of starting with just the resources you need and designing your architecture to automatically adjust to changing demand by scaling out (adding resources) or in (reducing resources). This ensures you pay only for the resources you actually use, eliminating concerns over insufficient computing capacity to meet customer needs.</p>
+<p>If you require the scaling process to happen automatically, the AWS service to use is Amazon EC2 Auto Scaling.</p>
+<p><strong>Amazon EC2 Auto Scaling</strong> functions much like having a dynamic staffing system in a busy coffee shop. Just as a coffee shop might call in extra baristas on busy mornings to keep the line moving, Amazon EC2 Auto Scaling automatically adds or removes EC2 instances in response to application demands. This ensures that your application remains available without unnecessary delays, akin to a customer facing a long wait due to only one barista being available.</p>
+<p>Within Amazon EC2 Auto Scaling, there are two main strategies:</p>
+<ol type="1">
+<li><strong>Dynamic Scaling:</strong> Adjusts the number of EC2 instances as demand on your application increases or decreases.</li>
+<li><strong>Predictive Scaling:</strong> Uses forecasting to predict demand and schedules the appropriate number of EC2 instances in advance.</li>
+</ol>
+<p>For instance, imagine you are launching an application on Amazon EC2. Initially, you set your Auto Scaling group with a minimum of one EC2 instance, ensuring that there is always at least one instance running. You might also set a desired capacity of two instances, although only one is strictly necessary for operation.</p>
+<p>Furthermore, you can specify a maximum capacity for your Auto Scaling group—say, four instances. This cap allows your application to scale out in response to increased demand but ensures it does not exceed four instances, helping manage costs effectively.</p>
+<p>By leveraging Amazon EC2 Auto Scaling, you pay only for the EC2 instances you use, precisely when you use them. This approach not only optimizes your expenditure but also ensures your architecture can provide the best possible customer experience by adapting to traffic fluctuations without manual intervention.</p>
 
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -779,10 +610,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../module-2-notes/Amazon-EC2-pricing.html" class="pagination-link" aria-label="**Amazon EC2 pricing**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./module-1-notes/Introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-2-notes/Elastic-Load-Balancing.html" class="pagination-link" aria-label="Elastic-Load-Balancing.html">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Elastic-Load-Balancing.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 1&nbsp; Let’s start with why?</title>
+<title>AWS Cloud Practitioner Notes - 1&nbsp; Preface</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./cloud-computing.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Let’s start with why?</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -115,13 +115,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Let’s start with why?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cloud-computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Cloud Computing</strong></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
     </ul>
@@ -134,9 +140,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#why-take-the-aws-cloud-practitioner-certification" id="toc-why-take-the-aws-cloud-practitioner-certification" class="nav-link active" data-scroll-target="#why-take-the-aws-cloud-practitioner-certification"><span class="header-section-number">1.0.1</span> Why Take the AWS Cloud Practitioner Certification?</a></li>
-  <li><a href="#what-is-aws" id="toc-what-is-aws" class="nav-link" data-scroll-target="#what-is-aws"><span class="header-section-number">1.0.2</span> What is AWS?</a></li>
-  <li><a href="#what-is-the-cloud-practitioner-certification" id="toc-what-is-the-cloud-practitioner-certification" class="nav-link" data-scroll-target="#what-is-the-cloud-practitioner-certification"><span class="header-section-number">1.0.3</span> What is the Cloud Practitioner Certification?</a></li>
+  <li><a href="#course-aims" id="toc-course-aims" class="nav-link active" data-scroll-target="#course-aims"><span class="header-section-number">1.1</span> <strong>Course Aims</strong></a></li>
+  <li><a href="#course-outline" id="toc-course-outline" class="nav-link" data-scroll-target="#course-outline"><span class="header-section-number">1.2</span> Course outline</a>
+  <ul class="collapse">
+  <li><a href="#module-1-introduction-to-amazon-web-services" id="toc-module-1-introduction-to-amazon-web-services" class="nav-link" data-scroll-target="#module-1-introduction-to-amazon-web-services"><span class="header-section-number">1.2.1</span> Module 1: Introduction to Amazon Web Services</a></li>
+  <li><a href="#module-2-compute-in-the-cloud" id="toc-module-2-compute-in-the-cloud" class="nav-link" data-scroll-target="#module-2-compute-in-the-cloud"><span class="header-section-number">1.2.2</span> Module 2: Compute in the Cloud</a></li>
+  <li><a href="#module-3-global-infrastructure-and-reliability" id="toc-module-3-global-infrastructure-and-reliability" class="nav-link" data-scroll-target="#module-3-global-infrastructure-and-reliability"><span class="header-section-number">1.2.3</span> Module 3: Global Infrastructure and Reliability</a></li>
+  <li><a href="#module-4-networking" id="toc-module-4-networking" class="nav-link" data-scroll-target="#module-4-networking"><span class="header-section-number">1.2.4</span> Module 4: Networking</a></li>
+  <li><a href="#module-5-storage-and-databases" id="toc-module-5-storage-and-databases" class="nav-link" data-scroll-target="#module-5-storage-and-databases"><span class="header-section-number">1.2.5</span> Module 5: Storage and Databases</a></li>
+  <li><a href="#module-6-security" id="toc-module-6-security" class="nav-link" data-scroll-target="#module-6-security"><span class="header-section-number">1.2.6</span> Module 6: Security</a></li>
+  <li><a href="#module-7-monitoring-and-analytics" id="toc-module-7-monitoring-and-analytics" class="nav-link" data-scroll-target="#module-7-monitoring-and-analytics"><span class="header-section-number">1.2.7</span> Module 7: Monitoring and Analytics</a></li>
+  <li><a href="#module-8-pricing-and-support" id="toc-module-8-pricing-and-support" class="nav-link" data-scroll-target="#module-8-pricing-and-support"><span class="header-section-number">1.2.8</span> Module 8: Pricing and Support</a></li>
+  <li><a href="#module-9-migration-and-innovation" id="toc-module-9-migration-and-innovation" class="nav-link" data-scroll-target="#module-9-migration-and-innovation"><span class="header-section-number">1.2.9</span> Module 9: Migration and Innovation</a></li>
+  <li><a href="#module-10-the-cloud-journey" id="toc-module-10-the-cloud-journey" class="nav-link" data-scroll-target="#module-10-the-cloud-journey"><span class="header-section-number">1.2.10</span> Module 10: The Cloud Journey</a></li>
+  <li><a href="#module-11-aws-certified-cloud-practitioner-basics" id="toc-module-11-aws-certified-cloud-practitioner-basics" class="nav-link" data-scroll-target="#module-11-aws-certified-cloud-practitioner-basics"><span class="header-section-number">1.2.11</span> Module 11: AWS Certified Cloud Practitioner Basics</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -145,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Let’s start with why?</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></h1>
 </div>
 
 
@@ -162,34 +180,142 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Preparing for the AWS Cloud Practitioner certification is an excellent step for anyone in tech, including data scientists and software engineers. Here’s why it’s beneficial, and a bit about AWS and the certification itself:</p>
-<section id="why-take-the-aws-cloud-practitioner-certification" class="level3" data-number="1.0.1">
-<h3 data-number="1.0.1" class="anchored" data-anchor-id="why-take-the-aws-cloud-practitioner-certification"><span class="header-section-number">1.0.1</span> Why Take the AWS Cloud Practitioner Certification?</h3>
-<ol type="1">
-<li><strong>Foundational Knowledge</strong>: The certification provides a comprehensive understanding of cloud concepts and AWS services, making it ideal for professionals looking to gain or solidify their cloud knowledge.</li>
-<li><strong>Industry Recognition</strong>: AWS certifications are highly recognized in the industry, enhancing your credibility and showcasing your cloud expertise to employers.</li>
-<li><strong>Versatility</strong>: Learning about AWS services can benefit various roles, from developers and data scientists to administrators and managers, as cloud computing is integral to many tech operations.</li>
-<li><strong>Career Advancement</strong>: It can open up new career opportunities, particularly in companies that use or are migrating to the cloud. The certification can also potentially lead to better job positions and higher salaries.</li>
-</ol>
-</section>
-<section id="what-is-aws" class="level3" data-number="1.0.2">
-<h3 data-number="1.0.2" class="anchored" data-anchor-id="what-is-aws"><span class="header-section-number">1.0.2</span> What is AWS?</h3>
-<p>AWS (Amazon Web Services) is the world’s most comprehensive and broadly adopted cloud platform. It offers over 200 fully featured services from data centers globally. AWS provides infrastructure and application services that enable running virtually everything in the cloud, from hosting applications and websites to big data projects and mobile app development.</p>
-</section>
-<section id="what-is-the-cloud-practitioner-certification" class="level3" data-number="1.0.3">
-<h3 data-number="1.0.3" class="anchored" data-anchor-id="what-is-the-cloud-practitioner-certification"><span class="header-section-number">1.0.3</span> What is the Cloud Practitioner Certification?</h3>
-<p>The AWS Certified Cloud Practitioner is an entry-level certification designed to validate an individual’s overall understanding of the AWS Cloud. It assesses the following areas:</p>
+<p>Welcome to your comprehensive online resource for preparing for the AWS Certified Cloud Practitioner exam. This course is meticulously designed for individuals aiming to acquire a fundamental understanding of the Amazon Web Services (AWS) Cloud, transcending specific technical roles. It is an ideal starting point for gaining insights into the essentials of AWS Cloud, including its services, security, architecture, pricing, and support frameworks.</p>
+<section id="course-aims" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="course-aims"><span class="header-section-number">1.1</span> <strong>Course Aims</strong></h2>
+<p>Through this course, participants will:</p>
 <ul>
-<li>The basic global infrastructure of the cloud</li>
-<li>Key services on the AWS platform and their common use cases</li>
-<li>Basic security and compliance aspects of the AWS platform and the shared security model</li>
-<li>Billing, account management, and pricing models</li>
-<li>Identifying sources of documentation or technical assistance (such as whitepapers or support tickets)</li>
+<li>Grasp a foundational understanding of AWS and its operational definitions.</li>
+<li>Compare and contrast various cloud deployment models such as on-premises, hybrid-cloud, and exclusively cloud-based solutions.</li>
+<li>Learn about the AWS global infrastructure and the pivotal role of Availability Zones.</li>
+<li>Understand the six key advantages of leveraging the AWS Cloud.</li>
+<li>Gain knowledge about primary AWS services across computing, networking, databases, and storage.</li>
+<li>Evaluate appropriate AWS solutions for diverse use cases.</li>
+<li>Explore the AWS Well-Architected Framework and the shared responsibility model.</li>
+<li>Dive into the fundamental aspects of AWS security services and cloud migration strategies.</li>
+<li>Discuss the financial implications of using AWS in terms of cost management and billing.</li>
+<li>Utilize AWS pricing tools to make informed, cost-effective decisions.</li>
 </ul>
-<p>This certification is geared towards individuals who have basic knowledge of the AWS platform, including anyone in managerial, technical, sales, purchasing, or financial roles who work with the AWS Cloud. It’s designed to provide a detailed overview and it’s often recommended as the first certification one should take when starting their AWS certification journey.</p>
-<p>This foundational knowledge sets the stage for more specialized certifications, such as AWS Solutions Architect, Developer, or SysOps Administrator, making it a valuable starting point for anyone looking to deepen their understanding of cloud technologies.</p>
+</section>
+<section id="course-outline" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="course-outline"><span class="header-section-number">1.2</span> Course outline</h2>
+<section id="module-1-introduction-to-amazon-web-services" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="module-1-introduction-to-amazon-web-services"><span class="header-section-number">1.2.1</span> Module 1: Introduction to Amazon Web Services</h3>
+<ul>
+<li>Summarize the benefits of AWS</li>
+<li>Describe differences between on-demand delivery and cloud deployments</li>
+<li>Summarize the pay-as-you-go pricing model</li>
+</ul>
+</section>
+<section id="module-2-compute-in-the-cloud" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="module-2-compute-in-the-cloud"><span class="header-section-number">1.2.2</span> Module 2: Compute in the Cloud</h3>
+<ul>
+<li>Describe the benefits of Amazon Elastic Compute Cloud (Amazon EC2) at a basic level</li>
+<li>Identify the different Amazon EC2 instance types</li>
+<li>Differentiate between the various billing options for Amazon EC2</li>
+<li>Describe the benefits of Amazon EC2 Auto Scaling</li>
+<li>Summarize the benefits of Elastic Load Balancing</li>
+<li>Give an example of the uses for Elastic Load Balancing</li>
+<li>Summarize the differences between Amazon Simple Notification Service (Amazon SNS) and Amazon Simple Queue Services (Amazon SQS)</li>
+<li>Summarize additional AWS compute options</li>
+</ul>
+</section>
+<section id="module-3-global-infrastructure-and-reliability" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="module-3-global-infrastructure-and-reliability"><span class="header-section-number">1.2.3</span> Module 3: Global Infrastructure and Reliability</h3>
+<ul>
+<li>Summarize the benefits of the AWS Global Infrastructure</li>
+<li>Describe the basic concept of Availability Zones</li>
+<li>Describe the benefits of Amazon CloudFront and Edge locations</li>
+<li>Compare different methods for provisioning AWS services</li>
+</ul>
+</section>
+<section id="module-4-networking" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="module-4-networking"><span class="header-section-number">1.2.4</span> Module 4: Networking</h3>
+<ul>
+<li>Describe the basic concepts of networking</li>
+<li>Describe the difference between public and private networking resources</li>
+<li>Explain a virtual private gateway using a real life scenario</li>
+<li>Explain a virtual private network (VPN) using a real life scenarioDescribe the benefit of AWS Direct Connect</li>
+<li>Describe the benefit of hybrid deployments</li>
+<li>Describe the layers of security used in an IT strategy</li>
+<li>Describe which services are used to interact with the AWS global network</li>
+</ul>
+</section>
+<section id="module-5-storage-and-databases" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="module-5-storage-and-databases"><span class="header-section-number">1.2.5</span> Module 5: Storage and Databases</h3>
+<ul>
+<li>Summarize the basic concept of storage and databases</li>
+<li>Describe benefits of Amazon Elastic Block Store (Amazon EBS)</li>
+<li>Describe benefits of Amazon Simple Storage Service (Amazon S3)</li>
+<li>Describe the benefits of Amazon Elastic File System (Amazon EFS)</li>
+<li>Summarize various storage solutions</li>
+<li>Describe the benefits of Amazon Relational Database Service (Amazon RDS)</li>
+<li>Describe the benefits of Amazon DynamoDB</li>
+<li>Summarize various database services</li>
+</ul>
+</section>
+<section id="module-6-security" class="level3" data-number="1.2.6">
+<h3 data-number="1.2.6" class="anchored" data-anchor-id="module-6-security"><span class="header-section-number">1.2.6</span> Module 6: Security</h3>
+<ul>
+<li>Explain the benefits of the shared responsibility model</li>
+<li>Describe multi-factor authentication (MFA)</li>
+<li>Differentiate between the AWS Identity and Access Management (IAM) security levels</li>
+<li>Describe security policies at a basic level</li>
+<li>Explain the benefits of AWS Organizations</li>
+<li>Summarize the benefits of compliance with AWS</li>
+<li>Explain primary AWS security services at a basic level</li>
+</ul>
+</section>
+<section id="module-7-monitoring-and-analytics" class="level3" data-number="1.2.7">
+<h3 data-number="1.2.7" class="anchored" data-anchor-id="module-7-monitoring-and-analytics"><span class="header-section-number">1.2.7</span> Module 7: Monitoring and Analytics</h3>
+<ul>
+<li>Summarize approaches to monitoring your AWS environment</li>
+<li>Describe the benefits of Amazon CloudWatch</li>
+<li>Describe the benefits of AWS CloudTrail</li>
+<li>Describe the benefits of AWS Trusted Advisor</li>
+</ul>
+</section>
+<section id="module-8-pricing-and-support" class="level3" data-number="1.2.8">
+<h3 data-number="1.2.8" class="anchored" data-anchor-id="module-8-pricing-and-support"><span class="header-section-number">1.2.8</span> Module 8: Pricing and Support</h3>
+<ul>
+<li>Understand AWS pricing and support models</li>
+<li>Describe the AWS Free Tier</li>
+<li>Describe key benefits of AWS Organizations and consolidated billing</li>
+<li>Explain the benefits of AWS Budgets</li>
+<li>Explain the benefits of AWS Cost Explorer</li>
+<li>Explain the primary benefits of the AWS Pricing Calculator</li>
+<li>Distinguish between the various AWS Support Plans</li>
+<li>Describe the benefits of AWS Marketplace</li>
+</ul>
+</section>
+<section id="module-9-migration-and-innovation" class="level3" data-number="1.2.9">
+<h3 data-number="1.2.9" class="anchored" data-anchor-id="module-9-migration-and-innovation"><span class="header-section-number">1.2.9</span> Module 9: Migration and Innovation</h3>
+<ul>
+<li>Understand migration and innovation in the AWS Cloud</li>
+<li>Summarize the AWS Cloud Adoption Framework (AWS CAF)</li>
+<li>Summarize six key factors of a cloud migration strategy</li>
+<li>Describe the benefits of various AWS data migration solutions, such as AWS Snowcone, AWS Snowball, and AWS Snowmobile</li>
+<li>Summarize the broad scope of innovative solutions that AWS offers</li>
+</ul>
+</section>
+<section id="module-10-the-cloud-journey" class="level3" data-number="1.2.10">
+<h3 data-number="1.2.10" class="anchored" data-anchor-id="module-10-the-cloud-journey"><span class="header-section-number">1.2.10</span> Module 10: The Cloud Journey</h3>
+<ul>
+<li>Summarize the six pillars of the AWS Well-Architected Framework</li>
+<li>Explain the six benefits of cloud computing</li>
+</ul>
+</section>
+<section id="module-11-aws-certified-cloud-practitioner-basics" class="level3" data-number="1.2.11">
+<h3 data-number="1.2.11" class="anchored" data-anchor-id="module-11-aws-certified-cloud-practitioner-basics"><span class="header-section-number">1.2.11</span> Module 11: AWS Certified Cloud Practitioner Basics</h3>
+<ul>
+<li>Determine resources for preparing for the AWS Certified Cloud Practitioner examination</li>
+<li>Describe benefits of becoming AWS Certified</li>
+</ul>
+<p>Each module is followed by quizzes to test your knowledge and reinforce learning. Ensure you engage with these quizzes and review the material as needed to solidify your understanding.</p>
+<p>This course serves as a pathway to not only prepare you for the AWS Certified Cloud Practitioner exam but also to instil a robust foundation in AWS Cloud, empowering you to navigate and utilize the cloud more effectively in your professional journey.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -609,8 +735,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cloud-computing.html" class="pagination-link" aria-label="**Cloud Computing**">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Cloud Computing</strong></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

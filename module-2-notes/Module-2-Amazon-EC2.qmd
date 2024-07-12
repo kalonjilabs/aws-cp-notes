@@ -1,0 +1,65 @@
+# Module 2: Amazon EC2
+
+## Introduction
+
+Imagine you run a small business that develops mobile games. As your games gain popularity, you face increasing pressure to maintain performance during peak usage times, such as when launching a new game or running a global event within the game. Initially, you hosted the games on a server in your office, but as the number of players grew, the server could not handle the load and would often crash during these critical times, leading to frustrated customers and lost revenue.
+
+This is where Amazon EC2 comes into play. By using Amazon EC2, you can easily launch virtual servers and scale capacity up or down automatically, depending on the demand from your game players. This ensures that your gaming servers are stable during high traffic periods and cost-efficient during quieter times.
+
+## **What is Amazon EC2?**
+
+Amazon EC2 (Elastic Compute Cloud) provides scalable computing capacity in the AWS cloud. This service allows you to launch virtual servers, known as instances, and manage the computing environment's scale and administration. With EC2, you can choose from a wide range of instance types to match your specific workload needs, from a small game server to a large, resource-intensive application. The service offers flexibility in configuring hardware, security, and networking settings. Additionally, it integrates seamlessly with other AWS services, enhancing your ability to develop, monitor, and deploy applications more efficiently.
+
+Whether it's ensuring that your mobile games perform flawlessly during peak usage or scaling down to save costs when demand is lower, Amazon EC2 provides the tools and flexibility to adjust your computing resources in real-time, aligning perfectly with your business needs.
+
+**Key Features of Amazon EC2:**
+
+- **Flexibility:** You can choose from a wide variety of instance types, configurations, and sizes, which allows you to tailor the hardware to your specific application needs. This includes configurations that optimize for memory, CPU, storage, and networking capacity.
+- **Scalability:** EC2 provides the ability to scale up or down quickly to handle changes in requirements or spikes in popularity, ensuring you only pay for what you use.
+- **Control:** You have complete control over your virtual servers, including the choice of operating system, networking details, and security settings. This makes it possible to run any software you own, just as you would on your own physical server.
+- **Integration:** EC2 integrates well with other AWS services, facilitating comprehensive cloud solutions that can include storage (Amazon S3), databases (Amazon RDS), and more.
+- **Security:** Amazon EC2 provides numerous security tools and features, such as Amazon VPC (Virtual Private Cloud) that allows you to use isolated networks within the cloud, and IAM (Identity and Access Management) to control access to instances securely.
+
+**Typical Uses for Amazon EC2:**
+
+- **Web hosting:** Many businesses use EC2 instances to host websites, ensuring they can easily handle unexpected traffic spikes.
+- **Application hosting:** From simple applications to sophisticated enterprise applications, you can run them all on EC2.
+- **Batch processing:** You can quickly scale up EC2 instances to complete batch processing jobs that require processing large volumes of data quickly.
+- **Development and test environments:** Developers use EC2 to quickly set up or tear down environments with different configurations to test new versions of applications.
+
+Amazon EC2 provides a flexible, scalable, and efficient way to run your applications in the cloud with minimal investment in physical hardware and allows for a pay-as-you-go pricing model, which can significantly reduce your IT costs and overhead.
+
+## **How Amazon EC2 works**
+
+Amazon EC2 (Elastic Compute Cloud) is a central part of Amazon Web Services that offers scalable computing on demand, allowing users to run and manage server instances over the cloud. Here’s a simplified breakdown of how you typically interact with Amazon EC2, from launch to connection and usage:
+
+### **Launch**
+
+To begin using Amazon EC2, you start by launching a virtual server, known as an instance. Here's how that works:
+
+- **Choose an AMI (Amazon Machine Image):** This is your first step. An AMI contains the operating system and the configurations required to launch your instance. You can choose from a variety of AMIs that Amazon provides or create your own.
+- **Select an Instance Type:** Amazon EC2 offers a range of instance types optimized for different purposes. Depending on your needs, you might select an instance with more CPU, memory, storage, or enhanced networking capabilities.
+- **Configure Instance:** Set up the networking and security for your instance. This includes choosing a network (VPC), subnets, and setting security groups which dictate the ports, protocols, and IPs allowed to interact with your instances.
+- **Add Storage:** EC2 allows you to attach storage to your instances. You can choose the type and size of storage based on your application needs.
+- **Launch Instance:** Once everything is set up, you launch the instance. AWS then allocates the resources and starts the instance after which it's ready to use.
+
+### **Connect**
+
+Once your EC2 instance is running, you can connect to it:
+
+- **Accessing the Instance:**
+    - **For Linux instances**, you typically connect via SSH using a key pair that you specify when setting up the instance. This ensures secure access without needing a password.
+    - **For Windows instances**, you can connect using Remote Desktop Protocol (RDP) with a username and password, which you can retrieve using your key pair.
+
+This step is crucial as it's where you manage the software side of your instance, installing necessary applications and configuring settings according to your project's requirements.
+
+### **Use**
+
+After connecting to your instance, you can use it just like any other computer. Here’s what generally happens in this phase:
+
+- **Run Applications:** You can deploy and run applications, host websites, and manage data. Whatever tasks you would do on a physical server can be done on an EC2 instance.
+- **Monitor and Manage:** AWS provides tools like Amazon CloudWatch to monitor the performance of your instance. You can track metrics such as CPU utilization, and network usage, and set up alarms for specific thresholds.
+- **Scale:** One of the significant advantages of EC2 is its scalability. Depending on the demand, you can scale your instances up or down. You can either do this manually or set up auto-scaling to adjust the capacity based on pre-defined rules and schedules.
+- **Secure:** Continuously manage the security of your instances by updating security groups, adding rules, and ensuring your software is up-to-date with the latest security patches.
+
+By the end of this process, you will have a fully functional virtual server ready to handle your computing tasks in the cloud, providing the flexibility to scale and adapt as your requirements evolve. This capability makes EC2 a powerful tool for businesses needing reliable, scalable, and efficient computing resources.

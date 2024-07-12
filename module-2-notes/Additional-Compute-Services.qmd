@@ -1,0 +1,50 @@
+# **Additional Compute Services**
+
+## **Serverless computing**
+
+“Serverless” might sound like there are no servers involved, but in reality, your code still runs on servers. The key difference is that you don’t have to worry about setting up or managing these servers. This allows you to shift your focus from server maintenance to innovating new products and features.
+
+One of the major advantages of serverless computing is its ability to automatically scale your applications. It adjusts the capacity of your applications by modifying units of consumption, such as throughput and memory, providing you with the flexibility you need.
+
+This is quite different from services like Amazon EC2, where you’re given the ability to run virtual servers in the cloud. With EC2, you’re responsible for provisioning instances (virtual servers), uploading your code, and continuously managing these instances while your application is running. In contrast, serverless computing takes care of these tasks for you, freeing up your time and resources.
+
+## **AWS Lambda**
+
+AWS Lambda is a service provided by AWS that embodies the concept of serverless computing. It allows you to run your code without the need to set up or manage servers.
+
+The beauty of AWS Lambda is its pay-as-you-go model. You’re only billed for the compute time your code consumes, not a second more. This means you’re not paying for idle time, and costs are kept to a minimum. Plus, it’s versatile. You can run code for virtually any type of application or backend service, all without any administrative tasks.
+
+Let’s consider a simple example. Suppose you have a Lambda function set up to automatically resize images uploaded to the AWS Cloud. The function springs into action the moment a new image is uploaded.
+
+Here’s how AWS Lambda works :
+
+1. You upload your code to Lambda.
+2. You configure your code to be triggered by an event source. This could be anything from AWS services to mobile applications or HTTP endpoints.
+3. Lambda springs into action and runs your code, but only when triggered.
+4. You’re billed solely for the compute time you consume. So, in our image resizing example, you’d only pay for the compute time used when new images are uploaded and the resizing function is triggered.
+
+## **Containers**
+
+<img src="awscontainers.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;">
+
+**Containers** are like little boxes where you can pack up your application’s code and all the things it needs to run (these are called dependencies). This is great because it means your application will run the same way no matter where you put it, just like how a toy packed in a box can be played with the same way no matter where you open it.
+
+AWS allows you to build and run these containerized applications. Containers are great for when you need your application to be secure, reliable, and scalable.
+
+Now, let’s dive a bit deeper into how containers work:
+
+**Scenario 1: One host with multiple containers** 
+
+Imagine you’re a developer at a company. The environment on your computer is different from the environment on the computers used by the IT operations staff. To make sure that your application’s environment stays the same no matter where it’s deployed, you decide to use a container. This is like packing your lunch in a lunchbox to make sure it stays the same no matter where you eat it. This approach helps reduce time spent debugging applications and diagnosing differences in computing environments.
+
+**Scenario 2: Tens of hosts with hundreds of containers** 
+
+When running containerized applications, it’s important to think about scalability. Imagine you’re not just managing one lunchbox, but tens of lunchboxes with hundreds of lunches inside. Or maybe even hundreds of lunchboxes with thousands of lunches! At this scale, think about how much time it might take for you to check each lunch (monitor memory usage), make sure no lunches are stolen (security), keep track of what’s in each lunchbox (logging), and so on.
+
+Amazon offers several services for containerized applications, including:
+
+**Amazon Elastic Container Service (Amazon ECS)**: This is a highly scalable, high-performance container management system that allows you to run and scale containerized applications on AWS. Amazon ECS supports Docker containers, a software platform that lets you build, test, and deploy applications quickly. AWS supports both the open-source Docker Community Edition and the subscription-based Docker Enterprise Edition. With Amazon ECS, you can use API calls to launch and stop Docker-enabled applications.
+
+**Amazon Elastic Kubernetes Service (Amazon EKS)**: This is a fully managed service that lets you run Kubernetes, an open-source software that allows you to deploy and manage containerized applications at scale, on AWS. A large community of volunteers maintains Kubernetes, and AWS actively collaborates with this community. As new features and functionalities are released for Kubernetes applications, you can easily apply these updates to your applications managed by Amazon EKS.
+
+**AWS Fargate**: This is a serverless compute engine for containers that works with both Amazon ECS and Amazon EKS. When using AWS Fargate, you don’t need to provision or manage servers. AWS Fargate takes care of your server infrastructure, allowing you to focus more on innovating and developing your applications. Plus, you only pay for the resources required to run your containers.

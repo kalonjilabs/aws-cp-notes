@@ -1,0 +1,48 @@
+# Cloud Computing
+
+Cloud computing is formally described as the on-demand delivery of IT resources over the internet at pay-as-you-go pricing. Instead of purchasing, operating, and maintaining physical data centres and servers, businesses can use technological services like computing power and storage from providers such as Amazon Web Services (AWS) as needed.
+
+To get a better idea of what this means, think about renting an apartment. Rather than buying a facility, which requires substantial upfront expenditures and continuous maintenance, businesses use cloud computing to have access to computing power and storage without having to invest in and manage their own data centres and servers.
+
+This strategy enables companies to use only what they require in terms of IT resources, analogous to renting a flat for the time you need it rather than purchasing one completely. You pay for what you use, when you use it, and you can easily scale your resources up or down based on your need, much as you may move to a larger or smaller flat depending on your life circumstances.
+
+AWS provides various cloud services, allowing businesses to access a variety of computing resources via the Internet. This method is not only cost-effective, but also versatile and expandable, making it a viable option for enterprises of any size. Whether a firm requires massive data storage, sophisticated applications, or both, AWS provides the resources needed on demand, allowing for operational efficiencies and cost savings.
+
+## **Deployment models for cloud computing**
+
+When choosing a cloud strategy, a company needs to evaluate several aspects including the necessary components for cloud applications, the preferred tools for managing resources, and the requirements of any existing legacy IT infrastructure.
+
+There are three main models for deploying cloud computing: cloud-based, on-premises, and hybrid.
+
+## Cloud-based
+
+- Operate all application components within the cloud environment.
+- Transfert existing applications to the cloud setting.
+- Develop and construct new applications directly in the cloud.
+
+In a cloud-based deployment model, it's feasible to transition existing applications into the cloud, or alternatively, to design and initiate new applications within the cloud framework. These applications can be developed atop low-level infrastructure, which necessitates management by your IT team. Alternatively, you could utilise more advanced services that diminish the need for extensive management, architecture, and scaling of the underlying infrastructure.
+
+In a cloud-based deployment model, it is possible to migrate current applications to the cloud or to develop and launch new applications within the cloud framework. These apps can be built on low-level infrastructure, requiring management by your IT personnel. Alternatively, you might use more advanced services that require less comprehensive management, architecture, and scaling of the underlying infrastructure.
+
+For instance, a business might develop an application that includes virtual servers, databases, and networking components, all operating entirely within the cloud.
+
+## On-premises
+
+Deploy resources using virtualisation and resource management tools. Boost resource use by employing application management and virtualisation technologies. On-premises deployment, also known as private cloud deployment, involves setting up resources on-site with these tools.
+
+For example, you might have applications running on technology housed entirely in your on-premises data centre. While this setup is similar to traditional IT setups, using application management and virtualisation technologies helps make better use of resources.
+
+## Hybrid
+
+n a hybrid deployment, you connect cloud resources to your on-premises setup. This method is useful in several scenarios. For instance, you might have older applications that are best kept on-site, or there may be regulations that require your company to store certain data on-site.
+
+Consider a company that wants to use cloud services for automating batch data processing and analytics, but has several older applications that are more suitable for on-premises use and won't be moved to the cloud. With a hybrid deployment, this company could maintain these legacy applications on-site while still taking advantage of cloud-based data and analytics services.
+
+# **Benefits of cloud computing**
+
+- **Trade upfront expense for variable expense**: Companies can avoid large initial investments in IT infrastructure by opting for cloud services where costs are based on consumption. For instance, a startup can sidestep the hefty expenses of setting up a data centre by utilising AWS cloud services, only paying for the server time and storage they actually use each month.
+- **Stop spending money to run and maintain data centres**: By migrating to cloud-based solutions, companies can significantly reduce or eliminate costs associated with maintaining physical data centres, including expenses for hardware upkeep and energy for cooling servers. For example, a business traditionally incurring high costs on hardware upgrades can cut these expenditures by shifting to cloud services.
+- **Stop guessing capacity**: Cloud services allow organisations to adjust their IT infrastructure capacity as needed, rather than attempting to predict future requirements. A retailer, for example, can increase their cloud resources to handle a surge in website traffic during a product launch and decrease resources afterwards, ensuring they pay only for what is necessary.
+- **Benefit from massive economies of scale**: Utilising cloud services enables businesses to access the advanced computing technologies and operational efficiencies enjoyed by large providers, but at a reduced cost due to the provider's scale of operation. A small enterprise, for instance, can access high-level technologies at a cost significantly lower than if they were to attempt similar operations independently.
+- **Increase speed and agility**: Cloud computing facilitates rapid deployment and iteration of applications, avoiding the delays typical of traditional IT provisioning. This enables tech companies to develop and deploy updates multiple times a day without waiting for hardware procurement or setup, greatly enhancing their operational agility.
+- **Go global in minutes**: Companies can deploy applications across multiple global regions with just a few clicks, significantly improving their reach and providing lower latency for a worldwide audience. An online gaming company, for example, can launch their game on servers in North America, Europe, and Asia, ensuring a seamless gaming experience for players across these regions.

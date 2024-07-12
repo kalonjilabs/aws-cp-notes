@@ -1,0 +1,22 @@
+# Introduction
+
+### What is a Server?
+
+A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.
+
+<img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;">
+
+### The Client-Server Model
+
+Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.
+
+<img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;">
+
+For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.
+
+<img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;">
+
+
+### Lesson Recap
+
+Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.

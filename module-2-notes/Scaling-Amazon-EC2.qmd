@@ -1,0 +1,18 @@
+# **Scaling Amazon EC2**
+
+Scalability is the process of starting with just the resources you need and designing your architecture to automatically adjust to changing demand by scaling out (adding resources) or in (reducing resources). This ensures you pay only for the resources you actually use, eliminating concerns over insufficient computing capacity to meet customer needs.
+
+If you require the scaling process to happen automatically, the AWS service to use is Amazon EC2 Auto Scaling.
+
+**Amazon EC2 Auto Scaling** functions much like having a dynamic staffing system in a busy coffee shop. Just as a coffee shop might call in extra baristas on busy mornings to keep the line moving, Amazon EC2 Auto Scaling automatically adds or removes EC2 instances in response to application demands. This ensures that your application remains available without unnecessary delays, akin to a customer facing a long wait due to only one barista being available.
+
+Within Amazon EC2 Auto Scaling, there are two main strategies:
+
+1. **Dynamic Scaling:** Adjusts the number of EC2 instances as demand on your application increases or decreases.
+2. **Predictive Scaling:** Uses forecasting to predict demand and schedules the appropriate number of EC2 instances in advance.
+
+For instance, imagine you are launching an application on Amazon EC2. Initially, you set your Auto Scaling group with a minimum of one EC2 instance, ensuring that there is always at least one instance running. You might also set a desired capacity of two instances, although only one is strictly necessary for operation.
+
+Furthermore, you can specify a maximum capacity for your Auto Scaling group—say, four instances. This cap allows your application to scale out in response to increased demand but ensures it does not exceed four instances, helping manage costs effectively.
+
+By leveraging Amazon EC2 Auto Scaling, you pay only for the EC2 instances you use, precisely when you use them. This approach not only optimizes your expenditure but also ensures your architecture can provide the best possible customer experience by adapting to traffic fluctuations without manual intervention.

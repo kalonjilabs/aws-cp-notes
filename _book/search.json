@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "AWS Cloud Practitioner Notes",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Preface\nWelcome to your comprehensive online resource for preparing for the AWS Certified Cloud Practitioner exam. This course is meticulously designed for individuals aiming to acquire a fundamental understanding of the Amazon Web Services (AWS) Cloud, transcending specific technical roles. It is an ideal starting point for gaining insights into the essentials of AWS Cloud, including its services, security, architecture, pricing, and support frameworks.",
     "crumbs": [
       "Preface"
     ]
@@ -12,11 +12,11 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Let’s start with why?",
+    "title": "1  Preface",
     "section": "",
-    "text": "Preparing for the AWS Cloud Practitioner certification is an excellent step for anyone in tech, including data scientists and software engineers. Here’s why it’s beneficial, and a bit about AWS and the certification itself:\n\n1.0.1 Why Take the AWS Cloud Practitioner Certification?\n\nFoundational Knowledge: The certification provides a comprehensive understanding of cloud concepts and AWS services, making it ideal for professionals looking to gain or solidify their cloud knowledge.\nIndustry Recognition: AWS certifications are highly recognized in the industry, enhancing your credibility and showcasing your cloud expertise to employers.\nVersatility: Learning about AWS services can benefit various roles, from developers and data scientists to administrators and managers, as cloud computing is integral to many tech operations.\nCareer Advancement: It can open up new career opportunities, particularly in companies that use or are migrating to the cloud. The certification can also potentially lead to better job positions and higher salaries.\n\n\n\n1.0.2 What is AWS?\nAWS (Amazon Web Services) is the world’s most comprehensive and broadly adopted cloud platform. It offers over 200 fully featured services from data centers globally. AWS provides infrastructure and application services that enable running virtually everything in the cloud, from hosting applications and websites to big data projects and mobile app development.\n\n\n1.0.3 What is the Cloud Practitioner Certification?\nThe AWS Certified Cloud Practitioner is an entry-level certification designed to validate an individual’s overall understanding of the AWS Cloud. It assesses the following areas:\n\nThe basic global infrastructure of the cloud\nKey services on the AWS platform and their common use cases\nBasic security and compliance aspects of the AWS platform and the shared security model\nBilling, account management, and pricing models\nIdentifying sources of documentation or technical assistance (such as whitepapers or support tickets)\n\nThis certification is geared towards individuals who have basic knowledge of the AWS platform, including anyone in managerial, technical, sales, purchasing, or financial roles who work with the AWS Cloud. It’s designed to provide a detailed overview and it’s often recommended as the first certification one should take when starting their AWS certification journey.\nThis foundational knowledge sets the stage for more specialized certifications, such as AWS Solutions Architect, Developer, or SysOps Administrator, making it a valuable starting point for anyone looking to deepen their understanding of cloud technologies.",
+    "text": "1.1 Course Aims\nThrough this course, participants will:",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Let’s start with why?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
     ]
   },
   {
@@ -27,6 +27,439 @@
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#course-aims",
+    "href": "intro.html#course-aims",
+    "title": "1  Preface",
+    "section": "",
+    "text": "Grasp a foundational understanding of AWS and its operational definitions.\nCompare and contrast various cloud deployment models such as on-premises, hybrid-cloud, and exclusively cloud-based solutions.\nLearn about the AWS global infrastructure and the pivotal role of Availability Zones.\nUnderstand the six key advantages of leveraging the AWS Cloud.\nGain knowledge about primary AWS services across computing, networking, databases, and storage.\nEvaluate appropriate AWS solutions for diverse use cases.\nExplore the AWS Well-Architected Framework and the shared responsibility model.\nDive into the fundamental aspects of AWS security services and cloud migration strategies.\nDiscuss the financial implications of using AWS in terms of cost management and billing.\nUtilize AWS pricing tools to make informed, cost-effective decisions.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#course-outline",
+    "href": "intro.html#course-outline",
+    "title": "1  Preface",
+    "section": "1.2 Course outline",
+    "text": "1.2 Course outline\n\n1.2.1 Module 1: Introduction to Amazon Web Services\n\nSummarize the benefits of AWS\nDescribe differences between on-demand delivery and cloud deployments\nSummarize the pay-as-you-go pricing model\n\n\n\n1.2.2 Module 2: Compute in the Cloud\n\nDescribe the benefits of Amazon Elastic Compute Cloud (Amazon EC2) at a basic level\nIdentify the different Amazon EC2 instance types\nDifferentiate between the various billing options for Amazon EC2\nDescribe the benefits of Amazon EC2 Auto Scaling\nSummarize the benefits of Elastic Load Balancing\nGive an example of the uses for Elastic Load Balancing\nSummarize the differences between Amazon Simple Notification Service (Amazon SNS) and Amazon Simple Queue Services (Amazon SQS)\nSummarize additional AWS compute options\n\n\n\n1.2.3 Module 3: Global Infrastructure and Reliability\n\nSummarize the benefits of the AWS Global Infrastructure\nDescribe the basic concept of Availability Zones\nDescribe the benefits of Amazon CloudFront and Edge locations\nCompare different methods for provisioning AWS services\n\n\n\n1.2.4 Module 4: Networking\n\nDescribe the basic concepts of networking\nDescribe the difference between public and private networking resources\nExplain a virtual private gateway using a real life scenario\nExplain a virtual private network (VPN) using a real life scenarioDescribe the benefit of AWS Direct Connect\nDescribe the benefit of hybrid deployments\nDescribe the layers of security used in an IT strategy\nDescribe which services are used to interact with the AWS global network\n\n\n\n1.2.5 Module 5: Storage and Databases\n\nSummarize the basic concept of storage and databases\nDescribe benefits of Amazon Elastic Block Store (Amazon EBS)\nDescribe benefits of Amazon Simple Storage Service (Amazon S3)\nDescribe the benefits of Amazon Elastic File System (Amazon EFS)\nSummarize various storage solutions\nDescribe the benefits of Amazon Relational Database Service (Amazon RDS)\nDescribe the benefits of Amazon DynamoDB\nSummarize various database services\n\n\n\n1.2.6 Module 6: Security\n\nExplain the benefits of the shared responsibility model\nDescribe multi-factor authentication (MFA)\nDifferentiate between the AWS Identity and Access Management (IAM) security levels\nDescribe security policies at a basic level\nExplain the benefits of AWS Organizations\nSummarize the benefits of compliance with AWS\nExplain primary AWS security services at a basic level\n\n\n\n1.2.7 Module 7: Monitoring and Analytics\n\nSummarize approaches to monitoring your AWS environment\nDescribe the benefits of Amazon CloudWatch\nDescribe the benefits of AWS CloudTrail\nDescribe the benefits of AWS Trusted Advisor\n\n\n\n1.2.8 Module 8: Pricing and Support\n\nUnderstand AWS pricing and support models\nDescribe the AWS Free Tier\nDescribe key benefits of AWS Organizations and consolidated billing\nExplain the benefits of AWS Budgets\nExplain the benefits of AWS Cost Explorer\nExplain the primary benefits of the AWS Pricing Calculator\nDistinguish between the various AWS Support Plans\nDescribe the benefits of AWS Marketplace\n\n\n\n1.2.9 Module 9: Migration and Innovation\n\nUnderstand migration and innovation in the AWS Cloud\nSummarize the AWS Cloud Adoption Framework (AWS CAF)\nSummarize six key factors of a cloud migration strategy\nDescribe the benefits of various AWS data migration solutions, such as AWS Snowcone, AWS Snowball, and AWS Snowmobile\nSummarize the broad scope of innovative solutions that AWS offers\n\n\n\n1.2.10 Module 10: The Cloud Journey\n\nSummarize the six pillars of the AWS Well-Architected Framework\nExplain the six benefits of cloud computing\n\n\n\n1.2.11 Module 11: AWS Certified Cloud Practitioner Basics\n\nDetermine resources for preparing for the AWS Certified Cloud Practitioner examination\nDescribe benefits of becoming AWS Certified\n\nEach module is followed by quizzes to test your knowledge and reinforce learning. Ensure you engage with these quizzes and review the material as needed to solidify your understanding.\nThis course serves as a pathway to not only prepare you for the AWS Certified Cloud Practitioner exam but also to instil a robust foundation in AWS Cloud, empowering you to navigate and utilize the cloud more effectively in your professional journey.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html",
+    "href": "cloud-computing.html",
+    "title": "2  Cloud Computing",
+    "section": "",
+    "text": "2.1 What is cloud computing?\nCloud computing is like a vast library where you can borrow exactly the books (compute power, storage, and applications) you need, whenever you need them, without having to buy or store them yourself. It’s the on-demand delivery of IT resources over the internet with pay-as-you-go pricing. This means you can access as many resources as you need, almost instantly, and only pay for what you use. Amazon Web Services (AWS) maintains the hardware required for these services, allowing you to manage and use resources through a web application as if they were your own.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#it-deployment-models",
+    "href": "cloud-computing.html#it-deployment-models",
+    "title": "2  Cloud Computing",
+    "section": "2.2 IT Deployment Models",
+    "text": "2.2 IT Deployment Models\nDeployment models in cloud computing can be likened to different types of housing arrangements:\n\n2.2.1 On-premises:\nLike owning a gated property—exclusive to one organisation, offering complete control and security for sensitive applications, meeting specific business needs.\nDeploying resources on-premises, using virtualization and providing resource management tools does not provide many of the benefits of cloud computing but is sometimes sought for its ability to provide dedicated resources. In most cases, this deployment model is the same as legacy IT infrastructure, while using application management and virtualization technologies to try and increase resource utilisation.\n\n\n2.2.2 Hybrid Cloud:\nIt combines elements of both, like owning a home but also renting additional space when needed. This setup allows keeping some servers on-premises while extending other capabilities to the cloud, providing flexibility and control over sensitive assets.\nA please visit hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are not located in the cloud. The most common method of hybrid deployment is between the cloud and existing on-premises infrastructure to extend, and grow, an organisation’s infrastructure into the cloud while connecting cloud resources to internal systems.\n\n\n2.2.3 Cloud:\nSimilar to living in a high-rise apartment, resources are owned and operated by a third-party provider and shared across multiple customers over the internet, offering cost effectiveness and easy scalability.\nA cloud-based application is fully deployed in the cloud and all parts of the application run in the cloud. Applications in the cloud have either been created in the cloud or have been migrated from an existing infrastructure to take advantage of the benefits of cloud computing. Cloud-based applications can be built on low-level infrastructure pieces or can use higher level services that provide abstraction from the management, architecting, and scaling requirements of core infrastructure.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#benefits-of-aws-cloud",
+    "href": "cloud-computing.html#benefits-of-aws-cloud",
+    "title": "2  Cloud Computing",
+    "section": "2.3 Benefits of AWS Cloud",
+    "text": "2.3 Benefits of AWS Cloud\n\nRapid Global Deployment: AWS boasts a global network of regions, making it possible to deploy applications and services within minutes. This global reach ensures that your resources are closer to your users, reducing latency and enhancing the user experience.\nAgility for Speedy Innovation: With AWS, you can innovate more quickly and efficiently, allowing your organization to deliver new features and solutions to customers at an accelerated pace. This agility is essential in a rapidly evolving digital landscape.\nCost Savings Through Economies of Scale: AWS leverages economies of scale, spreading infrastructure costs across a vast user base. As a result, you benefit from cost-effective solutions without the need for large upfront capital investments.\nNo Upfront Costs for Data Center Maintenance: AWS removes the burden of managing physical data centers. You can focus on your applications and services without worrying about IT infrastructure, as AWS takes care of the maintenance.\nOperational Expenses Over Capital Expenses: AWS follows an operational expenditure (OpEx) model, enabling you to pay for resources and services as you use them. This eliminates the need for substantial upfront capital expenditures (CapEx), making financial planning more predictable.\nElastic Capacity: AWS offers flexible, pay-as-you-go capacity. There’s no need to guess your capacity requirements in advance. You can scale resources up or down as needed, ensuring efficient resource utilization.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#meeting-non-functional-requirements-in-the-public-cloud",
+    "href": "cloud-computing.html#meeting-non-functional-requirements-in-the-public-cloud",
+    "title": "2  Cloud Computing",
+    "section": "2.4 Meeting Non-Functional Requirements in the Public Cloud",
+    "text": "2.4 Meeting Non-Functional Requirements in the Public Cloud\nThe AWS cloud platform addresses various non-functional requirements effectively, including:\n\nHigh Availability: AWS provides redundancy and failover capabilities, ensuring longer uptimes and enhanced reliability for your systems.\nElasticity: The ability to dynamically scale resources based on demand optimizes resource utilization and minimizes wastage.\nAgility: AWS services empower customers to innovate rapidly, reducing time-to-market for new features and applications.\nDurability: AWS offers data services with long-term data protection and storage, safeguarding your critical data.\nLow Latency: Low latency, or minimal delay between user requests and responses, is a key advantage, ensuring a smooth user experience.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#the-five-characteristics-of-cloud-computing",
+    "href": "cloud-computing.html#the-five-characteristics-of-cloud-computing",
+    "title": "2  Cloud Computing",
+    "section": "2.5 The Five Characteristics of Cloud Computing",
+    "text": "2.5 The Five Characteristics of Cloud Computing\nCloud computing is defined by five key characteristics:\n\nOn-demand self-service: Users can independently provision resources as needed without interaction from the service provider—think self-service in a cafeteria.\nBroad network access: Resources are available over the network and can be accessed through various devices—similar to streaming television accessible from any device with internet access.\nResource pooling and multi-tenancy: Multiple customers share the same infrastructure and applications, securely and privately, like a shared office space that’s used by different companies.\nRapid elasticity and scalability: Resources can be quickly scaled up or down based on demand, much like a hotel that can quickly accommodate more guests when needed.\nMeasured service: Usage is tracked and billed accurately, similar to a pay-as-you-go mobile phone plan.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#six-advantages-of-cloud-computing",
+    "href": "cloud-computing.html#six-advantages-of-cloud-computing",
+    "title": "2  Cloud Computing",
+    "section": "2.6 Six Advantages of Cloud Computing",
+    "text": "2.6 Six Advantages of Cloud Computing\nCloud computing transforms traditional IT infrastructure through:\n\nTrading capital expense for operational expense: Like renting equipment for a construction project instead of buying it.\nReduced total cost of ownership and operational expenses: Benefit from massive economies of scale—costs decrease as usage scales up due to the provider’s efficiency.\nElasticity: Adjust resources quickly to handle varying loads, much like a utility service that can vary its output based on customer demand.\nIncreased speed and agility: Deploy and improve applications faster, akin to upgrading software on your phone instantly.\nGo global in minutes: Expand your applications worldwide rapidly, similar to how digital content can be streamed globally.\nStopping spending on running data centers: Focus resources on core business rather than infrastructure, akin to outsourcing housekeeping services in a hotel.\n\n\n2.6.1 Problems Solved by the Cloud\nCloud computing addresses various traditional IT challenges, including:\n\nFlexibility: Easily change resource types as needed.\nCost-effectiveness: Only pay for the resources you use, avoiding upfront hardware investments.\nScalability and Elasticity: Adapt to larger loads or scale back as required.\nHigh availability and fault tolerance: Maintain operations across distributed data centres.\nAgility: Rapidly develop, test, and launch software applications, speeding up innovation.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#types-of-cloud-computing",
+    "href": "cloud-computing.html#types-of-cloud-computing",
+    "title": "2  Cloud Computing",
+    "section": "2.7 Types of Cloud Computing",
+    "text": "2.7 Types of Cloud Computing\nThe three main types of cloud services are:\n1. Infrastructure as a Service (IaaS):\nProvides the basic building blocks for cloud IT, offering the highest level of flexibility—similar to leasing land on which to build whatever structure you need.\nInfrastructure as a Service (IaaS) contains the basic building blocks for cloud IT and typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. Infrastructure as a Service vendors can help you with the highest level of flexibility and management control over your IT resources and are most similar to existing IT resources that many IT departments and developers are familiar with today.\n2. Platform as a Service (PaaS):\nEliminates the need to manage underlying infrastructure, focusing instead on the deployment and management of applications—like leasing a pre-built office space that you can customise.\nPlatforms as a service (PaaS) vendors remove the need for organisations to manage the underlying infrastructure (usually hardware and operating systems) and this integration allows you to focus on the deployment and management of your applications. This helps you be more efficient, as you don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.\n3. Software as a Service (SaaS):\nDelivers a complete product run and managed by the service provider—akin to subscribing to a streaming service.\nSoftware as a Service (SaaS) vendors provide you with software applications that is run and managed by the vendor. In most cases, people referring to Software as a Service are referring to third-party end-user applications. With a SaaS offering you do not have to think about how the service is maintained or how the underlying infrastructure is managed; you only need to think about how you will use that particular piece of software. A common example of a SaaS application is web-based email where you can send and receive email without having to manage feature additions to the email product or maintaining the servers and operating systems that the email program is running on",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#pricing-of-the-cloud-quick-overview",
+    "href": "cloud-computing.html#pricing-of-the-cloud-quick-overview",
+    "title": "2  Cloud Computing",
+    "section": "2.8 Pricing of the Cloud – Quick Overview",
+    "text": "2.8 Pricing of the Cloud – Quick Overview\nAWS employs a pay-as-you-go pricing model, breaking down costs into three primary categories:\n\nCompute: Pay for the compute time you consume.\nStorage: Pay for the storage space your data occupies.\nData Transfer: Pay for data transferred out of the cloud, while incoming data is free.\n\n\n2.8.1 AWS Cloud Use Cases\nAWS enables the development of sophisticated, scalable applications suitable for a diverse range of industries. Common use cases include enterprise IT, backup and storage, big data analytics, website hosting, mobile and social apps, and gaming. Each of these demonstrates the flexibility and capacity of AWS to support different technological and business requirements.\nThis structured overview not only helps you understand the fundamental aspects of cloud computing but also prepares you effectively for your AWS Cloud Practitioner exam by highlighting essential concepts and practical applications.\n\n\n2.8.2 Quiz on the topic- What is Cloud Computing?\nMCQ - What is the cloud",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#aws-regions-availability-zones-and-more",
+    "href": "cloud-computing.html#aws-regions-availability-zones-and-more",
+    "title": "2  Cloud Computing",
+    "section": "3.1 AWS Regions, Availability Zones, and More",
+    "text": "3.1 AWS Regions, Availability Zones, and More\nAmazon EC2 operates in multiple global locations, each with distinct components:\n\nRegion: A region represents a separate geographic area, ensuring redundancy and disaster recovery. Regions are fully independent, with varying services and resources.\nAvailability Zone (AZ): An AZ comprises one or more data centers with redundant power, networking, and connectivity. These zones provide high availability and fault tolerance.\nData Center: Data centers are the building blocks of AZs and come with robust physical and environmental protections.\nLocal Zones: Local Zones extend an AWS Region to geographic proximity, serving users with low-latency communication. They are ideal for latency-sensitive applications.\nWavelength Zones: Wavelength Zones are isolated zones within a carrier location, providing low-latency access for specific applications.\nGlobal Edge Network: Amazon CloudFront enhances performance and reliability with an extensive network of edge locations, ensuring fast content delivery.\n\nFor more information, visit the respective links provided for each component.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#leveraging-the-aws-well-architected-framework",
+    "href": "cloud-computing.html#leveraging-the-aws-well-architected-framework",
+    "title": "2  Cloud Computing",
+    "section": "3.2 Leveraging the AWS Well-Architected Framework",
+    "text": "3.2 Leveraging the AWS Well-Architected Framework\nThe AWS Well-Architected Framework offers guidance for building robust, efficient, and secure cloud infrastructures. Here are the key pillars of the framework:\n\nOperational Excellence: Plan for failure, deploy smaller reversible changes, script infrastructure as code, and continuously learn from failures. Utilize tools like AWS CodeCommit for versioning.\nSecurity: Automate security tasks, encrypt data in transit and at rest, follow the principle of least privilege, track and audit actions, and ensure security across all layers. Utilize AWS CloudTrail for comprehensive logging.\nReliability: Automatically recover from failures, scale horizontally for resilience, avoid guessing capacity needs, automate change management, and test recovery procedures. Consider multi-AZ deployments for high availability.\nPerformance Efficiency: Opt for serverless architectures, explore multi-region deployments, delegate tasks to cloud vendors, and experiment with virtual resources. AWS Lambda is an excellent choice for serverless workloads.\nCost Optimization: Implement consumption-based pricing, adopt Cloud Financial Management, measure overall efficiency, and pay only for the resources your applications require. Utilize features like S3 Intelligent Tiering for cost-effective data management.\nSustainability: Understand your environmental impact, set sustainability goals, maximize resource utilisation, leverage managed services, and reduce downstream impact. EC2 Auto-scaling can help optimise resource usage.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "cloud-computing.html#how-to-choose-an-aws-region",
+    "href": "cloud-computing.html#how-to-choose-an-aws-region",
+    "title": "2  Cloud Computing",
+    "section": "3.3 How to Choose an AWS Region?",
+    "text": "3.3 How to Choose an AWS Region?\nSelecting an AWS region should be strategic, akin to choosing a location for a new branch of a business. Here are the key factors:\n\nCompliance and Legal Requirements: Ensure data residency and sovereignty needs are met. This is like ensuring your business operations comply with local laws.\nProximity to Customers: Choose a region closest to your users to reduce the time it takes for data to travel, akin to opening a shop closer to your buyers to reduce delivery time.\nAvailable Services and Features: Not all regions have the same AWS services; newer services might be available in some regions first.\nPricing: Costs can vary from one region to another, just as the cost of living can vary from one country to another.\n\n\n3.3.1 AWS Availability Zones\nWithin each region, there are multiple Availability Zones (AZs). You can think of each AZ as a state or province within the “country” (region). Each AZ is made up of one or more data centers equipped with independent power, cooling, and networking to ensure fault tolerance and stability. They are interconnected with high-speed networking, enabling businesses to operate production applications and databases that are more highly available, fault tolerant, and scalable than would be possible from a single data center.\n\n\n3.3.2 AWS Points of Presence (Edge Locations)\nAWS Points of Presence or Edge Locations are like local post offices in towns. These are sites deployed in major cities and areas around the world to cache content closer to users, ensuring they receive data as quickly as possible. This system is part of AWS CloudFront, which helps in delivering content with lower latency.\n\n\n3.3.3 Tour of the AWS Console\nThe AWS Console is like the dashboard of a car, providing access to all the controls you need to manage your AWS services. It includes:\n\nGlobal Services: Services that are not specific to any region, like IAM (Identity and Access Management), Route 53 (a DNS web service), and CloudFront (a content delivery network).\nRegion-scoped Services: These are services that you can deploy in specific regions, like EC2 (Elastic Compute Cloud) for virtual servers, Lambda for serverless functions, or Elastic Beanstalk for deploying applications.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>**Cloud Computing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-1-notes/Introduction.html",
+    "href": "module-1-notes/Introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.0.1 What is a Server?\nA server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.\n\n\n\n1.0.2 The Client-Server Model\nImagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.\n\nFor example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.\n\n\n\n1.0.3 Lesson Recap\nToday, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "module-1-notes/Cloud-Computing.html",
+    "href": "module-1-notes/Cloud-Computing.html",
+    "title": "2  Cloud Computing",
+    "section": "",
+    "text": "2.1 Deployment models for cloud computing\nWhen choosing a cloud strategy, a company needs to evaluate several aspects including the necessary components for cloud applications, the preferred tools for managing resources, and the requirements of any existing legacy IT infrastructure.\nThere are three main models for deploying cloud computing: cloud-based, on-premises, and hybrid.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cloud Computing</span>"
+    ]
+  },
+  {
+    "objectID": "module-1-notes/Cloud-Computing.html#cloud-based",
+    "href": "module-1-notes/Cloud-Computing.html#cloud-based",
+    "title": "2  Cloud Computing",
+    "section": "2.2 Cloud-based",
+    "text": "2.2 Cloud-based\n\nOperate all application components within the cloud environment.\nTransfert existing applications to the cloud setting.\nDevelop and construct new applications directly in the cloud.\n\nIn a cloud-based deployment model, it’s feasible to transition existing applications into the cloud, or alternatively, to design and initiate new applications within the cloud framework. These applications can be developed atop low-level infrastructure, which necessitates management by your IT team. Alternatively, you could utilise more advanced services that diminish the need for extensive management, architecture, and scaling of the underlying infrastructure.\nIn a cloud-based deployment model, it is possible to migrate current applications to the cloud or to develop and launch new applications within the cloud framework. These apps can be built on low-level infrastructure, requiring management by your IT personnel. Alternatively, you might use more advanced services that require less comprehensive management, architecture, and scaling of the underlying infrastructure.\nFor instance, a business might develop an application that includes virtual servers, databases, and networking components, all operating entirely within the cloud.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cloud Computing</span>"
+    ]
+  },
+  {
+    "objectID": "module-1-notes/Cloud-Computing.html#on-premises",
+    "href": "module-1-notes/Cloud-Computing.html#on-premises",
+    "title": "2  Cloud Computing",
+    "section": "2.3 On-premises",
+    "text": "2.3 On-premises\nDeploy resources using virtualisation and resource management tools. Boost resource use by employing application management and virtualisation technologies. On-premises deployment, also known as private cloud deployment, involves setting up resources on-site with these tools.\nFor example, you might have applications running on technology housed entirely in your on-premises data centre. While this setup is similar to traditional IT setups, using application management and virtualisation technologies helps make better use of resources.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cloud Computing</span>"
+    ]
+  },
+  {
+    "objectID": "module-1-notes/Cloud-Computing.html#hybrid",
+    "href": "module-1-notes/Cloud-Computing.html#hybrid",
+    "title": "2  Cloud Computing",
+    "section": "2.4 Hybrid",
+    "text": "2.4 Hybrid\nn a hybrid deployment, you connect cloud resources to your on-premises setup. This method is useful in several scenarios. For instance, you might have older applications that are best kept on-site, or there may be regulations that require your company to store certain data on-site.\nConsider a company that wants to use cloud services for automating batch data processing and analytics, but has several older applications that are more suitable for on-premises use and won’t be moved to the cloud. With a hybrid deployment, this company could maintain these legacy applications on-site while still taking advantage of cloud-based data and analytics services.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cloud Computing</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#course-aims",
+    "href": "index.html#course-aims",
+    "title": "AWS Cloud Practitioner Notes",
+    "section": "Course Aims",
+    "text": "Course Aims\nThrough this course, participants will:\n\nGrasp a foundational understanding of AWS and its operational definitions.\nCompare and contrast various cloud deployment models such as on-premises, hybrid-cloud, and exclusively cloud-based solutions.\nLearn about the AWS global infrastructure and the pivotal role of Availability Zones.\nUnderstand the six key advantages of leveraging the AWS Cloud.\nGain knowledge about primary AWS services across computing, networking, databases, and storage.\nEvaluate appropriate AWS solutions for diverse use cases.\nExplore the AWS Well-Architected Framework and the shared responsibility model.\nDive into the fundamental aspects of AWS security services and cloud migration strategies.\nDiscuss the financial implications of using AWS in terms of cost management and billing.\nUtilize AWS pricing tools to make informed, cost-effective decisions.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#course-outline",
+    "href": "index.html#course-outline",
+    "title": "AWS Cloud Practitioner Notes",
+    "section": "Course outline",
+    "text": "Course outline\n\nModule 1: Introduction to Amazon Web Services\n\nSummarize the benefits of AWS\nDescribe differences between on-demand delivery and cloud deployments\nSummarize the pay-as-you-go pricing model\n\n\n\nModule 2: Compute in the Cloud\n\nDescribe the benefits of Amazon Elastic Compute Cloud (Amazon EC2) at a basic level\nIdentify the different Amazon EC2 instance types\nDifferentiate between the various billing options for Amazon EC2\nDescribe the benefits of Amazon EC2 Auto Scaling\nSummarize the benefits of Elastic Load Balancing\nGive an example of the uses for Elastic Load Balancing\nSummarize the differences between Amazon Simple Notification Service (Amazon SNS) and Amazon Simple Queue Services (Amazon SQS)\nSummarize additional AWS compute options\n\n\n\nModule 3: Global Infrastructure and Reliability\n\nSummarize the benefits of the AWS Global Infrastructure\nDescribe the basic concept of Availability Zones\nDescribe the benefits of Amazon CloudFront and Edge locations\nCompare different methods for provisioning AWS services\n\n\n\nModule 4: Networking\n\nDescribe the basic concepts of networking\nDescribe the difference between public and private networking resources\nExplain a virtual private gateway using a real life scenario\nExplain a virtual private network (VPN) using a real life scenarioDescribe the benefit of AWS Direct Connect\nDescribe the benefit of hybrid deployments\nDescribe the layers of security used in an IT strategy\nDescribe which services are used to interact with the AWS global network\n\n\n\nModule 5: Storage and Databases\n\nSummarize the basic concept of storage and databases\nDescribe benefits of Amazon Elastic Block Store (Amazon EBS)\nDescribe benefits of Amazon Simple Storage Service (Amazon S3)\nDescribe the benefits of Amazon Elastic File System (Amazon EFS)\nSummarize various storage solutions\nDescribe the benefits of Amazon Relational Database Service (Amazon RDS)\nDescribe the benefits of Amazon DynamoDB\nSummarize various database services\n\n\n\nModule 6: Security\n\nExplain the benefits of the shared responsibility model\nDescribe multi-factor authentication (MFA)\nDifferentiate between the AWS Identity and Access Management (IAM) security levels\nDescribe security policies at a basic level\nExplain the benefits of AWS Organizations\nSummarize the benefits of compliance with AWS\nExplain primary AWS security services at a basic level\n\n\n\nModule 7: Monitoring and Analytics\n\nSummarize approaches to monitoring your AWS environment\nDescribe the benefits of Amazon CloudWatch\nDescribe the benefits of AWS CloudTrail\nDescribe the benefits of AWS Trusted Advisor\n\n\n\nModule 8: Pricing and Support\n\nUnderstand AWS pricing and support models\nDescribe the AWS Free Tier\nDescribe key benefits of AWS Organizations and consolidated billing\nExplain the benefits of AWS Budgets\nExplain the benefits of AWS Cost Explorer\nExplain the primary benefits of the AWS Pricing Calculator\nDistinguish between the various AWS Support Plans\nDescribe the benefits of AWS Marketplace\n\n\n\nModule 9: Migration and Innovation\n\nUnderstand migration and innovation in the AWS Cloud\nSummarize the AWS Cloud Adoption Framework (AWS CAF)\nSummarize six key factors of a cloud migration strategy\nDescribe the benefits of various AWS data migration solutions, such as AWS Snowcone, AWS Snowball, and AWS Snowmobile\nSummarize the broad scope of innovative solutions that AWS offers\n\n\n\nModule 10: The Cloud Journey\n\nSummarize the six pillars of the AWS Well-Architected Framework\nExplain the six benefits of cloud computing\n\n\n\nModule 11: AWS Certified Cloud Practitioner Basics\n\nDetermine resources for preparing for the AWS Certified Cloud Practitioner examination\nDescribe benefits of becoming AWS Certified\n\nEach module is followed by quizzes to test your knowledge and reinforce learning. Ensure you engage with these quizzes and review the material as needed to solidify your understanding.\nThis course serves as a pathway to not only prepare you for the AWS Certified Cloud Practitioner exam but also to instil a robust foundation in AWS Cloud, empowering you to navigate and utilize the cloud more effectively in your professional journey.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-intro.html",
+    "href": "module-2-notes/Amazon-EC2-intro.html",
+    "title": "3  Amazon-EC2-intro",
+    "section": "",
+    "text": "3.1 What is Amazon EC2?\nAmazon EC2 (Elastic Compute Cloud) provides scalable computing capacity in the AWS cloud. This service allows you to launch virtual servers, known as instances, and manage the computing environment’s scale and administration. With EC2, you can choose from a wide range of instance types to match your specific workload needs, from a small game server to a large, resource-intensive application. The service offers flexibility in configuring hardware, security, and networking settings. Additionally, it integrates seamlessly with other AWS services, enhancing your ability to develop, monitor, and deploy applications more efficiently.\nWhether it’s ensuring that your mobile games perform flawlessly during peak usage or scaling down to save costs when demand is lower, Amazon EC2 provides the tools and flexibility to adjust your computing resources in real-time, aligning perfectly with your business needs.\nKey Features of Amazon EC2:\nTypical Uses for Amazon EC2:\nAmazon EC2 provides a flexible, scalable, and efficient way to run your applications in the cloud with minimal investment in physical hardware and allows for a pay-as-you-go pricing model, which can significantly reduce your IT costs and overhead.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Amazon-EC2-intro</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-intro.html#what-is-amazon-ec2",
+    "href": "module-2-notes/Amazon-EC2-intro.html#what-is-amazon-ec2",
+    "title": "3  Amazon-EC2-intro",
+    "section": "",
+    "text": "Flexibility: You can choose from a wide variety of instance types, configurations, and sizes, which allows you to tailor the hardware to your specific application needs. This includes configurations that optimize for memory, CPU, storage, and networking capacity.\nScalability: EC2 provides the ability to scale up or down quickly to handle changes in requirements or spikes in popularity, ensuring you only pay for what you use.\nControl: You have complete control over your virtual servers, including the choice of operating system, networking details, and security settings. This makes it possible to run any software you own, just as you would on your own physical server.\nIntegration: EC2 integrates well with other AWS services, facilitating comprehensive cloud solutions that can include storage (Amazon S3), databases (Amazon RDS), and more.\nSecurity: Amazon EC2 provides numerous security tools and features, such as Amazon VPC (Virtual Private Cloud) that allows you to use isolated networks within the cloud, and IAM (Identity and Access Management) to control access to instances securely.\n\n\n\nWeb hosting: Many businesses use EC2 instances to host websites, ensuring they can easily handle unexpected traffic spikes.\nApplication hosting: From simple applications to sophisticated enterprise applications, you can run them all on EC2.\nBatch processing: You can quickly scale up EC2 instances to complete batch processing jobs that require processing large volumes of data quickly.\nDevelopment and test environments: Developers use EC2 to quickly set up or tear down environments with different configurations to test new versions of applications.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Amazon-EC2-intro</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-intro.html#how-amazon-ec2-works",
+    "href": "module-2-notes/Amazon-EC2-intro.html#how-amazon-ec2-works",
+    "title": "3  Amazon-EC2-intro",
+    "section": "3.2 How Amazon EC2 works",
+    "text": "3.2 How Amazon EC2 works\nAmazon EC2 (Elastic Compute Cloud) is a central part of Amazon Web Services that offers scalable computing on demand, allowing users to run and manage server instances over the cloud. Here’s a simplified breakdown of how you typically interact with Amazon EC2, from launch to connection and usage:\n\n3.2.1 Launch\nTo begin using Amazon EC2, you start by launching a virtual server, known as an instance. Here’s how that works:\n\nChoose an AMI (Amazon Machine Image): This is your first step. An AMI contains the operating system and the configurations required to launch your instance. You can choose from a variety of AMIs that Amazon provides or create your own.\nSelect an Instance Type: Amazon EC2 offers a range of instance types optimized for different purposes. Depending on your needs, you might select an instance with more CPU, memory, storage, or enhanced networking capabilities.\nConfigure Instance: Set up the networking and security for your instance. This includes choosing a network (VPC), subnets, and setting security groups which dictate the ports, protocols, and IPs allowed to interact with your instances.\nAdd Storage: EC2 allows you to attach storage to your instances. You can choose the type and size of storage based on your application needs.\nLaunch Instance: Once everything is set up, you launch the instance. AWS then allocates the resources and starts the instance after which it’s ready to use.\n\n\n\n3.2.2 Connect\nOnce your EC2 instance is running, you can connect to it:\n\nAccessing the Instance:\n\nFor Linux instances, you typically connect via SSH using a key pair that you specify when setting up the instance. This ensures secure access without needing a password.\nFor Windows instances, you can connect using Remote Desktop Protocol (RDP) with a username and password, which you can retrieve using your key pair.\n\n\nThis step is crucial as it’s where you manage the software side of your instance, installing necessary applications and configuring settings according to your project’s requirements.\n\n\n3.2.3 Use\nAfter connecting to your instance, you can use it just like any other computer. Here’s what generally happens in this phase:\n\nRun Applications: You can deploy and run applications, host websites, and manage data. Whatever tasks you would do on a physical server can be done on an EC2 instance.\nMonitor and Manage: AWS provides tools like Amazon CloudWatch to monitor the performance of your instance. You can track metrics such as CPU utilization, and network usage, and set up alarms for specific thresholds.\nScale: One of the significant advantages of EC2 is its scalability. Depending on the demand, you can scale your instances up or down. You can either do this manually or set up auto-scaling to adjust the capacity based on pre-defined rules and schedules.\nSecure: Continuously manage the security of your instances by updating security groups, adding rules, and ensuring your software is up-to-date with the latest security patches.\n\nBy the end of this process, you will have a fully functional virtual server ready to handle your computing tasks in the cloud, providing the flexibility to scale and adapt as your requirements evolve. This capability makes EC2 a powerful tool for businesses needing reliable, scalable, and efficient computing resources.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Amazon-EC2-intro</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html",
+    "href": "module-2-notes/Amazon-EC2-Instance-Types.html",
+    "title": "4  EC2 Instance types",
+    "section": "",
+    "text": "4.1 General Purpose Instances\nGeneral purpose instances, such as T3 and M5, offer a balance of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage. For example, startups can use these instances for hosting websites and small-scale applications, providing a cost-effective solution with flexibility to handle varying levels of traffic.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EC2 Instance types</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html",
+    "href": "module-2-notes/Amazon-EC2-pricing.html",
+    "title": "5  Amazon EC2 pricing",
+    "section": "",
+    "text": "AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model listed in your uploaded content:\n\n5.0.1 On-Demand Instances\nOn-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.\n\n\n5.0.2 Reserved Instances\nReserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.\n\n\n5.0.3 EC2 Instance Savings Plans\nInstance Savings Plans offer a way to save up to 72% on your computing costs, similar to Reserved Instances, but with more flexibility in how instances are utilized across the AWS environment. These plans apply to any EC2 instance family, region, and OS, making them ideal for users with shifting or unpredictable workloads but consistent overall usage.\n\n\n5.0.4 Spot Instances\nSpot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.\n\n\n5.0.5 Dedicated Hosts\nDedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.\nEach pricing model is designed to meet different types of operational and financial needs, allowing businesses to optimize both performance and costs effectively. Depending on your workload requirements and how flexible you can be about when and how your applications run, you can choose the most cost-efficient way to use EC2.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#compute-optimized-instances",
+    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#compute-optimized-instances",
+    "title": "4  EC2 Instance types",
+    "section": "4.2 Compute Optimized Instances",
+    "text": "4.2 Compute Optimized Instances\nInstances like C5 and C6 are ideal for applications that benefit from high-performance processors. They are well-suited for compute-heavy tasks such as batch processing, media transcoding, scientific modelling, or gaming servers. Media companies often use these instances for intensive video encoding tasks that require robust computational power.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EC2 Instance types</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#memory-optimized-instances",
+    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#memory-optimized-instances",
+    "title": "4  EC2 Instance types",
+    "section": "4.3 Memory Optimized Instances",
+    "text": "4.3 Memory Optimized Instances\nMemory optimized instances, including R5 and X1, are designed to process large data sets in memory. They are commonly used in high-performance databases, real-time big data analytics, and large-scale in-memory processing. Financial institutions might use these instances to support real-time data processing within their financial systems or for complex risk management calculations.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EC2 Instance types</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#storage-optimized-instances",
+    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#storage-optimized-instances",
+    "title": "4  EC2 Instance types",
+    "section": "4.4 Storage Optimized Instances",
+    "text": "4.4 Storage Optimized Instances\nStorage optimized instances, such as I3 and D2, are engineered for jobs that need high, sequential read and write access to large data sets on local storage. They are particularly effective for data warehousing applications or distributed file systems. For instance, genomic research organizations leverage these instances for rapid genomic data processing, where fast access to large data sets is crucial.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EC2 Instance types</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#accelerated-computing-instances",
+    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#accelerated-computing-instances",
+    "title": "4  EC2 Instance types",
+    "section": "4.5 Accelerated Computing Instances",
+    "text": "4.5 Accelerated Computing Instances\nAccelerated computing instances, including P3 and F1, use hardware accelerators to efficiently handle computationally intensive tasks. They are optimal for floating-point calculations, graphics processing, and data pattern matching. Automotive companies might use these instances to run complex simulations for vehicle design or for training machine learning models to enhance autonomous driving technologies.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EC2 Instance types</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#micro-instances",
+    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#micro-instances",
+    "title": "4  EC2 Instance types",
+    "section": "4.6 Micro Instances",
+    "text": "4.6 Micro Instances\nMicro instances such as T3a and T4g Micro are an economical option for lower-traffic applications and websites. These instances are often chosen by small businesses and independent developers for hosting personal blogs, small websites, or development environments due to their low cost and adequate resources for handling light workloads.\nEach EC2 instance type is specifically tailored to meet different technical requirements and use cases, enabling organizations to select the most appropriate resources based on their specific application needs and budget constraints. This flexibility allows for optimal performance and cost efficiency across a wide range of applications and industries.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EC2 Instance types</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Scaling-Amazon-EC2.html",
+    "href": "module-2-notes/Scaling-Amazon-EC2.html",
+    "title": "6  Scaling Amazon EC2",
+    "section": "",
+    "text": "Scalability is the process of starting with just the resources you need and designing your architecture to automatically adjust to changing demand by scaling out (adding resources) or in (reducing resources). This ensures you pay only for the resources you actually use, eliminating concerns over insufficient computing capacity to meet customer needs.\nIf you require the scaling process to happen automatically, the AWS service to use is Amazon EC2 Auto Scaling.\nAmazon EC2 Auto Scaling functions much like having a dynamic staffing system in a busy coffee shop. Just as a coffee shop might call in extra baristas on busy mornings to keep the line moving, Amazon EC2 Auto Scaling automatically adds or removes EC2 instances in response to application demands. This ensures that your application remains available without unnecessary delays, akin to a customer facing a long wait due to only one barista being available.\nWithin Amazon EC2 Auto Scaling, there are two main strategies:\n\nDynamic Scaling: Adjusts the number of EC2 instances as demand on your application increases or decreases.\nPredictive Scaling: Uses forecasting to predict demand and schedules the appropriate number of EC2 instances in advance.\n\nFor instance, imagine you are launching an application on Amazon EC2. Initially, you set your Auto Scaling group with a minimum of one EC2 instance, ensuring that there is always at least one instance running. You might also set a desired capacity of two instances, although only one is strictly necessary for operation.\nFurthermore, you can specify a maximum capacity for your Auto Scaling group—say, four instances. This cap allows your application to scale out in response to increased demand but ensures it does not exceed four instances, helping manage costs effectively.\nBy leveraging Amazon EC2 Auto Scaling, you pay only for the EC2 instances you use, precisely when you use them. This approach not only optimizes your expenditure but also ensures your architecture can provide the best possible customer experience by adapting to traffic fluctuations without manual intervention.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>**Scaling Amazon EC2**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Elastic-Load-Balancing.html",
+    "href": "module-2-notes/Elastic-Load-Balancing.html",
+    "title": "7  Directing Traffic with Elastic Load Balancing",
+    "section": "",
+    "text": "Elastic Load Balancing (ELB) is an AWS service designed to automatically distribute incoming application traffic across multiple resources, such as Amazon EC2 instances. It functions as the central point of contact for all incoming web traffic to your Auto Scaling group. As your application scales by adding or removing EC2 instances based on traffic volume, the ELB routes these incoming requests first, then distributes them across multiple instances. This ensures that no single instance bears too much load, maintaining an even distribution that optimises resource use and enhances application performance.\nAlthough Elastic Load Balancing and Amazon EC2 Auto Scaling are distinct services, they are often used together to enhance the performance and availability of applications running on Amazon EC2. They collectively ensure that applications can handle high traffic loads efficiently without compromising on speed or availability.\nExample of Elastic Load Balancing:\nConsider Elastic Load Balancing as the organisational force in a bustling coffee shop. During periods of low demand, only a few registers need to be open to manage the customer flow effectively. This scenario is akin to having a smaller number of EC2 instances during quieter periods. Each register (or instance) has just enough customers (or traffic) to stay efficiently active without being idle.\nAs the day progresses and customer numbers increase, the coffee shop responds by opening more registers. A shop employee, acting much like a load balancer, directs customers to registers, ensuring that the workload is evenly spread across all open registers. This prevents any single register from becoming overwhelmed, much like how ELB prevents any single EC2 instance from becoming overburdened during high-demand periods.\nBy using Elastic Load Balancing, you ensure that your application’s traffic is managed as efficiently as a well-organised coffee shop, scaling resources up or down as needed and directing traffic to where it can be handled most effectively. This system not only improves the overall user experience but also optimises operational efficiency and resource use.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>**Directing Traffic with Elastic Load Balancing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Messaging-and-Queuing.html",
+    "href": "module-2-notes/Messaging-and-Queuing.html",
+    "title": "8  Messaging and Queuing",
+    "section": "",
+    "text": "8.1 Monolithic Applications\nA monolithic application is structured as a single, indivisible unit. This approach is traditional, where all components of the application, such as the user interface, business logic, database interactions, and other functions, are tightly integrated into a single software package. In a monolithic architecture:\nExample: Imagine a web application where the user interface, server-side logic, and database management are all handled by a single platform. If you need to update the database schema, the entire application might need to be tested and redeployed.\nDrawbacks: If one component of a monolithic application fails, it can jeopardise the entire system’s stability and availability because all components are interdependent.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**Messaging and Queuing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Messaging-and-Queuing.html#monolithic-applications",
+    "href": "module-2-notes/Messaging-and-Queuing.html#monolithic-applications",
+    "title": "8  Messaging and Queuing",
+    "section": "",
+    "text": "All components share the same memory space and resources.\nUpdates or changes to any single component often require redeploying the entire application.\nScalability can be challenging, as scaling the application typically means scaling the entire system, even if only one part requires more resources.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**Messaging and Queuing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Messaging-and-Queuing.html#aws-and-microservices",
+    "href": "module-2-notes/Messaging-and-Queuing.html#aws-and-microservices",
+    "title": "8  Messaging and Queuing",
+    "section": "8.3 AWS and Microservices",
+    "text": "8.3 AWS and Microservices\nAWS supports microservices through various managed services that reduce the overhead of handling the infrastructure. Key AWS services that facilitate microservices include:\n\n8.3.1 Amazon Simple Notification Service (SNS)\n\nA managed publish/subscribe service that decouples microservices by allowing them to publish or subscribe to notifications. It ensures that messages are pushed to multiple subscribers and can trigger functions, HTTP endpoints, or email notifications.\nImagine you’re at a party and you have an announcement to make. Instead of going to each person individually and repeating your message, you decide to use a loudspeaker. This way, everyone at the party can hear your message at the same time. This is similar to what a publish/subscribe (pub/sub) messaging service does. It’s like a digital loudspeaker for your applications.\nIn the world of software, we often have smaller, independent applications called microservices. These microservices need to talk to each other, but we don’t want them to do so directly because it can get very complicated very quickly. So, we use a pub/sub messaging service.\nHere’s how it works:\n\nWhen a microservice has a new piece of information to share (like our party announcement), it publishes a message to the messaging service.\nOther microservices that are interested in this information subscribe to these messages. Just like how people at the party would pay attention to the announcement.\nThe messaging service then makes sure that all the subscribers get the message. It’s like ensuring everyone at the party hears the announcement.\n\nThis system allows our microservices to remain decoupled, meaning they can operate independently without knowing specifics about each other, just like how people at the party can mingle independently without needing to know everyone’s details.\nLastly, these messages can trigger different actions, like starting up other functions, sending data to a website (HTTP endpoints), or even sending out email notifications. It’s like if your party announcement was to start a dance-off, head to the buffet, or check your email for a surprise!",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**Messaging and Queuing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Messaging-and-Queuing.html#amazon-simple-queue-service-sqs",
+    "href": "module-2-notes/Messaging-and-Queuing.html#amazon-simple-queue-service-sqs",
+    "title": "8  Messaging and Queuing",
+    "section": "8.4 Amazon Simple Queue Service (SQS)",
+    "text": "8.4 Amazon Simple Queue Service (SQS)\n\nThis is a managed message queuing service used for storing messages in transit between computers. By decoupling components, SQS allows individual components to scale independently, handle spikes, and ensure no message is lost or duplicated.\nLet’s imagine you’re in a busy post office. There are many people trying to send letters and packages, and the post office needs to make sure that everything gets delivered correctly. This is similar to what Amazon Simple Queue Service (SQS) does.\nHere’s how it works:\n\nWhen a computer (or in our analogy, a person) has a message (or a letter) to send, it gives it to SQS (the post office).\nSQS stores the message in a queue, just like how a post office would store letters and packages until they’re ready to be delivered.\nAnother computer can then come and pick up the message from the queue when it’s ready, just like how a mail carrier would pick up letters and packages from the post office to deliver them.\n\nThis system allows the computers (or people in our analogy) to work independently. They don’t need to know anything about each other, just like how you don’t need to know the mail carrier who will deliver your letter.\nSQS also helps handle spikes in traffic. If lots of messages are being sent at once, SQS can store them all and deliver them when it’s able to, just like how a post office can store many letters and packages during a busy holiday season.\nFinally, SQS makes sure that no message is lost or duplicated. It’s like how a post office makes sure that every letter and package is delivered exactly once, and that nothing gets lost in transit.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**Messaging and Queuing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Messaging-and-Queuing.html#microservices",
+    "href": "module-2-notes/Messaging-and-Queuing.html#microservices",
+    "title": "8  Messaging and Queuing",
+    "section": "8.2 Microservices",
+    "text": "8.2 Microservices\nMicroservices architecture breaks down an application into a collection of smaller, interconnected services, each performing a specific business function. These services are:\n\nLoosely coupled: Each service functions independently. Failure in one area does not impact the availability of others.\nHighly maintainable and testable: Services can be deployed, updated, redeployed, and scaled independently.\nOrganized around business capabilities: Each service corresponds to a business goal and can be developed by a team that understands that goal deeply.\n\nExample: In a retail application, microservices might include separate services for user accounts, product catalog management, order processing, and payment handling. Each service interacts with the others through well-defined interfaces, usually REST APIs.\nAdvantages: This architecture enhances the resilience of the application. If one service fails, the others continue to operate, potentially only reducing the functionality temporarily rather than causing a total application failure.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**Messaging and Queuing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Additional-Compute-Services.html",
+    "href": "module-2-notes/Additional-Compute-Services.html",
+    "title": "7  Additional Compute Services",
+    "section": "",
+    "text": "7.1 Serverless computing\n“Serverless” might sound like there are no servers involved, but in reality, your code still runs on servers. The key difference is that you don’t have to worry about setting up or managing these servers. This allows you to shift your focus from server maintenance to innovating new products and features.\nOne of the major advantages of serverless computing is its ability to automatically scale your applications. It adjusts the capacity of your applications by modifying units of consumption, such as throughput and memory, providing you with the flexibility you need.\nThis is quite different from services like Amazon EC2, where you’re given the ability to run virtual servers in the cloud. With EC2, you’re responsible for provisioning instances (virtual servers), uploading your code, and continuously managing these instances while your application is running. In contrast, serverless computing takes care of these tasks for you, freeing up your time and resources.",
+    "crumbs": [
+      "Amazon-EC2-intro",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>**Additional Compute Services**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Additional-Compute-Services.html#aws-lambda",
+    "href": "module-2-notes/Additional-Compute-Services.html#aws-lambda",
+    "title": "7  Additional Compute Services",
+    "section": "7.2 AWS Lambda",
+    "text": "7.2 AWS Lambda\nAWS Lambda is a service provided by AWS that embodies the concept of serverless computing. It allows you to run your code without the need to set up or manage servers.\nThe beauty of AWS Lambda is its pay-as-you-go model. You’re only billed for the compute time your code consumes, not a second more. This means you’re not paying for idle time, and costs are kept to a minimum. Plus, it’s versatile. You can run code for virtually any type of application or backend service, all without any administrative tasks.\nLet’s consider a simple example. Suppose you have a Lambda function set up to automatically resize images uploaded to the AWS Cloud. The function springs into action the moment a new image is uploaded.\nHere’s how AWS Lambda works :\n\nYou upload your code to Lambda.\nYou configure your code to be triggered by an event source. This could be anything from AWS services to mobile applications or HTTP endpoints.\nLambda springs into action and runs your code, but only when triggered.\nYou’re billed solely for the compute time you consume. So, in our image resizing example, you’d only pay for the compute time used when new images are uploaded and the resizing function is triggered.",
+    "crumbs": [
+      "Amazon-EC2-intro",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>**Additional Compute Services**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Additional-Compute-Services.html#containers",
+    "href": "module-2-notes/Additional-Compute-Services.html#containers",
+    "title": "7  Additional Compute Services",
+    "section": "7.3 Containers",
+    "text": "7.3 Containers\n\nContainers are like little boxes where you can pack up your application’s code and all the things it needs to run (these are called dependencies). This is great because it means your application will run the same way no matter where you put it, just like how a toy packed in a box can be played with the same way no matter where you open it.\nAWS allows you to build and run these containerized applications. Containers are great for when you need your application to be secure, reliable, and scalable.\nNow, let’s dive a bit deeper into how containers work:\nScenario 1: One host with multiple containers \nImagine you’re a developer at a company. The environment on your computer is different from the environment on the computers used by the IT operations staff. To make sure that your application’s environment stays the same no matter where it’s deployed, you decide to use a container. This is like packing your lunch in a lunchbox to make sure it stays the same no matter where you eat it. This approach helps reduce time spent debugging applications and diagnosing differences in computing environments.\nScenario 2: Tens of hosts with hundreds of containers \nWhen running containerized applications, it’s important to think about scalability. Imagine you’re not just managing one lunchbox, but tens of lunchboxes with hundreds of lunches inside. Or maybe even hundreds of lunchboxes with thousands of lunches! At this scale, think about how much time it might take for you to check each lunch (monitor memory usage), make sure no lunches are stolen (security), keep track of what’s in each lunchbox (logging), and so on.\nAmazon offers several services for containerized applications, including:\nAmazon Elastic Container Service (Amazon ECS): This is a highly scalable, high-performance container management system that allows you to run and scale containerized applications on AWS. Amazon ECS supports Docker containers, a software platform that lets you build, test, and deploy applications quickly. AWS supports both the open-source Docker Community Edition and the subscription-based Docker Enterprise Edition. With Amazon ECS, you can use API calls to launch and stop Docker-enabled applications.\nAmazon Elastic Kubernetes Service (Amazon EKS): This is a fully managed service that lets you run Kubernetes, an open-source software that allows you to deploy and manage containerized applications at scale, on AWS. A large community of volunteers maintains Kubernetes, and AWS actively collaborates with this community. As new features and functionalities are released for Kubernetes applications, you can easily apply these updates to your applications managed by Amazon EKS.\nAWS Fargate: This is a serverless compute engine for containers that works with both Amazon ECS and Amazon EKS. When using AWS Fargate, you don’t need to provision or manage servers. AWS Fargate takes care of your server infrastructure, allowing you to focus more on innovating and developing your applications. Plus, you only pay for the resources required to run your containers.",
+    "crumbs": [
+      "Amazon-EC2-intro",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>**Additional Compute Services**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Module-2-Amazon-EC2.html",
+    "href": "module-2-notes/Module-2-Amazon-EC2.html",
+    "title": "Module 2: Amazon EC2",
+    "section": "",
+    "text": "Introduction\nImagine you run a small business that develops mobile games. As your games gain popularity, you face increasing pressure to maintain performance during peak usage times, such as when launching a new game or running a global event within the game. Initially, you hosted the games on a server in your office, but as the number of players grew, the server could not handle the load and would often crash during these critical times, leading to frustrated customers and lost revenue.\nThis is where Amazon EC2 comes into play. By using Amazon EC2, you can easily launch virtual servers and scale capacity up or down automatically, depending on the demand from your game players. This ensures that your gaming servers are stable during high traffic periods and cost-efficient during quieter times.",
+    "crumbs": [
+      "Module 2: Amazon EC2"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Module-2-Amazon-EC2.html#what-is-amazon-ec2",
+    "href": "module-2-notes/Module-2-Amazon-EC2.html#what-is-amazon-ec2",
+    "title": "Module 2: Amazon EC2",
+    "section": "What is Amazon EC2?",
+    "text": "What is Amazon EC2?\nAmazon EC2 (Elastic Compute Cloud) provides scalable computing capacity in the AWS cloud. This service allows you to launch virtual servers, known as instances, and manage the computing environment’s scale and administration. With EC2, you can choose from a wide range of instance types to match your specific workload needs, from a small game server to a large, resource-intensive application. The service offers flexibility in configuring hardware, security, and networking settings. Additionally, it integrates seamlessly with other AWS services, enhancing your ability to develop, monitor, and deploy applications more efficiently.\nWhether it’s ensuring that your mobile games perform flawlessly during peak usage or scaling down to save costs when demand is lower, Amazon EC2 provides the tools and flexibility to adjust your computing resources in real-time, aligning perfectly with your business needs.\nKey Features of Amazon EC2:\n\nFlexibility: You can choose from a wide variety of instance types, configurations, and sizes, which allows you to tailor the hardware to your specific application needs. This includes configurations that optimize for memory, CPU, storage, and networking capacity.\nScalability: EC2 provides the ability to scale up or down quickly to handle changes in requirements or spikes in popularity, ensuring you only pay for what you use.\nControl: You have complete control over your virtual servers, including the choice of operating system, networking details, and security settings. This makes it possible to run any software you own, just as you would on your own physical server.\nIntegration: EC2 integrates well with other AWS services, facilitating comprehensive cloud solutions that can include storage (Amazon S3), databases (Amazon RDS), and more.\nSecurity: Amazon EC2 provides numerous security tools and features, such as Amazon VPC (Virtual Private Cloud) that allows you to use isolated networks within the cloud, and IAM (Identity and Access Management) to control access to instances securely.\n\nTypical Uses for Amazon EC2:\n\nWeb hosting: Many businesses use EC2 instances to host websites, ensuring they can easily handle unexpected traffic spikes.\nApplication hosting: From simple applications to sophisticated enterprise applications, you can run them all on EC2.\nBatch processing: You can quickly scale up EC2 instances to complete batch processing jobs that require processing large volumes of data quickly.\nDevelopment and test environments: Developers use EC2 to quickly set up or tear down environments with different configurations to test new versions of applications.\n\nAmazon EC2 provides a flexible, scalable, and efficient way to run your applications in the cloud with minimal investment in physical hardware and allows for a pay-as-you-go pricing model, which can significantly reduce your IT costs and overhead.",
+    "crumbs": [
+      "Module 2: Amazon EC2"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Module-2-Amazon-EC2.html#how-amazon-ec2-works",
+    "href": "module-2-notes/Module-2-Amazon-EC2.html#how-amazon-ec2-works",
+    "title": "Module 2: Amazon EC2",
+    "section": "How Amazon EC2 works",
+    "text": "How Amazon EC2 works\nAmazon EC2 (Elastic Compute Cloud) is a central part of Amazon Web Services that offers scalable computing on demand, allowing users to run and manage server instances over the cloud. Here’s a simplified breakdown of how you typically interact with Amazon EC2, from launch to connection and usage:\n\nLaunch\nTo begin using Amazon EC2, you start by launching a virtual server, known as an instance. Here’s how that works:\n\nChoose an AMI (Amazon Machine Image): This is your first step. An AMI contains the operating system and the configurations required to launch your instance. You can choose from a variety of AMIs that Amazon provides or create your own.\nSelect an Instance Type: Amazon EC2 offers a range of instance types optimized for different purposes. Depending on your needs, you might select an instance with more CPU, memory, storage, or enhanced networking capabilities.\nConfigure Instance: Set up the networking and security for your instance. This includes choosing a network (VPC), subnets, and setting security groups which dictate the ports, protocols, and IPs allowed to interact with your instances.\nAdd Storage: EC2 allows you to attach storage to your instances. You can choose the type and size of storage based on your application needs.\nLaunch Instance: Once everything is set up, you launch the instance. AWS then allocates the resources and starts the instance after which it’s ready to use.\n\n\n\nConnect\nOnce your EC2 instance is running, you can connect to it:\n\nAccessing the Instance:\n\nFor Linux instances, you typically connect via SSH using a key pair that you specify when setting up the instance. This ensures secure access without needing a password.\nFor Windows instances, you can connect using Remote Desktop Protocol (RDP) with a username and password, which you can retrieve using your key pair.\n\n\nThis step is crucial as it’s where you manage the software side of your instance, installing necessary applications and configuring settings according to your project’s requirements.\n\n\nUse\nAfter connecting to your instance, you can use it just like any other computer. Here’s what generally happens in this phase:\n\nRun Applications: You can deploy and run applications, host websites, and manage data. Whatever tasks you would do on a physical server can be done on an EC2 instance.\nMonitor and Manage: AWS provides tools like Amazon CloudWatch to monitor the performance of your instance. You can track metrics such as CPU utilization, and network usage, and set up alarms for specific thresholds.\nScale: One of the significant advantages of EC2 is its scalability. Depending on the demand, you can scale your instances up or down. You can either do this manually or set up auto-scaling to adjust the capacity based on pre-defined rules and schedules.\nSecure: Continuously manage the security of your instances by updating security groups, adding rules, and ensuring your software is up-to-date with the latest security patches.\n\nBy the end of this process, you will have a fully functional virtual server ready to handle your computing tasks in the cloud, providing the flexibility to scale and adapt as your requirements evolve. This capability makes EC2 a powerful tool for businesses needing reliable, scalable, and efficient computing resources.",
+    "crumbs": [
+      "Module 2: Amazon EC2"
     ]
   }
 ]

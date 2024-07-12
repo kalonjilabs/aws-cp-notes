@@ -7,10 +7,19 @@ book:
   date: "7/10/2024"
   chapters:
     - index.qmd
-    - intro.qmd
-    - cloud-computing.qmd
-    - summary.qmd
 
+    - part: module-1-notes/Introduction.qmd
+      chapters:
+        - module-1-notes/Cloud-Computing.qmd
+
+    - part: module-2-notes/Module-2-Amazon-EC2.qmd
+      chapters:
+        - module-2-notes/Amazon-EC2-Instance-Types.qmd
+        - module-2-notes/Amazon-EC2-pricing.qmd
+        - module-2-notes/Scaling-Amazon-EC2.qmd
+        - module-2-notes/Elastic-Load-Balancing.qmd
+        - module-2-notes/Messaging-and-Queuing.qmd
+        - module-2-notes/Additional-Compute-Services.qmd
 format:
   html:
     theme: cosmo

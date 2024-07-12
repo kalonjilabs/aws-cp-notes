@@ -1,0 +1,27 @@
+# EC2 Instance types
+
+## **General Purpose Instances**
+
+General purpose instances, such as T3 and M5, offer a balance of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage. For example, startups can use these instances for hosting websites and small-scale applications, providing a cost-effective solution with flexibility to handle varying levels of traffic.
+
+## **Compute Optimized Instances**
+
+Instances like C5 and C6 are ideal for applications that benefit from high-performance processors. They are well-suited for compute-heavy tasks such as batch processing, media transcoding, scientific modelling, or gaming servers. Media companies often use these instances for intensive video encoding tasks that require robust computational power.
+
+## **Memory Optimized Instances**
+
+Memory optimized instances, including R5 and X1, are designed to process large data sets in memory. They are commonly used in high-performance databases, real-time big data analytics, and large-scale in-memory processing. Financial institutions might use these instances to support real-time data processing within their financial systems or for complex risk management calculations.
+
+## **Storage Optimized Instances**
+
+Storage optimized instances, such as I3 and D2, are engineered for jobs that need high, sequential read and write access to large data sets on local storage. They are particularly effective for data warehousing applications or distributed file systems. For instance, genomic research organizations leverage these instances for rapid genomic data processing, where fast access to large data sets is crucial.
+
+## **Accelerated Computing Instances**
+
+Accelerated computing instances, including P3 and F1, use hardware accelerators to efficiently handle computationally intensive tasks. They are optimal for floating-point calculations, graphics processing, and data pattern matching. Automotive companies might use these instances to run complex simulations for vehicle design or for training machine learning models to enhance autonomous driving technologies.
+
+## **Micro Instances**
+
+Micro instances such as T3a and T4g Micro are an economical option for lower-traffic applications and websites. These instances are often chosen by small businesses and independent developers for hosting personal blogs, small websites, or development environments due to their low cost and adequate resources for handling light workloads.
+
+Each EC2 instance type is specifically tailored to meet different technical requirements and use cases, enabling organizations to select the most appropriate resources based on their specific application needs and budget constraints. This flexibility allows for optimal performance and cost efficiency across a wide range of applications and industries.

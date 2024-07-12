@@ -1,0 +1,13 @@
+# **Directing Traffic with Elastic Load Balancing**
+
+Elastic Load Balancing (ELB) is an AWS service designed to automatically distribute incoming application traffic across multiple resources, such as Amazon EC2 instances. It functions as the central point of contact for all incoming web traffic to your Auto Scaling group. As your application scales by adding or removing EC2 instances based on traffic volume, the ELB routes these incoming requests first, then distributes them across multiple instances. This ensures that no single instance bears too much load, maintaining an even distribution that optimises resource use and enhances application performance.
+
+Although Elastic Load Balancing and Amazon EC2 Auto Scaling are distinct services, they are often used together to enhance the performance and availability of applications running on Amazon EC2. They collectively ensure that applications can handle high traffic loads efficiently without compromising on speed or availability.
+
+**Example of Elastic Load Balancing:**
+
+Consider Elastic Load Balancing as the organisational force in a bustling coffee shop. During periods of low demand, only a few registers need to be open to manage the customer flow effectively. This scenario is akin to having a smaller number of EC2 instances during quieter periods. Each register (or instance) has just enough customers (or traffic) to stay efficiently active without being idle.
+
+As the day progresses and customer numbers increase, the coffee shop responds by opening more registers. A shop employee, acting much like a load balancer, directs customers to registers, ensuring that the workload is evenly spread across all open registers. This prevents any single register from becoming overwhelmed, much like how ELB prevents any single EC2 instance from becoming overburdened during high-demand periods.
+
+By using Elastic Load Balancing, you ensure that your application's traffic is managed as efficiently as a well-organised coffee shop, scaling resources up or down as needed and directing traffic to where it can be handled most effectively. This system not only improves the overall user experience but also optimises operational efficiency and resource use.

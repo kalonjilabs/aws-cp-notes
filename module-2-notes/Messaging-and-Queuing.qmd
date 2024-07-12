@@ -1,0 +1,69 @@
+# **Messaging and Queuing**
+
+## Monolithic Applications
+
+A monolithic application is structured as a single, indivisible unit. This approach is traditional, where all components of the application, such as the user interface, business logic, database interactions, and other functions, are tightly integrated into a single software package. In a monolithic architecture:
+
+- All components share the same memory space and resources.
+- Updates or changes to any single component often require redeploying the entire application.
+- Scalability can be challenging, as scaling the application typically means scaling the entire system, even if only one part requires more resources.
+
+**Example**: Imagine a web application where the user interface, server-side logic, and database management are all handled by a single platform. If you need to update the database schema, the entire application might need to be tested and redeployed.
+
+**Drawbacks**: If one component of a monolithic application fails, it can jeopardise the entire system’s stability and availability because all components are interdependent.
+
+## Microservices
+
+Microservices architecture breaks down an application into a collection of smaller, interconnected services, each performing a specific business function. These services are:
+
+- **Loosely coupled**: Each service functions independently. Failure in one area does not impact the availability of others.
+- **Highly maintainable and testable**: Services can be deployed, updated, redeployed, and scaled independently.
+- **Organized around business capabilities**: Each service corresponds to a business goal and can be developed by a team that understands that goal deeply.
+
+**Example**: In a retail application, microservices might include separate services for user accounts, product catalog management, order processing, and payment handling. Each service interacts with the others through well-defined interfaces, usually REST APIs.
+
+**Advantages**: This architecture enhances the resilience of the application. If one service fails, the others continue to operate, potentially only reducing the functionality temporarily rather than causing a total application failure.
+
+## AWS and Microservices
+
+AWS supports microservices through various managed services that reduce the overhead of handling the infrastructure. Key AWS services that facilitate microservices include:
+
+### **Amazon Simple Notification Service (SNS)**
+
+<img src="pubsubs.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;">
+
+A managed publish/subscribe service that decouples microservices by allowing them to publish or subscribe to notifications. It ensures that messages are pushed to multiple subscribers and can trigger functions, HTTP endpoints, or email notifications.
+
+Imagine you’re at a party and you have an announcement to make. Instead of going to each person individually and repeating your message, you decide to use a loudspeaker. This way, everyone at the party can hear your message at the same time. This is similar to what a **publish/subscribe (pub/sub) messaging service** does. It’s like a digital loudspeaker for your applications.
+
+In the world of software, we often have smaller, independent applications called **microservices**. These microservices need to talk to each other, but we don’t want them to do so directly because it can get very complicated very quickly. So, we use a pub/sub messaging service.
+
+Here’s how it works:
+
+- When a microservice has a new piece of information to share (like our party announcement), it **publishes** a message to the messaging service.
+- Other microservices that are interested in this information **subscribe** to these messages. Just like how people at the party would pay attention to the announcement.
+- The messaging service then makes sure that all the subscribers get the message. It’s like ensuring everyone at the party hears the announcement.
+
+This system allows our microservices to remain **decoupled**, meaning they can operate independently without knowing specifics about each other, just like how people at the party can mingle independently without needing to know everyone’s details.
+
+Lastly, these messages can trigger different actions, like starting up other functions, sending data to a website (HTTP endpoints), or even sending out email notifications. It’s like if your party announcement was to start a dance-off, head to the buffet, or check your email for a surprise!
+
+## **Amazon Simple Queue Service (SQS)**
+
+<img src="amazonSNS.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;">
+
+This is a managed message queuing service  used for storing messages in transit between computers. By decoupling components, SQS allows individual components to scale independently, handle spikes, and ensure no message is lost or duplicated.
+
+Let’s imagine you’re in a busy post office. There are many people trying to send letters and packages, and the post office needs to make sure that everything gets delivered correctly. This is similar to what **Amazon Simple Queue Service (SQS)** does.
+
+Here’s how it works:
+
+- When a computer (or in our analogy, a person) has a message (or a letter) to send, it gives it to SQS (the post office).
+- SQS stores the message in a queue, just like how a post office would store letters and packages until they’re ready to be delivered.
+- Another computer can then come and pick up the message from the queue when it’s ready, just like how a mail carrier would pick up letters and packages from the post office to deliver them.
+
+This system allows the computers (or people in our analogy) to work **independently**. They don’t need to know anything about each other, just like how you don’t need to know the mail carrier who will deliver your letter.
+
+SQS also helps handle **spikes in traffic**. If lots of messages are being sent at once, SQS can store them all and deliver them when it’s able to, just like how a post office can store many letters and packages during a busy holiday season.
+
+Finally, SQS makes sure that no message is **lost or duplicated**. It’s like how a post office makes sure that every letter and package is delivered exactly once, and that nothing gets lost in transit.
