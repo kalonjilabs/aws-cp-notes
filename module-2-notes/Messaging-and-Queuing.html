@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kalonji Tshisekedi">
-<meta name="dcterms.date" content="2024-07-10">
 
-<title>AWS Cloud Practitioner Notes</title>
+<title>6&nbsp; Messaging and Queuing – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,23 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./module-1-notes/Introduction.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../module-2-notes/Additional-Compute-Services.html" rel="next">
+<link href="../module-2-notes/Elastic-Load-Balancing.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Messaging-and-Queuing.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Messaging and Queuing</strong></span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AWS Cloud Practitioner Notes</a> 
+      <a href="../">AWS Cloud Practitioner Notes</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -109,13 +108,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -124,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-1-notes/Cloud-Computing.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-1-notes/Cloud-Computing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span></a>
   </div>
 </li>
@@ -132,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
+            <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Module 2: Amazon EC2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -141,37 +140,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Amazon-EC2-Instance-Types.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Scaling-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Elastic-Load-Balancing.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Elastic-Load-Balancing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Directing Traffic with Elastic Load Balancing</strong></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Messaging-and-Queuing.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Messaging-and-Queuing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Messaging and Queuing</strong></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./module-2-notes/Additional-Compute-Services.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-2-notes/Additional-Compute-Services.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><strong>Additional Compute Services</strong></span></span></a>
   </div>
 </li>
@@ -187,52 +186,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <li><a href="#monolithic-applications" id="toc-monolithic-applications" class="nav-link active" data-scroll-target="#monolithic-applications"><span class="header-section-number">6.1</span> Monolithic Applications</a></li>
+  <li><a href="#microservices" id="toc-microservices" class="nav-link" data-scroll-target="#microservices"><span class="header-section-number">6.2</span> Microservices</a></li>
+  <li><a href="#aws-and-microservices" id="toc-aws-and-microservices" class="nav-link" data-scroll-target="#aws-and-microservices"><span class="header-section-number">6.3</span> AWS and Microservices</a>
   <ul class="collapse">
-  <li><a href="#course-aims" id="toc-course-aims" class="nav-link" data-scroll-target="#course-aims"><strong>Course Aims</strong></a></li>
-  <li><a href="#course-outline" id="toc-course-outline" class="nav-link" data-scroll-target="#course-outline">Course outline</a>
-  <ul class="collapse">
-  <li><a href="#module-1-introduction-to-amazon-web-services" id="toc-module-1-introduction-to-amazon-web-services" class="nav-link" data-scroll-target="#module-1-introduction-to-amazon-web-services">Module 1: Introduction to Amazon Web Services</a></li>
-  <li><a href="#module-2-compute-in-the-cloud" id="toc-module-2-compute-in-the-cloud" class="nav-link" data-scroll-target="#module-2-compute-in-the-cloud">Module 2: Compute in the Cloud</a></li>
-  <li><a href="#module-3-global-infrastructure-and-reliability" id="toc-module-3-global-infrastructure-and-reliability" class="nav-link" data-scroll-target="#module-3-global-infrastructure-and-reliability">Module 3: Global Infrastructure and Reliability</a></li>
-  <li><a href="#module-4-networking" id="toc-module-4-networking" class="nav-link" data-scroll-target="#module-4-networking">Module 4: Networking</a></li>
-  <li><a href="#module-5-storage-and-databases" id="toc-module-5-storage-and-databases" class="nav-link" data-scroll-target="#module-5-storage-and-databases">Module 5: Storage and Databases</a></li>
-  <li><a href="#module-6-security" id="toc-module-6-security" class="nav-link" data-scroll-target="#module-6-security">Module 6: Security</a></li>
-  <li><a href="#module-7-monitoring-and-analytics" id="toc-module-7-monitoring-and-analytics" class="nav-link" data-scroll-target="#module-7-monitoring-and-analytics">Module 7: Monitoring and Analytics</a></li>
-  <li><a href="#module-8-pricing-and-support" id="toc-module-8-pricing-and-support" class="nav-link" data-scroll-target="#module-8-pricing-and-support">Module 8: Pricing and Support</a></li>
-  <li><a href="#module-9-migration-and-innovation" id="toc-module-9-migration-and-innovation" class="nav-link" data-scroll-target="#module-9-migration-and-innovation">Module 9: Migration and Innovation</a></li>
-  <li><a href="#module-10-the-cloud-journey" id="toc-module-10-the-cloud-journey" class="nav-link" data-scroll-target="#module-10-the-cloud-journey">Module 10: The Cloud Journey</a></li>
-  <li><a href="#module-11-aws-certified-cloud-practitioner-basics" id="toc-module-11-aws-certified-cloud-practitioner-basics" class="nav-link" data-scroll-target="#module-11-aws-certified-cloud-practitioner-basics">Module 11: AWS Certified Cloud Practitioner Basics</a></li>
+  <li><a href="#amazon-simple-notification-service-sns" id="toc-amazon-simple-notification-service-sns" class="nav-link" data-scroll-target="#amazon-simple-notification-service-sns"><span class="header-section-number">6.3.1</span> <strong>Amazon Simple Notification Service (SNS)</strong></a></li>
   </ul></li>
-  </ul></li>
+  <li><a href="#amazon-simple-queue-service-sqs" id="toc-amazon-simple-queue-service-sqs" class="nav-link" data-scroll-target="#amazon-simple-queue-service-sqs"><span class="header-section-number">6.4</span> <strong>Amazon Simple Queue Service (SQS)</strong></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Messaging-and-Queuing.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Messaging and Queuing</strong></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">AWS Cloud Practitioner Notes</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Messaging and Queuing</strong></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kalonji Tshisekedi </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 10, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -242,145 +218,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Welcome to your comprehensive online resource for preparing for the AWS Certified Cloud Practitioner exam. This course is meticulously designed for individuals aiming to acquire a fundamental understanding of the Amazon Web Services (AWS) Cloud, transcending specific technical roles. It is an ideal starting point for gaining insights into the essentials of AWS Cloud, including its services, security, architecture, pricing, and support frameworks.</p>
-<section id="course-aims" class="level2">
-<h2 class="anchored" data-anchor-id="course-aims"><strong>Course Aims</strong></h2>
-<p>Through this course, participants will:</p>
+<section id="monolithic-applications" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="monolithic-applications"><span class="header-section-number">6.1</span> Monolithic Applications</h2>
+<p>A monolithic application is structured as a single, indivisible unit. This approach is traditional, where all components of the application, such as the user interface, business logic, database interactions, and other functions, are tightly integrated into a single software package. In a monolithic architecture:</p>
 <ul>
-<li>Grasp a foundational understanding of AWS and its operational definitions.</li>
-<li>Compare and contrast various cloud deployment models such as on-premises, hybrid-cloud, and exclusively cloud-based solutions.</li>
-<li>Learn about the AWS global infrastructure and the pivotal role of Availability Zones.</li>
-<li>Understand the six key advantages of leveraging the AWS Cloud.</li>
-<li>Gain knowledge about primary AWS services across computing, networking, databases, and storage.</li>
-<li>Evaluate appropriate AWS solutions for diverse use cases.</li>
-<li>Explore the AWS Well-Architected Framework and the shared responsibility model.</li>
-<li>Dive into the fundamental aspects of AWS security services and cloud migration strategies.</li>
-<li>Discuss the financial implications of using AWS in terms of cost management and billing.</li>
-<li>Utilize AWS pricing tools to make informed, cost-effective decisions.</li>
+<li>All components share the same memory space and resources.</li>
+<li>Updates or changes to any single component often require redeploying the entire application.</li>
+<li>Scalability can be challenging, as scaling the application typically means scaling the entire system, even if only one part requires more resources.</li>
 </ul>
+<p><strong>Example</strong>: Imagine a web application where the user interface, server-side logic, and database management are all handled by a single platform. If you need to update the database schema, the entire application might need to be tested and redeployed.</p>
+<p><strong>Drawbacks</strong>: If one component of a monolithic application fails, it can jeopardise the entire system’s stability and availability because all components are interdependent.</p>
 </section>
-<section id="course-outline" class="level2">
-<h2 class="anchored" data-anchor-id="course-outline">Course outline</h2>
-<section id="module-1-introduction-to-amazon-web-services" class="level3">
-<h3 class="anchored" data-anchor-id="module-1-introduction-to-amazon-web-services">Module 1: Introduction to Amazon Web Services</h3>
+<section id="microservices" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="microservices"><span class="header-section-number">6.2</span> Microservices</h2>
+<p>Microservices architecture breaks down an application into a collection of smaller, interconnected services, each performing a specific business function. These services are:</p>
 <ul>
-<li>Summarize the benefits of AWS</li>
-<li>Describe differences between on-demand delivery and cloud deployments</li>
-<li>Summarize the pay-as-you-go pricing model</li>
+<li><strong>Loosely coupled</strong>: Each service functions independently. Failure in one area does not impact the availability of others.</li>
+<li><strong>Highly maintainable and testable</strong>: Services can be deployed, updated, redeployed, and scaled independently.</li>
+<li><strong>Organized around business capabilities</strong>: Each service corresponds to a business goal and can be developed by a team that understands that goal deeply.</li>
 </ul>
+<p><strong>Example</strong>: In a retail application, microservices might include separate services for user accounts, product catalog management, order processing, and payment handling. Each service interacts with the others through well-defined interfaces, usually REST APIs.</p>
+<p><strong>Advantages</strong>: This architecture enhances the resilience of the application. If one service fails, the others continue to operate, potentially only reducing the functionality temporarily rather than causing a total application failure.</p>
 </section>
-<section id="module-2-compute-in-the-cloud" class="level3">
-<h3 class="anchored" data-anchor-id="module-2-compute-in-the-cloud">Module 2: Compute in the Cloud</h3>
+<section id="aws-and-microservices" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="aws-and-microservices"><span class="header-section-number">6.3</span> AWS and Microservices</h2>
+<p>AWS supports microservices through various managed services that reduce the overhead of handling the infrastructure. Key AWS services that facilitate microservices include:</p>
+<section id="amazon-simple-notification-service-sns" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="amazon-simple-notification-service-sns"><span class="header-section-number">6.3.1</span> <strong>Amazon Simple Notification Service (SNS)</strong></h3>
+<p><img src="pubsubs.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<p>A managed publish/subscribe service that decouples microservices by allowing them to publish or subscribe to notifications. It ensures that messages are pushed to multiple subscribers and can trigger functions, HTTP endpoints, or email notifications.</p>
+<p>Imagine you’re at a party and you have an announcement to make. Instead of going to each person individually and repeating your message, you decide to use a loudspeaker. This way, everyone at the party can hear your message at the same time. This is similar to what a&nbsp;<strong>publish/subscribe (pub/sub) messaging service</strong>&nbsp;does. It’s like a digital loudspeaker for your applications.</p>
+<p>In the world of software, we often have smaller, independent applications called&nbsp;<strong>microservices</strong>. These microservices need to talk to each other, but we don’t want them to do so directly because it can get very complicated very quickly. So, we use a pub/sub messaging service.</p>
+<p>Here’s how it works:</p>
 <ul>
-<li>Describe the benefits of Amazon Elastic Compute Cloud (Amazon EC2) at a basic level</li>
-<li>Identify the different Amazon EC2 instance types</li>
-<li>Differentiate between the various billing options for Amazon EC2</li>
-<li>Describe the benefits of Amazon EC2 Auto Scaling</li>
-<li>Summarize the benefits of Elastic Load Balancing</li>
-<li>Give an example of the uses for Elastic Load Balancing</li>
-<li>Summarize the differences between Amazon Simple Notification Service (Amazon SNS) and Amazon Simple Queue Services (Amazon SQS)</li>
-<li>Summarize additional AWS compute options</li>
+<li>When a microservice has a new piece of information to share (like our party announcement), it&nbsp;<strong>publishes</strong>&nbsp;a message to the messaging service.</li>
+<li>Other microservices that are interested in this information&nbsp;<strong>subscribe</strong>&nbsp;to these messages. Just like how people at the party would pay attention to the announcement.</li>
+<li>The messaging service then makes sure that all the subscribers get the message. It’s like ensuring everyone at the party hears the announcement.</li>
 </ul>
+<p>This system allows our microservices to remain&nbsp;<strong>decoupled</strong>, meaning they can operate independently without knowing specifics about each other, just like how people at the party can mingle independently without needing to know everyone’s details.</p>
+<p>Lastly, these messages can trigger different actions, like starting up other functions, sending data to a website (HTTP endpoints), or even sending out email notifications. It’s like if your party announcement was to start a dance-off, head to the buffet, or check your email for a surprise!</p>
 </section>
-<section id="module-3-global-infrastructure-and-reliability" class="level3">
-<h3 class="anchored" data-anchor-id="module-3-global-infrastructure-and-reliability">Module 3: Global Infrastructure and Reliability</h3>
-<ul>
-<li>Summarize the benefits of the AWS Global Infrastructure</li>
-<li>Describe the basic concept of Availability Zones</li>
-<li>Describe the benefits of Amazon CloudFront and Edge locations</li>
-<li>Compare different methods for provisioning AWS services</li>
-</ul>
 </section>
-<section id="module-4-networking" class="level3">
-<h3 class="anchored" data-anchor-id="module-4-networking">Module 4: Networking</h3>
+<section id="amazon-simple-queue-service-sqs" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="amazon-simple-queue-service-sqs"><span class="header-section-number">6.4</span> <strong>Amazon Simple Queue Service (SQS)</strong></h2>
+<p><img src="amazonSNS.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<p>This is a managed message queuing service used for storing messages in transit between computers. By decoupling components, SQS allows individual components to scale independently, handle spikes, and ensure no message is lost or duplicated.</p>
+<p>Let’s imagine you’re in a busy post office. There are many people trying to send letters and packages, and the post office needs to make sure that everything gets delivered correctly. This is similar to what&nbsp;<strong>Amazon Simple Queue Service (SQS)</strong>&nbsp;does.</p>
+<p>Here’s how it works:</p>
 <ul>
-<li>Describe the basic concepts of networking</li>
-<li>Describe the difference between public and private networking resources</li>
-<li>Explain a virtual private gateway using a real life scenario</li>
-<li>Explain a virtual private network (VPN) using a real life scenarioDescribe the benefit of AWS Direct Connect</li>
-<li>Describe the benefit of hybrid deployments</li>
-<li>Describe the layers of security used in an IT strategy</li>
-<li>Describe which services are used to interact with the AWS global network</li>
+<li>When a computer (or in our analogy, a person) has a message (or a letter) to send, it gives it to SQS (the post office).</li>
+<li>SQS stores the message in a queue, just like how a post office would store letters and packages until they’re ready to be delivered.</li>
+<li>Another computer can then come and pick up the message from the queue when it’s ready, just like how a mail carrier would pick up letters and packages from the post office to deliver them.</li>
 </ul>
-</section>
-<section id="module-5-storage-and-databases" class="level3">
-<h3 class="anchored" data-anchor-id="module-5-storage-and-databases">Module 5: Storage and Databases</h3>
-<ul>
-<li>Summarize the basic concept of storage and databases</li>
-<li>Describe benefits of Amazon Elastic Block Store (Amazon EBS)</li>
-<li>Describe benefits of Amazon Simple Storage Service (Amazon S3)</li>
-<li>Describe the benefits of Amazon Elastic File System (Amazon EFS)</li>
-<li>Summarize various storage solutions</li>
-<li>Describe the benefits of Amazon Relational Database Service (Amazon RDS)</li>
-<li>Describe the benefits of Amazon DynamoDB</li>
-<li>Summarize various database services</li>
-</ul>
-</section>
-<section id="module-6-security" class="level3">
-<h3 class="anchored" data-anchor-id="module-6-security">Module 6: Security</h3>
-<ul>
-<li>Explain the benefits of the shared responsibility model</li>
-<li>Describe multi-factor authentication (MFA)</li>
-<li>Differentiate between the AWS Identity and Access Management (IAM) security levels</li>
-<li>Describe security policies at a basic level</li>
-<li>Explain the benefits of AWS Organizations</li>
-<li>Summarize the benefits of compliance with AWS</li>
-<li>Explain primary AWS security services at a basic level</li>
-</ul>
-</section>
-<section id="module-7-monitoring-and-analytics" class="level3">
-<h3 class="anchored" data-anchor-id="module-7-monitoring-and-analytics">Module 7: Monitoring and Analytics</h3>
-<ul>
-<li>Summarize approaches to monitoring your AWS environment</li>
-<li>Describe the benefits of Amazon CloudWatch</li>
-<li>Describe the benefits of AWS CloudTrail</li>
-<li>Describe the benefits of AWS Trusted Advisor</li>
-</ul>
-</section>
-<section id="module-8-pricing-and-support" class="level3">
-<h3 class="anchored" data-anchor-id="module-8-pricing-and-support">Module 8: Pricing and Support</h3>
-<ul>
-<li>Understand AWS pricing and support models</li>
-<li>Describe the AWS Free Tier</li>
-<li>Describe key benefits of AWS Organizations and consolidated billing</li>
-<li>Explain the benefits of AWS Budgets</li>
-<li>Explain the benefits of AWS Cost Explorer</li>
-<li>Explain the primary benefits of the AWS Pricing Calculator</li>
-<li>Distinguish between the various AWS Support Plans</li>
-<li>Describe the benefits of AWS Marketplace</li>
-</ul>
-</section>
-<section id="module-9-migration-and-innovation" class="level3">
-<h3 class="anchored" data-anchor-id="module-9-migration-and-innovation">Module 9: Migration and Innovation</h3>
-<ul>
-<li>Understand migration and innovation in the AWS Cloud</li>
-<li>Summarize the AWS Cloud Adoption Framework (AWS CAF)</li>
-<li>Summarize six key factors of a cloud migration strategy</li>
-<li>Describe the benefits of various AWS data migration solutions, such as AWS Snowcone, AWS Snowball, and AWS Snowmobile</li>
-<li>Summarize the broad scope of innovative solutions that AWS offers</li>
-</ul>
-</section>
-<section id="module-10-the-cloud-journey" class="level3">
-<h3 class="anchored" data-anchor-id="module-10-the-cloud-journey">Module 10: The Cloud Journey</h3>
-<ul>
-<li>Summarize the six pillars of the AWS Well-Architected Framework</li>
-<li>Explain the six benefits of cloud computing</li>
-</ul>
-</section>
-<section id="module-11-aws-certified-cloud-practitioner-basics" class="level3">
-<h3 class="anchored" data-anchor-id="module-11-aws-certified-cloud-practitioner-basics">Module 11: AWS Certified Cloud Practitioner Basics</h3>
-<ul>
-<li>Determine resources for preparing for the AWS Certified Cloud Practitioner examination</li>
-<li>Describe benefits of becoming AWS Certified</li>
-</ul>
-<p>Each module is followed by quizzes to test your knowledge and reinforce learning. Ensure you engage with these quizzes and review the material as needed to solidify your understanding.</p>
-<p>This course serves as a pathway to not only prepare you for the AWS Certified Cloud Practitioner exam but also to instil a robust foundation in AWS Cloud, empowering you to navigate and utilize the cloud more effectively in your professional journey.</p>
+<p>This system allows the computers (or people in our analogy) to work&nbsp;<strong>independently</strong>. They don’t need to know anything about each other, just like how you don’t need to know the mail carrier who will deliver your letter.</p>
+<p>SQS also helps handle&nbsp;<strong>spikes in traffic</strong>. If lots of messages are being sent at once, SQS can store them all and deliver them when it’s able to, just like how a post office can store many letters and packages during a busy holiday season.</p>
+<p>Finally, SQS makes sure that no message is&nbsp;<strong>lost or duplicated</strong>. It’s like how a post office makes sure that every letter and package is delivered exactly once, and that nothing gets lost in transit.</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -806,10 +700,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../module-2-notes/Elastic-Load-Balancing.html" class="pagination-link" aria-label="**Directing Traffic with Elastic Load Balancing**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Directing Traffic with Elastic Load Balancing</strong></span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./module-1-notes/Introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-2-notes/Additional-Compute-Services.html" class="pagination-link" aria-label="**Additional Compute Services**">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><strong>Additional Compute Services</strong></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
