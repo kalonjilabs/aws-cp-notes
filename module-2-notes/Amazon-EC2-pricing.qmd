@@ -1,25 +1,51 @@
 # **Amazon EC2 pricing**
 
-AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here's an overview of each EC2 pricing model listed in your uploaded content:
+Amazon EC2 charges you just for the compute time that you use. Amazon EC2 provides a range of price choices for various use cases. For example, if your use case can withstand interruptions, spot instances can help you save. You may also save money by committing early and locking in a minimal level of usage with reserved instances.
 
-### **On-Demand Instances**
+AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here's an overview of each EC2 pricing model :
+
+## 1. **On-Demand Instances**
 
 On-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don't know the exact workload in advance.
 
-### **Reserved Instances**
+## 2. **Reserved Instances**
 
 Reserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.
 
-### **EC2 Instance Savings Plans**
+There are two available types of Reserved Instances:
 
-Instance Savings Plans offer a way to save up to 72% on your computing costs, similar to Reserved Instances, but with more flexibility in how instances are utilized across the AWS environment. These plans apply to any EC2 instance family, region, and OS, making them ideal for users with shifting or unpredictable workloads but consistent overall usage.
+- Standard Reserved Instances
+- Convertible Reserved Instances
 
-### **Spot Instances**
+Standard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.
+
+**Standard Reserved Instances:** This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:
+
+- **Instance type and size:** For example, m5.xlarge
+- **Platform description (operating system):** For example, Microsoft Windows Server or Red Hat Enterprise Linux
+- **Tenancy:** Default tenancy or dedicated tenancy
+
+You can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.
+
+**Convertible Reserved Instances:** These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.
+
+At the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:
+
+- Terminate the instance.
+- Purchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).
+
+## 3. **EC2 Instance Savings Plans**
+
+These plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.
+
+Flexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs  from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.
+
+AWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.
+
+## 4. **Spot Instances**
 
 Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.
 
-### **Dedicated Hosts**
+## 5. **Dedicated Hosts**
 
 Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.
-
-Each pricing model is designed to meet different types of operational and financial needs, allowing businesses to optimize both performance and costs effectively. Depending on your workload requirements and how flexible you can be about when and how your applications run, you can choose the most cost-efficient way to use EC2.
