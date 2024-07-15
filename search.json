@@ -78,62 +78,7 @@
     "href": "module-2-notes/Amazon-EC2-Instance-Types.html",
     "title": "2  EC2 Instance types",
     "section": "",
-    "text": "2.1 General Purpose Instances\nGeneral purpose instances, such as T3 and M5, offer a balance of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage. For example, startups can use these instances for hosting websites and small-scale applications, providing a cost-effective solution with flexibility to handle varying levels of traffic.",
-    "crumbs": [
-      "Module 2: Amazon EC2",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>EC2 Instance types</span>"
-    ]
-  },
-  {
-    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#compute-optimized-instances",
-    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#compute-optimized-instances",
-    "title": "2  EC2 Instance types",
-    "section": "2.2 Compute Optimized Instances",
-    "text": "2.2 Compute Optimized Instances\nInstances like C5 and C6 are ideal for applications that benefit from high-performance processors. They are well-suited for compute-heavy tasks such as batch processing, media transcoding, scientific modelling, or gaming servers. Media companies often use these instances for intensive video encoding tasks that require robust computational power.",
-    "crumbs": [
-      "Module 2: Amazon EC2",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>EC2 Instance types</span>"
-    ]
-  },
-  {
-    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#memory-optimized-instances",
-    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#memory-optimized-instances",
-    "title": "2  EC2 Instance types",
-    "section": "2.3 Memory Optimized Instances",
-    "text": "2.3 Memory Optimized Instances\nMemory optimized instances, including R5 and X1, are designed to process large data sets in memory. They are commonly used in high-performance databases, real-time big data analytics, and large-scale in-memory processing. Financial institutions might use these instances to support real-time data processing within their financial systems or for complex risk management calculations.",
-    "crumbs": [
-      "Module 2: Amazon EC2",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>EC2 Instance types</span>"
-    ]
-  },
-  {
-    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#storage-optimized-instances",
-    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#storage-optimized-instances",
-    "title": "2  EC2 Instance types",
-    "section": "2.4 Storage Optimized Instances",
-    "text": "2.4 Storage Optimized Instances\nStorage optimized instances, such as I3 and D2, are engineered for jobs that need high, sequential read and write access to large data sets on local storage. They are particularly effective for data warehousing applications or distributed file systems. For instance, genomic research organizations leverage these instances for rapid genomic data processing, where fast access to large data sets is crucial.",
-    "crumbs": [
-      "Module 2: Amazon EC2",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>EC2 Instance types</span>"
-    ]
-  },
-  {
-    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#accelerated-computing-instances",
-    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#accelerated-computing-instances",
-    "title": "2  EC2 Instance types",
-    "section": "2.5 Accelerated Computing Instances",
-    "text": "2.5 Accelerated Computing Instances\nAccelerated computing instances, including P3 and F1, use hardware accelerators to efficiently handle computationally intensive tasks. They are optimal for floating-point calculations, graphics processing, and data pattern matching. Automotive companies might use these instances to run complex simulations for vehicle design or for training machine learning models to enhance autonomous driving technologies.",
-    "crumbs": [
-      "Module 2: Amazon EC2",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>EC2 Instance types</span>"
-    ]
-  },
-  {
-    "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html#micro-instances",
-    "href": "module-2-notes/Amazon-EC2-Instance-Types.html#micro-instances",
-    "title": "2  EC2 Instance types",
-    "section": "2.6 Micro Instances",
-    "text": "2.6 Micro Instances\nMicro instances such as T3a and T4g Micro are an economical option for lower-traffic applications and websites. These instances are often chosen by small businesses and independent developers for hosting personal blogs, small websites, or development environments due to their low cost and adequate resources for handling light workloads.\nEach EC2 instance type is specifically tailored to meet different technical requirements and use cases, enabling organizations to select the most appropriate resources based on their specific application needs and budget constraints. This flexibility allows for optimal performance and cost efficiency across a wide range of applications and industries.",
+    "text": "Amazon EC2 instance types are optimised for various tasks. Your workloads and applications’ unique requirements should guide your choice of instance type. This may include requirements for computation, memory, and storage capacities.\nThese instances can be summarised into the following five categories:.\n\n2.0.1 1. General Purpose Instances\nGeneral purpose instances offer a balanced set of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage.\nIn other words, general purpose instances are like Swiss Army knives in the world of cloud computing. They are versatile and can handle a variety of tasks well. They provide a balanced mix of resources: compute (processing power for calculations), memory (storage for data), and networking (data transfer capabilities).\nYou may use them for a range of workloads, including :\n\nApplication servers: These are the engines that run your applications. For example, if you have a web application like an online store, the application server is what processes the customer’s requests, like browsing items, adding them to the cart, and checking out.\nGaming servers: These servers host multiplayer online games. For instance, if you’re playing an online game like Fortnite or Minecraft with friends, the gaming server is what keeps track of everyone’s actions and game progress.\nBackend servers for enterprise applications: These servers handle the behind-the-scenes operations of large business applications. For example, in a banking system, the backend server would handle tasks like processing transactions, updating account balances, and generating financial reports.\nSmall and medium databases: These are the digital equivalent of record-keeping systems. They store, retrieve, and organize data. For instance, a small business might have a database that keeps track of inventory, sales, and customer information.\n\n\n\n2.0.2 2. Compute optimized Instances\nCompute-optimised instances are ideal for compute-bound applications that benefit from high-performance processors. They are like the sprinters in the world of cloud computing. They are designed for tasks that require a lot of processing power, just like a sprinter is built for speed.\nHere are some examples:\n\nHigh-performance web servers: These are like the super-fast express trains on the internet. They handle a lot of web traffic and need to respond to user requests quickly. For example, a popular e-commerce site during a big sale event would need a high-performance web server to handle the surge in traffic.\nCompute-intensive application servers: These are like the heavy-duty machines in a factory, crunching through complex calculations or processing large amounts of data. For instance, a weather forecasting system that needs to process data from thousands of weather stations and run complex simulations would be a compute-intensive application.\nDedicated gaming servers: These are like the high-speed racetracks for online multiplayer games, where fast response times are crucial for a good gaming experience. For example, a fast-paced online multiplayer game like Call of Duty would benefit from a dedicated gaming server.\nBatch processing workloads: These are like the assembly lines in a factory, processing many transactions in a single group. For example, a billing system that generates invoices for thousands of customers at the end of the month would use batch processing.\n\n\n\n2.0.3 3. Memory Optimized Instances\nMemory optimized instances are designed to provide rapid performance for tasks that handle extensive datasets in memory. In computing, memory serves as a provisional storage space. It accommodates all the data and directives required by a Central Processing Unit (CPU) to execute operations. Prior to the operation of a computer program or application, it is transferred from storage to memory. This act of preloading allows the CPU to have immediate access to the computer program.\nIn other words, memory optimized instances are like the big, spacious warehouses of cloud computing. They are designed to handle tasks that require a lot of space for storing data temporarily. This is similar to a warehouse where goods are stored before they are shipped out.\nMemory optimized instances can be used for:\n\nHigh-performance databases: These are like huge libraries with millions of books (data). The books need to be readily available (loaded into memory) for quick access. For example, a global e-commerce site like Amazon would use a high-performance database to store and quickly retrieve product information, customer data, and transaction details.\nReal-time processing of large unstructured data: This is like sorting through a big pile of mixed items (unstructured data) in real-time. For instance, a social media platform like X (Twitter) might use this to analyze and categorize millions of tweets as they are posted.\n\n\n\n2.0.4 4. Accelerated Computing Instances\nAccelerated computing instances employ hardware accelerators, also known as coprocessors, to carry out certain tasks more effectively than software running on CPUs can. In computing, a hardware accelerator is a device that can speed up data processing. Accelerated computing instances are perfectly suited for workloads like graphics applications, streaming games, and streaming applications.\nAccelerated computing instances can be used for :\n\nFloating-point number calculations: These are complex mathematical calculations that involve numbers with decimals. For example, scientific simulations or financial modeling applications that need to perform a lot of these calculations would benefit from accelerated computing.\nGraphics processing: This is like rendering a high-definition video or creating a 3D animation. For instance, a graphic design software or a video game would need to process a lot of graphics data quickly.\nData pattern matching: This is like finding a specific pattern in a large dataset. For example, a search engine looking for specific keywords in a large database of web pages would use data pattern matching.\n\n\n\n2.0.5 5. Storage Optimized Instances\nStorage optimized instances are designed for tasks that require high, sequential read and write access to extensive datasets on local storage. In other words, storage optimized instances are like the big cargo trucks of cloud computing. They are designed to handle tasks that involve a lot of loading and unloading of data, similar to a cargo truck transporting goods.\nIn computing, the term input/output operations per second (IOPS) is a performance metric for a storage device. It indicates the number of distinct input or output operations a device can execute in a single second. Storage optimized instances are engineered to deliver tens of thousands of low-latency, random IOPS to applications.\nInput operations can be thought of as data introduced into a system, like records entered into a database. An output operation is data produced by a server. An example of output could be the analytics conducted on the records in a database. If you have an application with a high IOPS demand, a storage optimized instance can offer superior performance compared to other instance types that are not optimized for this specific use case.\nStorage optimized instances can be used for :\n\nDistributed file systems: These are like a network of warehouses (storage spaces), where data is stored across multiple locations for easy access. For example, a cloud storage service like Dropbox or Google Drive would use a distributed file system.\nData warehousing applications: These are like huge data libraries that store, organize, and analyze large amounts of data. For instance, a business might use a data warehouse to analyze customer behavior, sales trends, and market research.\nHigh-frequency online transaction processing (OLTP) systems: These are like busy supermarkets where lots of transactions (like buying and selling of goods) are happening all at once. For example, an e-commerce site like Amazon during a big sale event would have a high-frequency OLTP system.",
     "crumbs": [
       "Module 2: Amazon EC2",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>EC2 Instance types</span>"
@@ -144,7 +89,51 @@
     "href": "module-2-notes/Amazon-EC2-pricing.html",
     "title": "3  Amazon EC2 pricing",
     "section": "",
-    "text": "AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model listed in your uploaded content:\n\n3.0.1 On-Demand Instances\nOn-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.\n\n\n3.0.2 Reserved Instances\nReserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.\n\n\n3.0.3 EC2 Instance Savings Plans\nInstance Savings Plans offer a way to save up to 72% on your computing costs, similar to Reserved Instances, but with more flexibility in how instances are utilized across the AWS environment. These plans apply to any EC2 instance family, region, and OS, making them ideal for users with shifting or unpredictable workloads but consistent overall usage.\n\n\n3.0.4 Spot Instances\nSpot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.\n\n\n3.0.5 Dedicated Hosts\nDedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.\nEach pricing model is designed to meet different types of operational and financial needs, allowing businesses to optimize both performance and costs effectively. Depending on your workload requirements and how flexible you can be about when and how your applications run, you can choose the most cost-efficient way to use EC2.",
+    "text": "3.1 1. On-Demand Instances\nOn-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#reserved-instances",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#reserved-instances",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.2 2. Reserved Instances",
+    "text": "3.2 2. Reserved Instances\nReserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.\nThere are two available types of Reserved Instances:\n\nStandard Reserved Instances\nConvertible Reserved Instances\n\nStandard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.\nStandard Reserved Instances: This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:\n\nInstance type and size: For example, m5.xlarge\nPlatform description (operating system): For example, Microsoft Windows Server or Red Hat Enterprise Linux\nTenancy: Default tenancy or dedicated tenancy\n\nYou can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.\nConvertible Reserved Instances: These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.\nAt the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:\n\nTerminate the instance.\nPurchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#ec2-instance-savings-plans",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#ec2-instance-savings-plans",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.3 3. EC2 Instance Savings Plans",
+    "text": "3.3 3. EC2 Instance Savings Plans\nThese plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.\nFlexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.\nAWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#spot-instances",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#spot-instances",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.4 4. Spot Instances",
+    "text": "3.4 4. Spot Instances\nSpot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#dedicated-hosts",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#dedicated-hosts",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.5 5. Dedicated Hosts",
+    "text": "3.5 5. Dedicated Hosts\nDedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.",
     "crumbs": [
       "Module 2: Amazon EC2",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
