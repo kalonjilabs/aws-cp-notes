@@ -1,0 +1,64 @@
+# **AWS Global Infrastructure**
+
+AWS is an international corporation with servers and data centres scattered across the globe. The phrase “AWS Global Infrastructure” refers to the extensive network of data centres and resources strategically positioned worldwide to deliver cloud services.
+
+Let's look at AWS's world infrastructure in a business context to better understand it. Assume you have a business need. You have an application to run, content to store, or data to analyse. Essentially, you have things that need to reside and function somewhere.
+
+Historically, businesses had to operate applications in their own data centres because they had no other option. However, with the advent of AWS, companies like yours can now run their applications in data centres they don’t own.
+
+One might argue that they could still utilise their own data centres, but any data centre, regardless of who built or owns it, has a fundamental issue. Incidents can occur that could result in you losing connection to that building. If you operate your own data centre, you must figure out how to respond to the question of what you will do when disaster strikes your building. You could operate a second data centre, but the cost of real estate alone could deter you, not to mention the duplicate costs of hardware, staff, electricity, heating and cooling, and security. Most businesses simply store backups somewhere and hope that disaster never strikes. However, hope is not a sound business strategy.
+
+AWS addresses the question of what happens when disaster strikes by constructing our data centres in large clusters known as regions, and here’s how it’s designed.
+
+AWS constructs regions throughout the world to be closest to where business traffic is needed. Locations include Paris, Tokyo, Sao Paulo, Dublin, and Ohio. Each region contains multiple data centres that provide all the compute, storage, and other services you need to run your applications. Each region can be connected to any other region via a high-speed fibre network controlled by AWS, creating a truly global operation from corner to corner if necessary. Before we delve into the architecture of how each region is constructed, it’s important to note that you, the business decision maker, get to choose which region you want to operate out of. Each region is isolated from every other region in the sense that absolutely no data enters or leaves your environment in that region unless you explicitly grant permission for that data to be moved. This is a crucial security discussion to have.
+
+For instance, you might have government compliance requirements that your financial information in Frankfurt cannot leave Germany. This is precisely how AWS operates by default. Any data stored in the Frankfurt Region never leaves the Frankfurt Region, or data in the London region never leaves London, or Sydney never leaves Sydney, unless you explicitly, with the correct credentials and permissions, request the data to be exported.
+
+Regional data sovereignty is an important feature of AWS Regions design. Data is subject to the local laws and legislation of the country where the region is located. So, now that you understand that your data, your application, resides and functions in a region, one of the first decisions you must make is which region to choose. 
+
+## Business factors that influence the choice of a region.
+
+When determining the right region for your services, data, and applications, consider the following four business factors:
+
+### Compliance with data governance and legal requirements
+
+You may need to keep your data in particular locations, depending on the policies and location of your company. For example, if your organisation demands that all data remain in the UK, you would select the London Region.
+Not every company has location-specific data regulations. If your location is not governed by compliance or regulatory standards, focus on the other issues. For example, if you need to store data within South Africa, select the Cape Town Region. However, most businesses are not subject to such severe laws. If compliance isn't a concern, consider the other factors.
+
+### Proximity to customers
+
+Choosing a region close to your customers helps deliver content faster. For example, if your company is based in Johannesburg and many of your clients are in Nairobi, you may run your infrastructure in the Cape Town Region to be close to headquarters, while running your apps in the Nairobi Region. The proximity to your consumer base is critical because of latency. If most of your customers are in Nairobi, consider running from the Nairobi region. While you can operate from South Africa, the time it takes for data to travel between South Africa and Kenya will always be a factor. Locating close to your customer base is usually the best decision.
+
+### Availability of services within a Region
+
+Sometimes the nearest region might not offer all the features you need. AWS is continuously innovating and adding new services, but rolling out new services worldwide requires physical infrastructure updates in each region. For example, if your developers want to use Amazon Braket (AWS's quantum computing platform) but it isn't available in your local region, they'll need to run it in one that is. While we may expect these services to eventually be available in all countries, availability may be the deciding factor for you right now.
+
+### Pricing
+
+Consider deploying applications in both South Africa and Kenya. Due to Kenya's tax system, it may cost 50% more to run the same workload in the Nairobi Region than in the Cape Town Region. Pricing varies by area due to factors such as tax rates and operational costs. For example, running the same workload in Nairobi could cost much more than in Cape Town. AWS pricing is transparent, with various price sheets for each location. If budget is a top priority, you may choose to operate in South Africa even if the customers are in Kenya.
+
+## **Availability Zones**
+
+When it comes to hosting your application, you might be concerned about relying on a single building. This concern is valid as a single building can fail due to various unforeseen circumstances. If your business needs to be disaster-proof, it can’t operate from just one location. AWS acknowledges this fact, and that’s why AWS Regions are not confined to a single location.
+
+**AWS regions and data Centers**
+
+AWS has numerous data centers scattered across the globe. Each AWS Region comprises multiple data centers. A single data center or a group of data centers is referred to as an Availability Zone (AZ) by AWS. 
+
+An **Availability Zone** is a single data center or a group of data centers within a region. Availability Zones are located tens of miles apart from each other. This is close enough to have low latency (the time between when content requested and received) between Availability Zones. However, if a disaster occurs in one part of the region, they are distant enough to reduce the chance that multiple Availability Zones are affected.
+
+Each Availability Zone consists of one or more distinct data centers with redundant power, networking, and connectivity. When you launch an Amazon EC2 instance, it initiates a virtual machine on physical hardware installed in an Availability Zone. This means each AWS Region consists of multiple isolated and physically separate Availability Zones within a geographic Region.
+
+**Importance of separation**
+
+Availability Zones are not built adjacent to each other. If a large-scale incident like a natural disaster were to occur, you could lose connectivity to everything in that Availability Zone.
+
+If you only run one EC2 instance, it only operates in one building or one Availability Zone. If a large-scale disaster occurs, will your application still be able to run and serve your business? The solution to this is to run multiple EC2 instances.
+
+The key point is not to run them in the same building or even on the same street. Push them as far apart as you can before the speed of light limits you if you still want low latency communication. The speed of light allows us to move these Availability Zones tens of miles apart from each other and still maintain single-digit millisecond latency between these Availability Zones. Now, if a disaster strikes, your application continues to operate because this disaster only affected some of your capacity, not all.
+
+**Best practices**
+
+As a best practice with AWS, we always recommend you run across at least two Availability Zones in a Region. This means redundantly deploying your infrastructure in two different AZs.
+
+But there’s more to Regions than just places to run EC2. Many of the AWS services run at the Region level, meaning they run synchronously across multiple AZs without any additional effort on your part.For example, the Elastic Load Balancer (ELB) we discussed previously is actually a regional construct. It operates across all Availability Zones, communicating with the EC2 instances running in a specific Availability Zone. Regional services are, by definition, already highly available at no additional cost or effort on your part. So, as you plan for high availability, any service listed as a regionally scoped service will already have that box checked. In the next section, we will look at going outside the Regions for additional solutions.
