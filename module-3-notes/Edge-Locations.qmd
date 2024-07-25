@@ -26,7 +26,7 @@ But what if your business wants to use AWS services inside their own building? A
 
 ## Key Points
 
-To summarize, here are the key points:
+To summarise, here are the key points:
 
 1. Regions are geographically isolated areas where you can access services needed to run your enterprise.
 2. Regions contain Availability Zones that allow you to run across physically separated buildings, tens of miles of separation, while keeping your application logically unified. Availability Zones help you solve high availability and disaster recovery scenarios, without any additional effort on your part.

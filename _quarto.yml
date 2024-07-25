@@ -21,10 +21,11 @@ book:
         - module-2-notes/Messaging-and-Queuing.qmd
         - module-2-notes/Additional-Compute-Services.qmd
 
-    - part: module-3-notes/Module-2-Amazon-EC2.qmd
+    - part: module-3-notes/Introduction-module-3.qmd
       chapters:
-        - module-2-notes/Amazon-EC2-Instance-Types.qmd
-        - module-2-notes/Amazon-EC2-pricing.qmd
+        - module-3-notes/AWS-Global-Infrastructure.qmd
+        - module-3-notes/Edge-Locations.qmd
+        - module-3-notes/How-to-Provision-AWS .qmd
 format:
   html:
     theme: cosmo
