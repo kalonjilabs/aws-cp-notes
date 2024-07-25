@@ -1,0 +1,12 @@
+The AWS Global Infrastructure is the backbone of AWS cloud services, providing a robust, secure, and scalable platform for the deployment of applications and services. It’s not just a collection of data centres, but a network of interconnected facilities spread across the globe, known as **Regions**.
+
+Why is this important, you ask?  Imagine you’re running a global e-commerce business. Your customers are not just in one location, but scattered around the world. With AWS Global Infrastructure, you can ensure that your website is always available and delivers fast performance to all your customers, no matter where they are.
+
+This is achieved through a combination of multiple Availability Zones within each Region, and edge locations used by Amazon CloudFront, AWS’s content delivery network service. This design not only ensures high availability and fault tolerance but also improves user experience by reducing latency.
+
+In the upcoming lessons, we will delve deeper into these topics:
+
+- We’ll **summarise the benefits** of the AWS Global Infrastructure, exploring how it supports scalability, reliability, security, and global reach.
+- We’ll **describe the basic concept of Availability Zones**, which are essentially isolated locations within a Region to run your applications and databases.
+- We’ll **discuss the benefits of Amazon CloudFront and edge locations**, and how they help deliver content to your users with low latency and high transfer speeds.
+- Lastly, we’ll **compare different methods for provisioning AWS services**, helping you understand the various ways you can create and manage your AWS resources.

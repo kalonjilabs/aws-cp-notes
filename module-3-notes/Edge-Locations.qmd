@@ -1,0 +1,33 @@
+# **Edge Locations**
+
+AWS global infrastructure is designed to help you serve your customers more effectively. One of the key criteria when selecting a Region is the proximity to your customers. But what if your customers are spread all over the world or in cities that are not close to any of our Regions?
+
+## Building Satellite Stores
+
+Consider a scenario where you have a thriving customer base in a new city. You can establish a satellite store to cater to these customers. From an IT perspective, if you have customers in Nairobi who need access to your data, but the data is hosted out of the London Region, you can place or cache a copy locally in Nairobi instead of having all the Nairobi-based customers send requests all the way to London to access the data.
+
+## Content Delivery Networks (CDNs)
+
+Caching copies of data closer to the customers all around the world employs the concept of content delivery networks, or CDNs. CDNs are commonly used, and on AWS, our CDN is called Amazon CloudFront.
+
+## Amazon CloudFront
+
+Amazon CloudFront is a service that helps deliver data, video, applications, and APIs to customers globally with low latency and high transfer speeds. Amazon CloudFront uses what are called Edge locations, all around the world, to help speed up communication with users, no matter where they are.
+
+## Edge Locations
+
+An edge location is a site that Amazon CloudFront uses to store cached copies of your content closer to your customers for faster delivery.
+
+Edge locations are separate from Regions, so you can push content from inside a Region to a collection of Edge locations around the world to accelerate communication and content delivery. AWS Edge locations also run more than just CloudFront. They run a domain name service, or DNS, known as Amazon Route 53, helping direct customers to the correct web locations with reliably low latency.
+
+## AWS Outposts
+
+But what if your business wants to use AWS services inside their own building? AWS can do that for you. AWS Outposts is a service where AWS will essentially install a fully operational mini Region right inside your own data center. That’s owned and operated by AWS, using 100% of AWS functionality, but isolated within your own building. It’s not a solution most customers need, but if you have specific problems that can only be solved by staying in your own building, AWS Outposts can help.
+
+## Key Points
+
+To summarize, here are the key points:
+
+1. Regions are geographically isolated areas where you can access services needed to run your enterprise.
+2. Regions contain Availability Zones that allow you to run across physically separated buildings, tens of miles of separation, while keeping your application logically unified. Availability Zones help you solve high availability and disaster recovery scenarios, without any additional effort on your part.
+3. AWS Edge locations run Amazon CloudFront to help get content closer to your customers, no matter where they are in the world.

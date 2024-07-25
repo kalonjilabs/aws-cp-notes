@@ -20,6 +20,11 @@ book:
         - module-2-notes/Elastic-Load-Balancing.qmd
         - module-2-notes/Messaging-and-Queuing.qmd
         - module-2-notes/Additional-Compute-Services.qmd
+
+    - part: module-3-notes/Module-2-Amazon-EC2.qmd
+      chapters:
+        - module-2-notes/Amazon-EC2-Instance-Types.qmd
+        - module-2-notes/Amazon-EC2-pricing.qmd
 format:
   html:
     theme: cosmo
