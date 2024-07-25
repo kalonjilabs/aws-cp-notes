@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Module 2: Amazon EC2 – AWS Cloud Practitioner Notes</title>
+<title>10&nbsp; How to Provision AWS – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-2-notes/Amazon-EC2-Instance-Types.html" rel="next">
-<link href="../module-1-notes/Cloud-Computing.html" rel="prev">
+<link href="../module-3-notes/Edge-Locations.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-3-notes/Introduction-module-3.html">Introduction-module-3.html</a></li><li class="breadcrumb-item"><a href="../module-3-notes/How-to-Provision-AWS .html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><strong>How to Provision AWS</strong></span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Module 2: Amazon EC2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -199,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-3-notes/How-to-Provision-AWS .html" class="sidebar-item-text sidebar-link">
+  <a href="../module-3-notes/How-to-Provision-AWS .html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><strong>How to Provision AWS</strong></span></span></a>
   </div>
 </li>
@@ -215,13 +214,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#what-is-amazon-ec2" id="toc-what-is-amazon-ec2" class="nav-link" data-scroll-target="#what-is-amazon-ec2"><strong>What is Amazon EC2?</strong></a></li>
-  <li><a href="#how-amazon-ec2-works" id="toc-how-amazon-ec2-works" class="nav-link" data-scroll-target="#how-amazon-ec2-works"><strong>How Amazon EC2 works</strong></a>
+  <li><a href="#understanding-apis" id="toc-understanding-apis" class="nav-link active" data-scroll-target="#understanding-apis"><span class="header-section-number">10.0.1</span> Understanding APIs</a></li>
+  <li><a href="#aws-management-console" id="toc-aws-management-console" class="nav-link" data-scroll-target="#aws-management-console"><span class="header-section-number">10.0.2</span> AWS Management Console</a></li>
+  <li><a href="#aws-command-line-interface-cli" id="toc-aws-command-line-interface-cli" class="nav-link" data-scroll-target="#aws-command-line-interface-cli"><span class="header-section-number">10.0.3</span> AWS Command Line Interface (CLI)</a></li>
+  <li><a href="#aws-software-development-kits-sdks" id="toc-aws-software-development-kits-sdks" class="nav-link" data-scroll-target="#aws-software-development-kits-sdks"><span class="header-section-number">10.0.4</span> AWS Software Development Kits (SDKs)</a></li>
+  <li><a href="#interacting-with-aws-services-using-managed-tools" id="toc-interacting-with-aws-services-using-managed-tools" class="nav-link" data-scroll-target="#interacting-with-aws-services-using-managed-tools"><span class="header-section-number">10.1</span> Interacting with AWS Services Using Managed Tools</a>
   <ul class="collapse">
-  <li><a href="#launch" id="toc-launch" class="nav-link" data-scroll-target="#launch"><strong>Launch</strong></a></li>
-  <li><a href="#connect" id="toc-connect" class="nav-link" data-scroll-target="#connect"><strong>Connect</strong></a></li>
-  <li><a href="#use" id="toc-use" class="nav-link" data-scroll-target="#use"><strong>Use</strong></a></li>
+  <li><a href="#aws-elastic-beanstalk" id="toc-aws-elastic-beanstalk" class="nav-link" data-scroll-target="#aws-elastic-beanstalk"><span class="header-section-number">10.1.1</span> AWS Elastic Beanstalk</a></li>
+  <li><a href="#aws-cloudformation" id="toc-aws-cloudformation" class="nav-link" data-scroll-target="#aws-cloudformation"><span class="header-section-number">10.1.2</span> AWS CloudFormation</a></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap"><span class="header-section-number">10.1.3</span> Recap</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -229,9 +230,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-3-notes/Introduction-module-3.html">Introduction-module-3.html</a></li><li class="breadcrumb-item"><a href="../module-3-notes/How-to-Provision-AWS .html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><strong>How to Provision AWS</strong></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Module 2: Amazon EC2</h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><strong>How to Provision AWS</strong></span></h1>
 </div>
 
 
@@ -248,68 +249,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Imagine you run a small business that develops mobile games. As your games gain popularity, you face increasing pressure to maintain performance during peak usage times, such as when launching a new game or running a global event within the game. Initially, you hosted the games on a server in your office, but as the number of players grew, the server could not handle the load and would often crash during these critical times, leading to frustrated customers and lost revenue.</p>
-<p>This is where Amazon EC2 comes into play. By using Amazon EC2, you can easily launch virtual servers and scale capacity up or down automatically, depending on the demand from your game players. This ensures that your gaming servers are stable during high traffic periods and cost-efficient during quieter times.</p>
+<p>As we explore different AWS resources and the AWS global infrastructure, you might be curious about how to actually interact with these services. The answer lies in APIs. In AWS, every action is an API call.</p>
+<section id="understanding-apis" class="level3" data-number="10.0.1">
+<h3 data-number="10.0.1" class="anchored" data-anchor-id="understanding-apis"><span class="header-section-number">10.0.1</span> Understanding APIs</h3>
+<p>An API, or Application Programming Interface, provides predetermined ways for you to interact with AWS services. You can invoke or call these APIs to provision, configure, and manage your AWS resources.</p>
+<p>For instance, launching an EC2 instance or creating an AWS Lambda function would each involve different requests and different API calls to AWS. You can use various tools like the AWS Management Console, the AWS Command Line Interface (CLI), the AWS Software Development Kits (SDKs), or AWS CloudFormation to create requests to send to AWS APIs to create and manage AWS resources.</p>
 </section>
-<section id="what-is-amazon-ec2" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-amazon-ec2"><strong>What is Amazon EC2?</strong></h2>
-<p>Amazon EC2 (Elastic Compute Cloud) provides scalable computing capacity in the AWS cloud. This service allows you to launch virtual servers, known as instances, and manage the computing environment’s scale and administration. With EC2, you can choose from a wide range of instance types to match your specific workload needs, from a small game server to a large, resource-intensive application. The service offers flexibility in configuring hardware, security, and networking settings. Additionally, it integrates seamlessly with other AWS services, enhancing your ability to develop, monitor, and deploy applications more efficiently.</p>
-<p>Whether it’s ensuring that your mobile games perform flawlessly during peak usage or scaling down to save costs when demand is lower, Amazon EC2 provides the tools and flexibility to adjust your computing resources in real-time, aligning perfectly with your business needs.</p>
-<p><strong>Key Features of Amazon EC2:</strong></p>
-<ul>
-<li><strong>Flexibility:</strong> You can choose from a wide variety of instance types, configurations, and sizes, which allows you to tailor the hardware to your specific application needs. This includes configurations that optimize for memory, CPU, storage, and networking capacity.</li>
-<li><strong>Scalability:</strong> EC2 provides the ability to scale up or down quickly to handle changes in requirements or spikes in popularity, ensuring you only pay for what you use.</li>
-<li><strong>Control:</strong> You have complete control over your virtual servers, including the choice of operating system, networking details, and security settings. This makes it possible to run any software you own, just as you would on your own physical server.</li>
-<li><strong>Integration:</strong> EC2 integrates well with other AWS services, facilitating comprehensive cloud solutions that can include storage (Amazon S3), databases (Amazon RDS), and more.</li>
-<li><strong>Security:</strong> Amazon EC2 provides numerous security tools and features, such as Amazon VPC (Virtual Private Cloud) that allows you to use isolated networks within the cloud, and IAM (Identity and Access Management) to control access to instances securely.</li>
-</ul>
-<p><strong>Typical Uses for Amazon EC2:</strong></p>
-<ul>
-<li><strong>Web hosting:</strong> Many businesses use EC2 instances to host websites, ensuring they can easily handle unexpected traffic spikes.</li>
-<li><strong>Application hosting:</strong> From simple applications to sophisticated enterprise applications, you can run them all on EC2.</li>
-<li><strong>Batch processing:</strong> You can quickly scale up EC2 instances to complete batch processing jobs that require processing large volumes of data quickly.</li>
-<li><strong>Development and test environments:</strong> Developers use EC2 to quickly set up or tear down environments with different configurations to test new versions of applications.</li>
-</ul>
-<p>Amazon EC2 provides a flexible, scalable, and efficient way to run your applications in the cloud with minimal investment in physical hardware and allows for a pay-as-you-go pricing model, which can significantly reduce your IT costs and overhead.</p>
+<section id="aws-management-console" class="level3" data-number="10.0.2">
+<h3 data-number="10.0.2" class="anchored" data-anchor-id="aws-management-console"><span class="header-section-number">10.0.2</span> AWS Management Console</h3>
+<p>The AWS Management Console is a browser-based tool. Through the console, you can manage your AWS resources visually and in an easily digestible manner. This is great for getting started and building your knowledge of the services. It’s also useful for building out test environments, viewing AWS bills, monitoring, and working with other non-technical resources.</p>
+<p>However, once you are up and running in a production-type environment, you don’t want to rely on the point-and-click style that the console provides to create and manage your AWS resources. This manual provisioning can lead to potential errors.</p>
 </section>
-<section id="how-amazon-ec2-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-amazon-ec2-works"><strong>How Amazon EC2 works</strong></h2>
-<p>Amazon EC2 (Elastic Compute Cloud) is a central part of Amazon Web Services that offers scalable computing on demand, allowing users to run and manage server instances over the cloud. Here’s a simplified breakdown of how you typically interact with Amazon EC2, from launch to connection and usage:</p>
-<section id="launch" class="level3">
-<h3 class="anchored" data-anchor-id="launch"><strong>Launch</strong></h3>
-<p>To begin using Amazon EC2, you start by launching a virtual server, known as an instance. Here’s how that works:</p>
-<ul>
-<li><strong>Choose an AMI (Amazon Machine Image):</strong> This is your first step. An AMI contains the operating system and the configurations required to launch your instance. You can choose from a variety of AMIs that Amazon provides or create your own.</li>
-<li><strong>Select an Instance Type:</strong> Amazon EC2 offers a range of instance types optimized for different purposes. Depending on your needs, you might select an instance with more CPU, memory, storage, or enhanced networking capabilities.</li>
-<li><strong>Configure Instance:</strong> Set up the networking and security for your instance. This includes choosing a network (VPC), subnets, and setting security groups which dictate the ports, protocols, and IPs allowed to interact with your instances.</li>
-<li><strong>Add Storage:</strong> EC2 allows you to attach storage to your instances. You can choose the type and size of storage based on your application needs.</li>
-<li><strong>Launch Instance:</strong> Once everything is set up, you launch the instance. AWS then allocates the resources and starts the instance after which it’s ready to use.</li>
-</ul>
+<section id="aws-command-line-interface-cli" class="level3" data-number="10.0.3">
+<h3 data-number="10.0.3" class="anchored" data-anchor-id="aws-command-line-interface-cli"><span class="header-section-number">10.0.3</span> AWS Command Line Interface (CLI)</h3>
+<p>The solution to this problem is to use tools that allow you to script or program the API calls. One such tool is the AWS Command Line Interface or CLI. The CLI allows you to make API calls using the terminal on your machine. This is different from the visual navigation style of the Management Console. Writing commands using the CLI makes actions scriptable and repeatable. This makes it less susceptible to human error, and you can have these scripts run automatically, like on a schedule or triggered by another process.</p>
 </section>
-<section id="connect" class="level3">
-<h3 class="anchored" data-anchor-id="connect"><strong>Connect</strong></h3>
-<p>Once your EC2 instance is running, you can connect to it:</p>
-<ul>
-<li><strong>Accessing the Instance:</strong>
-<ul>
-<li><strong>For Linux instances</strong>, you typically connect via SSH using a key pair that you specify when setting up the instance. This ensures secure access without needing a password.</li>
-<li><strong>For Windows instances</strong>, you can connect using Remote Desktop Protocol (RDP) with a username and password, which you can retrieve using your key pair.</li>
-</ul></li>
-</ul>
-<p>This step is crucial as it’s where you manage the software side of your instance, installing necessary applications and configuring settings according to your project’s requirements.</p>
+<section id="aws-software-development-kits-sdks" class="level3" data-number="10.0.4">
+<h3 data-number="10.0.4" class="anchored" data-anchor-id="aws-software-development-kits-sdks"><span class="header-section-number">10.0.4</span> AWS Software Development Kits (SDKs)</h3>
+<p>Automation is very important for a successful and predictable cloud deployment over time. Another way to interact with AWS is through the AWS Software Development Kits or SDKs. The SDKs allow you to interact with AWS resources through various programming languages. This makes it easy for developers to create programs that use AWS without using the low-level APIs, as well as avoiding that manual resource creation.</p>
+<p>This concludes our lesson on interacting with AWS services. There is much more to learn about AWS, but let’s keep it simple and stop here.</p>
 </section>
-<section id="use" class="level3">
-<h3 class="anchored" data-anchor-id="use"><strong>Use</strong></h3>
-<p>After connecting to your instance, you can use it just like any other computer. Here’s what generally happens in this phase:</p>
-<ul>
-<li><strong>Run Applications:</strong> You can deploy and run applications, host websites, and manage data. Whatever tasks you would do on a physical server can be done on an EC2 instance.</li>
-<li><strong>Monitor and Manage:</strong> AWS provides tools like Amazon CloudWatch to monitor the performance of your instance. You can track metrics such as CPU utilization, and network usage, and set up alarms for specific thresholds.</li>
-<li><strong>Scale:</strong> One of the significant advantages of EC2 is its scalability. Depending on the demand, you can scale your instances up or down. You can either do this manually or set up auto-scaling to adjust the capacity based on pre-defined rules and schedules.</li>
-<li><strong>Secure:</strong> Continuously manage the security of your instances by updating security groups, adding rules, and ensuring your software is up-to-date with the latest security patches.</li>
-</ul>
-<p>By the end of this process, you will have a fully functional virtual server ready to handle your computing tasks in the cloud, providing the flexibility to scale and adapt as your requirements evolve. This capability makes EC2 a powerful tool for businesses needing reliable, scalable, and efficient computing resources.</p>
+<section id="interacting-with-aws-services-using-managed-tools" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="interacting-with-aws-services-using-managed-tools"><span class="header-section-number">10.1</span> Interacting with AWS Services Using Managed Tools</h2>
+<p>In addition to the AWS Management Console, the Command Line Interface (CLI), and the Software Development Kits (SDKs), AWS provides managed tools like AWS Elastic Beanstalk and AWS CloudFormation to help you provision and manage your AWS environment.</p>
+<section id="aws-elastic-beanstalk" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="aws-elastic-beanstalk"><span class="header-section-number">10.1.1</span> AWS Elastic Beanstalk</h3>
+<p>AWS Elastic Beanstalk is a service that assists you in provisioning Amazon EC2-based environments. Instead of navigating through the console or writing multiple commands to build out your network, EC2 instances, scaling, and Elastic Load Balancers, you can provide your application code and desired configurations to the AWS Elastic Beanstalk service. This service then uses that information to build out your environment for you.</p>
+<p>AWS Elastic Beanstalk also simplifies the process of saving environment configurations, allowing them to be deployed again easily. It offers the convenience of not having to provision and manage all these components separately, while still providing visibility and control of the underlying resources. This allows you to focus on your business application, not the infrastructure.</p>
+</section>
+<section id="aws-cloudformation" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="aws-cloudformation"><span class="header-section-number">10.1.2</span> AWS CloudFormation</h3>
+<p>AWS CloudFormation is another service that helps create automated and repeatable deployments. It is an infrastructure-as-code tool that allows you to define a wide variety of AWS resources in a declarative way using JSON or YAML text-based documents, known as CloudFormation templates.</p>
+<p>A declarative format allows you to define what you want to build without specifying the details of exactly how to build it. CloudFormation lets you define what you want, and the CloudFormation engine takes care of the details, calling APIs to get everything built out.</p>
+<p>CloudFormation isn’t just limited to EC2-based solutions. It supports many different AWS resources, including storage, databases, analytics, machine learning, and more. Once you define your resources in a CloudFormation template, CloudFormation parses the template and begins provisioning all the resources you defined in parallel.</p>
+<p>CloudFormation manages all the calls to the backend AWS APIs for you. You can run the same CloudFormation template in multiple accounts or multiple regions, and it will create identical environments across them. This automated process reduces the room for human error.</p>
+</section>
+<section id="recap" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="recap"><span class="header-section-number">10.1.3</span> Recap</h3>
+<p>To recap, the AWS Management Console is great for learning and providing a visual for the user. However, it is a manual tool and not the best option for automation. Instead, you can use the CLI to script your interactions with AWS using the terminal, or the SDKs to write programs to interact with AWS. For a more managed approach, you can use tools like AWS Elastic Beanstalk or AWS CloudFormation.</p>
 
 
 </section>
@@ -738,14 +715,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span>
+      <a href="../module-3-notes/Edge-Locations.html" class="pagination-link" aria-label="**Edge Locations**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><strong>Edge Locations</strong></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="pagination-link" aria-label="EC2 Instance types">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
