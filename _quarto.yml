@@ -26,6 +26,11 @@ book:
         - module-3-notes/AWS-Global-Infrastructure.qmd
         - module-3-notes/Edge-Locations.qmd
         - module-3-notes/How-to-Provision-AWS .qmd
+
+    - part: module-4-notes/1-Introduction-m4.qmd
+      chapters:
+        - module-4-notes/2-Connectivity-to-AWS.qmd
+
 format:
   html:
     theme: cosmo
