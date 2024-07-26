@@ -262,21 +262,23 @@
   {
     "objectID": "module-2-notes/Amazon-EC2-Instance-Types.html",
     "href": "module-2-notes/Amazon-EC2-Instance-Types.html",
-    "title": "4  EC2 Instance types",
+    "title": "2  EC2 Instance types",
     "section": "",
-    "text": "4.1 General Purpose Instances\nGeneral purpose instances, such as T3 and M5, offer a balance of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage. For example, startups can use these instances for hosting websites and small-scale applications, providing a cost-effective solution with flexibility to handle varying levels of traffic.",
+    "text": "Amazon EC2 instance types are optimised for various tasks. Your workloads and applications’ unique requirements should guide your choice of instance type. This may include requirements for computation, memory, and storage capacities.\nThese instances can be summarised into the following five categories:.\n\n2.0.1 1. General Purpose Instances\nGeneral purpose instances offer a balanced set of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage.\nIn other words, general purpose instances are like Swiss Army knives in the world of cloud computing. They are versatile and can handle a variety of tasks well. They provide a balanced mix of resources: compute (processing power for calculations), memory (storage for data), and networking (data transfer capabilities).\nYou may use them for a range of workloads, including :\n\nApplication servers: These are the engines that run your applications. For example, if you have a web application like an online store, the application server is what processes the customer’s requests, like browsing items, adding them to the cart, and checking out.\nGaming servers: These servers host multiplayer online games. For instance, if you’re playing an online game like Fortnite or Minecraft with friends, the gaming server is what keeps track of everyone’s actions and game progress.\nBackend servers for enterprise applications: These servers handle the behind-the-scenes operations of large business applications. For example, in a banking system, the backend server would handle tasks like processing transactions, updating account balances, and generating financial reports.\nSmall and medium databases: These are the digital equivalent of record-keeping systems. They store, retrieve, and organize data. For instance, a small business might have a database that keeps track of inventory, sales, and customer information.\n\n\n\n2.0.2 2. Compute optimized Instances\nCompute-optimised instances are ideal for compute-bound applications that benefit from high-performance processors. They are like the sprinters in the world of cloud computing. They are designed for tasks that require a lot of processing power, just like a sprinter is built for speed.\nHere are some examples:\n\nHigh-performance web servers: These are like the super-fast express trains on the internet. They handle a lot of web traffic and need to respond to user requests quickly. For example, a popular e-commerce site during a big sale event would need a high-performance web server to handle the surge in traffic.\nCompute-intensive application servers: These are like the heavy-duty machines in a factory, crunching through complex calculations or processing large amounts of data. For instance, a weather forecasting system that needs to process data from thousands of weather stations and run complex simulations would be a compute-intensive application.\nDedicated gaming servers: These are like the high-speed racetracks for online multiplayer games, where fast response times are crucial for a good gaming experience. For example, a fast-paced online multiplayer game like Call of Duty would benefit from a dedicated gaming server.\nBatch processing workloads: These are like the assembly lines in a factory, processing many transactions in a single group. For example, a billing system that generates invoices for thousands of customers at the end of the month would use batch processing.\n\n\n\n2.0.3 3. Memory Optimized Instances\nMemory optimized instances are designed to provide rapid performance for tasks that handle extensive datasets in memory. In computing, memory serves as a provisional storage space. It accommodates all the data and directives required by a Central Processing Unit (CPU) to execute operations. Prior to the operation of a computer program or application, it is transferred from storage to memory. This act of preloading allows the CPU to have immediate access to the computer program.\nIn other words, memory optimized instances are like the big, spacious warehouses of cloud computing. They are designed to handle tasks that require a lot of space for storing data temporarily. This is similar to a warehouse where goods are stored before they are shipped out.\nMemory optimized instances can be used for:\n\nHigh-performance databases: These are like huge libraries with millions of books (data). The books need to be readily available (loaded into memory) for quick access. For example, a global e-commerce site like Amazon would use a high-performance database to store and quickly retrieve product information, customer data, and transaction details.\nReal-time processing of large unstructured data: This is like sorting through a big pile of mixed items (unstructured data) in real-time. For instance, a social media platform like X (Twitter) might use this to analyze and categorize millions of tweets as they are posted.\n\n\n\n2.0.4 4. Accelerated Computing Instances\nAccelerated computing instances employ hardware accelerators, also known as coprocessors, to carry out certain tasks more effectively than software running on CPUs can. In computing, a hardware accelerator is a device that can speed up data processing. Accelerated computing instances are perfectly suited for workloads like graphics applications, streaming games, and streaming applications.\nAccelerated computing instances can be used for :\n\nFloating-point number calculations: These are complex mathematical calculations that involve numbers with decimals. For example, scientific simulations or financial modeling applications that need to perform a lot of these calculations would benefit from accelerated computing.\nGraphics processing: This is like rendering a high-definition video or creating a 3D animation. For instance, a graphic design software or a video game would need to process a lot of graphics data quickly.\nData pattern matching: This is like finding a specific pattern in a large dataset. For example, a search engine looking for specific keywords in a large database of web pages would use data pattern matching.\n\n\n\n2.0.5 5. Storage Optimized Instances\nStorage optimized instances are designed for tasks that require high, sequential read and write access to extensive datasets on local storage. In other words, storage optimized instances are like the big cargo trucks of cloud computing. They are designed to handle tasks that involve a lot of loading and unloading of data, similar to a cargo truck transporting goods.\nIn computing, the term input/output operations per second (IOPS) is a performance metric for a storage device. It indicates the number of distinct input or output operations a device can execute in a single second. Storage optimized instances are engineered to deliver tens of thousands of low-latency, random IOPS to applications.\nInput operations can be thought of as data introduced into a system, like records entered into a database. An output operation is data produced by a server. An example of output could be the analytics conducted on the records in a database. If you have an application with a high IOPS demand, a storage optimized instance can offer superior performance compared to other instance types that are not optimized for this specific use case.\nStorage optimized instances can be used for :\n\nDistributed file systems: These are like a network of warehouses (storage spaces), where data is stored across multiple locations for easy access. For example, a cloud storage service like Dropbox or Google Drive would use a distributed file system.\nData warehousing applications: These are like huge data libraries that store, organize, and analyze large amounts of data. For instance, a business might use a data warehouse to analyze customer behavior, sales trends, and market research.\nHigh-frequency online transaction processing (OLTP) systems: These are like busy supermarkets where lots of transactions (like buying and selling of goods) are happening all at once. For example, an e-commerce site like Amazon during a big sale event would have a high-frequency OLTP system.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>EC2 Instance types</span>"
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>EC2 Instance types</span>"
     ]
   },
   {
     "objectID": "module-2-notes/Amazon-EC2-pricing.html",
     "href": "module-2-notes/Amazon-EC2-pricing.html",
-    "title": "5  Amazon EC2 pricing",
+    "title": "3  Amazon EC2 pricing",
     "section": "",
-    "text": "AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model listed in your uploaded content:\n\n5.0.1 On-Demand Instances\nOn-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.\n\n\n5.0.2 Reserved Instances\nReserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.\n\n\n5.0.3 EC2 Instance Savings Plans\nInstance Savings Plans offer a way to save up to 72% on your computing costs, similar to Reserved Instances, but with more flexibility in how instances are utilized across the AWS environment. These plans apply to any EC2 instance family, region, and OS, making them ideal for users with shifting or unpredictable workloads but consistent overall usage.\n\n\n5.0.4 Spot Instances\nSpot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.\n\n\n5.0.5 Dedicated Hosts\nDedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.\nEach pricing model is designed to meet different types of operational and financial needs, allowing businesses to optimize both performance and costs effectively. Depending on your workload requirements and how flexible you can be about when and how your applications run, you can choose the most cost-efficient way to use EC2.",
+    "text": "3.1 1. On-Demand Instances\nOn-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
     ]
   },
   {
@@ -460,6 +462,181 @@
     "text": "How Amazon EC2 works\nAmazon EC2 (Elastic Compute Cloud) is a central part of Amazon Web Services that offers scalable computing on demand, allowing users to run and manage server instances over the cloud. Here’s a simplified breakdown of how you typically interact with Amazon EC2, from launch to connection and usage:\n\nLaunch\nTo begin using Amazon EC2, you start by launching a virtual server, known as an instance. Here’s how that works:\n\nChoose an AMI (Amazon Machine Image): This is your first step. An AMI contains the operating system and the configurations required to launch your instance. You can choose from a variety of AMIs that Amazon provides or create your own.\nSelect an Instance Type: Amazon EC2 offers a range of instance types optimized for different purposes. Depending on your needs, you might select an instance with more CPU, memory, storage, or enhanced networking capabilities.\nConfigure Instance: Set up the networking and security for your instance. This includes choosing a network (VPC), subnets, and setting security groups which dictate the ports, protocols, and IPs allowed to interact with your instances.\nAdd Storage: EC2 allows you to attach storage to your instances. You can choose the type and size of storage based on your application needs.\nLaunch Instance: Once everything is set up, you launch the instance. AWS then allocates the resources and starts the instance after which it’s ready to use.\n\n\n\nConnect\nOnce your EC2 instance is running, you can connect to it:\n\nAccessing the Instance:\n\nFor Linux instances, you typically connect via SSH using a key pair that you specify when setting up the instance. This ensures secure access without needing a password.\nFor Windows instances, you can connect using Remote Desktop Protocol (RDP) with a username and password, which you can retrieve using your key pair.\n\n\nThis step is crucial as it’s where you manage the software side of your instance, installing necessary applications and configuring settings according to your project’s requirements.\n\n\nUse\nAfter connecting to your instance, you can use it just like any other computer. Here’s what generally happens in this phase:\n\nRun Applications: You can deploy and run applications, host websites, and manage data. Whatever tasks you would do on a physical server can be done on an EC2 instance.\nMonitor and Manage: AWS provides tools like Amazon CloudWatch to monitor the performance of your instance. You can track metrics such as CPU utilization, and network usage, and set up alarms for specific thresholds.\nScale: One of the significant advantages of EC2 is its scalability. Depending on the demand, you can scale your instances up or down. You can either do this manually or set up auto-scaling to adjust the capacity based on pre-defined rules and schedules.\nSecure: Continuously manage the security of your instances by updating security groups, adding rules, and ensuring your software is up-to-date with the latest security patches.\n\nBy the end of this process, you will have a fully functional virtual server ready to handle your computing tasks in the cloud, providing the flexibility to scale and adapt as your requirements evolve. This capability makes EC2 a powerful tool for businesses needing reliable, scalable, and efficient computing resources.",
     "crumbs": [
       "Module 2: Amazon EC2"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#reserved-instances",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#reserved-instances",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.2 2. Reserved Instances",
+    "text": "3.2 2. Reserved Instances\nReserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.\nThere are two available types of Reserved Instances:\n\nStandard Reserved Instances\nConvertible Reserved Instances\n\nStandard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.\nStandard Reserved Instances: This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:\n\nInstance type and size: For example, m5.xlarge\nPlatform description (operating system): For example, Microsoft Windows Server or Red Hat Enterprise Linux\nTenancy: Default tenancy or dedicated tenancy\n\nYou can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.\nConvertible Reserved Instances: These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.\nAt the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:\n\nTerminate the instance.\nPurchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#ec2-instance-savings-plans",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#ec2-instance-savings-plans",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.3 3. EC2 Instance Savings Plans",
+    "text": "3.3 3. EC2 Instance Savings Plans\nThese plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.\nFlexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.\nAWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#spot-instances",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#spot-instances",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.4 4. Spot Instances",
+    "text": "3.4 4. Spot Instances\nSpot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-2-notes/Amazon-EC2-pricing.html#dedicated-hosts",
+    "href": "module-2-notes/Amazon-EC2-pricing.html#dedicated-hosts",
+    "title": "3  Amazon EC2 pricing",
+    "section": "3.5 5. Dedicated Hosts",
+    "text": "3.5 5. Dedicated Hosts\nDedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.",
+    "crumbs": [
+      "Module 2: Amazon EC2",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>**Amazon EC2 pricing**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/Introduction-module-3.html",
+    "href": "module-3-notes/Introduction-module-3.html",
+    "title": "Module 3: AWS Global Infrastructure",
+    "section": "",
+    "text": "The AWS Global Infrastructure is the backbone of AWS cloud services, providing a robust, secure, and scalable platform for the deployment of applications and services. It’s not just a collection of data centres, but a network of interconnected facilities spread across the globe, known as Regions.\nWhy is this important, you ask? Imagine you’re running a global e-commerce business. Your customers are not just in one location, but scattered around the world. With AWS Global Infrastructure, you can ensure that your website is always available and delivers fast performance to all your customers, no matter where they are.\nThis is achieved through a combination of multiple Availability Zones within each Region, and edge locations used by Amazon CloudFront, AWS’s content delivery network service. This design not only ensures high availability and fault tolerance but also improves user experience by reducing latency.\nIn the upcoming lessons, we will delve deeper into these topics:\n\nWe’ll summarise the benefits of the AWS Global Infrastructure, exploring how it supports scalability, reliability, security, and global reach.\nWe’ll describe the basic concept of Availability Zones, which are essentially isolated locations within a Region to run your applications and databases.\nWe’ll discuss the benefits of Amazon CloudFront and edge locations, and how they help deliver content to your users with low latency and high transfer speeds.\nLastly, we’ll compare different methods for provisioning AWS services, helping you understand the various ways you can create and manage your AWS resources.",
+    "crumbs": [
+      "Module 3: AWS Global Infrastructure"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/AWS-Global-Infrastructure.html",
+    "href": "module-3-notes/AWS-Global-Infrastructure.html",
+    "title": "8  AWS Global Infrastructure",
+    "section": "",
+    "text": "8.1 Business factors that influence the choice of a region.\nWhen determining the right region for your services, data, and applications, consider the following four business factors:",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**AWS Global Infrastructure**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/AWS-Global-Infrastructure.html#business-factors-that-influence-the-choice-of-a-region.",
+    "href": "module-3-notes/AWS-Global-Infrastructure.html#business-factors-that-influence-the-choice-of-a-region.",
+    "title": "8  AWS Global Infrastructure",
+    "section": "",
+    "text": "8.1.1 Compliance with data governance and legal requirements\nYou may need to keep your data in particular locations, depending on the policies and location of your company. For example, if your organisation demands that all data remain in the UK, you would select the London Region. Not every company has location-specific data regulations. If your location is not governed by compliance or regulatory standards, focus on the other issues. For example, if you need to store data within South Africa, select the Cape Town Region. However, most businesses are not subject to such severe laws. If compliance isn’t a concern, consider the other factors.\n\n\n8.1.2 Proximity to customers\nChoosing a region close to your customers helps deliver content faster. For example, if your company is based in Johannesburg and many of your clients are in Nairobi, you may run your infrastructure in the Cape Town Region to be close to headquarters, while running your apps in the Nairobi Region. The proximity to your consumer base is critical because of latency. If most of your customers are in Nairobi, consider running from the Nairobi region. While you can operate from South Africa, the time it takes for data to travel between South Africa and Kenya will always be a factor. Locating close to your customer base is usually the best decision.\n\n\n8.1.3 Availability of services within a Region\nSometimes the nearest region might not offer all the features you need. AWS is continuously innovating and adding new services, but rolling out new services worldwide requires physical infrastructure updates in each region. For example, if your developers want to use Amazon Braket (AWS’s quantum computing platform) but it isn’t available in your local region, they’ll need to run it in one that is. While we may expect these services to eventually be available in all countries, availability may be the deciding factor for you right now.\n\n\n8.1.4 Pricing\nConsider deploying applications in both South Africa and Kenya. Due to Kenya’s tax system, it may cost 50% more to run the same workload in the Nairobi Region than in the Cape Town Region. Pricing varies by area due to factors such as tax rates and operational costs. For example, running the same workload in Nairobi could cost much more than in Cape Town. AWS pricing is transparent, with various price sheets for each location. If budget is a top priority, you may choose to operate in South Africa even if the customers are in Kenya.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**AWS Global Infrastructure**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/AWS-Global-Infrastructure.html#availability-zones",
+    "href": "module-3-notes/AWS-Global-Infrastructure.html#availability-zones",
+    "title": "8  AWS Global Infrastructure",
+    "section": "8.2 Availability Zones",
+    "text": "8.2 Availability Zones\nWhen it comes to hosting your application, you might be concerned about relying on a single building. This concern is valid as a single building can fail due to various unforeseen circumstances. If your business needs to be disaster-proof, it can’t operate from just one location. AWS acknowledges this fact, and that’s why AWS Regions are not confined to a single location.\nAWS regions and data Centers\nAWS has numerous data centers scattered across the globe. Each AWS Region comprises multiple data centers. A single data center or a group of data centers is referred to as an Availability Zone (AZ) by AWS.\nAn Availability Zone is a single data center or a group of data centers within a region. Availability Zones are located tens of miles apart from each other. This is close enough to have low latency (the time between when content requested and received) between Availability Zones. However, if a disaster occurs in one part of the region, they are distant enough to reduce the chance that multiple Availability Zones are affected.\nEach Availability Zone consists of one or more distinct data centers with redundant power, networking, and connectivity. When you launch an Amazon EC2 instance, it initiates a virtual machine on physical hardware installed in an Availability Zone. This means each AWS Region consists of multiple isolated and physically separate Availability Zones within a geographic Region.\nImportance of separation\nAvailability Zones are not built adjacent to each other. If a large-scale incident like a natural disaster were to occur, you could lose connectivity to everything in that Availability Zone.\nIf you only run one EC2 instance, it only operates in one building or one Availability Zone. If a large-scale disaster occurs, will your application still be able to run and serve your business? The solution to this is to run multiple EC2 instances.\nThe key point is not to run them in the same building or even on the same street. Push them as far apart as you can before the speed of light limits you if you still want low latency communication. The speed of light allows us to move these Availability Zones tens of miles apart from each other and still maintain single-digit millisecond latency between these Availability Zones. Now, if a disaster strikes, your application continues to operate because this disaster only affected some of your capacity, not all.\nBest practices\nAs a best practice with AWS, we always recommend you run across at least two Availability Zones in a Region. This means redundantly deploying your infrastructure in two different AZs.\nBut there’s more to Regions than just places to run EC2. Many of the AWS services run at the Region level, meaning they run synchronously across multiple AZs without any additional effort on your part.For example, the Elastic Load Balancer (ELB) we discussed previously is actually a regional construct. It operates across all Availability Zones, communicating with the EC2 instances running in a specific Availability Zone. Regional services are, by definition, already highly available at no additional cost or effort on your part. So, as you plan for high availability, any service listed as a regionally scoped service will already have that box checked. In the next section, we will look at going outside the Regions for additional solutions.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>**AWS Global Infrastructure**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/Edge-Locations.html",
+    "href": "module-3-notes/Edge-Locations.html",
+    "title": "9  Edge Locations",
+    "section": "",
+    "text": "9.1 Building Satellite Stores\nConsider a scenario where you have a thriving customer base in a new city. You can establish a satellite store to cater to these customers. From an IT perspective, if you have customers in Nairobi who need access to your data, but the data is hosted out of the London Region, you can place or cache a copy locally in Nairobi instead of having all the Nairobi-based customers send requests all the way to London to access the data.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Edge Locations**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/Edge-Locations.html#content-delivery-networks-cdns",
+    "href": "module-3-notes/Edge-Locations.html#content-delivery-networks-cdns",
+    "title": "9  Edge Locations",
+    "section": "9.2 Content Delivery Networks (CDNs)",
+    "text": "9.2 Content Delivery Networks (CDNs)\nCaching copies of data closer to the customers all around the world employs the concept of content delivery networks, or CDNs. CDNs are commonly used, and on AWS, our CDN is called Amazon CloudFront.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Edge Locations**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/Edge-Locations.html#amazon-cloudfront",
+    "href": "module-3-notes/Edge-Locations.html#amazon-cloudfront",
+    "title": "9  Edge Locations",
+    "section": "9.3 Amazon CloudFront",
+    "text": "9.3 Amazon CloudFront\nAmazon CloudFront is a service that helps deliver data, video, applications, and APIs to customers globally with low latency and high transfer speeds. Amazon CloudFront uses what are called Edge locations, all around the world, to help speed up communication with users, no matter where they are.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Edge Locations**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/Edge-Locations.html#edge-locations",
+    "href": "module-3-notes/Edge-Locations.html#edge-locations",
+    "title": "9  Edge Locations",
+    "section": "9.4 Edge Locations",
+    "text": "9.4 Edge Locations\nAn edge location is a site that Amazon CloudFront uses to store cached copies of your content closer to your customers for faster delivery.\nEdge locations are separate from Regions, so you can push content from inside a Region to a collection of Edge locations around the world to accelerate communication and content delivery. AWS Edge locations also run more than just CloudFront. They run a domain name service, or DNS, known as Amazon Route 53, helping direct customers to the correct web locations with reliably low latency.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Edge Locations**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/Edge-Locations.html#aws-outposts",
+    "href": "module-3-notes/Edge-Locations.html#aws-outposts",
+    "title": "9  Edge Locations",
+    "section": "9.5 AWS Outposts",
+    "text": "9.5 AWS Outposts\nBut what if your business wants to use AWS services inside their own building? AWS can do that for you. AWS Outposts is a service where AWS will essentially install a fully operational mini Region right inside your own data center. That’s owned and operated by AWS, using 100% of AWS functionality, but isolated within your own building. It’s not a solution most customers need, but if you have specific problems that can only be solved by staying in your own building, AWS Outposts can help.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Edge Locations**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/Edge-Locations.html#key-points",
+    "href": "module-3-notes/Edge-Locations.html#key-points",
+    "title": "9  Edge Locations",
+    "section": "9.6 Key Points",
+    "text": "9.6 Key Points\nTo summarise, here are the key points:\n\nRegions are geographically isolated areas where you can access services needed to run your enterprise.\nRegions contain Availability Zones that allow you to run across physically separated buildings, tens of miles of separation, while keeping your application logically unified. Availability Zones help you solve high availability and disaster recovery scenarios, without any additional effort on your part.\nAWS Edge locations run Amazon CloudFront to help get content closer to your customers, no matter where they are in the world.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Edge Locations**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/How-to-Provision-AWS .html",
+    "href": "module-3-notes/How-to-Provision-AWS .html",
+    "title": "10  How to Provision AWS",
+    "section": "",
+    "text": "10.0.1 Understanding APIs\nAn API, or Application Programming Interface, provides predetermined ways for you to interact with AWS services. You can invoke or call these APIs to provision, configure, and manage your AWS resources.\nFor instance, launching an EC2 instance or creating an AWS Lambda function would each involve different requests and different API calls to AWS. You can use various tools like the AWS Management Console, the AWS Command Line Interface (CLI), the AWS Software Development Kits (SDKs), or AWS CloudFormation to create requests to send to AWS APIs to create and manage AWS resources.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>**How to Provision AWS**</span>"
+    ]
+  },
+  {
+    "objectID": "module-3-notes/How-to-Provision-AWS .html#interacting-with-aws-services-using-managed-tools",
+    "href": "module-3-notes/How-to-Provision-AWS .html#interacting-with-aws-services-using-managed-tools",
+    "title": "10  How to Provision AWS",
+    "section": "10.1 Interacting with AWS Services Using Managed Tools",
+    "text": "10.1 Interacting with AWS Services Using Managed Tools\nIn addition to the AWS Management Console, the Command Line Interface (CLI), and the Software Development Kits (SDKs), AWS provides managed tools like AWS Elastic Beanstalk and AWS CloudFormation to help you provision and manage your AWS environment.\n\n10.1.1 AWS Elastic Beanstalk\nAWS Elastic Beanstalk is a service that assists you in provisioning Amazon EC2-based environments. Instead of navigating through the console or writing multiple commands to build out your network, EC2 instances, scaling, and Elastic Load Balancers, you can provide your application code and desired configurations to the AWS Elastic Beanstalk service. This service then uses that information to build out your environment for you.\nAWS Elastic Beanstalk also simplifies the process of saving environment configurations, allowing them to be deployed again easily. It offers the convenience of not having to provision and manage all these components separately, while still providing visibility and control of the underlying resources. This allows you to focus on your business application, not the infrastructure.\n\n\n10.1.2 AWS CloudFormation\nAWS CloudFormation is another service that helps create automated and repeatable deployments. It is an infrastructure-as-code tool that allows you to define a wide variety of AWS resources in a declarative way using JSON or YAML text-based documents, known as CloudFormation templates.\nA declarative format allows you to define what you want to build without specifying the details of exactly how to build it. CloudFormation lets you define what you want, and the CloudFormation engine takes care of the details, calling APIs to get everything built out.\nCloudFormation isn’t just limited to EC2-based solutions. It supports many different AWS resources, including storage, databases, analytics, machine learning, and more. Once you define your resources in a CloudFormation template, CloudFormation parses the template and begins provisioning all the resources you defined in parallel.\nCloudFormation manages all the calls to the backend AWS APIs for you. You can run the same CloudFormation template in multiple accounts or multiple regions, and it will create identical environments across them. This automated process reduces the room for human error.\n\n\n10.1.3 Recap\nTo recap, the AWS Management Console is great for learning and providing a visual for the user. However, it is a manual tool and not the best option for automation. Instead, you can use the CLI to script your interactions with AWS using the terminal, or the SDKs to write programs to interact with AWS. For a more managed approach, you can use tools like AWS Elastic Beanstalk or AWS CloudFormation.",
+    "crumbs": [
+      "Introduction-module-3.html",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>**How to Provision AWS**</span>"
     ]
   }
 ]

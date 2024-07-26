@@ -61,4 +61,14 @@ The key point is not to run them in the same building or even on the same street
 
 As a best practice with AWS, we always recommend you run across at least two Availability Zones in a Region. This means redundantly deploying your infrastructure in two different AZs.
 
-But there’s more to Regions than just places to run EC2. Many of the AWS services run at the Region level, meaning they run synchronously across multiple AZs without any additional effort on your part.For example, the Elastic Load Balancer (ELB) we discussed previously is actually a regional construct. It operates across all Availability Zones, communicating with the EC2 instances running in a specific Availability Zone. Regional services are, by definition, already highly available at no additional cost or effort on your part. So, as you plan for high availability, any service listed as a regionally scoped service will already have that box checked. In the next section, we will look at going outside the Regions for additional solutions.
+But there’s more to Regions than just places to run EC2. Many of the AWS services run at the Region level, meaning they run synchronously across multiple AZs without any additional effort on your part.For example, the Elastic Load Balancer (ELB) we discussed previously is actually a regional construct. It operates across all Availability Zones, communicating with the EC2 instances running in a specific Availability Zone.
+
+ A Region consists of three or more Availability Zones.For example, the South America (São Paulo) Region is sa-east-1. It includes three Availability Zones: sa-east-1a, sa-east-1b, and sa-east-1c.
+
+Regional services are, by definition, already highly available at no additional cost or effort on your part. So, as you plan for high availability, any service listed as a regionally scoped service will already have that box checked. In the next section, we will look at going outside the Regions for additional solutions.
+
+**Additional links**
+
+[AWS global infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
+
+[Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
