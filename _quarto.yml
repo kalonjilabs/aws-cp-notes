@@ -29,7 +29,7 @@ book:
 
     - part: module-4-notes/1-Introduction-m4.qmd
       chapters:
-        - module-4-notes/2-Connectivity-to-AWS.
+        - module-4-notes/2-Connectivity-to-AWS.qmd
         - module-4-notes/3-Subnets-and-NACL.qmd
 
 format:

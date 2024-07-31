@@ -1,4 +1,5 @@
-# Module 3: AWS Global Infrastructure
+# Module 3
+# AWS Global Infrastructure
 
 The AWS Global Infrastructure is the backbone of AWS cloud services, providing a robust, secure, and scalable platform for the deployment of applications and services. It’s not just a collection of data centres, but a network of interconnected facilities spread across the globe, known as **Regions**.
 

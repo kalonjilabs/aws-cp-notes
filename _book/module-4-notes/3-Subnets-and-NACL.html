@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - Module 4</title>
+<title>AWS Cloud Practitioner Notes - 12&nbsp; Subnets and Network Access Control Lists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-4-notes/2-Connectivity-to-AWS.html" rel="next">
-<link href="../module-3-notes/How-to-Provision-AWS .html" rel="prev">
+<link href="../module-4-notes/2-Connectivity-to-AWS.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Module 4</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Introduction to AWS Networking and Security</a></li><li class="breadcrumb-item"><a href="../module-4-notes/3-Subnets-and-NACL.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -207,8 +206,8 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-4-notes/1-Introduction-m4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Module 4</span></a>
+            <a href="../module-4-notes/1-Introduction-m4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to AWS Networking and Security</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -222,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span></a>
   </div>
 </li>
@@ -238,16 +237,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-to-aws-networking-and-security" id="toc-introduction-to-aws-networking-and-security" class="nav-link active" data-scroll-target="#introduction-to-aws-networking-and-security">Introduction to AWS Networking and Security</a></li>
+  <li><a href="#background-and-analogy" id="toc-background-and-analogy" class="nav-link active" data-scroll-target="#background-and-analogy"><span class="header-section-number">12.0.1</span> Background and analogy</a></li>
+  <li><a href="#subnets" id="toc-subnets" class="nav-link" data-scroll-target="#subnets"><span class="header-section-number">12.0.2</span> Subnets</a></li>
+  <li><a href="#network-traffic-in-a-vpc" id="toc-network-traffic-in-a-vpc" class="nav-link" data-scroll-target="#network-traffic-in-a-vpc"><span class="header-section-number">12.0.3</span> Network Traffic in a VPC</a></li>
+  <li><a href="#network-acls" id="toc-network-acls" class="nav-link" data-scroll-target="#network-acls"><span class="header-section-number">12.0.4</span> Network ACLs</a></li>
+  <li><a href="#security-groups" id="toc-security-groups" class="nav-link" data-scroll-target="#security-groups"><span class="header-section-number">12.0.5</span> Security Groups</a></li>
+  <li><a href="#example-scenario" id="toc-example-scenario" class="nav-link" data-scroll-target="#example-scenario"><span class="header-section-number">12.0.6</span> Example Scenario</a></li>
+  <li><a href="#understanding-stateless-and-stateful-packet-filtering-in-aws" id="toc-understanding-stateless-and-stateful-packet-filtering-in-aws" class="nav-link" data-scroll-target="#understanding-stateless-and-stateful-packet-filtering-in-aws"><span class="header-section-number">12.0.7</span> Understanding Stateless and Stateful Packet Filtering in AWS</a></li>
+  <li><a href="#stateless-packet-filtering-with-nacls" id="toc-stateless-packet-filtering-with-nacls" class="nav-link" data-scroll-target="#stateless-packet-filtering-with-nacls"><span class="header-section-number">12.0.8</span> Stateless Packet Filtering with NACLs</a></li>
+  <li><a href="#stateful-packet-filtering-with-security-groups" id="toc-stateful-packet-filtering-with-security-groups" class="nav-link" data-scroll-target="#stateful-packet-filtering-with-security-groups"><span class="header-section-number">12.0.9</span> Stateful Packet Filtering with Security Groups</a></li>
+  <li><a href="#comparing-nacls-and-security-groups" id="toc-comparing-nacls-and-security-groups" class="nav-link" data-scroll-target="#comparing-nacls-and-security-groups"><span class="header-section-number">12.0.10</span> Comparing NACLs and Security Groups</a></li>
+  <li><a href="#vpc-component-recap" id="toc-vpc-component-recap" class="nav-link" data-scroll-target="#vpc-component-recap"><span class="header-section-number">12.0.11</span> VPC Component Recap</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Introduction to AWS Networking and Security</a></li><li class="breadcrumb-item"><a href="../module-4-notes/3-Subnets-and-NACL.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Module 4</h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></h1>
 </div>
 
 
@@ -264,21 +273,156 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction-to-aws-networking-and-security" class="level1">
-<h1>Introduction to AWS Networking and Security</h1>
-<p>In the age of cloud computing, understanding networking and security is critical. As more and more of our workloads migrate to the cloud, the demand for secure, dependable, and efficient networking has never been higher. This is where Amazon Web Services, a renowned cloud service provider, comes into action.</p>
-<p>AWS offers a wide range of services and products for developing and deploying large-scale applications. However, in order to take full advantage of these tools, you must first grasp how AWS networking and security function. This knowledge will enable you to create and deploy powerful, scalable, and secure apps on AWS.</p>
-<p>This module is meant to provide you with this crucial knowledge. It serves as the foundation for your journey towards AWS Cloud Practitioner certification.</p>
-<p>Here are the learning objectives for this module:</p>
+<p>Your Virtual Private Cloud (VPC) is like a fortress; nothing enters or exits without your explicit permission. Think of your virtual private cloud (VPC) as a high-security building with distinct rooms (subnets), and rigorous security measures (Network Access Control Lists, or NACLs), regulating who can enter and exit each room. Let’s explore how this works and why it’s essential for your network security.</p>
+<section id="background-and-analogy" class="level3" data-number="12.0.1">
+<h3 data-number="12.0.1" class="anchored" data-anchor-id="background-and-analogy"><span class="header-section-number">12.0.1</span> Background and analogy</h3>
+<p>Imagine you own a large, secure building (your VPC). This building has multiple rooms, each with different purposes and levels of access:</p>
 <ol type="1">
-<li>Describe the basic concepts of networking.</li>
-<li>Describe the difference between public and private networking resources.</li>
-<li>Explain a virtual private gateway using a real-life scenario.</li>
-<li>Explain a virtual private network (VPN) using a real-life scenario.</li>
-<li>Describe the benefit of AWS Direct Connect.</li>
-<li>Describe the benefit of hybrid deployments.</li>
-<li>Describe the layers of security used in an IT strategy.</li>
-<li>Describe the services customers use to interact with the AWS global network.</li>
+<li><strong>Public room:</strong> This room is like the lobby of your building, accessible to anyone who walks in from the street (internet). This is where you place resources like your website, which need to be accessible to the public.</li>
+<li><strong>Private room:</strong> This room is deep inside your building, accessible only to authorised personnel. This is where you store sensitive information, like customer databases.</li>
+</ol>
+<p>To control access to these rooms, you have two types of security personnel:</p>
+<ul>
+<li><strong>Network ACLs:</strong> These are like passport control officers at the border of each room (subnet). They check the credentials of every person (data packet) entering or leaving the room.</li>
+<li><strong>Security groups:</strong> These are like doormen at the entrance of each office (EC2 instance). They ensure only authorised individuals can enter specific offices.</li>
+</ul>
+</section>
+<section id="subnets" class="level3" data-number="12.0.2">
+<h3 data-number="12.0.2" class="anchored" data-anchor-id="subnets"><span class="header-section-number">12.0.2</span> Subnets</h3>
+<p>A <strong>subnet</strong> is a section of your VPC where you can group resources based on security or operational needs. Subnets can be public or private:</p>
+<ul>
+<li><strong>Public Subnets:</strong> These contain resources that need to be accessible by the public, such as a website.</li>
+<li><strong>Private Subnets:</strong> These contain resources that should only be accessible through your private network, like a database.</li>
+</ul>
+<p>For example, you might have an application where the web servers are in a public subnet, and they communicate with databases in a private subnet.</p>
+<p><img src="subnets.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="network-traffic-in-a-vpc" class="level3" data-number="12.0.3">
+<h3 data-number="12.0.3" class="anchored" data-anchor-id="network-traffic-in-a-vpc"><span class="header-section-number">12.0.3</span> Network Traffic in a VPC</h3>
+<p>When a customer requests data from an application hosted in the AWS Cloud, this request is sent as a <strong>packet</strong> (a unit of data). This packet enters the VPC through an internet gateway and must pass through several security checks before reaching its destination.</p>
+</section>
+<section id="network-acls" class="level3" data-number="12.0.4">
+<h3 data-number="12.0.4" class="anchored" data-anchor-id="network-acls"><span class="header-section-number">12.0.4</span> Network ACLs</h3>
+<p>A <strong>Network Access Control List (NACL)</strong> is a virtual firewall that controls inbound and outbound traffic at the subnet level:</p>
+<ul>
+<li><strong>Inbound Rules:</strong> These rules control incoming traffic.</li>
+<li><strong>Outbound Rules:</strong> These rules control outgoing traffic.</li>
+</ul>
+<p>Think of a NACL as a passport control officer at the border of a country. This officer checks travelers’ credentials when they are entering and exiting the country. If the traveler (data packet) is on the approved list, they can pass. If not, they are denied entry.</p>
+<p>Each AWS account includes a default NACL. By default, this NACL allows all inbound and outbound traffic, but you can modify it to add specific rules. For custom NACLs, all traffic is denied until you add rules to allow specific traffic.</p>
+<p><img src="Network-ACL.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="security-groups" class="level3" data-number="12.0.5">
+<h3 data-number="12.0.5" class="anchored" data-anchor-id="security-groups"><span class="header-section-number">12.0.5</span> Security Groups</h3>
+<p>While NACLs control traffic at the subnet level, <strong>Security Groups</strong> control traffic at the instance level:</p>
+<ul>
+<li>Each EC2 instance has an associated security group.</li>
+<li>By default, a security group blocks all incoming traffic and allows all outgoing traffic.</li>
+<li>You can modify security group rules to allow specific types of traffic, such as web traffic (HTTP/HTTPS).</li>
+</ul>
+<p>If NACLs are like passport control, security groups are like doormen at the entrance of an office. They ensure that only authorised traffic can enter the instance.</p>
+<p><img src="security-groups.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="example-scenario" class="level3" data-number="12.0.6">
+<h3 data-number="12.0.6" class="anchored" data-anchor-id="example-scenario"><span class="header-section-number">12.0.6</span> Example Scenario</h3>
+<p>Let’s walk through an example of how a packet travels from one instance to another in a different subnet:</p>
+<ol type="1">
+<li><strong>Instance A (Source):</strong>
+<ul>
+<li>The packet leaves Instance A and passes through its security group. Since security groups allow all outbound traffic by default, the packet can leave without any issues.</li>
+<li>The packet then reaches the boundary of the subnet and must pass through the NACL. If the packet is allowed by the NACL, it can proceed.</li>
+</ul></li>
+<li><strong>Subnet Boundary:</strong>
+<ul>
+<li>The packet crosses into the target subnet and must pass through the NACL at this boundary. If it’s allowed, it can enter the subnet.</li>
+</ul></li>
+<li><strong>Instance B (Destination):</strong>
+<ul>
+<li>The packet reaches Instance B and must pass through its security group. If the security group allows the traffic, the packet reaches its destination.</li>
+</ul></li>
+<li><strong>Return Traffic:</strong>
+<ul>
+<li>When the packet returns, the security group of Instance B allows it to leave (default behavior).</li>
+<li>The NACL at the subnet boundary checks the packet again.</li>
+<li>The packet crosses into the original subnet and passes through its NACL.</li>
+<li>Finally, the security group of Instance A recognizes the returning packet and allows it in.</li>
+</ul></li>
+</ol>
+<p>By using both NACLs and security groups, AWS ensures a robust and layered security approach for your VPC. NACLs provide broad subnet-level security, while security groups offer fine-grained instance-level security. Together, they help keep your network secure and functional, much like the combined efforts of passport control officers and doormen in a high-security building.</p>
+<p>This layered security model is crucial for protecting your AWS infrastructure and ensuring that only authorised traffic can access your resources.</p>
+<p>For more detailed information and additional training on AWS security, be sure to follow the provided links and enhance your knowledge to secure your infrastructure effectively.</p>
+</section>
+<section id="understanding-stateless-and-stateful-packet-filtering-in-aws" class="level3" data-number="12.0.7">
+<h3 data-number="12.0.7" class="anchored" data-anchor-id="understanding-stateless-and-stateful-packet-filtering-in-aws"><span class="header-section-number">12.0.7</span> Understanding Stateless and Stateful Packet Filtering in AWS</h3>
+<p>Ensuring the security of your network traffic is essential when working with AWS. Two fundamental mechanisms that AWS provides for this purpose are Network Access Control Lists (NACLs) and Security Groups. These tools are used to filter traffic, but they operate in different ways: stateless packet filtering and stateful packet filtering.</p>
+</section>
+<section id="stateless-packet-filtering-with-nacls" class="level3" data-number="12.0.8">
+<h3 data-number="12.0.8" class="anchored" data-anchor-id="stateless-packet-filtering-with-nacls"><span class="header-section-number">12.0.8</span> Stateless Packet Filtering with NACLs</h3>
+<p>Network ACLs perform <strong>stateless packet filtering</strong>, meaning they do not remember previous decisions and evaluate each packet crossing the subnet boundary individually.</p>
+<p><strong>Analogy:</strong> Imagine you’re at an airport trying to enter a different country. Each time you arrive at the passport control (network ACL), the officer checks your documents regardless of whether you’ve entered before. Similarly, NACLs check each packet against their rules for both inbound and outbound traffic.</p>
+<p><img src="stateless.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<ul>
+<li><strong>Inbound Traffic:</strong> When a data packet (traveller) arrives at the subnet border (country’s border), the NACL checks its credentials (source IP, protocol, port) against a list of rules. If approved, the packet is allowed in; otherwise, it’s denied entry.</li>
+<li><strong>Outbound Traffic:</strong> When a packet leaves the subnet, the NACL checks it again, ensuring it meets the outbound rules before allowing it to exit.</li>
+</ul>
+<p><strong>Example:</strong> Consider a request sent from an Amazon EC2 instance to the internet. When the response packet returns, the NACL doesn’t remember the initial request. It evaluates the response packet against its rules to decide whether to allow it into the subnet.</p>
+</section>
+<section id="stateful-packet-filtering-with-security-groups" class="level3" data-number="12.0.9">
+<h3 data-number="12.0.9" class="anchored" data-anchor-id="stateful-packet-filtering-with-security-groups"><span class="header-section-number">12.0.9</span> Stateful Packet Filtering with Security Groups</h3>
+<p>Security Groups perform <strong>stateful packet filtering</strong>, which means they remember previous decisions regarding incoming packets and allow responses based on this memory.</p>
+<p><strong>Analogy:</strong> Picture an apartment building with a door attendant (security group) in the lobby. When guests (packets) arrive, the attendant checks a list to ensure they’re allowed entry. Once inside, the attendant remembers these guests and does not check the list again when they exit.</p>
+<p><img src="statefull.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<ul>
+<li><strong>Inbound Traffic:</strong> By default, a security group denies all inbound traffic. You can add rules to allow specific types of traffic, such as HTTP or SSH.</li>
+<li><strong>Outbound Traffic:</strong> By default, a security group allows all outbound traffic. You can modify these rules if needed.</li>
+</ul>
+<p><strong>Example:</strong> Suppose an EC2 instance sends a request to the internet. When the response packet comes back, the security group remembers the initial request and allows the response to enter, even if the inbound rules do not explicitly allow it.</p>
+</section>
+<section id="comparing-nacls-and-security-groups" class="level3" data-number="12.0.10">
+<h3 data-number="12.0.10" class="anchored" data-anchor-id="comparing-nacls-and-security-groups"><span class="header-section-number">12.0.10</span> Comparing NACLs and Security Groups</h3>
+<p>Understanding the differences between NACLs and Security Groups is crucial:</p>
+<ul>
+<li><strong>Network ACLs:</strong>
+<ul>
+<li><strong>Stateless:</strong> They do not remember past decisions.</li>
+<li><strong>Subnet-Level:</strong> Control traffic at the subnet level.</li>
+<li><strong>Rules:</strong> Evaluate both inbound and outbound traffic separately.</li>
+</ul></li>
+<li><strong>Security Groups:</strong>
+<ul>
+<li><strong>Stateful:</strong> They remember past decisions.</li>
+<li><strong>Instance-Level:</strong> Control traffic at the instance level.</li>
+<li><strong>Rules:</strong> Allow all outbound traffic by default and evaluate inbound traffic based on rules.</li>
+</ul></li>
+</ul>
+<p><img src="vpc-packets.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="vpc-component-recap" class="level3" data-number="12.0.11">
+<h3 data-number="12.0.11" class="anchored" data-anchor-id="vpc-component-recap"><span class="header-section-number">12.0.11</span> VPC Component Recap</h3>
+<p>Here’s a quick recap of the VPC components we’ve discussed:</p>
+<ol type="1">
+<li><strong>Subnets:</strong> Segments within a VPC that can be public or private, controlling access based on security needs.</li>
+<li><strong>Network ACLs:</strong> Stateless firewalls at the subnet level, controlling inbound and outbound traffic.</li>
+<li><strong>Security Groups:</strong> Stateful firewalls at the instance level, controlling inbound traffic and allowing outbound traffic by default.</li>
+<li><strong>Internet Gateway:</strong> A gateway that allows communication between the VPC and the internet, used by public subnets.</li>
 </ol>
 
 
@@ -696,14 +840,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-3-notes/How-to-Provision-AWS .html" class="pagination-link" aria-label="**How to Provision AWS**">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><strong>How to Provision AWS</strong></span></span>
+      <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="pagination-link" aria-label="Connectivity to AWS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="pagination-link" aria-label="Connectivity to AWS">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
