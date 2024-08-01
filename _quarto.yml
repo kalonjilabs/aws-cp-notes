@@ -37,7 +37,8 @@ book:
       chapters:
         - module-5-notes/2-Amazon-EBS.qmd
         - module-5-notes/3-Amazon-S3.qmd
-        - module-5-notes/4-Global-Networking.qmd
+        - module-5-notes/4-Amazon-EFS.qmd
+        - module-5-notes/5-Amazon-RDS.qmd
 
 format:
   html:

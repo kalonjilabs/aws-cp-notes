@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 12&nbsp; Subnets and Network Access Control Lists</title>
+<title>AWS Cloud Practitioner Notes - 15&nbsp; Amazon Simple Storage Service (Amazon S3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-4-notes/4-Global-Networking.html" rel="next">
-<link href="../module-4-notes/2-Connectivity-to-AWS.html" rel="prev">
+<link href="../module-5-notes/4-Amazon-EFS.html" rel="next">
+<link href="../module-5-notes/2-Amazon-EBS.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Module 4</a></li><li class="breadcrumb-item"><a href="../module-4-notes/3-Subnets-and-NACL.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/3-Amazon-S3.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -222,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span></a>
   </div>
 </li>
@@ -251,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span></a>
   </div>
 </li>
@@ -279,26 +279,39 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#background-and-analogy" id="toc-background-and-analogy" class="nav-link active" data-scroll-target="#background-and-analogy"><span class="header-section-number">12.0.1</span> Background and analogy</a></li>
-  <li><a href="#subnets" id="toc-subnets" class="nav-link" data-scroll-target="#subnets"><span class="header-section-number">12.0.2</span> Subnets</a></li>
-  <li><a href="#network-traffic-in-a-vpc" id="toc-network-traffic-in-a-vpc" class="nav-link" data-scroll-target="#network-traffic-in-a-vpc"><span class="header-section-number">12.0.3</span> Network Traffic in a VPC</a></li>
-  <li><a href="#network-acls" id="toc-network-acls" class="nav-link" data-scroll-target="#network-acls"><span class="header-section-number">12.0.4</span> Network ACLs</a></li>
-  <li><a href="#security-groups" id="toc-security-groups" class="nav-link" data-scroll-target="#security-groups"><span class="header-section-number">12.0.5</span> Security Groups</a></li>
-  <li><a href="#example-scenario" id="toc-example-scenario" class="nav-link" data-scroll-target="#example-scenario"><span class="header-section-number">12.0.6</span> Example Scenario</a></li>
-  <li><a href="#understanding-stateless-and-stateful-packet-filtering-in-aws" id="toc-understanding-stateless-and-stateful-packet-filtering-in-aws" class="nav-link" data-scroll-target="#understanding-stateless-and-stateful-packet-filtering-in-aws"><span class="header-section-number">12.0.7</span> Understanding Stateless and Stateful Packet Filtering in AWS</a></li>
-  <li><a href="#stateless-packet-filtering-with-nacls" id="toc-stateless-packet-filtering-with-nacls" class="nav-link" data-scroll-target="#stateless-packet-filtering-with-nacls"><span class="header-section-number">12.0.8</span> Stateless Packet Filtering with NACLs</a></li>
-  <li><a href="#stateful-packet-filtering-with-security-groups" id="toc-stateful-packet-filtering-with-security-groups" class="nav-link" data-scroll-target="#stateful-packet-filtering-with-security-groups"><span class="header-section-number">12.0.9</span> Stateful Packet Filtering with Security Groups</a></li>
-  <li><a href="#comparing-nacls-and-security-groups" id="toc-comparing-nacls-and-security-groups" class="nav-link" data-scroll-target="#comparing-nacls-and-security-groups"><span class="header-section-number">12.0.10</span> Comparing NACLs and Security Groups</a></li>
-  <li><a href="#vpc-component-recap" id="toc-vpc-component-recap" class="nav-link" data-scroll-target="#vpc-component-recap"><span class="header-section-number">12.0.11</span> VPC Component Recap</a></li>
+  <li><a href="#understanding-object-storage" id="toc-understanding-object-storage" class="nav-link active" data-scroll-target="#understanding-object-storage"><span class="header-section-number">15.1</span> Understanding object storage</a></li>
+  <li><a href="#amazon-s3" id="toc-amazon-s3" class="nav-link" data-scroll-target="#amazon-s3"><span class="header-section-number">15.2</span> Amazon S3</a>
+  <ul class="collapse">
+  <li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits"><span class="header-section-number">15.2.1</span> Benefits</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works"><span class="header-section-number">15.2.2</span> How it works</a></li>
+  </ul></li>
+  <li><a href="#amazon-s3-storage-classes" id="toc-amazon-s3-storage-classes" class="nav-link" data-scroll-target="#amazon-s3-storage-classes"><span class="header-section-number">15.3</span> Amazon S3 storage classes</a>
+  <ul class="collapse">
+  <li><a href="#amazon-s3-standard" id="toc-amazon-s3-standard" class="nav-link" data-scroll-target="#amazon-s3-standard"><span class="header-section-number">15.3.1</span> Amazon S3 standard</a></li>
+  <li><a href="#amazon-s3-standard-infrequent-access-s3-standard-ia" id="toc-amazon-s3-standard-infrequent-access-s3-standard-ia" class="nav-link" data-scroll-target="#amazon-s3-standard-infrequent-access-s3-standard-ia"><span class="header-section-number">15.3.2</span> Amazon S3 standard-infrequent access (s3 standard-IA)</a></li>
+  <li><a href="#amazon-s3-one-zone-infrequent-access-s3-one-zone-ia" id="toc-amazon-s3-one-zone-infrequent-access-s3-one-zone-ia" class="nav-link" data-scroll-target="#amazon-s3-one-zone-infrequent-access-s3-one-zone-ia"><span class="header-section-number">15.3.3</span> Amazon S3 one zone-infrequent access (s3 one zone-IA)</a></li>
+  <li><a href="#amazon-s3-intelligent-tiering" id="toc-amazon-s3-intelligent-tiering" class="nav-link" data-scroll-target="#amazon-s3-intelligent-tiering"><span class="header-section-number">15.3.4</span> Amazon S3 intelligent-tiering</a></li>
+  <li><a href="#amazon-s3-glacier-instant-retrieval" id="toc-amazon-s3-glacier-instant-retrieval" class="nav-link" data-scroll-target="#amazon-s3-glacier-instant-retrieval"><span class="header-section-number">15.3.5</span> Amazon S3 glacier instant retrieval</a></li>
+  <li><a href="#amazon-s3-glacier-flexible-retrieval" id="toc-amazon-s3-glacier-flexible-retrieval" class="nav-link" data-scroll-target="#amazon-s3-glacier-flexible-retrieval"><span class="header-section-number">15.3.6</span> Amazon S3 glacier flexible retrieval</a></li>
+  <li><a href="#amazon-s3-glacier-deep-archive" id="toc-amazon-s3-glacier-deep-archive" class="nav-link" data-scroll-target="#amazon-s3-glacier-deep-archive"><span class="header-section-number">15.3.7</span> Amazon S3 glacier deep archive</a></li>
+  <li><a href="#amazon-s3-outposts" id="toc-amazon-s3-outposts" class="nav-link" data-scroll-target="#amazon-s3-outposts"><span class="header-section-number">15.3.8</span> Amazon S3 outposts</a></li>
+  </ul></li>
+  <li><a href="#comparing-amazon-ebs-and-amazon-s3" id="toc-comparing-amazon-ebs-and-amazon-s3" class="nav-link" data-scroll-target="#comparing-amazon-ebs-and-amazon-s3"><span class="header-section-number">15.4</span> <strong>Comparing Amazon EBS and Amazon S3</strong></a>
+  <ul class="collapse">
+  <li><a href="#amazon-s3-benefits" id="toc-amazon-s3-benefits" class="nav-link" data-scroll-target="#amazon-s3-benefits"><span class="header-section-number">15.4.1</span> Amazon S3 benefits</a></li>
+  <li><a href="#amazon-s3-use-cases" id="toc-amazon-s3-use-cases" class="nav-link" data-scroll-target="#amazon-s3-use-cases"><span class="header-section-number">15.4.2</span> Amazon S3 use cases</a></li>
+  <li><a href="#amazon-ebs-benefits" id="toc-amazon-ebs-benefits" class="nav-link" data-scroll-target="#amazon-ebs-benefits"><span class="header-section-number">15.4.3</span> Amazon EBS benefits</a></li>
+  <li><a href="#amazon-ebs-use-cases" id="toc-amazon-ebs-use-cases" class="nav-link" data-scroll-target="#amazon-ebs-use-cases"><span class="header-section-number">15.4.4</span> Amazon EBS use cases</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Module 4</a></li><li class="breadcrumb-item"><a href="../module-4-notes/3-Subnets-and-NACL.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/3-Amazon-S3.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></h1>
 </div>
 
 
@@ -315,159 +328,156 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Your Virtual Private Cloud (VPC) is like a fortress; nothing enters or exits without your explicit permission. Think of your virtual private cloud (VPC) as a high-security building with distinct rooms (subnets), and rigorous security measures (Network Access Control Lists, or NACLs), regulating who can enter and exit each room. Let’s explore how this works and why it’s essential for your network security.</p>
-<section id="background-and-analogy" class="level3" data-number="12.0.1">
-<h3 data-number="12.0.1" class="anchored" data-anchor-id="background-and-analogy"><span class="header-section-number">12.0.1</span> Background and analogy</h3>
-<p>Imagine you own a large, secure building (your VPC). This building has multiple rooms, each with different purposes and levels of access:</p>
-<ol type="1">
-<li><strong>Public room:</strong> This room is like the lobby of your building, accessible to anyone who walks in from the street (internet). This is where you place resources like your website, which need to be accessible to the public.</li>
-<li><strong>Private room:</strong> This room is deep inside your building, accessible only to authorised personnel. This is where you store sensitive information, like customer databases.</li>
-</ol>
-<p>To control access to these rooms, you have two types of security personnel:</p>
-<ul>
-<li><strong>Network ACLs:</strong> These are like passport control officers at the border of each room (subnet). They check the credentials of every person (data packet) entering or leaving the room.</li>
-<li><strong>Security groups:</strong> These are like doormen at the entrance of each office (EC2 instance). They ensure only authorised individuals can enter specific offices.</li>
-</ul>
-</section>
-<section id="subnets" class="level3" data-number="12.0.2">
-<h3 data-number="12.0.2" class="anchored" data-anchor-id="subnets"><span class="header-section-number">12.0.2</span> Subnets</h3>
-<p>A <strong>subnet</strong> is a section of your VPC where you can group resources based on security or operational needs. Subnets can be public or private:</p>
-<ul>
-<li><strong>Public Subnets:</strong> These contain resources that need to be accessible by the public, such as a website.</li>
-<li><strong>Private Subnets:</strong> These contain resources that should only be accessible through your private network, like a database.</li>
-</ul>
-<p>For example, you might have an application where the web servers are in a public subnet, and they communicate with databases in a private subnet.</p>
-<p><img src="subnets.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
+<p>Most businesses need to store data, and Amazon S3 is a reliable solution for storing and retrieving virtually unlimited data at any scale.</p>
+<section id="understanding-object-storage" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="understanding-object-storage"><span class="header-section-number">15.1</span> Understanding object storage</h2>
+<p>Object storage is a data storage architecture ideal for storing, archiving, backing up, and managing high volumes of static, unstructured data, such as emails, videos, photos, web pages, audio files, sensor data, and other media and web content.</p>
+<p>Objects in object storage are discrete units of data stored in a structurally flat environment. Unlike file-based systems with folders and directories, each object is a self-contained repository that includes the data, metadata (descriptive information about the object), and a unique ID number for locating and accessing the object.</p>
+<p>Object storage allows for unlimited scaling and improved data resiliency and disaster recovery by aggregating object storage devices into larger pools and distributing these pools across locations. Objects are often stored on cloud servers and accessed via Application Programming Interfaces (APIs), primarily HTTP-based RESTful APIs.</p>
+<p><img src="object-storage.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;"></p>
 <p style="text-align: center;">
 <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
 </p>
-</section>
-<section id="network-traffic-in-a-vpc" class="level3" data-number="12.0.3">
-<h3 data-number="12.0.3" class="anchored" data-anchor-id="network-traffic-in-a-vpc"><span class="header-section-number">12.0.3</span> Network Traffic in a VPC</h3>
-<p>When a customer requests data from an application hosted in the AWS Cloud, this request is sent as a <strong>packet</strong> (a unit of data). This packet enters the VPC through an internet gateway and must pass through several security checks before reaching its destination.</p>
-</section>
-<section id="network-acls" class="level3" data-number="12.0.4">
-<h3 data-number="12.0.4" class="anchored" data-anchor-id="network-acls"><span class="header-section-number">12.0.4</span> Network ACLs</h3>
-<p>A <strong>Network Access Control List (NACL)</strong> is a virtual firewall that controls inbound and outbound traffic at the subnet level:</p>
+<p>In object storage, each object consists of data, metadata, and a key:</p>
 <ul>
-<li><strong>Inbound Rules:</strong> These rules control incoming traffic.</li>
-<li><strong>Outbound Rules:</strong> These rules control outgoing traffic.</li>
+<li><strong>Data:</strong> This can be an image, video, text document, or any other file type.</li>
+<li><strong>Metadata:</strong> Contains information about the data, such as usage, size, and other relevant details.</li>
+<li><strong>Key:</strong> A unique identifier for the object.</li>
 </ul>
-<p>Think of a NACL as a passport control officer at the border of a country. This officer checks travelers’ credentials when they are entering and exiting the country. If the traveler (data packet) is on the approved list, they can pass. If not, they are denied entry.</p>
-<p>Each AWS account includes a default NACL. By default, this NACL allows all inbound and outbound traffic, but you can modify it to add specific rules. For custom NACLs, all traffic is denied until you add rules to allow specific traffic.</p>
-<p><img src="Network-ACL.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
-<p style="text-align: center;">
-<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
-</p>
+<p>Data is stored as objects in buckets. For example, a file on your hard drive is an object, and the file directory is the bucket. The maximum object size for upload is 5 terabytes. Objects can be versioned to protect against accidental deletion, and permissions can be set to control access.</p>
+<p>Amazon S3 provides multiple storage tiers for different use cases, such as frequently accessed data versus long-term archival.</p>
 </section>
-<section id="security-groups" class="level3" data-number="12.0.5">
-<h3 data-number="12.0.5" class="anchored" data-anchor-id="security-groups"><span class="header-section-number">12.0.5</span> Security Groups</h3>
-<p>While NACLs control traffic at the subnet level, <strong>Security Groups</strong> control traffic at the instance level:</p>
+<section id="amazon-s3" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="amazon-s3"><span class="header-section-number">15.2</span> Amazon S3</h2>
+<p>Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. It enables customers of all sizes and industries to store, manage, analyze, and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize and analyze data, and configure fine-tuned access controls to meet specific business and compliance requirements.</p>
+<section id="benefits" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="benefits"><span class="header-section-number">15.2.1</span> Benefits</h3>
+<p><strong>Scalability:</strong> Amazon S3 can store virtually any amount of data, scaling up to exabytes with unmatched performance. It is fully elastic, automatically growing and shrinking as you add and remove data. There’s no need to provision storage, and you pay only for what you use.</p>
+<p><strong>Durability and availability:</strong> Amazon S3 provides the most durable storage in the cloud with industry-leading availability. Its unique architecture is designed to provide 99.999999999% (11 nines) data durability and 99.99% availability by default, supported by the strongest SLAs in the cloud.</p>
+<p><strong>Security and data protection:</strong> Amazon S3 ensures data security with unmatched protection, compliance, and access control capabilities. Data is secure, private, and encrypted by default, with extensive auditing capabilities to monitor access requests to your S3 resources.</p>
+<p><strong>Lowest price and highest performance:</strong> For every task, Amazon S3 provides a variety of storage classes with the best price-performance ratios. Massive volumes of data can be cost-effectively stored, regardless of how often, seldom, or infrequently they are used, thanks to automated data lifecycle management. Throughput, latency, resilience, and flexibility offered by S3 guarantee that performance is never constrained by storage.</p>
+</section>
+<section id="how-it-works" class="level3" data-number="15.2.2">
+<h3 data-number="15.2.2" class="anchored" data-anchor-id="how-it-works"><span class="header-section-number">15.2.2</span> How it works</h3>
+<p><img src="howitworks.png" alt="How S3 works " style="width:95%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://aws.amazon.com/s3/">Source: Amazon S3 </a>
+</p>
+<p>Amazon S3 stores data as objects within buckets. An object consists of a file and any metadata that describes the file. A bucket is a container for objects. To store data in Amazon S3, you first create a bucket and specify a bucket name and AWS Region. Then, you upload your data to that bucket as objects in Amazon S3. Each object has a key (or key name), which is the unique identifier for the object within the bucket.</p>
+<p>Amazon S3 provides features that you can configure to support your specific use case:</p>
 <ul>
-<li>Each EC2 instance has an associated security group.</li>
-<li>By default, a security group blocks all incoming traffic and allows all outgoing traffic.</li>
-<li>You can modify security group rules to allow specific types of traffic, such as web traffic (HTTP/HTTPS).</li>
+<li><strong>Versioning:</strong> S3 Versioning allows you to keep multiple versions of an object in the same bucket. This feature enables you to restore objects that are accidentally deleted or overwritten.</li>
+<li><strong>Access controls:</strong> Buckets and the objects in them are private and can only be accessed with explicitly granted permissions. You can use bucket policies, AWS Identity and Access Management (IAM) policies, S3 Access Points, and access control lists (ACLs) to manage access.</li>
 </ul>
-<p>If NACLs are like passport control, security groups are like doormen at the entrance of an office. They ensure that only authorised traffic can enter the instance.</p>
-<p><img src="security-groups.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
-<p style="text-align: center;">
-<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
-</p>
 </section>
-<section id="example-scenario" class="level3" data-number="12.0.6">
-<h3 data-number="12.0.6" class="anchored" data-anchor-id="example-scenario"><span class="header-section-number">12.0.6</span> Example Scenario</h3>
-<p>Let’s walk through an example of how a packet travels from one instance to another in a different subnet:</p>
-<ol type="1">
-<li><strong>Instance A (Source):</strong>
-<ul>
-<li>The packet leaves Instance A and passes through its security group. Since security groups allow all outbound traffic by default, the packet can leave without any issues.</li>
-<li>The packet then reaches the boundary of the subnet and must pass through the NACL. If the packet is allowed by the NACL, it can proceed.</li>
-</ul></li>
-<li><strong>Subnet Boundary:</strong>
-<ul>
-<li>The packet crosses into the target subnet and must pass through the NACL at this boundary. If it’s allowed, it can enter the subnet.</li>
-</ul></li>
-<li><strong>Instance B (Destination):</strong>
-<ul>
-<li>The packet reaches Instance B and must pass through its security group. If the security group allows the traffic, the packet reaches its destination.</li>
-</ul></li>
-<li><strong>Return Traffic:</strong>
-<ul>
-<li>When the packet returns, the security group of Instance B allows it to leave (default behavior).</li>
-<li>The NACL at the subnet boundary checks the packet again.</li>
-<li>The packet crosses into the original subnet and passes through its NACL.</li>
-<li>Finally, the security group of Instance A recognizes the returning packet and allows it in.</li>
-</ul></li>
-</ol>
-<p>By using both NACLs and security groups, AWS ensures a robust and layered security approach for your VPC. NACLs provide broad subnet-level security, while security groups offer fine-grained instance-level security. Together, they help keep your network secure and functional, much like the combined efforts of passport control officers and doormen in a high-security building.</p>
-<p>This layered security model is crucial for protecting your AWS infrastructure and ensuring that only authorised traffic can access your resources.</p>
-<p>For more detailed information and additional training on AWS security, be sure to follow the provided links and enhance your knowledge to secure your infrastructure effectively.</p>
 </section>
-<section id="understanding-stateless-and-stateful-packet-filtering-in-aws" class="level3" data-number="12.0.7">
-<h3 data-number="12.0.7" class="anchored" data-anchor-id="understanding-stateless-and-stateful-packet-filtering-in-aws"><span class="header-section-number">12.0.7</span> Understanding Stateless and Stateful Packet Filtering in AWS</h3>
-<p>Ensuring the security of your network traffic is essential when working with AWS. Two fundamental mechanisms that AWS provides for this purpose are Network Access Control Lists (NACLs) and Security Groups. These tools are used to filter traffic, but they operate in different ways: stateless packet filtering and stateful packet filtering.</p>
-</section>
-<section id="stateless-packet-filtering-with-nacls" class="level3" data-number="12.0.8">
-<h3 data-number="12.0.8" class="anchored" data-anchor-id="stateless-packet-filtering-with-nacls"><span class="header-section-number">12.0.8</span> Stateless Packet Filtering with NACLs</h3>
-<p>Network ACLs perform <strong>stateless packet filtering</strong>, meaning they do not remember previous decisions and evaluate each packet crossing the subnet boundary individually.</p>
-<p><strong>Analogy:</strong> Imagine you’re at an airport trying to enter a different country. Each time you arrive at the passport control (network ACL), the officer checks your documents regardless of whether you’ve entered before. Similarly, NACLs check each packet against their rules for both inbound and outbound traffic.</p>
-<p><img src="stateless.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
-<p style="text-align: center;">
-<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
-</p>
+<section id="amazon-s3-storage-classes" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="amazon-s3-storage-classes"><span class="header-section-number">15.3</span> Amazon S3 storage classes</h2>
+<p>Amazon S3 offers a variety of storage classes to fit different business and cost needs. When selecting a storage class, consider how often you plan to retrieve your data and how available you need it to be. Here is an overview of the different storage classes, along with use case examples for each.</p>
+<section id="amazon-s3-standard" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="amazon-s3-standard"><span class="header-section-number">15.3.1</span> Amazon S3 standard</h3>
+<p><strong>Description:</strong> Designed for frequently accessed data, this storage class stores data in at least three Availability Zones. It provides high availability and durability, making it suitable for a wide range of use cases.</p>
+<p><strong>Use case examples:</strong></p>
 <ul>
-<li><strong>Inbound Traffic:</strong> When a data packet (traveller) arrives at the subnet border (country’s border), the NACL checks its credentials (source IP, protocol, port) against a list of rules. If approved, the packet is allowed in; otherwise, it’s denied entry.</li>
-<li><strong>Outbound Traffic:</strong> When a packet leaves the subnet, the NACL checks it again, ensuring it meets the outbound rules before allowing it to exit.</li>
+<li><strong>Websites:</strong> Hosting static assets such as images, CSS, and JavaScript files that are frequently accessed by users.</li>
+<li><strong>Content distribution:</strong> Storing multimedia files for streaming services or content delivery networks (CDNs).</li>
+<li><strong>Data analytics:</strong> Storing datasets that need to be quickly accessed and processed for analysis.</li>
 </ul>
-<p><strong>Example:</strong> Consider a request sent from an Amazon EC2 instance to the internet. When the response packet returns, the NACL doesn’t remember the initial request. It evaluates the response packet against its rules to decide whether to allow it into the subnet.</p>
 </section>
-<section id="stateful-packet-filtering-with-security-groups" class="level3" data-number="12.0.9">
-<h3 data-number="12.0.9" class="anchored" data-anchor-id="stateful-packet-filtering-with-security-groups"><span class="header-section-number">12.0.9</span> Stateful Packet Filtering with Security Groups</h3>
-<p>Security Groups perform <strong>stateful packet filtering</strong>, which means they remember previous decisions regarding incoming packets and allow responses based on this memory.</p>
-<p><strong>Analogy:</strong> Picture an apartment building with a door attendant (security group) in the lobby. When guests (packets) arrive, the attendant checks a list to ensure they’re allowed entry. Once inside, the attendant remembers these guests and does not check the list again when they exit.</p>
-<p><img src="statefull.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
-<p style="text-align: center;">
-<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
-</p>
+<section id="amazon-s3-standard-infrequent-access-s3-standard-ia" class="level3" data-number="15.3.2">
+<h3 data-number="15.3.2" class="anchored" data-anchor-id="amazon-s3-standard-infrequent-access-s3-standard-ia"><span class="header-section-number">15.3.2</span> Amazon S3 standard-infrequent access (s3 standard-IA)</h3>
+<p><strong>Description:</strong> Ideal for data that is infrequently accessed but needs high availability when required. It offers a lower storage price and higher retrieval price compared to S3 Standard, while still storing data in at least three Availability Zones.</p>
+<p><strong>Use case examples:</strong></p>
 <ul>
-<li><strong>Inbound Traffic:</strong> By default, a security group denies all inbound traffic. You can add rules to allow specific types of traffic, such as HTTP or SSH.</li>
-<li><strong>Outbound Traffic:</strong> By default, a security group allows all outbound traffic. You can modify these rules if needed.</li>
+<li><strong>Backup storage:</strong> Storing backups of application data that are not accessed frequently but need to be available when needed.</li>
+<li><strong>Disaster recovery:</strong> Keeping disaster recovery copies of critical business data that must be quickly accessible in case of an emergency.</li>
 </ul>
-<p><strong>Example:</strong> Suppose an EC2 instance sends a request to the internet. When the response packet comes back, the security group remembers the initial request and allows the response to enter, even if the inbound rules do not explicitly allow it.</p>
 </section>
-<section id="comparing-nacls-and-security-groups" class="level3" data-number="12.0.10">
-<h3 data-number="12.0.10" class="anchored" data-anchor-id="comparing-nacls-and-security-groups"><span class="header-section-number">12.0.10</span> Comparing NACLs and Security Groups</h3>
-<p>Understanding the differences between NACLs and Security Groups is crucial:</p>
+<section id="amazon-s3-one-zone-infrequent-access-s3-one-zone-ia" class="level3" data-number="15.3.3">
+<h3 data-number="15.3.3" class="anchored" data-anchor-id="amazon-s3-one-zone-infrequent-access-s3-one-zone-ia"><span class="header-section-number">15.3.3</span> Amazon S3 one zone-infrequent access (s3 one zone-IA)</h3>
+<p><strong>Description:</strong> Stores data in a single Availability Zone, offering lower storage costs. It is suitable for data that can be easily reproduced in the event of an Availability Zone failure.</p>
+<p><strong>Use case examples:</strong></p>
 <ul>
-<li><strong>Network ACLs:</strong>
-<ul>
-<li><strong>Stateless:</strong> They do not remember past decisions.</li>
-<li><strong>Subnet-Level:</strong> Control traffic at the subnet level.</li>
-<li><strong>Rules:</strong> Evaluate both inbound and outbound traffic separately.</li>
-</ul></li>
-<li><strong>Security Groups:</strong>
-<ul>
-<li><strong>Stateful:</strong> They remember past decisions.</li>
-<li><strong>Instance-Level:</strong> Control traffic at the instance level.</li>
-<li><strong>Rules:</strong> Allow all outbound traffic by default and evaluate inbound traffic based on rules.</li>
-</ul></li>
+<li><strong>Non-critical data:</strong> Storing data that can be recreated or is not critical to business operations, such as temporary logs or redundant copies of data.</li>
+<li><strong>Cost-sensitive backups:</strong> Storing backup copies where cost savings are prioritized over redundancy.</li>
 </ul>
-<p><img src="vpc-packets.png" alt="Subnets" style="width:75%; display: block; margin: auto;"></p>
-<p style="text-align: center;">
-<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
-</p>
 </section>
-<section id="vpc-component-recap" class="level3" data-number="12.0.11">
-<h3 data-number="12.0.11" class="anchored" data-anchor-id="vpc-component-recap"><span class="header-section-number">12.0.11</span> VPC Component Recap</h3>
-<p>Here is a quick recap of the VPC components we’ve discussed:</p>
-<ol type="1">
-<li><strong>Subnets:</strong> Segments within a VPC that can be public or private, controlling access based on security needs.</li>
-<li><strong>Network ACLs:</strong> Stateless firewalls at the subnet level, controlling inbound and outbound traffic.</li>
-<li><strong>Security Groups:</strong> Stateful firewalls at the instance level, controlling inbound traffic and allowing outbound traffic by default.</li>
-<li><strong>Internet Gateway:</strong> A gateway that allows communication between the VPC and the internet, used by public subnets.</li>
-</ol>
+<section id="amazon-s3-intelligent-tiering" class="level3" data-number="15.3.4">
+<h3 data-number="15.3.4" class="anchored" data-anchor-id="amazon-s3-intelligent-tiering"><span class="header-section-number">15.3.4</span> Amazon S3 intelligent-tiering</h3>
+<p><strong>Description:</strong> Ideal for data with unknown or changing access patterns. This storage class automatically moves objects between frequent and infrequent access tiers based on usage, with a small monthly monitoring and automation fee per object.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Dynamic data:</strong> Storing data where access patterns are unpredictable, such as data from IoT devices or logs that might be accessed irregularly.</li>
+<li><strong>Cost optimization:</strong> Automatically optimizing costs by moving data to the most cost-effective storage tier without manual intervention.</li>
+</ul>
+</section>
+<section id="amazon-s3-glacier-instant-retrieval" class="level3" data-number="15.3.5">
+<h3 data-number="15.3.5" class="anchored" data-anchor-id="amazon-s3-glacier-instant-retrieval"><span class="header-section-number">15.3.5</span> Amazon S3 glacier instant retrieval</h3>
+<p><strong>Description:</strong> Suitable for archived data that requires immediate access, with retrieval times within milliseconds.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Medical records:</strong> Storing medical records that need to be archived but must be quickly accessible for compliance or medical emergencies.</li>
+<li><strong>Legal documents:</strong> Archiving legal documents that might be needed immediately for legal proceedings or audits.</li>
+</ul>
+</section>
+<section id="amazon-s3-glacier-flexible-retrieval" class="level3" data-number="15.3.6">
+<h3 data-number="15.3.6" class="anchored" data-anchor-id="amazon-s3-glacier-flexible-retrieval"><span class="header-section-number">15.3.6</span> Amazon S3 glacier flexible retrieval</h3>
+<p><strong>Description:</strong> Low-cost storage for data archiving, with retrieval times ranging from minutes to hours. It is suitable for storing archived customer records or older media files.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Customer records:</strong> Archiving old customer records that are rarely accessed but must be retained for regulatory compliance.</li>
+<li><strong>Media archives:</strong> Storing older video footage or historical data that can afford longer retrieval times.</li>
+</ul>
+</section>
+<section id="amazon-s3-glacier-deep-archive" class="level3" data-number="15.3.7">
+<h3 data-number="15.3.7" class="anchored" data-anchor-id="amazon-s3-glacier-deep-archive"><span class="header-section-number">15.3.7</span> Amazon S3 glacier deep archive</h3>
+<p><strong>Description:</strong> The lowest-cost storage class for long-term data retention, with retrieval times from 12 to 48 hours. It is ideal for data accessed once or twice a year.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Compliance data:</strong> Storing data required for long-term retention, such as financial records or audit logs, which are rarely accessed.</li>
+<li><strong>Historical archives:</strong> Archiving historical documents, research data, or records that are only needed occasionally.</li>
+</ul>
+</section>
+<section id="amazon-s3-outposts" class="level3" data-number="15.3.8">
+<h3 data-number="15.3.8" class="anchored" data-anchor-id="amazon-s3-outposts"><span class="header-section-number">15.3.8</span> Amazon S3 outposts</h3>
+<p><strong>Description:</strong> Provides object storage on-premises with AWS Outposts, designed for local data residency requirements and demanding performance needs.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Local data residency:</strong> Storing sensitive data that must remain within a specific geographic location due to regulatory or compliance requirements.</li>
+<li><strong>High-performance applications:</strong> Using for applications that require low-latency access to data stored on-premises, such as manufacturing systems or edge computing environments.</li>
+</ul>
+</section>
+</section>
+<section id="comparing-amazon-ebs-and-amazon-s3" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="comparing-amazon-ebs-and-amazon-s3"><span class="header-section-number">15.4</span> <strong>Comparing Amazon EBS and Amazon S3</strong></h2>
+<section id="amazon-s3-benefits" class="level3" data-number="15.4.1">
+<h3 data-number="15.4.1" class="anchored" data-anchor-id="amazon-s3-benefits"><span class="header-section-number">15.4.1</span> Amazon S3 benefits</h3>
+<p>Amazon Simple Storage Service (Amazon S3) is AWS’s object storage solution. If you’ve ever used services like Google Drive or Dropbox, you’ll understand the basic concept of S3. At first glance, S3 seems like a simple place to store files, photos, videos, and other documents. However, S3 offers far more than basic object storage.</p>
+<p>S3 provides scalable solutions, meaning it can grow or shrink to meet your needs in a cost-effective manner as your project size changes. It also helps you manage data effectively, allowing you to control who accesses your content. S3 offers robust data protection against various threats, replicates your data for increased durability, and provides different storage classes to help you save money.</p>
+</section>
+<section id="amazon-s3-use-cases" class="level3" data-number="15.4.2">
+<h3 data-number="15.4.2" class="anchored" data-anchor-id="amazon-s3-use-cases"><span class="header-section-number">15.4.2</span> Amazon S3 use cases</h3>
+<ul>
+<li><strong>Backup and restore:</strong> Have you ever accidentally deleted something important? S3’s backup and restore capabilities ensure users don’t lose data through versioning and deletion protection. Versioning saves a new version of a file every time it’s updated, and deletion protection ensures the user has the right permissions before deleting a file.</li>
+<li><strong>Disaster recovery:</strong> What would a company do during an unexpected power outage or if their on-premises data center suddenly crashed? S3 data is protected in Amazon-managed data centers, the same ones Amazon uses to host their world-famous shopping website. By using S3, users get a second storage option without having to pay for the rent and utilities of a physical site.</li>
+<li><strong>Archiving:</strong> Some businesses need to store financial, medical, or other data mandated by industry standards. AWS allows users to archive this type of data with S3 Glacier, one of the many S3 storage classes. S3 Glacier is a cost-effective solution for archiving and is one of the best in the market.</li>
+</ul>
+</section>
+<section id="amazon-ebs-benefits" class="level3" data-number="15.4.3">
+<h3 data-number="15.4.3" class="anchored" data-anchor-id="amazon-ebs-benefits"><span class="header-section-number">15.4.3</span> Amazon EBS benefits</h3>
+<p>Amazon Elastic Block Store (Amazon EBS) is AWS’s block storage service. EBS is different from S3 in that it provides a storage volume directly connected to EC2 (Elastic Cloud Compute) instances. EBS allows you to store files directly on an EC2 instance, enabling quick and cost-effective access to your files. Think of EBS as “EC2 storage.”</p>
+<p>You can customize your EBS volumes to suit the workload. For example, if you need greater throughput, you could choose a Throughput Optimized HDD EBS volume. If you have no specific needs, an EBS General Purpose SSD might suffice. For high-performance needs, an EBS Provisioned IOPS SSD volume is suitable.</p>
+<p>Just remember that EBS works with EC2 in a similar way to how your hard drive works with your computer. EBS lets you save files locally to an EC2 instance, allowing your EC2 to perform powerful tasks that would otherwise be impossible. Let’s look at a couple of examples.</p>
+</section>
+<section id="amazon-ebs-use-cases" class="level3" data-number="15.4.4">
+<h3 data-number="15.4.4" class="anchored" data-anchor-id="amazon-ebs-use-cases"><span class="header-section-number">15.4.4</span> Amazon EBS use cases</h3>
+<ul>
+<li><strong>Database performance:</strong> Many companies look for cheaper ways to run their databases. Amazon EBS provides both relational and NoSQL databases with scalable solutions that have low-latency performance. Slack, the messaging app, uses EBS to increase database performance to better serve customers worldwide.</li>
+<li><strong>Instance backup:</strong> Another use case for EBS involves backing up your instances. Because EBS is an AWS-native solution, the backups you create in EBS can easily be uploaded to S3 for convenient and cost-effective storage. This ensures you can always recover to a certain point in time if needed.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -882,13 +892,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="pagination-link" aria-label="Connectivity to AWS">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span>
+      <a href="../module-5-notes/2-Amazon-EBS.html" class="pagination-link" aria-label="**Amazon EBS**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-4-notes/4-Global-Networking.html" class="pagination-link" aria-label="**Global Networking**">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><strong>Global Networking</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-5-notes/4-Amazon-EFS.html" class="pagination-link" aria-label="Amazon Elastic File System (Amazon EFS)">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
