@@ -1,0 +1,22 @@
+# Module 5
+
+# Introduction
+
+### Storage and databases on AWS
+
+Based on what we've discussed so far, it is possible to build an elastic, scalable, disaster-resistant, and cost-optimized system via AWS, with a worldwide, highly secure network that can be installed totally programmatically.
+
+Some cloud-based activities may require data storage, such as client information and loyalty programs. That means we need to store info and use databases. Not just any database will do; we must be sure to select the appropriate database for the job and the appropriate storage for the various data kinds.
+
+You may have many different data usage needs and data types. In this module, we will learn about the different services AWS offers to help you build the perfect data solution.
+
+You will learn to:
+
+- Summarise the basic concepts of storage and databases.
+- Describe the benefits of the Amazon Elastic Block Store (Amazon EBS).
+- Describe the benefits of Amazon Simple Storage Service (Amazon S3).
+- Describe the benefits of the Amazon Elastic File System (Amazon EFS).
+- Summarise various storage solutions.
+- Describe the benefits of the Amazon Relational Database Service (Amazon RDS).
+- Describe the benefits of Amazon DynamoDB.
+- Summarise various database services.

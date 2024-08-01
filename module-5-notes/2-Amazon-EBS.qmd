@@ -1,0 +1,76 @@
+# **Amazon EBS**
+
+### Instance stores and Amazon Elastic Block Store (Amazon EBS)
+
+### How does memory get stored on AWS?
+
+When using Amazon EC2 to run your business applications, those applications need access to CPU, memory, network, and storage. EC2 instances provide access to all these components. Here, we'll focus on storage. As applications run, they often require access to block-level storage.
+
+Block-level storage is like a place to store files, which are series of bytes stored in blocks on a disk. When a file is updated, only the changed blocks are updated, making it an efficient storage type for applications like databases, enterprise software, or file systems.
+
+Just as you access block-level storage on your personal computer through your hard drive, EC2 instances also have hard drives, with different types available.
+
+### Instance stores
+
+Instance store volumes behave like physical hard drives. When you launch an EC2 instance, depending on the instance type, it might provide local storage called instance store volumes. These volumes are physically attached to the host on which your EC2 instance is running. You can write to it just like a normal hard drive.
+
+However, because these volumes are attached to the underlying physical host, all data written to an instance store volume is deleted if you stop or terminate your EC2 instance. This is because the EC2 instance might start up on a different host when restarted, where the original volume does not exist.
+
+Due to this temporary nature, instance store volumes are useful for data that can be lost without significant consequences, such as temporary files or scratch data.
+
+An instance store provides temporary block-level storage for an Amazon EC2 instance. This storage has the same lifespan as the instance, meaning data is lost when the instance is terminated.
+
+The key takeaway is not to write important data to the drives that come with EC2 instances. For persistent storage, Amazon offers a service called Amazon Elastic Block Store (EBS).
+
+To review an example of how instance stores work, see the steps beloe:
+
+
+**Step 1:** An Amazon EC2 instance with an attached instance store is running.
+
+<img src="awsInstanceStore-1.png" alt="Instance stores" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+**Step 2:** The instance is stopped or terminated.
+
+<img src="awsInstanceStore-2.png" alt="Instance stores" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+**Step 3:** All data on the attached instance store is deleted.
+
+<img src="awsInstanceStore-3.png" alt="Instance stores" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+
+### Amazon EBS and snapshots
+
+Amazon EBS allows you to create virtual hard drives, called EBS volumes, which you can attach to your EC2 instances. These volumes are separate from the local instance store volumes and are not tied directly to the host running your EC2 instance. This means that data written to an EBS volume can persist between stops and starts of an EC2 instance.
+
+<img src="EC2-EBS.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+
+EBS volumes come in various sizes and types. You define the size, type, and configuration of the volume you need, provision it, and attach it to your EC2 instance. Your application can then write to this volume, and the data will remain even if the EC2 instance is stopped and restarted.
+
+For data protection, EBS allows you to take incremental backups called snapshots. An EBS snapshot is an incremental backup, meaning only the blocks of data that have changed since the most recent snapshot are saved. This is different from full backups, where all data in a storage volume is copied each time a backup occurs.
+
+### Amazon EBS snapshots
+
+<img src="EBS-snapshot.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;">
+<p style="text-align: center;">Incremental backups of EBS volumes with Amazon EBS snapshots. On Day 1, two volumes are backed up. Day 2 adds one new volume and the new volume is backed up. Day 3 adds two more volumes for a total of five volumes. Only the two new volumes are backed up.</p>
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+Taking regular snapshots of your EBS volumes is crucial to ensure data safety. If a drive becomes corrupted, you can restore data from a snapshot. This provides a reliable backup mechanism, ensuring data persistence and integrity.

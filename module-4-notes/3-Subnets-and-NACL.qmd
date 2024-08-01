@@ -154,7 +154,7 @@ Understanding the differences between NACLs and Security Groups is crucial:
 
 ### VPC Component Recap
 
-Here’s a quick recap of the VPC components we’ve discussed:
+Here is a quick recap of the VPC components we’ve discussed:
 
 1. **Subnets:** Segments within a VPC that can be public or private, controlling access based on security needs.
 2. **Network ACLs:** Stateless firewalls at the subnet level, controlling inbound and outbound traffic.
