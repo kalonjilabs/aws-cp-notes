@@ -31,6 +31,7 @@ book:
       chapters:
         - module-4-notes/2-Connectivity-to-AWS.qmd
         - module-4-notes/3-Subnets-and-NACL.qmd
+        - module-4-notes/4-Global-Networking.qmd
 
 format:
   html:

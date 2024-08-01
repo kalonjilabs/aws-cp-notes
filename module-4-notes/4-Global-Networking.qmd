@@ -1,0 +1,52 @@
+# **Global Networking**
+
+### Global Networking in AWS
+
+Understanding how customers interact with your AWS infrastructure is essential for optimising performance and ensuring seamless user experiences. This section will guide you through the concepts of Domain Name System (DNS) and the key AWS services that facilitate efficient global networking.
+
+### Domain Name System (DNS)
+
+Imagine AnyCompany has a website hosted in the AWS Cloud. When customers enter the web address into their browser, they can access the website thanks to DNS resolution. DNS resolution involves translating a domain name into an IP address, akin to looking up a number in a phone book.
+
+### How DNS Works
+
+1. **Customer Request:** When you enter the domain name into your browser, the request is sent to a customer DNS resolver.
+2. **DNS Resolver Query:** The customer DNS resolver queries the company DNS server for the IP address associated with AnyCompany’s website.
+3. **Response:** The company DNS server responds with the IP address, such as 192.0.2.0, allowing the browser to access the website.
+
+### Amazon Route 53
+
+Amazon Route 53 is AWS’s DNS web service, offering highly available and scalable domain name resolution. It translates website names into IP addresses, enabling seamless navigation across the internet.
+
+### Key Features of Route 53
+
+- **Domain Name Registration:** You can register and manage domain names directly within Route 53.
+- **Traffic Routing:** Route 53 can direct traffic using various routing policies, such as latency-based routing, geolocation DNS, geoproximity, and weighted round robin.
+- **Integration with AWS Services:** Route 53 connects user requests to AWS infrastructure, like Amazon EC2 instances and load balancers. It can also route traffic to infrastructure outside AWS.
+
+<img src="dns.png" alt="dns" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+### Example: Route 53 and Amazon CloudFront
+
+1. **Customer Request:** A customer requests data from AnyCompany’s website.
+2. **DNS Resolution:** Route 53 resolves the domain name to its corresponding IP address, 192.0.2.0, and sends this information back to the customer.
+3. **Edge Location:** The customer’s request is sent to the nearest edge location via Amazon CloudFront.
+4. **Content Delivery:** CloudFront connects to the Application Load Balancer, which directs the request to an Amazon EC2 instance.
+
+<img src="exampleDNS.png" alt="dns example" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+### Amazon CloudFront
+
+Amazon CloudFront is a content delivery network (CDN) that uses edge locations to deliver content as close to users as possible, improving latency and speeding up delivery.
+
+### Example: Content Delivery in South Africa
+
+Suppose AnyCompany’s website is hosted in the Cape Town Region, and static web assets, like images and GIFs, are deployed in CloudFront edge locations in Johannesburg. When a user in Johannesburg accesses the website, they receive content from the nearby edge location, ensuring quick delivery. For users in other African cities, such as Nairobi or Lagos, similar edge locations can be used to minimise latency and enhance user experience.
