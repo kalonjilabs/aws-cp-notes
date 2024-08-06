@@ -44,7 +44,7 @@ book:
         - module-5-notes/8-AWS-DMS.qmd
         - module-5-notes/9-Additional_database_service.qmd
 
-    - part: module-6-notes/1-Introduction-m5.qmd
+    - part: module-6-notes/1-Introduction.qmd
       chapters:
         - module-6-notes/1-Introduction.qmd
         - module-6-notes/2-AWS-sahred.qmd

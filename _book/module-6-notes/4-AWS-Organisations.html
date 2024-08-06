@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 17&nbsp; Amazon Relational Database Service (Amazon RDS)</title>
+<title>AWS Cloud Practitioner Notes - 25&nbsp; AWS Organisations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-5-notes/6-Amazon-DynamoDB.html" rel="next">
-<link href="../module-5-notes/4-Amazon-EFS.html" rel="prev">
+<link href="../module-6-notes/5-Compliance.html" rel="next">
+<link href="../module-6-notes/3-AWS-permission.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/5-Amazon-RDS.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">module-6-notes/1-Introduction-m5.qmd</a></li><li class="breadcrumb-item"><a href="../module-6-notes/4-AWS-Organisations.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -263,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></span></a>
   </div>
 </li>
@@ -322,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-6-notes/4-AWS-Organisations.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-6-notes/4-AWS-Organisations.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></span></a>
   </div>
 </li>
@@ -356,26 +356,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#relational-databases" id="toc-relational-databases" class="nav-link active" data-scroll-target="#relational-databases"><span class="header-section-number">17.1</span> Relational databases</a></li>
-  <li><a href="#moving-databases-to-the-cloud" id="toc-moving-databases-to-the-cloud" class="nav-link" data-scroll-target="#moving-databases-to-the-cloud"><span class="header-section-number">17.2</span> Moving databases to the cloud</a></li>
-  <li><a href="#amazon-rds-a-managed-service" id="toc-amazon-rds-a-managed-service" class="nav-link" data-scroll-target="#amazon-rds-a-managed-service"><span class="header-section-number">17.3</span> Amazon RDS: A managed service</a></li>
-  <li><a href="#example-of-data-in-a-relational-database" id="toc-example-of-data-in-a-relational-database" class="nav-link" data-scroll-target="#example-of-data-in-a-relational-database"><span class="header-section-number">17.4</span> Example of data in a relational database</a></li>
-  <li><a href="#amazon-rds" id="toc-amazon-rds" class="nav-link" data-scroll-target="#amazon-rds"><span class="header-section-number">17.5</span> Amazon RDS</a>
-  <ul class="collapse">
-  <li><a href="#amazon-rds-database-engines" id="toc-amazon-rds-database-engines" class="nav-link" data-scroll-target="#amazon-rds-database-engines"><span class="header-section-number">17.5.1</span> Amazon RDS database engines</a></li>
-  <li><a href="#amazon-aurora" id="toc-amazon-aurora" class="nav-link" data-scroll-target="#amazon-aurora"><span class="header-section-number">17.5.2</span> Amazon Aurora</a></li>
-  <li><a href="#key-benefits-of-amazon-aurora" id="toc-key-benefits-of-amazon-aurora" class="nav-link" data-scroll-target="#key-benefits-of-amazon-aurora"><span class="header-section-number">17.5.3</span> Key benefits of Amazon Aurora</a></li>
-  <li><a href="#use-cases-for-amazon-aurora" id="toc-use-cases-for-amazon-aurora" class="nav-link" data-scroll-target="#use-cases-for-amazon-aurora"><span class="header-section-number">17.5.4</span> Use cases for Amazon Aurora</a></li>
-  </ul></li>
+  <li><a href="#permissions-and-access-in-aws" id="toc-permissions-and-access-in-aws" class="nav-link active" data-scroll-target="#permissions-and-access-in-aws"><span class="header-section-number">25.0.1</span> Permissions and Access in AWS</a></li>
+  <li><a href="#aws-organisations" id="toc-aws-organisations" class="nav-link" data-scroll-target="#aws-organisations"><span class="header-section-number">25.0.2</span> AWS Organisations</a></li>
+  <li><a href="#implementing-best-practices" id="toc-implementing-best-practices" class="nav-link" data-scroll-target="#implementing-best-practices"><span class="header-section-number">25.0.3</span> Implementing Best Practices</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/5-Amazon-RDS.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">module-6-notes/1-Introduction-m5.qmd</a></li><li class="breadcrumb-item"><a href="../module-6-notes/4-AWS-Organisations.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></h1>
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></h1>
 </div>
 
 
@@ -392,87 +384,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Now that we’ve covered various data storage types, let’s discuss managing relationships between different data types, which can quickly become a challenge. For instance, consider an e-commerce business that needs to manage customer information, order details, and product inventories. Maintaining relationships between these different data types is crucial but can become complex as the business grows.</p>
-<section id="relational-databases" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="relational-databases"><span class="header-section-number">17.1</span> Relational databases</h2>
-<p>To address this complexity, it’s best to use a relational database management system (RDBMS). An RDBMS stores data in a structured way that relates different pieces of data to one another. For example, customer information can be stored in a customer table, while physical addresses can be stored in an address table. These tables can be related via a common attribute, such as a customer ID, allowing for efficient querying and data management.</p>
-<p>SQL (Structured Query Language) is commonly used to query relational databases. Popular database systems supported by AWS include MySQL, PostgreSQL, Oracle, and Microsoft SQL Server. Many businesses run these databases on-premises, but they can be moved to the cloud for greater flexibility and scalability.</p>
+<section id="permissions-and-access-in-aws" class="level3" data-number="25.0.1">
+<h3 data-number="25.0.1" class="anchored" data-anchor-id="permissions-and-access-in-aws"><span class="header-section-number">25.0.1</span> Permissions and Access in AWS</h3>
+<p>When starting with AWS, it usually begins with a single account. However, as your company grows or embarks on its cloud journey, it’s crucial to establish a separation of duties. For instance, you may want your developers to have access to development resources, your accounting staff to access billing information, or different business units to experiment with AWS services without affecting each other.</p>
+<p>Managing multiple accounts can quickly become complicated. You might need to track various accounts with different permissions and responsibilities. To address this, AWS offers a service called AWS Organisations, which simplifies the management of multiple AWS accounts.</p>
 </section>
-<section id="moving-databases-to-the-cloud" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="moving-databases-to-the-cloud"><span class="header-section-number">17.2</span> Moving databases to the cloud</h2>
-<p>One method for moving on-premises databases to the cloud is called Lift-and-Shift, which involves migrating your database to run on Amazon EC2. This allows you to maintain control over variables like the operating system, memory, CPU, and storage capacity, similar to your on-premises environment. Standard migration practices or tools like the Database Migration Service can facilitate this process.</p>
-</section>
-<section id="amazon-rds-a-managed-service" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="amazon-rds-a-managed-service"><span class="header-section-number">17.3</span> Amazon RDS: A managed service</h2>
-<p>A more managed option for running databases in the cloud is Amazon Relational Database Service (Amazon RDS). Amazon RDS supports major database engines and offers numerous benefits, including automated patching, backups, redundancy, failover, and disaster recovery. These features reduce the administrative burden on database administrators, allowing them to focus on solving business problems rather than maintaining databases.</p>
-<p>In a relational database, data is stored in a way that relates it to other pieces of data, making it easy to understand, consistent, and scalable. For example, a coffee shop owner can write an SQL query to identify all customers whose most frequently purchased drink is a medium latte.</p>
-</section>
-<section id="example-of-data-in-a-relational-database" class="level2" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="example-of-data-in-a-relational-database"><span class="header-section-number">17.4</span> Example of data in a relational database</h2>
-<p>Consider a relational database for an online bookstore. It might include the following tables:</p>
-<ul>
-<li><strong>Customers:</strong> Stores customer information like name, email, and contact details.</li>
-<li><strong>Books:</strong> Stores details about books like title, author, ISBN, and price.</li>
-<li><strong>Orders:</strong> Stores order information, linking customers to the books they purchased, including order date and quantity.</li>
-</ul>
-<p>These tables are related through keys, allowing efficient data retrieval and management.</p>
-</section>
-<section id="amazon-rds" class="level2" data-number="17.5">
-<h2 data-number="17.5" class="anchored" data-anchor-id="amazon-rds"><span class="header-section-number">17.5</span> Amazon RDS</h2>
-<p>Amazon Relational Database Service (Amazon RDS) enables you to run relational databases in the AWS Cloud. It automates tasks such as hardware provisioning, database setup, patching, and backups, freeing up time to focus on using data to innovate your applications. Amazon RDS can be integrated with other services, such as AWS Lambda, to query your database from a serverless application.</p>
-<p>Amazon RDS provides various security options, including encryption at rest (protecting data while it is stored) and encryption in transit (protecting data while it is being sent and received).</p>
-<section id="amazon-rds-database-engines" class="level3" data-number="17.5.1">
-<h3 data-number="17.5.1" class="anchored" data-anchor-id="amazon-rds-database-engines"><span class="header-section-number">17.5.1</span> Amazon RDS database engines</h3>
-<p>Amazon RDS supports six database engines, each optimized for different aspects like memory, performance, or input/output (I/O). The supported database engines are:</p>
-<ul>
-<li><strong>Amazon Aurora</strong></li>
-<li><strong>PostgreSQL</strong></li>
-<li><strong>MySQL</strong></li>
-<li><strong>MariaDB</strong></li>
-<li><strong>Oracle Database</strong></li>
-<li><strong>Microsoft SQL Server</strong></li>
-</ul>
-<p>By using Amazon RDS, you can leverage the power of these database engines with the added benefits of AWS’s managed services, ensuring efficient and secure data management.</p>
-</section>
-<section id="amazon-aurora" class="level3" data-number="17.5.2">
-<h3 data-number="17.5.2" class="anchored" data-anchor-id="amazon-aurora"><span class="header-section-number">17.5.2</span> Amazon Aurora</h3>
-<p>Amazon Aurora is an enterprise-class relational database that is compatible with MySQL and PostgreSQL. It offers significant performance improvements, being up to five times faster than standard MySQL databases and up to three times faster than standard PostgreSQL databases.</p>
-</section>
-<section id="key-benefits-of-amazon-aurora" class="level3" data-number="17.5.3">
-<h3 data-number="17.5.3" class="anchored" data-anchor-id="key-benefits-of-amazon-aurora"><span class="header-section-number">17.5.3</span> Key benefits of Amazon Aurora</h3>
+<section id="aws-organisations" class="level3" data-number="25.0.2">
+<h3 data-number="25.0.2" class="anchored" data-anchor-id="aws-organisations"><span class="header-section-number">25.0.2</span> AWS Organisations</h3>
+<p>AWS Organisations allows you to consolidate and manage multiple AWS accounts within a central location. When you create an organisation, AWS Organisations automatically creates a root, which is the parent container for all accounts in your organisation. This service enables you to manage billing, control access, ensure compliance, enhance security, and share resources across your AWS accounts.</p>
+<p><strong>Key Features of AWS Organisations:</strong></p>
 <ol type="1">
-<li><strong>Performance:</strong>
+<li><strong>Centralised Management</strong>: AWS Organisations provides a central location to manage all your AWS accounts. For example, if you have accounts A, B, C, F, and G, you can combine them into one organisation, making it easier to manage and discover additional accounts like D and E.</li>
+<li><strong>Consolidated Billing</strong>: With AWS Organisations, you can use the primary account to consolidate and pay for all member accounts. This not only simplifies billing but also offers bulk discounts, saving money.</li>
+<li><strong>Service Control Policies (SCPs)</strong>: SCPs allow you to control the AWS services, resources, and individual API actions that users and roles in each account can access. As the administrator of the primary account, you can specify the maximum permissions for member accounts, ensuring that users only have access to what they need.</li>
+<li><strong>Organisational Units (OUs)</strong>: You can group accounts into OUs to manage accounts with similar business or security requirements more efficiently. When you apply a policy to an OU, all accounts within that OU inherit the specified permissions. This feature helps isolate workloads or applications with specific security requirements.
 <ul>
-<li>Amazon Aurora is designed to deliver high performance with low latency. It achieves this by optimizing the database engine and reducing unnecessary input/output (I/O) operations. This results in faster query processing and improved overall performance compared to traditional MySQL and PostgreSQL databases.</li>
-</ul></li>
-<li><strong>Cost efficiency:</strong>
-<ul>
-<li>Aurora helps reduce database costs by minimizing unnecessary I/O operations. This means you get more efficient use of your database resources, leading to cost savings. Additionally, Aurora’s pay-as-you-go pricing model ensures that you only pay for the resources you actually use.</li>
-</ul></li>
-<li><strong>High availability:</strong>
-<ul>
-<li>Aurora is built for high availability and reliability. It replicates six copies of your data across three Availability Zones. This multi-AZ replication ensures that your data is always available, even in the event of an infrastructure failure in one of the Availability Zones. Additionally, Aurora continuously backs up your data to Amazon S3, providing an extra layer of data protection.</li>
-</ul></li>
-<li><strong>Scalability:</strong>
-<ul>
-<li>Amazon Aurora can automatically scale storage as needed, up to 128 terabytes per database instance. This means you don’t have to worry about running out of storage space or manually provisioning additional storage. Aurora also supports read replicas, which allows you to distribute read traffic and scale read operations independently from write operations.</li>
-</ul></li>
-<li><strong>Security:</strong>
-<ul>
-<li>Aurora offers robust security features, including encryption at rest and in transit, network isolation using Amazon Virtual Private Cloud (VPC), and fine-grained access control with AWS Identity and Access Management (IAM). These features help ensure that your data is secure and compliant with industry standards.</li>
+<li><strong>Example</strong>: If you have accounts that need to comply with regulatory requirements, you can place them into an OU and attach a policy that blocks access to non-compliant AWS services.</li>
 </ul></li>
 </ol>
 </section>
-<section id="use-cases-for-amazon-aurora" class="level3" data-number="17.5.4">
-<h3 data-number="17.5.4" class="anchored" data-anchor-id="use-cases-for-amazon-aurora"><span class="header-section-number">17.5.4</span> Use cases for Amazon Aurora</h3>
-<ul>
-<li><strong>High-performance applications:</strong> If your applications require high transaction throughput and low latency, Aurora is an excellent choice. Examples include e-commerce platforms, financial applications, and online gaming.</li>
-<li><strong>Scalable web applications:</strong> Aurora’s ability to automatically scale storage and support read replicas makes it ideal for web applications that experience variable traffic patterns and need to handle large amounts of read traffic.</li>
-<li><strong>Data warehousing and analytics:</strong> Aurora’s high performance and scalability make it suitable for data warehousing and analytics workloads, where fast query processing and the ability to handle large datasets are critical.</li>
-</ul>
+<section id="implementing-best-practices" class="level3" data-number="25.0.3">
+<h3 data-number="25.0.3" class="anchored" data-anchor-id="implementing-best-practices"><span class="header-section-number">25.0.3</span> Implementing Best Practices</h3>
+<ol type="1">
+<li><strong>Start with the Root User</strong>: Begin by creating an IAM user with administrative permissions to manage other users and resources. Avoid using the root user for daily tasks to minimise security risks.</li>
+<li><strong>Create IAM Users</strong>: Create individual IAM users for each person needing access to AWS. Assign specific permissions to each user based on their role and responsibilities.</li>
+<li><strong>Utilise IAM Policies</strong>: Define permissions through IAM policies, following the principle of least privilege. Ensure users only have access to the resources they need to perform their tasks.</li>
+<li><strong>Leverage IAM Groups</strong>: Group users with similar access needs into IAM groups and assign policies at the group level. This simplifies permission management and ensures consistency.</li>
+<li><strong>Employ IAM Roles</strong>: Use IAM roles for temporary access to AWS resources. Roles are ideal for users or applications that need different levels of access at different times.</li>
+<li><strong>Enable Multi-Factor Authentication (MFA)</strong>: Enhance security by enabling MFA for all IAM users. MFA requires additional verification, providing an extra layer of protection.</li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -887,13 +829,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-5-notes/4-Amazon-EFS.html" class="pagination-link" aria-label="Amazon Elastic File System (Amazon EFS)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span>
+      <a href="../module-6-notes/3-AWS-permission.html" class="pagination-link" aria-label="User Permissions and Access">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-5-notes/6-Amazon-DynamoDB.html" class="pagination-link" aria-label="Amazon DynamoDB">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-6-notes/5-Compliance.html" class="pagination-link" aria-label="Compliance in AWS">
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

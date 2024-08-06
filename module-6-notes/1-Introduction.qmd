@@ -1,5 +1,7 @@
 # Module 6
 
+# Introduction
+
 In this module, you will learn how to:
 
 Explain the benefits of the shared responsibility model.

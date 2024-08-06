@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 17&nbsp; Amazon Relational Database Service (Amazon RDS)</title>
+<title>AWS Cloud Practitioner Notes - 24&nbsp; User Permissions and Access</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-5-notes/6-Amazon-DynamoDB.html" rel="next">
-<link href="../module-5-notes/4-Amazon-EFS.html" rel="prev">
+<link href="../module-6-notes/4-AWS-Organisations.html" rel="next">
+<link href="../module-6-notes/2-AWS-sahred.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/5-Amazon-RDS.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">module-6-notes/1-Introduction-m5.qmd</a></li><li class="breadcrumb-item"><a href="../module-6-notes/3-AWS-permission.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -263,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></span></a>
   </div>
 </li>
@@ -316,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-6-notes/3-AWS-permission.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-6-notes/3-AWS-permission.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></span></a>
   </div>
 </li>
@@ -356,26 +356,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#relational-databases" id="toc-relational-databases" class="nav-link active" data-scroll-target="#relational-databases"><span class="header-section-number">17.1</span> Relational databases</a></li>
-  <li><a href="#moving-databases-to-the-cloud" id="toc-moving-databases-to-the-cloud" class="nav-link" data-scroll-target="#moving-databases-to-the-cloud"><span class="header-section-number">17.2</span> Moving databases to the cloud</a></li>
-  <li><a href="#amazon-rds-a-managed-service" id="toc-amazon-rds-a-managed-service" class="nav-link" data-scroll-target="#amazon-rds-a-managed-service"><span class="header-section-number">17.3</span> Amazon RDS: A managed service</a></li>
-  <li><a href="#example-of-data-in-a-relational-database" id="toc-example-of-data-in-a-relational-database" class="nav-link" data-scroll-target="#example-of-data-in-a-relational-database"><span class="header-section-number">17.4</span> Example of data in a relational database</a></li>
-  <li><a href="#amazon-rds" id="toc-amazon-rds" class="nav-link" data-scroll-target="#amazon-rds"><span class="header-section-number">17.5</span> Amazon RDS</a>
-  <ul class="collapse">
-  <li><a href="#amazon-rds-database-engines" id="toc-amazon-rds-database-engines" class="nav-link" data-scroll-target="#amazon-rds-database-engines"><span class="header-section-number">17.5.1</span> Amazon RDS database engines</a></li>
-  <li><a href="#amazon-aurora" id="toc-amazon-aurora" class="nav-link" data-scroll-target="#amazon-aurora"><span class="header-section-number">17.5.2</span> Amazon Aurora</a></li>
-  <li><a href="#key-benefits-of-amazon-aurora" id="toc-key-benefits-of-amazon-aurora" class="nav-link" data-scroll-target="#key-benefits-of-amazon-aurora"><span class="header-section-number">17.5.3</span> Key benefits of Amazon Aurora</a></li>
-  <li><a href="#use-cases-for-amazon-aurora" id="toc-use-cases-for-amazon-aurora" class="nav-link" data-scroll-target="#use-cases-for-amazon-aurora"><span class="header-section-number">17.5.4</span> Use cases for Amazon Aurora</a></li>
-  </ul></li>
+  <li><a href="#understanding-user-permissions-and-access-in-aws" id="toc-understanding-user-permissions-and-access-in-aws" class="nav-link active" data-scroll-target="#understanding-user-permissions-and-access-in-aws"><span class="header-section-number">24.0.1</span> Understanding User Permissions and Access in AWS</a></li>
+  <li><a href="#aws-account-root-user" id="toc-aws-account-root-user" class="nav-link" data-scroll-target="#aws-account-root-user"><span class="header-section-number">24.0.2</span> AWS Account Root User</a></li>
+  <li><a href="#iam-users" id="toc-iam-users" class="nav-link" data-scroll-target="#iam-users"><span class="header-section-number">24.0.3</span> IAM Users</a></li>
+  <li><a href="#iam-policies" id="toc-iam-policies" class="nav-link" data-scroll-target="#iam-policies"><span class="header-section-number">24.0.4</span> IAM Policies</a></li>
+  <li><a href="#iam-groups" id="toc-iam-groups" class="nav-link" data-scroll-target="#iam-groups"><span class="header-section-number">24.0.5</span> IAM Groups</a></li>
+  <li><a href="#iam-roles" id="toc-iam-roles" class="nav-link" data-scroll-target="#iam-roles"><span class="header-section-number">24.0.6</span> IAM Roles</a></li>
+  <li><a href="#multi-factor-authentication-mfa" id="toc-multi-factor-authentication-mfa" class="nav-link" data-scroll-target="#multi-factor-authentication-mfa"><span class="header-section-number">24.0.7</span> Multi-Factor Authentication (MFA)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/5-Amazon-RDS.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">module-6-notes/1-Introduction-m5.qmd</a></li><li class="breadcrumb-item"><a href="../module-6-notes/3-AWS-permission.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></h1>
+<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></h1>
 </div>
 
 
@@ -392,87 +388,49 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Now that we’ve covered various data storage types, let’s discuss managing relationships between different data types, which can quickly become a challenge. For instance, consider an e-commerce business that needs to manage customer information, order details, and product inventories. Maintaining relationships between these different data types is crucial but can become complex as the business grows.</p>
-<section id="relational-databases" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="relational-databases"><span class="header-section-number">17.1</span> Relational databases</h2>
-<p>To address this complexity, it’s best to use a relational database management system (RDBMS). An RDBMS stores data in a structured way that relates different pieces of data to one another. For example, customer information can be stored in a customer table, while physical addresses can be stored in an address table. These tables can be related via a common attribute, such as a customer ID, allowing for efficient querying and data management.</p>
-<p>SQL (Structured Query Language) is commonly used to query relational databases. Popular database systems supported by AWS include MySQL, PostgreSQL, Oracle, and Microsoft SQL Server. Many businesses run these databases on-premises, but they can be moved to the cloud for greater flexibility and scalability.</p>
+<section id="understanding-user-permissions-and-access-in-aws" class="level3" data-number="24.0.1">
+<h3 data-number="24.0.1" class="anchored" data-anchor-id="understanding-user-permissions-and-access-in-aws"><span class="header-section-number">24.0.1</span> Understanding User Permissions and Access in AWS</h3>
+<p>AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. IAM provides the flexibility to configure access based on your company’s specific operational and security needs. This guide will cover the key features of IAM, including IAM users, groups, roles, policies, and multi-factor authentication (MFA), along with best practices for each.</p>
 </section>
-<section id="moving-databases-to-the-cloud" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="moving-databases-to-the-cloud"><span class="header-section-number">17.2</span> Moving databases to the cloud</h2>
-<p>One method for moving on-premises databases to the cloud is called Lift-and-Shift, which involves migrating your database to run on Amazon EC2. This allows you to maintain control over variables like the operating system, memory, CPU, and storage capacity, similar to your on-premises environment. Standard migration practices or tools like the Database Migration Service can facilitate this process.</p>
+<section id="aws-account-root-user" class="level3" data-number="24.0.2">
+<h3 data-number="24.0.2" class="anchored" data-anchor-id="aws-account-root-user"><span class="header-section-number">24.0.2</span> AWS Account Root User</h3>
+<p>When you first create an AWS account, you start with an identity known as the root user. The root user is accessed using the email address and password you used to create the account. Think of the root user as the owner of a coffee shop who has complete control over everything.</p>
+<p><img src="awsroot.png" alt=" AWS account root user " style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p><strong>Best Practice</strong>: Avoid using the root user for everyday tasks. Instead, use the root user to create an initial IAM user with permissions to create other users. Continue to create individual IAM users for regular tasks and reserve the root user for tasks that require its unique privileges, such as changing the root user email address or updating your AWS support plan.</p>
 </section>
-<section id="amazon-rds-a-managed-service" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="amazon-rds-a-managed-service"><span class="header-section-number">17.3</span> Amazon RDS: A managed service</h2>
-<p>A more managed option for running databases in the cloud is Amazon Relational Database Service (Amazon RDS). Amazon RDS supports major database engines and offers numerous benefits, including automated patching, backups, redundancy, failover, and disaster recovery. These features reduce the administrative burden on database administrators, allowing them to focus on solving business problems rather than maintaining databases.</p>
-<p>In a relational database, data is stored in a way that relates it to other pieces of data, making it easy to understand, consistent, and scalable. For example, a coffee shop owner can write an SQL query to identify all customers whose most frequently purchased drink is a medium latte.</p>
+<section id="iam-users" class="level3" data-number="24.0.3">
+<h3 data-number="24.0.3" class="anchored" data-anchor-id="iam-users"><span class="header-section-number">24.0.3</span> IAM Users</h3>
+<p>An IAM user is an identity you create in AWS, representing a person or application that interacts with AWS services. An IAM user has a name and credentials. By default, new IAM users have no permissions, so you must grant them the necessary permissions to perform specific actions, such as launching an EC2 instance or creating an S3 bucket.</p>
+<p><strong>Best Practice</strong>: Create individual IAM users for each person who needs access to AWS, even if they require the same level of access. This ensures each user has unique security credentials, enhancing security.</p>
 </section>
-<section id="example-of-data-in-a-relational-database" class="level2" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="example-of-data-in-a-relational-database"><span class="header-section-number">17.4</span> Example of data in a relational database</h2>
-<p>Consider a relational database for an online bookstore. It might include the following tables:</p>
-<ul>
-<li><strong>Customers:</strong> Stores customer information like name, email, and contact details.</li>
-<li><strong>Books:</strong> Stores details about books like title, author, ISBN, and price.</li>
-<li><strong>Orders:</strong> Stores order information, linking customers to the books they purchased, including order date and quantity.</li>
-</ul>
-<p>These tables are related through keys, allowing efficient data retrieval and management.</p>
+<section id="iam-policies" class="level3" data-number="24.0.4">
+<h3 data-number="24.0.4" class="anchored" data-anchor-id="iam-policies"><span class="header-section-number">24.0.4</span> IAM Policies</h3>
+<p>IAM policies are documents that define permissions for AWS services and resources. Policies allow you to customise access levels for different users, such as granting access to all S3 buckets or just a specific bucket.</p>
+<p><strong>Best Practice</strong>: Follow the principle of least privilege, granting users only the permissions they need to perform their tasks. For example, if an employee needs access to a specific bucket, specify that bucket in the IAM policy rather than granting access to all buckets.</p>
 </section>
-<section id="amazon-rds" class="level2" data-number="17.5">
-<h2 data-number="17.5" class="anchored" data-anchor-id="amazon-rds"><span class="header-section-number">17.5</span> Amazon RDS</h2>
-<p>Amazon Relational Database Service (Amazon RDS) enables you to run relational databases in the AWS Cloud. It automates tasks such as hardware provisioning, database setup, patching, and backups, freeing up time to focus on using data to innovate your applications. Amazon RDS can be integrated with other services, such as AWS Lambda, to query your database from a serverless application.</p>
-<p>Amazon RDS provides various security options, including encryption at rest (protecting data while it is stored) and encryption in transit (protecting data while it is being sent and received).</p>
-<section id="amazon-rds-database-engines" class="level3" data-number="17.5.1">
-<h3 data-number="17.5.1" class="anchored" data-anchor-id="amazon-rds-database-engines"><span class="header-section-number">17.5.1</span> Amazon RDS database engines</h3>
-<p>Amazon RDS supports six database engines, each optimized for different aspects like memory, performance, or input/output (I/O). The supported database engines are:</p>
-<ul>
-<li><strong>Amazon Aurora</strong></li>
-<li><strong>PostgreSQL</strong></li>
-<li><strong>MySQL</strong></li>
-<li><strong>MariaDB</strong></li>
-<li><strong>Oracle Database</strong></li>
-<li><strong>Microsoft SQL Server</strong></li>
-</ul>
-<p>By using Amazon RDS, you can leverage the power of these database engines with the added benefits of AWS’s managed services, ensuring efficient and secure data management.</p>
+<section id="iam-groups" class="level3" data-number="24.0.5">
+<h3 data-number="24.0.5" class="anchored" data-anchor-id="iam-groups"><span class="header-section-number">24.0.5</span> IAM Groups</h3>
+<p>An IAM group is a collection of IAM users. Assigning a policy to a group grants the permissions specified in the policy to all users in the group. For example, a coffee shop owner could create a “Cashiers” group and assign permissions to that group, making it easy to manage access for all cashiers.</p>
+<p><img src="awsGroups.png" alt=" IAM groups " style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p><strong>Best Practice</strong>: Use IAM groups to manage permissions efficiently. If an employee changes roles, move them to a different group to adjust their permissions accordingly.</p>
 </section>
-<section id="amazon-aurora" class="level3" data-number="17.5.2">
-<h3 data-number="17.5.2" class="anchored" data-anchor-id="amazon-aurora"><span class="header-section-number">17.5.2</span> Amazon Aurora</h3>
-<p>Amazon Aurora is an enterprise-class relational database that is compatible with MySQL and PostgreSQL. It offers significant performance improvements, being up to five times faster than standard MySQL databases and up to three times faster than standard PostgreSQL databases.</p>
+<section id="iam-roles" class="level3" data-number="24.0.6">
+<h3 data-number="24.0.6" class="anchored" data-anchor-id="iam-roles"><span class="header-section-number">24.0.6</span> IAM Roles</h3>
+<p>IAM roles provide temporary access to permissions for users, applications, or services. An IAM role can be assumed to gain the permissions associated with that role, similar to a coffee shop employee switching between different tasks throughout the day.</p>
+<p><strong>Best Practice</strong>: Use IAM roles for temporary access to services or resources rather than granting long-term permissions. This is particularly useful for users who need to perform various tasks that require different permissions.</p>
 </section>
-<section id="key-benefits-of-amazon-aurora" class="level3" data-number="17.5.3">
-<h3 data-number="17.5.3" class="anchored" data-anchor-id="key-benefits-of-amazon-aurora"><span class="header-section-number">17.5.3</span> Key benefits of Amazon Aurora</h3>
-<ol type="1">
-<li><strong>Performance:</strong>
-<ul>
-<li>Amazon Aurora is designed to deliver high performance with low latency. It achieves this by optimizing the database engine and reducing unnecessary input/output (I/O) operations. This results in faster query processing and improved overall performance compared to traditional MySQL and PostgreSQL databases.</li>
-</ul></li>
-<li><strong>Cost efficiency:</strong>
-<ul>
-<li>Aurora helps reduce database costs by minimizing unnecessary I/O operations. This means you get more efficient use of your database resources, leading to cost savings. Additionally, Aurora’s pay-as-you-go pricing model ensures that you only pay for the resources you actually use.</li>
-</ul></li>
-<li><strong>High availability:</strong>
-<ul>
-<li>Aurora is built for high availability and reliability. It replicates six copies of your data across three Availability Zones. This multi-AZ replication ensures that your data is always available, even in the event of an infrastructure failure in one of the Availability Zones. Additionally, Aurora continuously backs up your data to Amazon S3, providing an extra layer of data protection.</li>
-</ul></li>
-<li><strong>Scalability:</strong>
-<ul>
-<li>Amazon Aurora can automatically scale storage as needed, up to 128 terabytes per database instance. This means you don’t have to worry about running out of storage space or manually provisioning additional storage. Aurora also supports read replicas, which allows you to distribute read traffic and scale read operations independently from write operations.</li>
-</ul></li>
-<li><strong>Security:</strong>
-<ul>
-<li>Aurora offers robust security features, including encryption at rest and in transit, network isolation using Amazon Virtual Private Cloud (VPC), and fine-grained access control with AWS Identity and Access Management (IAM). These features help ensure that your data is secure and compliant with industry standards.</li>
-</ul></li>
-</ol>
-</section>
-<section id="use-cases-for-amazon-aurora" class="level3" data-number="17.5.4">
-<h3 data-number="17.5.4" class="anchored" data-anchor-id="use-cases-for-amazon-aurora"><span class="header-section-number">17.5.4</span> Use cases for Amazon Aurora</h3>
-<ul>
-<li><strong>High-performance applications:</strong> If your applications require high transaction throughput and low latency, Aurora is an excellent choice. Examples include e-commerce platforms, financial applications, and online gaming.</li>
-<li><strong>Scalable web applications:</strong> Aurora’s ability to automatically scale storage and support read replicas makes it ideal for web applications that experience variable traffic patterns and need to handle large amounts of read traffic.</li>
-<li><strong>Data warehousing and analytics:</strong> Aurora’s high performance and scalability make it suitable for data warehousing and analytics workloads, where fast query processing and the ability to handle large datasets are critical.</li>
-</ul>
+<section id="multi-factor-authentication-mfa" class="level3" data-number="24.0.7">
+<h3 data-number="24.0.7" class="anchored" data-anchor-id="multi-factor-authentication-mfa"><span class="header-section-number">24.0.7</span> Multi-Factor Authentication (MFA)</h3>
+<p>MFA adds an extra layer of security to your AWS account by requiring additional verification beyond just a password. For example, you might need to enter a code sent to your phone after providing your password.</p>
+<p><strong>Best Practice</strong>: Enable MFA for all IAM users to enhance the security of your AWS account.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -887,13 +845,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-5-notes/4-Amazon-EFS.html" class="pagination-link" aria-label="Amazon Elastic File System (Amazon EFS)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span>
+      <a href="../module-6-notes/2-AWS-sahred.html" class="pagination-link" aria-label="**AWS shared responsibility model**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-5-notes/6-Amazon-DynamoDB.html" class="pagination-link" aria-label="Amazon DynamoDB">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-6-notes/4-AWS-Organisations.html" class="pagination-link" aria-label="AWS Organisations">
+        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
