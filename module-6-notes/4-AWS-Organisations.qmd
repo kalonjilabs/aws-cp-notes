@@ -1,0 +1,28 @@
+# AWS Organisations
+
+### Permissions and Access in AWS
+
+When starting with AWS, it usually begins with a single account. However, as your company grows or embarks on its cloud journey, it's crucial to establish a separation of duties. For instance, you may want your developers to have access to development resources, your accounting staff to access billing information, or different business units to experiment with AWS services without affecting each other.
+
+Managing multiple accounts can quickly become complicated. You might need to track various accounts with different permissions and responsibilities. To address this, AWS offers a service called AWS Organisations, which simplifies the management of multiple AWS accounts.
+
+### AWS Organisations
+
+AWS Organisations allows you to consolidate and manage multiple AWS accounts within a central location. When you create an organisation, AWS Organisations automatically creates a root, which is the parent container for all accounts in your organisation. This service enables you to manage billing, control access, ensure compliance, enhance security, and share resources across your AWS accounts.
+
+**Key Features of AWS Organisations:**
+
+1. **Centralised Management**: AWS Organisations provides a central location to manage all your AWS accounts. For example, if you have accounts A, B, C, F, and G, you can combine them into one organisation, making it easier to manage and discover additional accounts like D and E.
+2. **Consolidated Billing**: With AWS Organisations, you can use the primary account to consolidate and pay for all member accounts. This not only simplifies billing but also offers bulk discounts, saving money.
+3. **Service Control Policies (SCPs)**: SCPs allow you to control the AWS services, resources, and individual API actions that users and roles in each account can access. As the administrator of the primary account, you can specify the maximum permissions for member accounts, ensuring that users only have access to what they need.
+4. **Organisational Units (OUs)**: You can group accounts into OUs to manage accounts with similar business or security requirements more efficiently. When you apply a policy to an OU, all accounts within that OU inherit the specified permissions. This feature helps isolate workloads or applications with specific security requirements.
+    - **Example**: If you have accounts that need to comply with regulatory requirements, you can place them into an OU and attach a policy that blocks access to non-compliant AWS services.
+
+### Implementing Best Practices
+
+1. **Start with the Root User**: Begin by creating an IAM user with administrative permissions to manage other users and resources. Avoid using the root user for daily tasks to minimise security risks.
+2. **Create IAM Users**: Create individual IAM users for each person needing access to AWS. Assign specific permissions to each user based on their role and responsibilities.
+3. **Utilise IAM Policies**: Define permissions through IAM policies, following the principle of least privilege. Ensure users only have access to the resources they need to perform their tasks.
+4. **Leverage IAM Groups**: Group users with similar access needs into IAM groups and assign policies at the group level. This simplifies permission management and ensures consistency.
+5. **Employ IAM Roles**: Use IAM roles for temporary access to AWS resources. Roles are ideal for users or applications that need different levels of access at different times.
+6. **Enable Multi-Factor Authentication (MFA)**: Enhance security by enabling MFA for all IAM users. MFA requires additional verification, providing an extra layer of protection.

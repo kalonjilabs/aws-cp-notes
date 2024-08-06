@@ -1,0 +1,36 @@
+# **AWS shared responsibility model**
+
+### Understanding Security Responsibilities in AWS
+
+AWS provides a variety of resources and services, including on-premises databases, networking, and EC2 instances. However, a key question often arises: when maintaining and running these sophisticated services, who is responsible for their security?
+
+The response is that AWS and the customer share this obligation. AWS environments are managed as interconnected components rather than as isolated entities. AWS takes care of some aspects, while you, the customer, are responsible for others. This notion is referred to as the shared responsibility model.The shared responsibility model splits into two areas: customer responsibilities, often called “security in the cloud,” and AWS responsibilities, known as “security of the cloud.” You can think of this model as similar to the relationship between a homeowner and a homebuilder. The builder (AWS) is responsible for constructing the house and ensuring its structural integrity. The homeowner (the customer) is responsible for safeguarding the house's contents, including locking the doors and windows.
+
+<img src="shared-responsibility.jpg" alt=" shared responsibility " style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://aws.amazon.com/compliance/shared-responsibility-model/">Source: Shared Responsibility Model</a>
+</p>
+
+**Customers: Security in the Cloud**
+
+As a customer, you are responsible for the security of everything that you create and store in the AWS Cloud. When using AWS services, you have complete control over your content. This means you are responsible for managing security requirements for your content, including which content you choose to store on AWS, which AWS services you use, and who has access to that content. You also control how access rights are granted, managed, and revoked.
+
+The security steps you take will depend on factors such as the services you use, the complexity of your systems, and your company’s specific operational and security needs. These steps include:
+
+- Selecting, configuring, and patching the operating systems that will run on Amazon EC2 instances.
+- Configuring security groups.
+- Managing user accounts.
+
+**AWS: Security of the Cloud**
+
+AWS is responsible for the security of the cloud. This means AWS operates, manages, and controls the components at all layers of infrastructure. This includes areas such as the host operating system, the virtualisation layer, and even the physical security of the data centres from which services operate.
+
+AWS is responsible for protecting the global infrastructure that runs all the services offered in the AWS Cloud. This infrastructure includes AWS Regions, Availability Zones, and edge locations. AWS manages the security of the cloud, specifically the physical infrastructure that hosts your resources, which includes:
+
+- Physical security of data centres
+- Hardware and software infrastructure
+- Network infrastructure
+- Virtualisation infrastructure
+
+Although you cannot visit AWS data centres to see this protection firsthand, AWS provides several reports from third-party auditors. These auditors have verified its compliance with various computer security standards and regulations.

@@ -1,0 +1,53 @@
+# User Permissions and Access
+
+### Understanding User Permissions and Access in AWS
+
+AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. IAM provides the flexibility to configure access based on your company's specific operational and security needs. This guide will cover the key features of IAM, including IAM users, groups, roles, policies, and multi-factor authentication (MFA), along with best practices for each.
+
+### AWS Account Root User
+
+When you first create an AWS account, you start with an identity known as the root user. The root user is accessed using the email address and password you used to create the account. Think of the root user as the owner of a coffee shop who has complete control over everything.
+
+<img src="awsroot.png" alt=" AWS account root user " style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+**Best Practice**: Avoid using the root user for everyday tasks. Instead, use the root user to create an initial IAM user with permissions to create other users. Continue to create individual IAM users for regular tasks and reserve the root user for tasks that require its unique privileges, such as changing the root user email address or updating your AWS support plan.
+
+### IAM Users
+
+An IAM user is an identity you create in AWS, representing a person or application that interacts with AWS services. An IAM user has a name and credentials. By default, new IAM users have no permissions, so you must grant them the necessary permissions to perform specific actions, such as launching an EC2 instance or creating an S3 bucket.
+
+**Best Practice**: Create individual IAM users for each person who needs access to AWS, even if they require the same level of access. This ensures each user has unique security credentials, enhancing security.
+
+### IAM Policies
+
+IAM policies are documents that define permissions for AWS services and resources. Policies allow you to customise access levels for different users, such as granting access to all S3 buckets or just a specific bucket.
+
+**Best Practice**: Follow the principle of least privilege, granting users only the permissions they need to perform their tasks. For example, if an employee needs access to a specific bucket, specify that bucket in the IAM policy rather than granting access to all buckets.
+
+### IAM Groups
+
+An IAM group is a collection of IAM users. Assigning a policy to a group grants the permissions specified in the policy to all users in the group. For example, a coffee shop owner could create a "Cashiers" group and assign permissions to that group, making it easy to manage access for all cashiers.
+
+<img src="awsGroups.png" alt=" IAM groups " style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+**Best Practice**: Use IAM groups to manage permissions efficiently. If an employee changes roles, move them to a different group to adjust their permissions accordingly.
+
+### IAM Roles
+
+IAM roles provide temporary access to permissions for users, applications, or services. An IAM role can be assumed to gain the permissions associated with that role, similar to a coffee shop employee switching between different tasks throughout the day.
+
+**Best Practice**: Use IAM roles for temporary access to services or resources rather than granting long-term permissions. This is particularly useful for users who need to perform various tasks that require different permissions.
+
+### Multi-Factor Authentication (MFA)
+
+MFA adds an extra layer of security to your AWS account by requiring additional verification beyond just a password. For example, you might need to enter a code sent to your phone after providing your password.
+
+**Best Practice**: Enable MFA for all IAM users to enhance the security of your AWS account.

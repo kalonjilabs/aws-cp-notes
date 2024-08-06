@@ -1,0 +1,37 @@
+# Compliance in AWS
+
+In the context of AWS (Amazon Web Services), compliance refers to following particular standards and regulations that are relevant to the industry you operate in. You will undergo an audit or inspection to ensure that you fulfil these requirements.
+
+### Why Compliance Matters
+
+Regardless of your business type, maintaining compliance is crucial. For example, if you manage software that handles consumer data in the EU, you must comply with the GDPR (General Data Protection Regulation). If you run healthcare applications in the US, you need to meet HIPAA (Health Insurance Portability and Accountability Act) compliance requirements. Compliance ensures that your operations are legal, secure, and trustworthy.
+
+### AWS and Compliance
+
+When using AWS, compliance involves both AWS's responsibilities and your own. AWS has built its infrastructure following industry best practices for security and compliance. As an AWS customer, you inherit these best practices. AWS complies with numerous assurance programmes, which means many aspects of compliance are already handled, allowing you to focus on your application and data.
+
+### Shared Responsibility Model
+
+The AWS Shared Responsibility Model outlines the division of security and compliance duties between AWS and you, the customer. AWS is responsible for cloud security, which encompasses physical infrastructure, hardware, and operational software (such as networking and databases). You are responsible for the security in the cloud, which includes the management of your data, user permissions, and configurations. You're in charge of the architecture, therefore you have to make sure it complies with regulations.
+
+### Tools for Compliance
+
+AWS offers various tools to help you maintain compliance:
+
+1. **AWS Artifact**: This service provides on-demand access to AWS security and compliance reports and select online agreements. It has two main sections:
+    - **AWS Artifact Agreements**: Here, you can review, accept, and manage agreements that address specific regulatory needs, such as HIPAA.
+    - **AWS Artifact Reports**: This section offers compliance reports from third-party auditors who verify that AWS complies with global, regional, and industry-specific standards. These reports can be shared with your auditors to demonstrate compliance.
+2. **AWS Compliance Center**: This is a resource hub where you can find compliance-related information, including customer stories, whitepapers, and documentation on AWS risk and compliance. It also includes an auditor learning path to help your team understand how to use AWS to meet compliance requirements.
+3. **Region Selection**: The AWS Region you choose to operate in can help meet compliance needs, especially if regulations require data to remain within specific geographic boundaries. AWS ensures that data does not automatically replicate across regions, helping you adhere to local data storage laws.
+
+### Data Ownership and Protection
+
+You own your data in AWS. This means you have full control over how your data is stored, encrypted, and accessed. AWS provides various encryption mechanisms across its services, often configurable with just a setting change. This flexibility allows you to meet specific data protection standards required by your industry.
+
+### Documentation and Audits
+
+AWS provides extensive documentation and whitepapers to support your compliance efforts. For instance, the AWS Risk and Security Whitepaper outlines best practices for security and compliance in AWS. You can request documentation proving that AWS follows these practices, which is crucial during audits.
+
+### Conclusion
+
+Compliance in AWS is a shared responsibility where AWS manages the security of the cloud infrastructure, and you manage the security of your data and applications within the cloud. By utilising tools like AWS Artifact and the AWS Compliance Center, you can streamline your compliance efforts, ensuring your operations meet industry standards and regulations. This collaborative approach helps you maintain a secure, compliant, and trustworthy environment for your business operations.
