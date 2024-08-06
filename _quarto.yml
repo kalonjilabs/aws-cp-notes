@@ -40,7 +40,9 @@ book:
         - module-5-notes/4-Amazon-EFS.qmd
         - module-5-notes/5-Amazon-RDS.qmd
         - module-5-notes/6-Amazon-DynamoDB.qmd
-        - module-5-notes/7-Additional_database_service.qmd
+        - module-5-notes/7-Amazon-Redshift.qmd
+        - module-5-notes/8-AWS-DMS.qmd
+        - module-5-notes/9-Additional_database_service.qmd
 
     - part: module-6-notes/1-Introduction-m5.qmd
       chapters:
