@@ -39,6 +39,15 @@ book:
         - module-5-notes/3-Amazon-S3.qmd
         - module-5-notes/4-Amazon-EFS.qmd
         - module-5-notes/5-Amazon-RDS.qmd
+        - module-5-notes/6-Amazon-DynamoDB.qmd
+        - module-5-notes/7-Additional_database_service.qmd
+
+    - part: module-6-notes/1-Introduction-m5.qmd
+      chapters:
+        - module-6-notes/2-Amazon-EBS.qmd
+        - module-6-notes/3-Amazon-S3.qmd
+        - module-6-notes/4-Amazon-EFS.qmd
+        - module-6-notes/5-Amazon-RDS.qmd
 
 format:
   html:

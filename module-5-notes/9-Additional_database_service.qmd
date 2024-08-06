@@ -1,0 +1,59 @@
+### Amazon DocumentDB
+
+**Amazon DocumentDB** is a managed document database service that supports MongoDB workloads. It is designed to handle, store, and query JSON data efficiently, making it ideal for applications that work with semi-structured data. DocumentDB provides scalability, high availability, and security, while maintaining compatibility with MongoDB drivers and tools.
+
+### Use Cases:
+
+- Content management systems
+- Mobile and web applications
+- Catalogues and user profiles
+
+### Amazon Neptune
+
+**Amazon Neptune** is a fully managed graph database service that supports both property graph and RDF graph models. It is designed for applications that require highly connected data and complex queries, such as social networking, recommendation engines, and fraud detection.
+
+### Use Cases:
+
+- Social networking applications
+- Knowledge graphs
+- Fraud detection systems
+
+### Amazon Quantum Ledger Database (Amazon QLDB)
+
+**Amazon QLDB** is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log. This service is ideal for applications that require an authoritative data source and a complete and verifiable history of changes.
+
+### Use Cases:
+
+- Supply chain tracking
+- Financial transaction systems
+- Registries and record-keeping
+
+### Amazon Managed Blockchain
+
+**Amazon Managed Blockchain** is a fully managed service that allows you to create and manage scalable blockchain networks using popular open-source frameworks like Hyperledger Fabric and Ethereum. This service simplifies the setup and management of blockchain networks, making it easier to build applications where multiple parties can execute transactions without a trusted central authority.
+
+### Use Cases:
+
+- Supply chain transparency
+- Financial services
+- Decentralised applications
+
+### Amazon ElastiCache
+
+**Amazon ElastiCache** is a fully managed in-memory caching service that supports Redis and Memcached. It is designed to improve the performance of web applications by retrieving data from high throughput and low latency in-memory caches, rather than relying entirely on slower disk-based databases.
+
+### Use Cases:
+
+- Real-time analytics
+- Gaming leaderboards
+- Session storage
+
+### Amazon DynamoDB Accelerator (DAX)
+
+**Amazon DynamoDB Accelerator (DAX)** is a fully managed, highly available in-memory cache for DynamoDB that delivers up to a 10x performance improvement – from milliseconds to microseconds – even at millions of requests per second. DAX handles the heavy lifting of cache management, freeing developers from the complexity of designing, deploying, and managing a distributed cache.
+
+### Use Cases:
+
+- High-traffic web applications
+- E-commerce applications
+- Gaming applications
