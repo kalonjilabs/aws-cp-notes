@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>28&nbsp; Additional Security Services in AWS – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-6-notes/6-Denial-of-Service-Attacks.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/7-Additional-Security.html"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -340,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-6-notes/7-Additional-Security.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-6-notes/7-Additional-Security.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></span></a>
   </div>
 </li>
@@ -356,18 +355,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#the-concept-of-encryption" id="toc-the-concept-of-encryption" class="nav-link active" data-scroll-target="#the-concept-of-encryption"><span class="header-section-number">28.0.1</span> The Concept of Encryption</a></li>
+  <li><a href="#encryption-in-aws" id="toc-encryption-in-aws" class="nav-link" data-scroll-target="#encryption-in-aws"><span class="header-section-number">28.0.2</span> Encryption in AWS</a></li>
+  <li><a href="#amazon-inspector" id="toc-amazon-inspector" class="nav-link" data-scroll-target="#amazon-inspector"><span class="header-section-number">28.0.3</span> Amazon Inspector</a></li>
+  <li><a href="#amazon-guardduty" id="toc-amazon-guardduty" class="nav-link" data-scroll-target="#amazon-guardduty"><span class="header-section-number">28.0.4</span> Amazon GuardDuty</a></li>
+  <li><a href="#aws-key-management-service-aws-kms" id="toc-aws-key-management-service-aws-kms" class="nav-link" data-scroll-target="#aws-key-management-service-aws-kms"><span class="header-section-number">28.0.5</span> AWS Key Management Service (AWS KMS)</a></li>
+  <li><a href="#aws-web-application-firewall-waf" id="toc-aws-web-application-firewall-waf" class="nav-link" data-scroll-target="#aws-web-application-firewall-waf"><span class="header-section-number">28.0.6</span> AWS Web Application Firewall (WAF)</a></li>
+  <li><a href="#example-of-aws-waf-in-action" id="toc-example-of-aws-waf-in-action" class="nav-link" data-scroll-target="#example-of-aws-waf-in-action"><span class="header-section-number">28.0.7</span> Example of AWS WAF in Action</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">28.0.8</span> Conclusion</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/7-Additional-Security.html"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></h1>
 </div>
 
 
@@ -384,21 +388,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<section id="the-concept-of-encryption" class="level3" data-number="28.0.1">
+<h3 data-number="28.0.1" class="anchored" data-anchor-id="the-concept-of-encryption"><span class="header-section-number">28.0.1</span> The Concept of Encryption</h3>
+<p>Encryption is a method of securing messages or data so that only authorised parties can access them. Unauthorised parties are therefore unlikely or unable to access the data. Imagine it as a key and door scenario: if you have the key, you can unlock the door; if you don’t, you cannot.</p>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="encryption-in-aws" class="level3" data-number="28.0.2">
+<h3 data-number="28.0.2" class="anchored" data-anchor-id="encryption-in-aws"><span class="header-section-number">28.0.2</span> Encryption in AWS</h3>
+<p>At AWS, encryption comes in two variations: encryption at rest and encryption in transit.</p>
+<ul>
+<li><strong>Encryption at Rest</strong>: This refers to data being secured while it is stored and not actively moving. For example, server-side encryption at rest is enabled on all DynamoDB table data, helping prevent unauthorised access. DynamoDB’s encryption at rest integrates with AWS Key Management Service (KMS) for managing the encryption key used to encrypt your tables. Without this key, you cannot access your data, so it is vital to keep it safe.</li>
+<li><strong>Encryption in Transit</strong>: This means data is secured while it is moving between two points, such as between an AWS service and a client. For example, when connecting a Redshift instance to a SQL client, secure sockets layer (SSL) connections are used to encrypt data, and service certificates validate and authorise the client. This ensures data is protected while passing between Redshift and the client. Similar functionality exists in numerous other AWS services, such as SQS, S3, and RDS.</li>
+</ul>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="amazon-inspector" class="level3" data-number="28.0.3">
+<h3 data-number="28.0.3" class="anchored" data-anchor-id="amazon-inspector"><span class="header-section-number">28.0.3</span> Amazon Inspector</h3>
+<p>Amazon Inspector helps improve the security and compliance of your AWS-deployed applications by running automated security assessments against your infrastructure. It checks for deviations from security best practices, exposure of EC2 instances, vulnerabilities, and more. The service consists of three parts:</p>
+<ol type="1">
+<li><strong>Network Configuration Reachability</strong>: Examines the network configurations.</li>
+<li><strong>Amazon Agent</strong>: Installed on EC2 instances to gather data.</li>
+<li><strong>Security Assessment Service</strong>: Analyses data and provides findings.</li>
+</ol>
+<p>To use Amazon Inspector, configure the options, run the service, and it will generate a list of potential security issues. These findings are displayed in the Amazon Inspector console with detailed descriptions and recommendations for remediation. You can also retrieve findings through an API.</p>
+</section>
+<section id="amazon-guardduty" class="level3" data-number="28.0.4">
+<h3 data-number="28.0.4" class="anchored" data-anchor-id="amazon-guardduty"><span class="header-section-number">28.0.4</span> Amazon GuardDuty</h3>
+<p>Amazon GuardDuty is a threat detection service that continuously analyses metadata from your account and network activity. It utilises AWS CloudTrail events, Amazon VPC Flow Logs, and DNS logs. GuardDuty uses integrated threat intelligence, anomaly detection, and machine learning to identify threats accurately. It runs independently from your other AWS services, ensuring that it does not affect their performance or availability.</p>
+<p><img src="WAF-1.png" alt=" Amazon GuardDuty" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="aws-key-management-service-aws-kms" class="level3" data-number="28.0.5">
+<h3 data-number="28.0.5" class="anchored" data-anchor-id="aws-key-management-service-aws-kms"><span class="header-section-number">28.0.5</span> AWS Key Management Service (AWS KMS)</h3>
+<p>AWS Key Management Service (KMS) enables you to perform encryption operations using cryptographic keys, which are random strings of digits used for encrypting and decrypting data. AWS KMS allows you to create, manage, and use cryptographic keys and control their use across various services and applications. You can specify which IAM users and roles can manage keys and even temporarily disable keys to prevent their use. Your keys never leave AWS KMS, ensuring you maintain control.</p>
+</section>
+<section id="aws-web-application-firewall-waf" class="level3" data-number="28.0.6">
+<h3 data-number="28.0.6" class="anchored" data-anchor-id="aws-web-application-firewall-waf"><span class="header-section-number">28.0.6</span> AWS Web Application Firewall (WAF)</h3>
+<p>AWS WAF is a web application firewall that monitors network requests to your web applications. It works with Amazon CloudFront and an Application Load Balancer to block or allow traffic using a web access control list (ACL).</p>
+</section>
+<section id="example-of-aws-waf-in-action" class="level3" data-number="28.0.7">
+<h3 data-number="28.0.7" class="anchored" data-anchor-id="example-of-aws-waf-in-action"><span class="header-section-number">28.0.7</span> Example of AWS WAF in Action</h3>
+<p>Suppose your application is receiving malicious network requests from several IP addresses. You want to prevent these requests but allow legitimate users to access your application. You configure the web ACL to allow all requests except those from the specified IP addresses. When a request comes into AWS WAF, it checks against the rules in the web ACL. If the request does not come from a blocked IP address, it allows access to the application.</p>
+<p><img src="WAF-1.png" alt=" AWS Web Application Firewall" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>If a request comes from one of the blocked IP addresses specified in the web ACL, AWS WAF denies access.</p>
+<p><img src="WAF-2.png" alt=" AWS Web Application Firewall" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="conclusion" class="level3" data-number="28.0.8">
+<h3 data-number="28.0.8" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">28.0.8</span> Conclusion</h3>
+<p>AWS offers a robust set of security services to help protect your applications and data. From encryption and automated security assessments with Amazon Inspector to intelligent threat detection with Amazon GuardDuty, AWS provides tools to enhance your security posture. Understanding and utilising these services ensures that your applications are secure, compliant, and resilient against various threats.</p>
 
 
 </section>
@@ -826,14 +869,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-6-notes/6-Denial-of-Service-Attacks.html" class="pagination-link" aria-label="**Denial-of-Service Attacks**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title"><strong>Denial-of-Service Attacks</strong></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

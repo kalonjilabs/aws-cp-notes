@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>25&nbsp; AWS Organisations – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-6-notes/5-Compliance.html" rel="next">
+<link href="../module-6-notes/3-AWS-permission.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/4-AWS-Organisations.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -322,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-6-notes/4-AWS-Organisations.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-6-notes/4-AWS-Organisations.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></span></a>
   </div>
 </li>
@@ -356,18 +356,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#permissions-and-access-in-aws" id="toc-permissions-and-access-in-aws" class="nav-link active" data-scroll-target="#permissions-and-access-in-aws"><span class="header-section-number">25.0.1</span> Permissions and Access in AWS</a></li>
+  <li><a href="#aws-organisations" id="toc-aws-organisations" class="nav-link" data-scroll-target="#aws-organisations"><span class="header-section-number">25.0.2</span> AWS Organisations</a></li>
+  <li><a href="#implementing-best-practices" id="toc-implementing-best-practices" class="nav-link" data-scroll-target="#implementing-best-practices"><span class="header-section-number">25.0.3</span> Implementing Best Practices</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/4-AWS-Organisations.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></h1>
 </div>
 
 
@@ -384,21 +384,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<section id="permissions-and-access-in-aws" class="level3" data-number="25.0.1">
+<h3 data-number="25.0.1" class="anchored" data-anchor-id="permissions-and-access-in-aws"><span class="header-section-number">25.0.1</span> Permissions and Access in AWS</h3>
+<p>When starting with AWS, it usually begins with a single account. However, as your company grows or embarks on its cloud journey, it’s crucial to establish a separation of duties. For instance, you may want your developers to have access to development resources, your accounting staff to access billing information, or different business units to experiment with AWS services without affecting each other.</p>
+<p>Managing multiple accounts can quickly become complicated. You might need to track various accounts with different permissions and responsibilities. To address this, AWS offers a service called AWS Organisations, which simplifies the management of multiple AWS accounts.</p>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="aws-organisations" class="level3" data-number="25.0.2">
+<h3 data-number="25.0.2" class="anchored" data-anchor-id="aws-organisations"><span class="header-section-number">25.0.2</span> AWS Organisations</h3>
+<p>AWS Organisations allows you to consolidate and manage multiple AWS accounts within a central location. When you create an organisation, AWS Organisations automatically creates a root, which is the parent container for all accounts in your organisation. This service enables you to manage billing, control access, ensure compliance, enhance security, and share resources across your AWS accounts.</p>
+<p><strong>Key Features of AWS Organisations:</strong></p>
+<ol type="1">
+<li><strong>Centralised Management</strong>: AWS Organisations provides a central location to manage all your AWS accounts. For example, if you have accounts A, B, C, F, and G, you can combine them into one organisation, making it easier to manage and discover additional accounts like D and E.</li>
+<li><strong>Consolidated Billing</strong>: With AWS Organisations, you can use the primary account to consolidate and pay for all member accounts. This not only simplifies billing but also offers bulk discounts, saving money.</li>
+<li><strong>Service Control Policies (SCPs)</strong>: SCPs allow you to control the AWS services, resources, and individual API actions that users and roles in each account can access. As the administrator of the primary account, you can specify the maximum permissions for member accounts, ensuring that users only have access to what they need.</li>
+<li><strong>Organisational Units (OUs)</strong>: You can group accounts into OUs to manage accounts with similar business or security requirements more efficiently. When you apply a policy to an OU, all accounts within that OU inherit the specified permissions. This feature helps isolate workloads or applications with specific security requirements.
+<ul>
+<li><strong>Example</strong>: If you have accounts that need to comply with regulatory requirements, you can place them into an OU and attach a policy that blocks access to non-compliant AWS services.</li>
+</ul></li>
+</ol>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="implementing-best-practices" class="level3" data-number="25.0.3">
+<h3 data-number="25.0.3" class="anchored" data-anchor-id="implementing-best-practices"><span class="header-section-number">25.0.3</span> Implementing Best Practices</h3>
+<ol type="1">
+<li><strong>Start with the Root User</strong>: Begin by creating an IAM user with administrative permissions to manage other users and resources. Avoid using the root user for daily tasks to minimise security risks.</li>
+<li><strong>Create IAM Users</strong>: Create individual IAM users for each person needing access to AWS. Assign specific permissions to each user based on their role and responsibilities.</li>
+<li><strong>Utilise IAM Policies</strong>: Define permissions through IAM policies, following the principle of least privilege. Ensure users only have access to the resources they need to perform their tasks.</li>
+<li><strong>Leverage IAM Groups</strong>: Group users with similar access needs into IAM groups and assign policies at the group level. This simplifies permission management and ensures consistency.</li>
+<li><strong>Employ IAM Roles</strong>: Use IAM roles for temporary access to AWS resources. Roles are ideal for users or applications that need different levels of access at different times.</li>
+<li><strong>Enable Multi-Factor Authentication (MFA)</strong>: Enhance security by enabling MFA for all IAM users. MFA requires additional verification, providing an extra layer of protection.</li>
+</ol>
 
 
 </section>
@@ -826,13 +840,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-6-notes/3-AWS-permission.html" class="pagination-link" aria-label="User Permissions and Access">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-6-notes/5-Compliance.html" class="pagination-link" aria-label="Compliance in AWS">
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

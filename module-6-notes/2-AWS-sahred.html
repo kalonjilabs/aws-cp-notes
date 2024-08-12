@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>23&nbsp; AWS shared responsibility model – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-6-notes/3-AWS-permission.html" rel="next">
+<link href="../module-6-notes/1-Introduction.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/2-AWS-sahred.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -310,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-6-notes/2-AWS-sahred.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-6-notes/2-AWS-sahred.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></span></a>
   </div>
 </li>
@@ -356,18 +356,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#understanding-security-responsibilities-in-aws" id="toc-understanding-security-responsibilities-in-aws" class="nav-link active" data-scroll-target="#understanding-security-responsibilities-in-aws"><span class="header-section-number">23.0.1</span> Understanding Security Responsibilities in AWS</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/2-AWS-sahred.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></h1>
 </div>
 
 
@@ -384,21 +382,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
-</section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
-</section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="understanding-security-responsibilities-in-aws" class="level3" data-number="23.0.1">
+<h3 data-number="23.0.1" class="anchored" data-anchor-id="understanding-security-responsibilities-in-aws"><span class="header-section-number">23.0.1</span> Understanding Security Responsibilities in AWS</h3>
+<p>AWS provides a variety of resources and services, including on-premises databases, networking, and EC2 instances. However, a key question often arises: when maintaining and running these sophisticated services, who is responsible for their security?</p>
+<p>The response is that AWS and the customer share this obligation. AWS environments are managed as interconnected components rather than as isolated entities. AWS takes care of some aspects, while you, the customer, are responsible for others. This notion is referred to as the shared responsibility model.The shared responsibility model splits into two areas: customer responsibilities, often called “security in the cloud,” and AWS responsibilities, known as “security of the cloud.” You can think of this model as similar to the relationship between a homeowner and a homebuilder. The builder (AWS) is responsible for constructing the house and ensuring its structural integrity. The homeowner (the customer) is responsible for safeguarding the house’s contents, including locking the doors and windows.</p>
+<p><img src="shared-responsibility.jpg" alt=" shared responsibility " style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://aws.amazon.com/compliance/shared-responsibility-model/">Source: Shared Responsibility Model</a>
+</p>
+<p><strong>Customers: Security in the Cloud</strong></p>
+<p>As a customer, you are responsible for the security of everything that you create and store in the AWS Cloud. When using AWS services, you have complete control over your content. This means you are responsible for managing security requirements for your content, including which content you choose to store on AWS, which AWS services you use, and who has access to that content. You also control how access rights are granted, managed, and revoked.</p>
+<p>The security steps you take will depend on factors such as the services you use, the complexity of your systems, and your company’s specific operational and security needs. These steps include:</p>
+<ul>
+<li>Selecting, configuring, and patching the operating systems that will run on Amazon EC2 instances.</li>
+<li>Configuring security groups.</li>
+<li>Managing user accounts.</li>
+</ul>
+<p><strong>AWS: Security of the Cloud</strong></p>
+<p>AWS is responsible for the security of the cloud. This means AWS operates, manages, and controls the components at all layers of infrastructure. This includes areas such as the host operating system, the virtualisation layer, and even the physical security of the data centres from which services operate.</p>
+<p>AWS is responsible for protecting the global infrastructure that runs all the services offered in the AWS Cloud. This infrastructure includes AWS Regions, Availability Zones, and edge locations. AWS manages the security of the cloud, specifically the physical infrastructure that hosts your resources, which includes:</p>
+<ul>
+<li>Physical security of data centres</li>
+<li>Hardware and software infrastructure</li>
+<li>Network infrastructure</li>
+<li>Virtualisation infrastructure</li>
+</ul>
+<p>Although you cannot visit AWS data centres to see this protection firsthand, AWS provides several reports from third-party auditors. These auditors have verified its compliance with various computer security standards and regulations.</p>
 
 
 </section>
@@ -826,13 +835,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-6-notes/1-Introduction.html" class="pagination-link" aria-label="Module 6">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Module 6</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-6-notes/3-AWS-permission.html" class="pagination-link" aria-label="User Permissions and Access">
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

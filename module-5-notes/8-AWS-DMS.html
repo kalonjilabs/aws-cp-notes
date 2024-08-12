@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>20&nbsp; AWS DMS – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-5-notes/9-Additional_database_service.html" rel="next">
+<link href="../module-5-notes/7-Amazon-Redshift.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/8-AWS-DMS.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -281,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-5-notes/8-AWS-DMS.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-5-notes/8-AWS-DMS.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></span></a>
   </div>
 </li>
@@ -356,18 +356,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#aws-database-migration-service-aws-dms" id="toc-aws-database-migration-service-aws-dms" class="nav-link active" data-scroll-target="#aws-database-migration-service-aws-dms"><span class="header-section-number">20.0.1</span> AWS Database Migration Service (AWS DMS)</a></li>
+  <li><a href="#homogeneous-migrations-same-type-databases" id="toc-homogeneous-migrations-same-type-databases" class="nav-link" data-scroll-target="#homogeneous-migrations-same-type-databases"><span class="header-section-number">20.0.2</span> Homogeneous Migrations (Same Type Databases)</a></li>
+  <li><a href="#heterogeneous-migrations-different-type-databases" id="toc-heterogeneous-migrations-different-type-databases" class="nav-link" data-scroll-target="#heterogeneous-migrations-different-type-databases"><span class="header-section-number">20.0.3</span> Heterogeneous Migrations (Different Type Databases)</a></li>
+  <li><a href="#other-use-cases" id="toc-other-use-cases" class="nav-link" data-scroll-target="#other-use-cases"><span class="header-section-number">20.0.4</span> Other Use Cases</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/8-AWS-DMS.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></h1>
 </div>
 
 
@@ -384,21 +385,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<section id="aws-database-migration-service-aws-dms" class="level3" data-number="20.0.1">
+<h3 data-number="20.0.1" class="anchored" data-anchor-id="aws-database-migration-service-aws-dms"><span class="header-section-number">20.0.1</span> AWS Database Migration Service (AWS DMS)</h3>
+<p>If you have a database that’s on-premises or already in the cloud, AWS offers a service called Amazon Database Migration Service (DMS). AWS DMS helps customers migrate existing databases onto AWS in a secure and easy manner. It enables you to migrate data between a source and a target database with minimal downtime, keeping the source database fully operational during the migration. Additionally, the source and target databases don’t have to be of the same type.</p>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="homogeneous-migrations-same-type-databases" class="level3" data-number="20.0.2">
+<h3 data-number="20.0.2" class="anchored" data-anchor-id="homogeneous-migrations-same-type-databases"><span class="header-section-number">20.0.2</span> Homogeneous Migrations (Same Type Databases)</h3>
+<p>When both the source and target databases are of the same type, the migration is known as homogeneous. Examples include:</p>
+<ul>
+<li>MySQL to Amazon RDS for MySQL</li>
+<li>Microsoft SQL Server to Amazon RDS for SQL Server</li>
+<li>Oracle to Amazon RDS for Oracle</li>
+</ul>
+<p>This process is straightforward since the schema structures, data types, and database code are compatible between the source and target databases.</p>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="heterogeneous-migrations-different-type-databases" class="level3" data-number="20.0.3">
+<h3 data-number="20.0.3" class="anchored" data-anchor-id="heterogeneous-migrations-different-type-databases"><span class="header-section-number">20.0.3</span> Heterogeneous Migrations (Different Type Databases)</h3>
+<p>When the source and target databases are of different types, the migration is known as heterogeneous. This process involves two steps:</p>
+<ol type="1">
+<li><strong>Schema Conversion</strong>: Use the AWS Schema Conversion Tool to convert the source schema and database code to match the target database.</li>
+<li><strong>Data Migration</strong>: Use AWS DMS to migrate the data from the source database to the target database.</li>
+</ol>
+</section>
+<section id="other-use-cases" class="level3" data-number="20.0.4">
+<h3 data-number="20.0.4" class="anchored" data-anchor-id="other-use-cases"><span class="header-section-number">20.0.4</span> Other Use Cases</h3>
+<p>AWS DMS can also be used for various other purposes, including:</p>
+<ul>
+<li><strong>Development and Test Migrations</strong>: Migrate a copy of your production database to your development or test environments. This allows you to develop and test against production data without affecting production users. This migration can be done once or continuously.</li>
+<li><strong>Database Consolidation</strong>: Consolidate several databases into one central database.</li>
+<li><strong>Continuous Replication</strong>: Perform continuous data replication for disaster recovery or because of geographic separation.</li>
+</ul>
+<p>AWS DMS makes database migrations efficient and minimises downtime, ensuring a seamless transition for your applications and users.</p>
 
 
 </section>
@@ -826,13 +843,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-5-notes/7-Amazon-Redshift.html" class="pagination-link" aria-label="**Amazon Redshift**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><strong>Amazon Redshift</strong></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-5-notes/9-Additional_database_service.html" class="pagination-link" aria-label="Amazon DocumentDB">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

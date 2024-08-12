@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>21&nbsp; Amazon DocumentDB – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-6-notes/1-Introduction.html" rel="next">
+<link href="../module-5-notes/8-AWS-DMS.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/9-Additional_database_service.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -287,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-5-notes/9-Additional_database_service.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-5-notes/9-Additional_database_service.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></span></a>
   </div>
 </li>
@@ -356,18 +356,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">21.0.1</span> Use Cases:</a></li>
+  <li><a href="#amazon-neptune" id="toc-amazon-neptune" class="nav-link" data-scroll-target="#amazon-neptune"><span class="header-section-number">21.0.2</span> Amazon Neptune</a></li>
+  <li><a href="#use-cases-1" id="toc-use-cases-1" class="nav-link" data-scroll-target="#use-cases-1"><span class="header-section-number">21.0.3</span> Use Cases:</a></li>
+  <li><a href="#amazon-quantum-ledger-database-amazon-qldb" id="toc-amazon-quantum-ledger-database-amazon-qldb" class="nav-link" data-scroll-target="#amazon-quantum-ledger-database-amazon-qldb"><span class="header-section-number">21.0.4</span> Amazon Quantum Ledger Database (Amazon QLDB)</a></li>
+  <li><a href="#use-cases-2" id="toc-use-cases-2" class="nav-link" data-scroll-target="#use-cases-2"><span class="header-section-number">21.0.5</span> Use Cases:</a></li>
+  <li><a href="#amazon-managed-blockchain" id="toc-amazon-managed-blockchain" class="nav-link" data-scroll-target="#amazon-managed-blockchain"><span class="header-section-number">21.0.6</span> Amazon Managed Blockchain</a></li>
+  <li><a href="#use-cases-3" id="toc-use-cases-3" class="nav-link" data-scroll-target="#use-cases-3"><span class="header-section-number">21.0.7</span> Use Cases:</a></li>
+  <li><a href="#amazon-elasticache" id="toc-amazon-elasticache" class="nav-link" data-scroll-target="#amazon-elasticache"><span class="header-section-number">21.0.8</span> Amazon ElastiCache</a></li>
+  <li><a href="#use-cases-4" id="toc-use-cases-4" class="nav-link" data-scroll-target="#use-cases-4"><span class="header-section-number">21.0.9</span> Use Cases:</a></li>
+  <li><a href="#amazon-dynamodb-accelerator-dax" id="toc-amazon-dynamodb-accelerator-dax" class="nav-link" data-scroll-target="#amazon-dynamodb-accelerator-dax"><span class="header-section-number">21.0.10</span> Amazon DynamoDB Accelerator (DAX)</a></li>
+  <li><a href="#use-cases-5" id="toc-use-cases-5" class="nav-link" data-scroll-target="#use-cases-5"><span class="header-section-number">21.0.11</span> Use Cases:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/9-Additional_database_service.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></h1>
 </div>
 
 
@@ -384,21 +392,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<p><strong>Amazon DocumentDB</strong> is a managed document database service that supports MongoDB workloads. It is designed to handle, store, and query JSON data efficiently, making it ideal for applications that work with semi-structured data. DocumentDB provides scalability, high availability, and security, while maintaining compatibility with MongoDB drivers and tools.</p>
+<section id="use-cases" class="level3" data-number="21.0.1">
+<h3 data-number="21.0.1" class="anchored" data-anchor-id="use-cases"><span class="header-section-number">21.0.1</span> Use Cases:</h3>
+<ul>
+<li>Content management systems</li>
+<li>Mobile and web applications</li>
+<li>Catalogues and user profiles</li>
+</ul>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="amazon-neptune" class="level3" data-number="21.0.2">
+<h3 data-number="21.0.2" class="anchored" data-anchor-id="amazon-neptune"><span class="header-section-number">21.0.2</span> Amazon Neptune</h3>
+<p><strong>Amazon Neptune</strong> is a fully managed graph database service that supports both property graph and RDF graph models. It is designed for applications that require highly connected data and complex queries, such as social networking, recommendation engines, and fraud detection.</p>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="use-cases-1" class="level3" data-number="21.0.3">
+<h3 data-number="21.0.3" class="anchored" data-anchor-id="use-cases-1"><span class="header-section-number">21.0.3</span> Use Cases:</h3>
+<ul>
+<li>Social networking applications</li>
+<li>Knowledge graphs</li>
+<li>Fraud detection systems</li>
+</ul>
+</section>
+<section id="amazon-quantum-ledger-database-amazon-qldb" class="level3" data-number="21.0.4">
+<h3 data-number="21.0.4" class="anchored" data-anchor-id="amazon-quantum-ledger-database-amazon-qldb"><span class="header-section-number">21.0.4</span> Amazon Quantum Ledger Database (Amazon QLDB)</h3>
+<p><strong>Amazon QLDB</strong> is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log. This service is ideal for applications that require an authoritative data source and a complete and verifiable history of changes.</p>
+</section>
+<section id="use-cases-2" class="level3" data-number="21.0.5">
+<h3 data-number="21.0.5" class="anchored" data-anchor-id="use-cases-2"><span class="header-section-number">21.0.5</span> Use Cases:</h3>
+<ul>
+<li>Supply chain tracking</li>
+<li>Financial transaction systems</li>
+<li>Registries and record-keeping</li>
+</ul>
+</section>
+<section id="amazon-managed-blockchain" class="level3" data-number="21.0.6">
+<h3 data-number="21.0.6" class="anchored" data-anchor-id="amazon-managed-blockchain"><span class="header-section-number">21.0.6</span> Amazon Managed Blockchain</h3>
+<p><strong>Amazon Managed Blockchain</strong> is a fully managed service that allows you to create and manage scalable blockchain networks using popular open-source frameworks like Hyperledger Fabric and Ethereum. This service simplifies the setup and management of blockchain networks, making it easier to build applications where multiple parties can execute transactions without a trusted central authority.</p>
+</section>
+<section id="use-cases-3" class="level3" data-number="21.0.7">
+<h3 data-number="21.0.7" class="anchored" data-anchor-id="use-cases-3"><span class="header-section-number">21.0.7</span> Use Cases:</h3>
+<ul>
+<li>Supply chain transparency</li>
+<li>Financial services</li>
+<li>Decentralised applications</li>
+</ul>
+</section>
+<section id="amazon-elasticache" class="level3" data-number="21.0.8">
+<h3 data-number="21.0.8" class="anchored" data-anchor-id="amazon-elasticache"><span class="header-section-number">21.0.8</span> Amazon ElastiCache</h3>
+<p><strong>Amazon ElastiCache</strong> is a fully managed in-memory caching service that supports Redis and Memcached. It is designed to improve the performance of web applications by retrieving data from high throughput and low latency in-memory caches, rather than relying entirely on slower disk-based databases.</p>
+</section>
+<section id="use-cases-4" class="level3" data-number="21.0.9">
+<h3 data-number="21.0.9" class="anchored" data-anchor-id="use-cases-4"><span class="header-section-number">21.0.9</span> Use Cases:</h3>
+<ul>
+<li>Real-time analytics</li>
+<li>Gaming leaderboards</li>
+<li>Session storage</li>
+</ul>
+</section>
+<section id="amazon-dynamodb-accelerator-dax" class="level3" data-number="21.0.10">
+<h3 data-number="21.0.10" class="anchored" data-anchor-id="amazon-dynamodb-accelerator-dax"><span class="header-section-number">21.0.10</span> Amazon DynamoDB Accelerator (DAX)</h3>
+<p><strong>Amazon DynamoDB Accelerator (DAX)</strong> is a fully managed, highly available in-memory cache for DynamoDB that delivers up to a 10x performance improvement – from milliseconds to microseconds – even at millions of requests per second. DAX handles the heavy lifting of cache management, freeing developers from the complexity of designing, deploying, and managing a distributed cache.</p>
+</section>
+<section id="use-cases-5" class="level3" data-number="21.0.11">
+<h3 data-number="21.0.11" class="anchored" data-anchor-id="use-cases-5"><span class="header-section-number">21.0.11</span> Use Cases:</h3>
+<ul>
+<li>High-traffic web applications</li>
+<li>E-commerce applications</li>
+<li>Gaming applications</li>
+</ul>
 
 
 </section>
@@ -826,13 +887,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-5-notes/8-AWS-DMS.html" class="pagination-link" aria-label="AWS DMS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-6-notes/1-Introduction.html" class="pagination-link" aria-label="Module 6">
+        <span class="nav-page-text">Module 6</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

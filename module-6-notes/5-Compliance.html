@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>26&nbsp; Compliance in AWS – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-6-notes/6-Denial-of-Service-Attacks.html" rel="next">
+<link href="../module-6-notes/4-AWS-Organisations.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/5-Compliance.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -328,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-6-notes/5-Compliance.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-6-notes/5-Compliance.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></span></a>
   </div>
 </li>
@@ -356,18 +356,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#why-compliance-matters" id="toc-why-compliance-matters" class="nav-link active" data-scroll-target="#why-compliance-matters"><span class="header-section-number">26.0.1</span> Why Compliance Matters</a></li>
+  <li><a href="#aws-and-compliance" id="toc-aws-and-compliance" class="nav-link" data-scroll-target="#aws-and-compliance"><span class="header-section-number">26.0.2</span> AWS and Compliance</a></li>
+  <li><a href="#shared-responsibility-model" id="toc-shared-responsibility-model" class="nav-link" data-scroll-target="#shared-responsibility-model"><span class="header-section-number">26.0.3</span> Shared Responsibility Model</a></li>
+  <li><a href="#tools-for-compliance" id="toc-tools-for-compliance" class="nav-link" data-scroll-target="#tools-for-compliance"><span class="header-section-number">26.0.4</span> Tools for Compliance</a></li>
+  <li><a href="#data-ownership-and-protection" id="toc-data-ownership-and-protection" class="nav-link" data-scroll-target="#data-ownership-and-protection"><span class="header-section-number">26.0.5</span> Data Ownership and Protection</a></li>
+  <li><a href="#documentation-and-audits" id="toc-documentation-and-audits" class="nav-link" data-scroll-target="#documentation-and-audits"><span class="header-section-number">26.0.6</span> Documentation and Audits</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">26.0.7</span> Conclusion</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">Module 6</a></li><li class="breadcrumb-item"><a href="../module-6-notes/5-Compliance.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></h1>
 </div>
 
 
@@ -384,21 +388,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<p>In the context of AWS (Amazon Web Services), compliance refers to following particular standards and regulations that are relevant to the industry you operate in. You will undergo an audit or inspection to ensure that you fulfil these requirements.</p>
+<section id="why-compliance-matters" class="level3" data-number="26.0.1">
+<h3 data-number="26.0.1" class="anchored" data-anchor-id="why-compliance-matters"><span class="header-section-number">26.0.1</span> Why Compliance Matters</h3>
+<p>Regardless of your business type, maintaining compliance is crucial. For example, if you manage software that handles consumer data in the EU, you must comply with the GDPR (General Data Protection Regulation). If you run healthcare applications in the US, you need to meet HIPAA (Health Insurance Portability and Accountability Act) compliance requirements. Compliance ensures that your operations are legal, secure, and trustworthy.</p>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="aws-and-compliance" class="level3" data-number="26.0.2">
+<h3 data-number="26.0.2" class="anchored" data-anchor-id="aws-and-compliance"><span class="header-section-number">26.0.2</span> AWS and Compliance</h3>
+<p>When using AWS, compliance involves both AWS’s responsibilities and your own. AWS has built its infrastructure following industry best practices for security and compliance. As an AWS customer, you inherit these best practices. AWS complies with numerous assurance programmes, which means many aspects of compliance are already handled, allowing you to focus on your application and data.</p>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="shared-responsibility-model" class="level3" data-number="26.0.3">
+<h3 data-number="26.0.3" class="anchored" data-anchor-id="shared-responsibility-model"><span class="header-section-number">26.0.3</span> Shared Responsibility Model</h3>
+<p>The AWS Shared Responsibility Model outlines the division of security and compliance duties between AWS and you, the customer. AWS is responsible for cloud security, which encompasses physical infrastructure, hardware, and operational software (such as networking and databases). You are responsible for the security in the cloud, which includes the management of your data, user permissions, and configurations. You’re in charge of the architecture, therefore you have to make sure it complies with regulations.</p>
+</section>
+<section id="tools-for-compliance" class="level3" data-number="26.0.4">
+<h3 data-number="26.0.4" class="anchored" data-anchor-id="tools-for-compliance"><span class="header-section-number">26.0.4</span> Tools for Compliance</h3>
+<p>AWS offers various tools to help you maintain compliance:</p>
+<ol type="1">
+<li><strong>AWS Artifact</strong>: This service provides on-demand access to AWS security and compliance reports and select online agreements. It has two main sections:
+<ul>
+<li><strong>AWS Artifact Agreements</strong>: Here, you can review, accept, and manage agreements that address specific regulatory needs, such as HIPAA.</li>
+<li><strong>AWS Artifact Reports</strong>: This section offers compliance reports from third-party auditors who verify that AWS complies with global, regional, and industry-specific standards. These reports can be shared with your auditors to demonstrate compliance.</li>
+</ul></li>
+<li><strong>AWS Compliance Center</strong>: This is a resource hub where you can find compliance-related information, including customer stories, whitepapers, and documentation on AWS risk and compliance. It also includes an auditor learning path to help your team understand how to use AWS to meet compliance requirements.</li>
+<li><strong>Region Selection</strong>: The AWS Region you choose to operate in can help meet compliance needs, especially if regulations require data to remain within specific geographic boundaries. AWS ensures that data does not automatically replicate across regions, helping you adhere to local data storage laws.</li>
+</ol>
+</section>
+<section id="data-ownership-and-protection" class="level3" data-number="26.0.5">
+<h3 data-number="26.0.5" class="anchored" data-anchor-id="data-ownership-and-protection"><span class="header-section-number">26.0.5</span> Data Ownership and Protection</h3>
+<p>You own your data in AWS. This means you have full control over how your data is stored, encrypted, and accessed. AWS provides various encryption mechanisms across its services, often configurable with just a setting change. This flexibility allows you to meet specific data protection standards required by your industry.</p>
+</section>
+<section id="documentation-and-audits" class="level3" data-number="26.0.6">
+<h3 data-number="26.0.6" class="anchored" data-anchor-id="documentation-and-audits"><span class="header-section-number">26.0.6</span> Documentation and Audits</h3>
+<p>AWS provides extensive documentation and whitepapers to support your compliance efforts. For instance, the AWS Risk and Security Whitepaper outlines best practices for security and compliance in AWS. You can request documentation proving that AWS follows these practices, which is crucial during audits.</p>
+</section>
+<section id="conclusion" class="level3" data-number="26.0.7">
+<h3 data-number="26.0.7" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">26.0.7</span> Conclusion</h3>
+<p>Compliance in AWS is a shared responsibility where AWS manages the security of the cloud infrastructure, and you manage the security of your data and applications within the cloud. By utilising tools like AWS Artifact and the AWS Compliance Center, you can streamline your compliance efforts, ensuring your operations meet industry standards and regulations. This collaborative approach helps you maintain a secure, compliant, and trustworthy environment for your business operations.</p>
 
 
 </section>
@@ -826,13 +852,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-6-notes/4-AWS-Organisations.html" class="pagination-link" aria-label="AWS Organisations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-6-notes/6-Denial-of-Service-Attacks.html" class="pagination-link" aria-label="**Denial-of-Service Attacks**">
+        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title"><strong>Denial-of-Service Attacks</strong></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

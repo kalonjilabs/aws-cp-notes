@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>14&nbsp; Amazon EBS – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-5-notes/3-Amazon-S3.html" rel="next">
+<link href="../module-5-notes/1-Introduction-m5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/2-Amazon-EBS.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -245,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-5-notes/2-Amazon-EBS.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-5-notes/2-Amazon-EBS.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></span></a>
   </div>
 </li>
@@ -356,18 +356,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#instance-stores-and-amazon-elastic-block-store-amazon-ebs" id="toc-instance-stores-and-amazon-elastic-block-store-amazon-ebs" class="nav-link active" data-scroll-target="#instance-stores-and-amazon-elastic-block-store-amazon-ebs"><span class="header-section-number">14.0.1</span> Instance stores and Amazon Elastic Block Store (Amazon EBS)</a></li>
+  <li><a href="#how-does-memory-get-stored-on-aws" id="toc-how-does-memory-get-stored-on-aws" class="nav-link" data-scroll-target="#how-does-memory-get-stored-on-aws"><span class="header-section-number">14.0.2</span> How does memory get stored on AWS?</a></li>
+  <li><a href="#instance-stores" id="toc-instance-stores" class="nav-link" data-scroll-target="#instance-stores"><span class="header-section-number">14.0.3</span> Instance stores</a></li>
+  <li><a href="#amazon-ebs-and-snapshots" id="toc-amazon-ebs-and-snapshots" class="nav-link" data-scroll-target="#amazon-ebs-and-snapshots"><span class="header-section-number">14.0.4</span> Amazon EBS and snapshots</a></li>
+  <li><a href="#amazon-ebs-snapshots" id="toc-amazon-ebs-snapshots" class="nav-link" data-scroll-target="#amazon-ebs-snapshots"><span class="header-section-number">14.0.5</span> Amazon EBS snapshots</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/2-Amazon-EBS.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></h1>
 </div>
 
 
@@ -384,21 +386,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<section id="instance-stores-and-amazon-elastic-block-store-amazon-ebs" class="level3" data-number="14.0.1">
+<h3 data-number="14.0.1" class="anchored" data-anchor-id="instance-stores-and-amazon-elastic-block-store-amazon-ebs"><span class="header-section-number">14.0.1</span> Instance stores and Amazon Elastic Block Store (Amazon EBS)</h3>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="how-does-memory-get-stored-on-aws" class="level3" data-number="14.0.2">
+<h3 data-number="14.0.2" class="anchored" data-anchor-id="how-does-memory-get-stored-on-aws"><span class="header-section-number">14.0.2</span> How does memory get stored on AWS?</h3>
+<p>When using Amazon EC2 to run your business applications, those applications need access to CPU, memory, network, and storage. EC2 instances provide access to all these components. Here, we’ll focus on storage. As applications run, they often require access to block-level storage.</p>
+<p>Block-level storage is like a place to store files, which are series of bytes stored in blocks on a disk. When a file is updated, only the changed blocks are updated, making it an efficient storage type for applications like databases, enterprise software, or file systems.</p>
+<p>Just as you access block-level storage on your personal computer through your hard drive, EC2 instances also have hard drives, with different types available.</p>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="instance-stores" class="level3" data-number="14.0.3">
+<h3 data-number="14.0.3" class="anchored" data-anchor-id="instance-stores"><span class="header-section-number">14.0.3</span> Instance stores</h3>
+<p>Instance store volumes behave like physical hard drives. When you launch an EC2 instance, depending on the instance type, it might provide local storage called instance store volumes. These volumes are physically attached to the host on which your EC2 instance is running. You can write to it just like a normal hard drive.</p>
+<p>However, because these volumes are attached to the underlying physical host, all data written to an instance store volume is deleted if you stop or terminate your EC2 instance. This is because the EC2 instance might start up on a different host when restarted, where the original volume does not exist.</p>
+<p>Due to this temporary nature, instance store volumes are useful for data that can be lost without significant consequences, such as temporary files or scratch data.</p>
+<p>An instance store provides temporary block-level storage for an Amazon EC2 instance. This storage has the same lifespan as the instance, meaning data is lost when the instance is terminated.</p>
+<p>The key takeaway is not to write important data to the drives that come with EC2 instances. For persistent storage, Amazon offers a service called Amazon Elastic Block Store (EBS).</p>
+<p>To review an example of how instance stores work, see the steps beloe:</p>
+<p><strong>Step 1:</strong> An Amazon EC2 instance with an attached instance store is running.</p>
+<p><img src="awsInstanceStore-1.png" alt="Instance stores" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p><strong>Step 2:</strong> The instance is stopped or terminated.</p>
+<p><img src="awsInstanceStore-2.png" alt="Instance stores" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p><strong>Step 3:</strong> All data on the attached instance store is deleted.</p>
+<p><img src="awsInstanceStore-3.png" alt="Instance stores" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="amazon-ebs-and-snapshots" class="level3" data-number="14.0.4">
+<h3 data-number="14.0.4" class="anchored" data-anchor-id="amazon-ebs-and-snapshots"><span class="header-section-number">14.0.4</span> Amazon EBS and snapshots</h3>
+<p>Amazon EBS allows you to create virtual hard drives, called EBS volumes, which you can attach to your EC2 instances. These volumes are separate from the local instance store volumes and are not tied directly to the host running your EC2 instance. This means that data written to an EBS volume can persist between stops and starts of an EC2 instance.</p>
+<p><img src="EC2-EBS.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>EBS volumes come in various sizes and types. You define the size, type, and configuration of the volume you need, provision it, and attach it to your EC2 instance. Your application can then write to this volume, and the data will remain even if the EC2 instance is stopped and restarted.</p>
+<p>For data protection, EBS allows you to take incremental backups called snapshots. An EBS snapshot is an incremental backup, meaning only the blocks of data that have changed since the most recent snapshot are saved. This is different from full backups, where all data in a storage volume is copied each time a backup occurs.</p>
+</section>
+<section id="amazon-ebs-snapshots" class="level3" data-number="14.0.5">
+<h3 data-number="14.0.5" class="anchored" data-anchor-id="amazon-ebs-snapshots"><span class="header-section-number">14.0.5</span> Amazon EBS snapshots</h3>
+<img src="EBS-snapshot.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;">
+<p style="text-align: center;">
+Incremental backups of EBS volumes with Amazon EBS snapshots. On Day 1, two volumes are backed up. Day 2 adds one new volume and the new volume is backed up. Day 3 adds two more volumes for a total of five volumes. Only the two new volumes are backed up.
+</p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>Taking regular snapshots of your EBS volumes is crucial to ensure data safety. If a drive becomes corrupted, you can restore data from a snapshot. This provides a reliable backup mechanism, ensuring data persistence and integrity.</p>
 
 
 </section>
@@ -826,13 +866,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-5-notes/1-Introduction-m5.html" class="pagination-link" aria-label="Module 5">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Module 5</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-5-notes/3-Amazon-S3.html" class="pagination-link" aria-label="Amazon Simple Storage Service (Amazon S3)">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

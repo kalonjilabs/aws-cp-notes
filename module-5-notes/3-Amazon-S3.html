@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>15&nbsp; Amazon Simple Storage Service (Amazon S3) – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-5-notes/4-Amazon-EFS.html" rel="next">
+<link href="../module-5-notes/2-Amazon-EBS.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/3-Amazon-S3.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -251,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span></a>
   </div>
 </li>
@@ -356,18 +356,39 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#understanding-object-storage" id="toc-understanding-object-storage" class="nav-link active" data-scroll-target="#understanding-object-storage"><span class="header-section-number">15.1</span> Understanding object storage</a></li>
+  <li><a href="#amazon-s3" id="toc-amazon-s3" class="nav-link" data-scroll-target="#amazon-s3"><span class="header-section-number">15.2</span> Amazon S3</a>
+  <ul class="collapse">
+  <li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits"><span class="header-section-number">15.2.1</span> Benefits</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works"><span class="header-section-number">15.2.2</span> How it works</a></li>
+  </ul></li>
+  <li><a href="#amazon-s3-storage-classes" id="toc-amazon-s3-storage-classes" class="nav-link" data-scroll-target="#amazon-s3-storage-classes"><span class="header-section-number">15.3</span> Amazon S3 storage classes</a>
+  <ul class="collapse">
+  <li><a href="#amazon-s3-standard" id="toc-amazon-s3-standard" class="nav-link" data-scroll-target="#amazon-s3-standard"><span class="header-section-number">15.3.1</span> Amazon S3 standard</a></li>
+  <li><a href="#amazon-s3-standard-infrequent-access-s3-standard-ia" id="toc-amazon-s3-standard-infrequent-access-s3-standard-ia" class="nav-link" data-scroll-target="#amazon-s3-standard-infrequent-access-s3-standard-ia"><span class="header-section-number">15.3.2</span> Amazon S3 standard-infrequent access (s3 standard-IA)</a></li>
+  <li><a href="#amazon-s3-one-zone-infrequent-access-s3-one-zone-ia" id="toc-amazon-s3-one-zone-infrequent-access-s3-one-zone-ia" class="nav-link" data-scroll-target="#amazon-s3-one-zone-infrequent-access-s3-one-zone-ia"><span class="header-section-number">15.3.3</span> Amazon S3 one zone-infrequent access (s3 one zone-IA)</a></li>
+  <li><a href="#amazon-s3-intelligent-tiering" id="toc-amazon-s3-intelligent-tiering" class="nav-link" data-scroll-target="#amazon-s3-intelligent-tiering"><span class="header-section-number">15.3.4</span> Amazon S3 intelligent-tiering</a></li>
+  <li><a href="#amazon-s3-glacier-instant-retrieval" id="toc-amazon-s3-glacier-instant-retrieval" class="nav-link" data-scroll-target="#amazon-s3-glacier-instant-retrieval"><span class="header-section-number">15.3.5</span> Amazon S3 glacier instant retrieval</a></li>
+  <li><a href="#amazon-s3-glacier-flexible-retrieval" id="toc-amazon-s3-glacier-flexible-retrieval" class="nav-link" data-scroll-target="#amazon-s3-glacier-flexible-retrieval"><span class="header-section-number">15.3.6</span> Amazon S3 glacier flexible retrieval</a></li>
+  <li><a href="#amazon-s3-glacier-deep-archive" id="toc-amazon-s3-glacier-deep-archive" class="nav-link" data-scroll-target="#amazon-s3-glacier-deep-archive"><span class="header-section-number">15.3.7</span> Amazon S3 glacier deep archive</a></li>
+  <li><a href="#amazon-s3-outposts" id="toc-amazon-s3-outposts" class="nav-link" data-scroll-target="#amazon-s3-outposts"><span class="header-section-number">15.3.8</span> Amazon S3 outposts</a></li>
+  </ul></li>
+  <li><a href="#comparing-amazon-ebs-and-amazon-s3" id="toc-comparing-amazon-ebs-and-amazon-s3" class="nav-link" data-scroll-target="#comparing-amazon-ebs-and-amazon-s3"><span class="header-section-number">15.4</span> <strong>Comparing Amazon EBS and Amazon S3</strong></a>
+  <ul class="collapse">
+  <li><a href="#amazon-s3-benefits" id="toc-amazon-s3-benefits" class="nav-link" data-scroll-target="#amazon-s3-benefits"><span class="header-section-number">15.4.1</span> Amazon S3 benefits</a></li>
+  <li><a href="#amazon-s3-use-cases" id="toc-amazon-s3-use-cases" class="nav-link" data-scroll-target="#amazon-s3-use-cases"><span class="header-section-number">15.4.2</span> Amazon S3 use cases</a></li>
+  <li><a href="#amazon-ebs-benefits" id="toc-amazon-ebs-benefits" class="nav-link" data-scroll-target="#amazon-ebs-benefits"><span class="header-section-number">15.4.3</span> Amazon EBS benefits</a></li>
+  <li><a href="#amazon-ebs-use-cases" id="toc-amazon-ebs-use-cases" class="nav-link" data-scroll-target="#amazon-ebs-use-cases"><span class="header-section-number">15.4.4</span> Amazon EBS use cases</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/3-Amazon-S3.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></h1>
 </div>
 
 
@@ -384,23 +405,156 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<p>Most businesses need to store data, and Amazon S3 is a reliable solution for storing and retrieving virtually unlimited data at any scale.</p>
+<section id="understanding-object-storage" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="understanding-object-storage"><span class="header-section-number">15.1</span> Understanding object storage</h2>
+<p>Object storage is a data storage architecture ideal for storing, archiving, backing up, and managing high volumes of static, unstructured data, such as emails, videos, photos, web pages, audio files, sensor data, and other media and web content.</p>
+<p>Objects in object storage are discrete units of data stored in a structurally flat environment. Unlike file-based systems with folders and directories, each object is a self-contained repository that includes the data, metadata (descriptive information about the object), and a unique ID number for locating and accessing the object.</p>
+<p>Object storage allows for unlimited scaling and improved data resiliency and disaster recovery by aggregating object storage devices into larger pools and distributing these pools across locations. Objects are often stored on cloud servers and accessed via Application Programming Interfaces (APIs), primarily HTTP-based RESTful APIs.</p>
+<p><img src="object-storage.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>In object storage, each object consists of data, metadata, and a key:</p>
+<ul>
+<li><strong>Data:</strong> This can be an image, video, text document, or any other file type.</li>
+<li><strong>Metadata:</strong> Contains information about the data, such as usage, size, and other relevant details.</li>
+<li><strong>Key:</strong> A unique identifier for the object.</li>
+</ul>
+<p>Data is stored as objects in buckets. For example, a file on your hard drive is an object, and the file directory is the bucket. The maximum object size for upload is 5 terabytes. Objects can be versioned to protect against accidental deletion, and permissions can be set to control access.</p>
+<p>Amazon S3 provides multiple storage tiers for different use cases, such as frequently accessed data versus long-term archival.</p>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="amazon-s3" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="amazon-s3"><span class="header-section-number">15.2</span> Amazon S3</h2>
+<p>Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. It enables customers of all sizes and industries to store, manage, analyze, and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize and analyze data, and configure fine-tuned access controls to meet specific business and compliance requirements.</p>
+<section id="benefits" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="benefits"><span class="header-section-number">15.2.1</span> Benefits</h3>
+<p><strong>Scalability:</strong> Amazon S3 can store virtually any amount of data, scaling up to exabytes with unmatched performance. It is fully elastic, automatically growing and shrinking as you add and remove data. There’s no need to provision storage, and you pay only for what you use.</p>
+<p><strong>Durability and availability:</strong> Amazon S3 provides the most durable storage in the cloud with industry-leading availability. Its unique architecture is designed to provide 99.999999999% (11 nines) data durability and 99.99% availability by default, supported by the strongest SLAs in the cloud.</p>
+<p><strong>Security and data protection:</strong> Amazon S3 ensures data security with unmatched protection, compliance, and access control capabilities. Data is secure, private, and encrypted by default, with extensive auditing capabilities to monitor access requests to your S3 resources.</p>
+<p><strong>Lowest price and highest performance:</strong> For every task, Amazon S3 provides a variety of storage classes with the best price-performance ratios. Massive volumes of data can be cost-effectively stored, regardless of how often, seldom, or infrequently they are used, thanks to automated data lifecycle management. Throughput, latency, resilience, and flexibility offered by S3 guarantee that performance is never constrained by storage.</p>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="how-it-works" class="level3" data-number="15.2.2">
+<h3 data-number="15.2.2" class="anchored" data-anchor-id="how-it-works"><span class="header-section-number">15.2.2</span> How it works</h3>
+<p><img src="howitworks.png" alt="How S3 works " style="width:95%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://aws.amazon.com/s3/">Source: Amazon S3 </a>
+</p>
+<p>Amazon S3 stores data as objects within buckets. An object consists of a file and any metadata that describes the file. A bucket is a container for objects. To store data in Amazon S3, you first create a bucket and specify a bucket name and AWS Region. Then, you upload your data to that bucket as objects in Amazon S3. Each object has a key (or key name), which is the unique identifier for the object within the bucket.</p>
+<p>Amazon S3 provides features that you can configure to support your specific use case:</p>
+<ul>
+<li><strong>Versioning:</strong> S3 Versioning allows you to keep multiple versions of an object in the same bucket. This feature enables you to restore objects that are accidentally deleted or overwritten.</li>
+<li><strong>Access controls:</strong> Buckets and the objects in them are private and can only be accessed with explicitly granted permissions. You can use bucket policies, AWS Identity and Access Management (IAM) policies, S3 Access Points, and access control lists (ACLs) to manage access.</li>
+</ul>
+</section>
+</section>
+<section id="amazon-s3-storage-classes" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="amazon-s3-storage-classes"><span class="header-section-number">15.3</span> Amazon S3 storage classes</h2>
+<p>Amazon S3 offers a variety of storage classes to fit different business and cost needs. When selecting a storage class, consider how often you plan to retrieve your data and how available you need it to be. Here is an overview of the different storage classes, along with use case examples for each.</p>
+<section id="amazon-s3-standard" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="amazon-s3-standard"><span class="header-section-number">15.3.1</span> Amazon S3 standard</h3>
+<p><strong>Description:</strong> Designed for frequently accessed data, this storage class stores data in at least three Availability Zones. It provides high availability and durability, making it suitable for a wide range of use cases.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Websites:</strong> Hosting static assets such as images, CSS, and JavaScript files that are frequently accessed by users.</li>
+<li><strong>Content distribution:</strong> Storing multimedia files for streaming services or content delivery networks (CDNs).</li>
+<li><strong>Data analytics:</strong> Storing datasets that need to be quickly accessed and processed for analysis.</li>
+</ul>
+</section>
+<section id="amazon-s3-standard-infrequent-access-s3-standard-ia" class="level3" data-number="15.3.2">
+<h3 data-number="15.3.2" class="anchored" data-anchor-id="amazon-s3-standard-infrequent-access-s3-standard-ia"><span class="header-section-number">15.3.2</span> Amazon S3 standard-infrequent access (s3 standard-IA)</h3>
+<p><strong>Description:</strong> Ideal for data that is infrequently accessed but needs high availability when required. It offers a lower storage price and higher retrieval price compared to S3 Standard, while still storing data in at least three Availability Zones.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Backup storage:</strong> Storing backups of application data that are not accessed frequently but need to be available when needed.</li>
+<li><strong>Disaster recovery:</strong> Keeping disaster recovery copies of critical business data that must be quickly accessible in case of an emergency.</li>
+</ul>
+</section>
+<section id="amazon-s3-one-zone-infrequent-access-s3-one-zone-ia" class="level3" data-number="15.3.3">
+<h3 data-number="15.3.3" class="anchored" data-anchor-id="amazon-s3-one-zone-infrequent-access-s3-one-zone-ia"><span class="header-section-number">15.3.3</span> Amazon S3 one zone-infrequent access (s3 one zone-IA)</h3>
+<p><strong>Description:</strong> Stores data in a single Availability Zone, offering lower storage costs. It is suitable for data that can be easily reproduced in the event of an Availability Zone failure.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Non-critical data:</strong> Storing data that can be recreated or is not critical to business operations, such as temporary logs or redundant copies of data.</li>
+<li><strong>Cost-sensitive backups:</strong> Storing backup copies where cost savings are prioritized over redundancy.</li>
+</ul>
+</section>
+<section id="amazon-s3-intelligent-tiering" class="level3" data-number="15.3.4">
+<h3 data-number="15.3.4" class="anchored" data-anchor-id="amazon-s3-intelligent-tiering"><span class="header-section-number">15.3.4</span> Amazon S3 intelligent-tiering</h3>
+<p><strong>Description:</strong> Ideal for data with unknown or changing access patterns. This storage class automatically moves objects between frequent and infrequent access tiers based on usage, with a small monthly monitoring and automation fee per object.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Dynamic data:</strong> Storing data where access patterns are unpredictable, such as data from IoT devices or logs that might be accessed irregularly.</li>
+<li><strong>Cost optimization:</strong> Automatically optimizing costs by moving data to the most cost-effective storage tier without manual intervention.</li>
+</ul>
+</section>
+<section id="amazon-s3-glacier-instant-retrieval" class="level3" data-number="15.3.5">
+<h3 data-number="15.3.5" class="anchored" data-anchor-id="amazon-s3-glacier-instant-retrieval"><span class="header-section-number">15.3.5</span> Amazon S3 glacier instant retrieval</h3>
+<p><strong>Description:</strong> Suitable for archived data that requires immediate access, with retrieval times within milliseconds.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Medical records:</strong> Storing medical records that need to be archived but must be quickly accessible for compliance or medical emergencies.</li>
+<li><strong>Legal documents:</strong> Archiving legal documents that might be needed immediately for legal proceedings or audits.</li>
+</ul>
+</section>
+<section id="amazon-s3-glacier-flexible-retrieval" class="level3" data-number="15.3.6">
+<h3 data-number="15.3.6" class="anchored" data-anchor-id="amazon-s3-glacier-flexible-retrieval"><span class="header-section-number">15.3.6</span> Amazon S3 glacier flexible retrieval</h3>
+<p><strong>Description:</strong> Low-cost storage for data archiving, with retrieval times ranging from minutes to hours. It is suitable for storing archived customer records or older media files.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Customer records:</strong> Archiving old customer records that are rarely accessed but must be retained for regulatory compliance.</li>
+<li><strong>Media archives:</strong> Storing older video footage or historical data that can afford longer retrieval times.</li>
+</ul>
+</section>
+<section id="amazon-s3-glacier-deep-archive" class="level3" data-number="15.3.7">
+<h3 data-number="15.3.7" class="anchored" data-anchor-id="amazon-s3-glacier-deep-archive"><span class="header-section-number">15.3.7</span> Amazon S3 glacier deep archive</h3>
+<p><strong>Description:</strong> The lowest-cost storage class for long-term data retention, with retrieval times from 12 to 48 hours. It is ideal for data accessed once or twice a year.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Compliance data:</strong> Storing data required for long-term retention, such as financial records or audit logs, which are rarely accessed.</li>
+<li><strong>Historical archives:</strong> Archiving historical documents, research data, or records that are only needed occasionally.</li>
+</ul>
+</section>
+<section id="amazon-s3-outposts" class="level3" data-number="15.3.8">
+<h3 data-number="15.3.8" class="anchored" data-anchor-id="amazon-s3-outposts"><span class="header-section-number">15.3.8</span> Amazon S3 outposts</h3>
+<p><strong>Description:</strong> Provides object storage on-premises with AWS Outposts, designed for local data residency requirements and demanding performance needs.</p>
+<p><strong>Use case examples:</strong></p>
+<ul>
+<li><strong>Local data residency:</strong> Storing sensitive data that must remain within a specific geographic location due to regulatory or compliance requirements.</li>
+<li><strong>High-performance applications:</strong> Using for applications that require low-latency access to data stored on-premises, such as manufacturing systems or edge computing environments.</li>
+</ul>
+</section>
+</section>
+<section id="comparing-amazon-ebs-and-amazon-s3" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="comparing-amazon-ebs-and-amazon-s3"><span class="header-section-number">15.4</span> <strong>Comparing Amazon EBS and Amazon S3</strong></h2>
+<section id="amazon-s3-benefits" class="level3" data-number="15.4.1">
+<h3 data-number="15.4.1" class="anchored" data-anchor-id="amazon-s3-benefits"><span class="header-section-number">15.4.1</span> Amazon S3 benefits</h3>
+<p>Amazon Simple Storage Service (Amazon S3) is AWS’s object storage solution. If you’ve ever used services like Google Drive or Dropbox, you’ll understand the basic concept of S3. At first glance, S3 seems like a simple place to store files, photos, videos, and other documents. However, S3 offers far more than basic object storage.</p>
+<p>S3 provides scalable solutions, meaning it can grow or shrink to meet your needs in a cost-effective manner as your project size changes. It also helps you manage data effectively, allowing you to control who accesses your content. S3 offers robust data protection against various threats, replicates your data for increased durability, and provides different storage classes to help you save money.</p>
+</section>
+<section id="amazon-s3-use-cases" class="level3" data-number="15.4.2">
+<h3 data-number="15.4.2" class="anchored" data-anchor-id="amazon-s3-use-cases"><span class="header-section-number">15.4.2</span> Amazon S3 use cases</h3>
+<ul>
+<li><strong>Backup and restore:</strong> Have you ever accidentally deleted something important? S3’s backup and restore capabilities ensure users don’t lose data through versioning and deletion protection. Versioning saves a new version of a file every time it’s updated, and deletion protection ensures the user has the right permissions before deleting a file.</li>
+<li><strong>Disaster recovery:</strong> What would a company do during an unexpected power outage or if their on-premises data center suddenly crashed? S3 data is protected in Amazon-managed data centers, the same ones Amazon uses to host their world-famous shopping website. By using S3, users get a second storage option without having to pay for the rent and utilities of a physical site.</li>
+<li><strong>Archiving:</strong> Some businesses need to store financial, medical, or other data mandated by industry standards. AWS allows users to archive this type of data with S3 Glacier, one of the many S3 storage classes. S3 Glacier is a cost-effective solution for archiving and is one of the best in the market.</li>
+</ul>
+</section>
+<section id="amazon-ebs-benefits" class="level3" data-number="15.4.3">
+<h3 data-number="15.4.3" class="anchored" data-anchor-id="amazon-ebs-benefits"><span class="header-section-number">15.4.3</span> Amazon EBS benefits</h3>
+<p>Amazon Elastic Block Store (Amazon EBS) is AWS’s block storage service. EBS is different from S3 in that it provides a storage volume directly connected to EC2 (Elastic Cloud Compute) instances. EBS allows you to store files directly on an EC2 instance, enabling quick and cost-effective access to your files. Think of EBS as “EC2 storage.”</p>
+<p>You can customize your EBS volumes to suit the workload. For example, if you need greater throughput, you could choose a Throughput Optimized HDD EBS volume. If you have no specific needs, an EBS General Purpose SSD might suffice. For high-performance needs, an EBS Provisioned IOPS SSD volume is suitable.</p>
+<p>Just remember that EBS works with EC2 in a similar way to how your hard drive works with your computer. EBS lets you save files locally to an EC2 instance, allowing your EC2 to perform powerful tasks that would otherwise be impossible. Let’s look at a couple of examples.</p>
+</section>
+<section id="amazon-ebs-use-cases" class="level3" data-number="15.4.4">
+<h3 data-number="15.4.4" class="anchored" data-anchor-id="amazon-ebs-use-cases"><span class="header-section-number">15.4.4</span> Amazon EBS use cases</h3>
+<ul>
+<li><strong>Database performance:</strong> Many companies look for cheaper ways to run their databases. Amazon EBS provides both relational and NoSQL databases with scalable solutions that have low-latency performance. Slack, the messaging app, uses EBS to increase database performance to better serve customers worldwide.</li>
+<li><strong>Instance backup:</strong> Another use case for EBS involves backing up your instances. Because EBS is an AWS-native solution, the backups you create in EBS can easily be uploaded to S3 for convenient and cost-effective storage. This ensures you can always recover to a certain point in time if needed.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -826,13 +980,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-5-notes/2-Amazon-EBS.html" class="pagination-link" aria-label="**Amazon EBS**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-5-notes/4-Amazon-EFS.html" class="pagination-link" aria-label="Amazon Elastic File System (Amazon EFS)">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – AWS Cloud Practitioner Notes</title>
+<title>11&nbsp; Connectivity to AWS – AWS Cloud Practitioner Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-1-notes/Cloud-Computing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../module-4-notes/3-Subnets-and-NACL.html" rel="next">
+<link href="../module-4-notes/1-Introduction-m4.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-1-notes/Introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Module 4</a></li><li class="breadcrumb-item"><a href="../module-4-notes/2-Connectivity-to-AWS.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link active">
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -216,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="sidebar-item-text sidebar-link">
+  <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span></a>
   </div>
 </li>
@@ -356,18 +356,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-server" id="toc-what-is-a-server" class="nav-link active" data-scroll-target="#what-is-a-server">What is a Server?</a></li>
-  <li><a href="#the-client-server-model" id="toc-the-client-server-model" class="nav-link" data-scroll-target="#the-client-server-model">The Client-Server Model</a></li>
-  <li><a href="#lesson-recap" id="toc-lesson-recap" class="nav-link" data-scroll-target="#lesson-recap">Lesson Recap</a></li>
+  <li><a href="#why-a-vpc" id="toc-why-a-vpc" class="nav-link active" data-scroll-target="#why-a-vpc"><span class="header-section-number">11.0.1</span> Why a VPC?</a></li>
+  <li><a href="#the-structure-of-a-vpc" id="toc-the-structure-of-a-vpc" class="nav-link" data-scroll-target="#the-structure-of-a-vpc"><span class="header-section-number">11.0.2</span> The Structure of a VPC</a></li>
+  <li><a href="#the-coffee-shop-analogy" id="toc-the-coffee-shop-analogy" class="nav-link" data-scroll-target="#the-coffee-shop-analogy"><span class="header-section-number">11.0.3</span> The Coffee Shop Analogy</a></li>
+  <li><a href="#internet-gateway" id="toc-internet-gateway" class="nav-link" data-scroll-target="#internet-gateway"><span class="header-section-number">11.0.4</span> Internet Gateway</a></li>
+  <li><a href="#virtual-private-gateway" id="toc-virtual-private-gateway" class="nav-link" data-scroll-target="#virtual-private-gateway"><span class="header-section-number">11.0.5</span> Virtual Private Gateway</a></li>
+  <li><a href="#aws-direct-connect" id="toc-aws-direct-connect" class="nav-link" data-scroll-target="#aws-direct-connect"><span class="header-section-number">11.0.6</span> AWS Direct Connect</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Module 4</a></li><li class="breadcrumb-item"><a href="../module-4-notes/2-Connectivity-to-AWS.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></h1>
 </div>
 
 
@@ -384,21 +387,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-server" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-server">What is a Server?</h3>
-<p>A server is a powerful computer that stores and sends data across a network. It receives requests from clients (other computers), processes these requests, and sends back the needed responses. This allows us to use services like web hosting, email, and cloud storage.</p>
-<p><img src="server.jpeg" alt="Server" style="width:40%; display: block; margin: auto;"></p>
+<p>When we talk about connectivity in Amazon Web Services (AWS), we are referring to the different ways in which your resources within the AWS Cloud can communicate with each other, as well as the different ways in which they can connect to the outside world. Connectivity is a fundamental concept in cloud computing because it ensures that the various components of your application or service can interact seamlessly and securely.</p>
+<p>One of the core components that facilitates connectivity within AWS is the Virtual Private Cloud (VPC). But, before we get into what a VPC is and how it works, we should first understand why we need it.</p>
+<section id="why-a-vpc" class="level3" data-number="11.0.1">
+<h3 data-number="11.0.1" class="anchored" data-anchor-id="why-a-vpc"><span class="header-section-number">11.0.1</span> Why a VPC?</h3>
+<p>In traditional IT infrastructures, companies store their applications and data in their own physical data centres. These data centres have network limits and security mechanisms in place to ensure that only permitted users and systems have access to the resources they contain. When migrating to the cloud, companies require the same type of control and security. This is where VPCs come into play.</p>
+<p>A VPC, or Virtual Private Cloud, allows you to build a conceptually isolated area of the AWS Cloud from which you can launch AWS resources in a virtual network that you choose. This isolation provides the essential security and control, similar to that found in a typical data centre, but with the extra benefit of cloud scalability and flexibility.</p>
 </section>
-<section id="the-client-server-model" class="level3">
-<h3 class="anchored" data-anchor-id="the-client-server-model">The Client-Server Model</h3>
-<p>Imagine the client-server model as a restaurant. You, the customer, ask for something (like ordering food). The restaurant (server) takes your order, prepares your food (processes your request), and brings you your meal (sends the response). In computing, a client is any device that asks for services or information, like a web browser or an app. The server is like Amazon Elastic Compute Cloud (Amazon EC2), which handles these requests and responds.</p>
-<p><img src="client-server.jpeg" alt="Client-server model" style="width:40%; display: block; margin: auto;"></p>
-<p>For example, a client might be looking for a news article, the latest game score, or a video. The server checks the request and responds by sending the information back to the client.</p>
-<p><img src="client-server-2.jpeg" alt="Client-server interaction" style="width:40%; display: block; margin: auto;"></p>
+<section id="the-structure-of-a-vpc" class="level3" data-number="11.0.2">
+<h3 data-number="11.0.2" class="anchored" data-anchor-id="the-structure-of-a-vpc"><span class="header-section-number">11.0.2</span> The Structure of a VPC</h3>
+<p>A virtual private cloud (VPC) gives you the ability to construct your own private IP range for your Amazon Web Services (AWS) resources. Within your VPC, you may store services such as EC2 instances and ELBs.</p>
+<p>Now you don’t just throw your resources into a VPC and move on. You assign them to distinct subnets. Subnets are chunks of IP addresses in your VPC that enable you to combine resources together. Subnets, along with networking rules we will cover later, control whether resources are either publicly or privately available. There are actually ways you can control what traffic gets into your VPC at all. For some VPCs, you might have internet-facing resources that the public should be able to reach, like a public website.</p>
+<p>However, in other cases, you may have resources that should only be accessible if someone is logged into your private network. This could be internal services, such as an HR application or a backend database. First, let’s look at public-facing resources.</p>
 </section>
-<section id="lesson-recap" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-recap">Lesson Recap</h3>
-<p>Today, we learned about servers and the client-server model. Servers are the powerful computers that manage requests and send data over networks. The client-server model helps us understand how our devices communicate with servers to fetch information or use services. This basic concept is important for anyone starting to learn about how networks and the internet work.</p>
+<section id="the-coffee-shop-analogy" class="level3" data-number="11.0.3">
+<h3 data-number="11.0.3" class="anchored" data-anchor-id="the-coffee-shop-analogy"><span class="header-section-number">11.0.3</span> The Coffee Shop Analogy</h3>
+<p>Imagine your VPC as a coffee shop. Just as a coffee shop needs a way for customers to enter and exit, your VPC needs ways for data to flow in and out. Depending on the type of customers (or data) and their needs, you’ll have different types of entrances.</p>
+</section>
+<section id="internet-gateway" class="level3" data-number="11.0.4">
+<h3 data-number="11.0.4" class="anchored" data-anchor-id="internet-gateway"><span class="header-section-number">11.0.4</span> Internet Gateway</h3>
+<p>To allow traffic from the public internet to flow into and out of your VPC, you must attach an Internet Gateway (IGW).</p>
+<p>An Internet Gateway is like a doorway that is open to the public. Think of it like a coffee shop. Customers can’t get in and get their coffee without a front door, so we’ll have to install one, and people will be able to enter and exit our cafe through it. In this case, the front door functions similarly to an Internet gateway. Without it, no one may access the resources stored within your VPC.</p>
+<p><img src="igw.png" alt="Internet gateway" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="virtual-private-gateway" class="level3" data-number="11.0.5">
+<h3 data-number="11.0.5" class="anchored" data-anchor-id="virtual-private-gateway"><span class="header-section-number">11.0.5</span> Virtual Private Gateway</h3>
+<p>Next, let’s talk about a VPC with all internal private resources. We don’t want just anyone from anywhere to be able to reach these resources. So we don’t want an Internet Gateway attached to our VPC. Instead, we want a private gateway that only allows people in if they are coming from an approved network, not the public internet. This private doorway is called a Virtual Private Gateway, and it allows you to create a VPN connection between a private network, like your on-premises data centre or internal corporate network to your VPC.</p>
+<p>To relate this back to the coffee shop, this would be like having a private bus route going from my building to the coffee shop. If I want to get coffee, I first must badge into the building, thus authenticating my identity, and then I can take the secret bus route to the internal coffee shop that only people from my building can use. So if you want to establish an encrypted VPN connection to your private internal AWS resources, you would need to attach a Virtual Private Gateway to your VPC.</p>
+<p><img src="vpn.png" alt="private gateway" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="aws-direct-connect" class="level3" data-number="11.0.6">
+<h3 data-number="11.0.6" class="anchored" data-anchor-id="aws-direct-connect"><span class="header-section-number">11.0.6</span> AWS Direct Connect</h3>
+<p>Now the problem with our super secret bus route is that it still uses the open road. It’s susceptible to traffic jams and slowdowns caused by the rest of the world going about their business. The same thing is true for VPN connections. They are private and encrypted, but they still use a regular internet connection that has bandwidth that is being shared by many people using the internet.</p>
+<p>So what I’ve done to make things more reliable and less susceptible to slowdowns is I made a totally separate magic doorway that leads directly from the studio into the coffee shop. No one else driving around on the road can slow me down because this is my direct doorway; no one else can use it. What, did you not have a secret magic doorway into your favourite coffee shop? All right, moving on. The point is you still want a private connection, but you want it to be dedicated and shared with no one else. You want the lowest amount of latency possible with the highest amount of security possible.</p>
+<p><img src="direct.png" alt="AWS Direct Connect" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>With AWS, you can achieve that using what is called AWS Direct Connect. Direct Connect allows you to establish a completely private, dedicated fibre connection from your data centre to AWS. You work with a Direct Connect partner in your area to establish this connection because, like my magic doorway, AWS Direct Connect provides a physical line that connects your network to your AWS VPC. This can help you meet high regulatory and compliance needs, as well as sidestep any potential bandwidth issues. It’s also important to note that one VPC might have multiple types of gateways attached for multiple types of resources all residing in the same VPC, just in different subnets.</p>
 
 
 </section>
@@ -826,13 +858,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../module-4-notes/1-Introduction-m4.html" class="pagination-link" aria-label="Module 4">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Module 4</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-1-notes/Cloud-Computing.html" class="pagination-link" aria-label="Cloud Computing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-4-notes/3-Subnets-and-NACL.html" class="pagination-link" aria-label="**Subnets and Network Access Control Lists**">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
