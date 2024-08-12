@@ -1,0 +1,51 @@
+# Amazon DynamoDB
+
+# Amazon DynamoDB
+
+## Introduction to Non-Relational NoSQL Databases
+
+Non-relational databases, also known as NoSQL databases, provide an alternative to the traditional relational database model by using different structures to organise data. Unlike relational databases that use rows and columns, non-relational databases often utilise key-value pairs. This flexible schema allows for more dynamic and scalable data management, making them suitable for various use cases where performance and flexibility are critical.
+
+### Non-Relational Databases
+
+In a non-relational database, data is stored in tables. Each table contains items (keys), and each item has attributes (values). Attributes can be thought of as different features of your data. Key-value databases are a common type of non-relational database. They allow you to add or remove attributes from items in the table at any time, and not every item needs to have the same attributes.
+
+### Example of Non-Relational Database
+
+Non-relational databases are particularly useful when dealing with datasets that are less rigid and require high access rates. Traditional SQL databases, with their fixed schemas and performance constraints under stress, might not be the best fit for such scenarios. This is where non-relational databases, such as DynamoDB, excel.
+
+## Amazon DynamoDB
+
+Amazon DynamoDB is a fully managed, serverless, key-value database service that offers single-digit millisecond performance at any scale. It provides a flexible and scalable solution for applications requiring consistent performance and high throughput.
+
+### Key Features of DynamoDB
+
+1. **Serverless Architecture**: DynamoDB is a serverless database, meaning you do not need to manage the underlying infrastructure. Amazon handles all the server provisioning, patching, and maintenance, allowing you to focus on your application development.
+2. **Scalability**: DynamoDB automatically scales to accommodate changes in data volume and throughput, ensuring consistent performance regardless of database size. This automatic scaling makes it ideal for applications with variable or unpredictable workloads.
+3. **High Availability and Durability**: DynamoDB stores data redundantly across multiple availability zones, mirroring data across multiple drives. This redundancy ensures high availability and durability, reducing the operational burden of managing a highly available database.
+4. **Millisecond Performance**: DynamoDB provides millisecond response times, which is crucial for applications with millions of users and high-performance requirements. This quick response time enhances user experience and application reliability.
+5. **Flexible Schema**: Unlike traditional relational databases, DynamoDB allows you to add or remove attributes from items at any time. This flexibility supports datasets with varying attributes, making it a suitable choice for diverse and evolving data models.
+
+### Querying DynamoDB
+
+DynamoDB does not use SQL for querying data. Instead, it relies on a simpler query model based on a subset of attributes designated as keys. This model supports efficient queries focusing on collections of items within a single table rather than complex queries spanning multiple tables.
+
+### Use Cases and Performance
+
+DynamoDB is purpose-built for specific use cases requiring high scalability and performance. For example, during Prime Day in 2019, DynamoDB handled 7.11 trillion API calls over 48 hours, peaking at 45.4 million requests per second. This level of scalability and performance is achieved without the need for manual database management, showcasing the power and efficiency of DynamoDB.
+
+### Comparing Amazon RDS and Amazon DynamoDB
+
+### Amazon RDS
+
+- **Automatic high availability; recovery provided**
+- **Customer ownership of data**
+- **Customer ownership of schema**
+- **Customer control of network**
+
+### Amazon DynamoDB
+
+- **Key-value**
+- **Massive throughput capabilities**
+- **PB size potential**
+- **Granular API access**

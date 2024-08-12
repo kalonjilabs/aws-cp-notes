@@ -1,0 +1,61 @@
+# Connectivity to AWS
+
+When we talk about connectivity in Amazon Web Services (AWS), we are referring to the different ways in which your resources within the AWS Cloud can communicate with each other, as well as the different ways in which they can connect to the outside world. Connectivity is a fundamental concept in cloud computing because it ensures that the various components of your application or service can interact seamlessly and securely.
+
+One of the core components that facilitates connectivity within AWS is the Virtual Private Cloud (VPC). But, before we get into what a VPC is and how it works, we should first understand why we need it.
+
+### Why a VPC?
+
+In traditional IT infrastructures, companies store their applications and data in their own physical data centres. These data centres have network limits and security mechanisms in place to ensure that only permitted users and systems have access to the resources they contain. When migrating to the cloud, companies require the same type of control and security. This is where VPCs come into play.
+
+A VPC, or Virtual Private Cloud, allows you to build a conceptually isolated area of the AWS Cloud from which you can launch AWS resources in a virtual network that you choose. This isolation provides the essential security and control, similar to that found in a typical data centre, but with the extra benefit of cloud scalability and flexibility.
+
+### The Structure of a VPC
+
+A virtual private cloud (VPC) gives you the ability to construct your own private IP range for your Amazon Web Services (AWS) resources. Within your VPC, you may store services such as EC2 instances and ELBs.
+
+Now you don't just throw your resources into a VPC and move on. You assign them to distinct subnets. Subnets are chunks of IP addresses in your VPC that enable you to combine resources together. Subnets, along with networking rules we will cover later, control whether resources are either publicly or privately available. There are actually ways you can control what traffic gets into your VPC at all. For some VPCs, you might have internet-facing resources that the public should be able to reach, like a public website.
+
+However, in other cases, you may have resources that should only be accessible if someone is logged into your private network. This could be internal services, such as an HR application or a backend database. First, let's look at public-facing resources.
+
+### The Coffee Shop Analogy
+
+Imagine your VPC as a coffee shop. Just as a coffee shop needs a way for customers to enter and exit, your VPC needs ways for data to flow in and out. Depending on the type of customers (or data) and their needs, you'll have different types of entrances.
+
+### Internet Gateway
+
+To allow traffic from the public internet to flow into and out of your VPC, you must attach an Internet Gateway (IGW).
+
+An Internet Gateway is like a doorway that is open to the public. Think of it like a coffee shop. Customers can't get in and get their coffee without a front door, so we'll have to install one, and people will be able to enter and exit our cafe through it. In this case, the front door functions similarly to an Internet gateway. Without it, no one may access the resources stored within your VPC.
+
+<img src="igw.png" alt="Internet gateway" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+### Virtual Private Gateway
+
+Next, let's talk about a VPC with all internal private resources. We don't want just anyone from anywhere to be able to reach these resources. So we don't want an Internet Gateway attached to our VPC. Instead, we want a private gateway that only allows people in if they are coming from an approved network, not the public internet. This private doorway is called a Virtual Private Gateway, and it allows you to create a VPN connection between a private network, like your on-premises data centre or internal corporate network to your VPC.
+
+To relate this back to the coffee shop, this would be like having a private bus route going from my building to the coffee shop. If I want to get coffee, I first must badge into the building, thus authenticating my identity, and then I can take the secret bus route to the internal coffee shop that only people from my building can use. So if you want to establish an encrypted VPN connection to your private internal AWS resources, you would need to attach a Virtual Private Gateway to your VPC.
+
+<img src="vpn.png" alt="private gateway" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+### AWS Direct Connect
+
+Now the problem with our super secret bus route is that it still uses the open road. It's susceptible to traffic jams and slowdowns caused by the rest of the world going about their business. The same thing is true for VPN connections. They are private and encrypted, but they still use a regular internet connection that has bandwidth that is being shared by many people using the internet.
+
+So what I've done to make things more reliable and less susceptible to slowdowns is I made a totally separate magic doorway that leads directly from the studio into the coffee shop. No one else driving around on the road can slow me down because this is my direct doorway; no one else can use it. What, did you not have a secret magic doorway into your favourite coffee shop? All right, moving on. The point is you still want a private connection, but you want it to be dedicated and shared with no one else. You want the lowest amount of latency possible with the highest amount of security possible.
+
+<img src="direct.png" alt="AWS Direct Connect" style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+With AWS, you can achieve that using what is called AWS Direct Connect. Direct Connect allows you to establish a completely private, dedicated fibre connection from your data centre to AWS. You work with a Direct Connect partner in your area to establish this connection because, like my magic doorway, AWS Direct Connect provides a physical line that connects your network to your AWS VPC. This can help you meet high regulatory and compliance needs, as well as sidestep any potential bandwidth issues. It's also important to note that one VPC might have multiple types of gateways attached for multiple types of resources all residing in the same VPC, just in different subnets.

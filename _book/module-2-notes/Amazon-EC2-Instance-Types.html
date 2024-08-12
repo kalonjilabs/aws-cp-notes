@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 4&nbsp; EC2 Instance types</title>
+<title>AWS Cloud Practitioner Notes - 2&nbsp; EC2 Instance types</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../module-2-notes/Amazon-EC2-pricing.html" rel="next">
-<link href="../module-2-notes/Amazon-EC2-intro.html" rel="prev">
+<link href="../module-2-notes/Module-2-Amazon-EC2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-Instance-Types.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-Instance-Types.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -112,36 +112,99 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-1-notes/Introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../module-1-notes/Cloud-Computing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cloud Computing</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../module-2-notes/Amazon-EC2-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Amazon-EC2-intro</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 2: Amazon EC2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-2-notes/Elastic-Load-Balancing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Directing Traffic with Elastic Load Balancing</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-2-notes/Messaging-and-Queuing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Messaging and Queuing</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-2-notes/Additional-Compute-Services.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><strong>Additional Compute Services</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-3-notes/Introduction-module-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction-module-3.html</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-3-notes/AWS-Global-Infrastructure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><strong>AWS Global Infrastructure</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-3-notes/Edge-Locations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><strong>Edge Locations</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-3-notes/How-to-Provision-AWS .html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><strong>How to Provision AWS</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -152,21 +215,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#general-purpose-instances" id="toc-general-purpose-instances" class="nav-link active" data-scroll-target="#general-purpose-instances"><span class="header-section-number">4.1</span> <strong>General Purpose Instances</strong></a></li>
-  <li><a href="#compute-optimized-instances" id="toc-compute-optimized-instances" class="nav-link" data-scroll-target="#compute-optimized-instances"><span class="header-section-number">4.2</span> <strong>Compute Optimized Instances</strong></a></li>
-  <li><a href="#memory-optimized-instances" id="toc-memory-optimized-instances" class="nav-link" data-scroll-target="#memory-optimized-instances"><span class="header-section-number">4.3</span> <strong>Memory Optimized Instances</strong></a></li>
-  <li><a href="#storage-optimized-instances" id="toc-storage-optimized-instances" class="nav-link" data-scroll-target="#storage-optimized-instances"><span class="header-section-number">4.4</span> <strong>Storage Optimized Instances</strong></a></li>
-  <li><a href="#accelerated-computing-instances" id="toc-accelerated-computing-instances" class="nav-link" data-scroll-target="#accelerated-computing-instances"><span class="header-section-number">4.5</span> <strong>Accelerated Computing Instances</strong></a></li>
-  <li><a href="#micro-instances" id="toc-micro-instances" class="nav-link" data-scroll-target="#micro-instances"><span class="header-section-number">4.6</span> <strong>Micro Instances</strong></a></li>
+  <li><a href="#general-purpose-instances" id="toc-general-purpose-instances" class="nav-link active" data-scroll-target="#general-purpose-instances"><span class="header-section-number">2.0.1</span> 1. <strong>General Purpose Instances</strong></a></li>
+  <li><a href="#compute-optimized-instances" id="toc-compute-optimized-instances" class="nav-link" data-scroll-target="#compute-optimized-instances"><span class="header-section-number">2.0.2</span> 2. <strong>Compute optimized Instances</strong></a></li>
+  <li><a href="#memory-optimized-instances" id="toc-memory-optimized-instances" class="nav-link" data-scroll-target="#memory-optimized-instances"><span class="header-section-number">2.0.3</span> 3. <strong>Memory Optimized Instances</strong></a></li>
+  <li><a href="#accelerated-computing-instances" id="toc-accelerated-computing-instances" class="nav-link" data-scroll-target="#accelerated-computing-instances"><span class="header-section-number">2.0.4</span> 4. <strong>Accelerated Computing Instances</strong></a></li>
+  <li><a href="#storage-optimized-instances" id="toc-storage-optimized-instances" class="nav-link" data-scroll-target="#storage-optimized-instances"><span class="header-section-number">2.0.5</span> 5. <strong>Storage Optimized Instances</strong></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-Instance-Types.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></h1>
 </div>
 
 
@@ -183,30 +245,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="general-purpose-instances" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="general-purpose-instances"><span class="header-section-number">4.1</span> <strong>General Purpose Instances</strong></h2>
-<p>General purpose instances, such as T3 and M5, offer a balance of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage. For example, startups can use these instances for hosting websites and small-scale applications, providing a cost-effective solution with flexibility to handle varying levels of traffic.</p>
+<p>Amazon EC2 instance types are optimised for various tasks. Your workloads and applications’ unique requirements should guide your choice of instance type. This may include requirements for computation, memory, and storage capacities.</p>
+<p>These instances can be summarised into the following five categories:.</p>
+<section id="general-purpose-instances" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="general-purpose-instances"><span class="header-section-number">2.0.1</span> 1. <strong>General Purpose Instances</strong></h3>
+<p>General purpose instances offer a balanced set of compute, memory, and networking resources. These are suitable for applications that have moderate load requirements with occasional spikes in usage.</p>
+<p>In other words, general purpose instances are like Swiss Army knives in the world of cloud computing. They are versatile and can handle a variety of tasks well. They provide a balanced mix of resources: compute (processing power for calculations), memory (storage for data), and networking (data transfer capabilities).</p>
+<p>You may use them for a range of workloads, including :</p>
+<ul>
+<li><strong>Application servers</strong>: These are the engines that run your applications. For example, if you have a web application like an online store, the application server is what processes the customer’s requests, like browsing items, adding them to the cart, and checking out.</li>
+<li><strong>Gaming servers</strong>: These servers host multiplayer online games. For instance, if you’re playing an online game like Fortnite or Minecraft with friends, the gaming server is what keeps track of everyone’s actions and game progress.</li>
+<li><strong>Backend servers for enterprise applications</strong>: These servers handle the behind-the-scenes operations of large business applications. For example, in a banking system, the backend server would handle tasks like processing transactions, updating account balances, and generating financial reports.</li>
+<li><strong>Small and medium databases</strong>: These are the digital equivalent of record-keeping systems. They store, retrieve, and organize data. For instance, a small business might have a database that keeps track of inventory, sales, and customer information.</li>
+</ul>
 </section>
-<section id="compute-optimized-instances" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="compute-optimized-instances"><span class="header-section-number">4.2</span> <strong>Compute Optimized Instances</strong></h2>
-<p>Instances like C5 and C6 are ideal for applications that benefit from high-performance processors. They are well-suited for compute-heavy tasks such as batch processing, media transcoding, scientific modelling, or gaming servers. Media companies often use these instances for intensive video encoding tasks that require robust computational power.</p>
+<section id="compute-optimized-instances" class="level3" data-number="2.0.2">
+<h3 data-number="2.0.2" class="anchored" data-anchor-id="compute-optimized-instances"><span class="header-section-number">2.0.2</span> 2. <strong>Compute optimized Instances</strong></h3>
+<p>Compute-optimised instances are ideal for compute-bound applications that benefit from high-performance processors. They are like the sprinters in the world of cloud computing. They are designed for tasks that require a lot of processing power, just like a sprinter is built for speed.</p>
+<p>Here are some examples:</p>
+<ul>
+<li><strong>High-performance web servers</strong>: These are like the super-fast express trains on the internet. They handle a lot of web traffic and need to respond to user requests quickly. For example, a popular e-commerce site during a big sale event would need a high-performance web server to handle the surge in traffic.</li>
+<li><strong>Compute-intensive application servers</strong>: These are like the heavy-duty machines in a factory, crunching through complex calculations or processing large amounts of data. For instance, a weather forecasting system that needs to process data from thousands of weather stations and run complex simulations would be a compute-intensive application.</li>
+<li><strong>Dedicated gaming servers</strong>: These are like the high-speed racetracks for online multiplayer games, where fast response times are crucial for a good gaming experience. For example, a fast-paced online multiplayer game like Call of Duty would benefit from a dedicated gaming server.</li>
+<li><strong>Batch processing workloads</strong>: These are like the assembly lines in a factory, processing many transactions in a single group. For example, a billing system that generates invoices for thousands of customers at the end of the month would use batch processing.</li>
+</ul>
 </section>
-<section id="memory-optimized-instances" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="memory-optimized-instances"><span class="header-section-number">4.3</span> <strong>Memory Optimized Instances</strong></h2>
-<p>Memory optimized instances, including R5 and X1, are designed to process large data sets in memory. They are commonly used in high-performance databases, real-time big data analytics, and large-scale in-memory processing. Financial institutions might use these instances to support real-time data processing within their financial systems or for complex risk management calculations.</p>
+<section id="memory-optimized-instances" class="level3" data-number="2.0.3">
+<h3 data-number="2.0.3" class="anchored" data-anchor-id="memory-optimized-instances"><span class="header-section-number">2.0.3</span> 3. <strong>Memory Optimized Instances</strong></h3>
+<p>Memory optimized instances are designed to provide rapid performance for tasks that handle extensive datasets in memory. In computing, memory serves as a provisional storage space. It accommodates all the data and directives required by a Central Processing Unit (CPU) to execute operations. Prior to the operation of a computer program or application, it is transferred from storage to memory. This act of preloading allows the CPU to have immediate access to the computer program.</p>
+<p>In other words, memory optimized instances are like the big, spacious warehouses of cloud computing. They are designed to handle tasks that require a lot of space for storing data temporarily. This is similar to a warehouse where goods are stored before they are shipped out.</p>
+<p>Memory optimized instances can be used for:</p>
+<ul>
+<li><strong>High-performance databases</strong>: These are like huge libraries with millions of books (data). The books need to be readily available (loaded into memory) for quick access. For example, a global e-commerce site like Amazon would use a high-performance database to store and quickly retrieve product information, customer data, and transaction details.</li>
+<li><strong>Real-time processing of large unstructured data</strong>: This is like sorting through a big pile of mixed items (unstructured data) in real-time. For instance, a social media platform like X (Twitter) might use this to analyze and categorize millions of tweets as they are posted.</li>
+</ul>
 </section>
-<section id="storage-optimized-instances" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="storage-optimized-instances"><span class="header-section-number">4.4</span> <strong>Storage Optimized Instances</strong></h2>
-<p>Storage optimized instances, such as I3 and D2, are engineered for jobs that need high, sequential read and write access to large data sets on local storage. They are particularly effective for data warehousing applications or distributed file systems. For instance, genomic research organizations leverage these instances for rapid genomic data processing, where fast access to large data sets is crucial.</p>
+<section id="accelerated-computing-instances" class="level3" data-number="2.0.4">
+<h3 data-number="2.0.4" class="anchored" data-anchor-id="accelerated-computing-instances"><span class="header-section-number">2.0.4</span> 4. <strong>Accelerated Computing Instances</strong></h3>
+<p>Accelerated computing instances employ hardware accelerators, also known as coprocessors, to carry out certain tasks more effectively than software running on CPUs can. In computing, a hardware accelerator is a device that can speed up data processing. Accelerated computing instances are perfectly suited for workloads like graphics applications, streaming games, and streaming applications.</p>
+<p>Accelerated computing instances can be used for :</p>
+<ul>
+<li><strong>Floating-point number calculations</strong>: These are complex mathematical calculations that involve numbers with decimals. For example, scientific simulations or financial modeling applications that need to perform a lot of these calculations would benefit from accelerated computing.</li>
+<li><strong>Graphics processing</strong>: This is like rendering a high-definition video or creating a 3D animation. For instance, a graphic design software or a video game would need to process a lot of graphics data quickly.</li>
+<li><strong>Data pattern matching</strong>: This is like finding a specific pattern in a large dataset. For example, a search engine looking for specific keywords in a large database of web pages would use data pattern matching.</li>
+</ul>
 </section>
-<section id="accelerated-computing-instances" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="accelerated-computing-instances"><span class="header-section-number">4.5</span> <strong>Accelerated Computing Instances</strong></h2>
-<p>Accelerated computing instances, including P3 and F1, use hardware accelerators to efficiently handle computationally intensive tasks. They are optimal for floating-point calculations, graphics processing, and data pattern matching. Automotive companies might use these instances to run complex simulations for vehicle design or for training machine learning models to enhance autonomous driving technologies.</p>
-</section>
-<section id="micro-instances" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="micro-instances"><span class="header-section-number">4.6</span> <strong>Micro Instances</strong></h2>
-<p>Micro instances such as T3a and T4g Micro are an economical option for lower-traffic applications and websites. These instances are often chosen by small businesses and independent developers for hosting personal blogs, small websites, or development environments due to their low cost and adequate resources for handling light workloads.</p>
-<p>Each EC2 instance type is specifically tailored to meet different technical requirements and use cases, enabling organizations to select the most appropriate resources based on their specific application needs and budget constraints. This flexibility allows for optimal performance and cost efficiency across a wide range of applications and industries.</p>
+<section id="storage-optimized-instances" class="level3" data-number="2.0.5">
+<h3 data-number="2.0.5" class="anchored" data-anchor-id="storage-optimized-instances"><span class="header-section-number">2.0.5</span> 5. <strong>Storage Optimized Instances</strong></h3>
+<p>Storage optimized instances are designed for tasks that require high, sequential read and write access to extensive datasets on local storage. In other words, storage optimized instances are like the big cargo trucks of cloud computing. They are designed to handle tasks that involve a lot of loading and unloading of data, similar to a cargo truck transporting goods.</p>
+<p>In computing, the term input/output operations per second (IOPS) is a performance metric for a storage device. It indicates the number of distinct input or output operations a device can execute in a single second. Storage optimized instances are engineered to deliver tens of thousands of low-latency, random IOPS to applications.</p>
+<p>Input operations can be thought of as data introduced into a system, like records entered into a database. An output operation is data produced by a server. An example of output could be the analytics conducted on the records in a database. If you have an application with a high IOPS demand, a storage optimized instance can offer superior performance compared to other instance types that are not optimized for this specific use case.</p>
+<p>Storage optimized instances can be used for :</p>
+<ul>
+<li><strong>Distributed file systems</strong>: These are like a network of warehouses (storage spaces), where data is stored across multiple locations for easy access. For example, a cloud storage service like Dropbox or Google Drive would use a distributed file system.</li>
+<li><strong>Data warehousing applications</strong>: These are like huge data libraries that store, organize, and analyze large amounts of data. For instance, a business might use a data warehouse to analyze customer behavior, sales trends, and market research.</li>
+<li><strong>High-frequency online transaction processing (OLTP) systems</strong>: These are like busy supermarkets where lots of transactions (like buying and selling of goods) are happening all at once. For example, an e-commerce site like Amazon during a big sale event would have a high-frequency OLTP system.</li>
+</ul>
 
 
 </section>
@@ -623,13 +717,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-2-notes/Amazon-EC2-intro.html" class="pagination-link" aria-label="Amazon-EC2-intro">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Amazon-EC2-intro</span></span>
+      <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="pagination-link" aria-label="Module 2: Amazon EC2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Module 2: Amazon EC2</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../module-2-notes/Amazon-EC2-pricing.html" class="pagination-link" aria-label="**Amazon EC2 pricing**">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

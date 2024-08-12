@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 3&nbsp; Amazon EC2 pricing</title>
+<title>AWS Cloud Practitioner Notes - 14&nbsp; Amazon EBS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-2-notes/Scaling-Amazon-EC2.html" rel="next">
-<link href="../module-2-notes/Amazon-EC2-Instance-Types.html" rel="prev">
+<link href="../module-5-notes/3-Amazon-S3.html" rel="next">
+<link href="../module-5-notes/1-Introduction-m5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/2-Amazon-EBS.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Module 2: Amazon EC2</span></a>
+ <span class="menu-text">Module 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-3-notes/Introduction-module-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction-module-3.html</span></a>
+ <span class="menu-text">Module 3</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -205,6 +205,70 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-4-notes/1-Introduction-m4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 4</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/4-Global-Networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><strong>Global Networking</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-5-notes/1-Introduction-m5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 5</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/2-Amazon-EBS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/4-Amazon-EFS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -215,20 +279,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#on-demand-instances" id="toc-on-demand-instances" class="nav-link active" data-scroll-target="#on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></a></li>
-  <li><a href="#reserved-instances" id="toc-reserved-instances" class="nav-link" data-scroll-target="#reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></a></li>
-  <li><a href="#ec2-instance-savings-plans" id="toc-ec2-instance-savings-plans" class="nav-link" data-scroll-target="#ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></a></li>
-  <li><a href="#spot-instances" id="toc-spot-instances" class="nav-link" data-scroll-target="#spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></a></li>
-  <li><a href="#dedicated-hosts" id="toc-dedicated-hosts" class="nav-link" data-scroll-target="#dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></a></li>
+  <li><a href="#instance-stores-and-amazon-elastic-block-store-amazon-ebs" id="toc-instance-stores-and-amazon-elastic-block-store-amazon-ebs" class="nav-link active" data-scroll-target="#instance-stores-and-amazon-elastic-block-store-amazon-ebs"><span class="header-section-number">14.0.1</span> Instance stores and Amazon Elastic Block Store (Amazon EBS)</a></li>
+  <li><a href="#how-does-memory-get-stored-on-aws" id="toc-how-does-memory-get-stored-on-aws" class="nav-link" data-scroll-target="#how-does-memory-get-stored-on-aws"><span class="header-section-number">14.0.2</span> How does memory get stored on AWS?</a></li>
+  <li><a href="#instance-stores" id="toc-instance-stores" class="nav-link" data-scroll-target="#instance-stores"><span class="header-section-number">14.0.3</span> Instance stores</a></li>
+  <li><a href="#amazon-ebs-and-snapshots" id="toc-amazon-ebs-and-snapshots" class="nav-link" data-scroll-target="#amazon-ebs-and-snapshots"><span class="header-section-number">14.0.4</span> Amazon EBS and snapshots</a></li>
+  <li><a href="#amazon-ebs-snapshots" id="toc-amazon-ebs-snapshots" class="nav-link" data-scroll-target="#amazon-ebs-snapshots"><span class="header-section-number">14.0.5</span> Amazon EBS snapshots</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/2-Amazon-EBS.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></h1>
 </div>
 
 
@@ -245,48 +309,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Amazon EC2 charges you just for the compute time that you use. Amazon EC2 provides a range of price choices for various use cases. For example, if your use case can withstand interruptions, spot instances can help you save. You may also save money by committing early and locking in a minimal level of usage with reserved instances.</p>
-<p>AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model :</p>
-<section id="on-demand-instances" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></h2>
-<p>On-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.</p>
+<section id="instance-stores-and-amazon-elastic-block-store-amazon-ebs" class="level3" data-number="14.0.1">
+<h3 data-number="14.0.1" class="anchored" data-anchor-id="instance-stores-and-amazon-elastic-block-store-amazon-ebs"><span class="header-section-number">14.0.1</span> Instance stores and Amazon Elastic Block Store (Amazon EBS)</h3>
 </section>
-<section id="reserved-instances" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></h2>
-<p>Reserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.</p>
-<p>There are two available types of Reserved Instances:</p>
-<ul>
-<li>Standard Reserved Instances</li>
-<li>Convertible Reserved Instances</li>
-</ul>
-<p>Standard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.</p>
-<p><strong>Standard Reserved Instances:</strong> This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:</p>
-<ul>
-<li><strong>Instance type and size:</strong>&nbsp;For example, m5.xlarge</li>
-<li><strong>Platform description (operating system):</strong>&nbsp;For example, Microsoft Windows Server or Red Hat Enterprise Linux</li>
-<li><strong>Tenancy:</strong>&nbsp;Default tenancy or dedicated tenancy</li>
-</ul>
-<p>You can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.</p>
-<p><strong>Convertible Reserved Instances:</strong> These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.</p>
-<p>At the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:</p>
-<ul>
-<li>Terminate the instance.</li>
-<li>Purchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).</li>
-</ul>
+<section id="how-does-memory-get-stored-on-aws" class="level3" data-number="14.0.2">
+<h3 data-number="14.0.2" class="anchored" data-anchor-id="how-does-memory-get-stored-on-aws"><span class="header-section-number">14.0.2</span> How does memory get stored on AWS?</h3>
+<p>When using Amazon EC2 to run your business applications, those applications need access to CPU, memory, network, and storage. EC2 instances provide access to all these components. Here, we’ll focus on storage. As applications run, they often require access to block-level storage.</p>
+<p>Block-level storage is like a place to store files, which are series of bytes stored in blocks on a disk. When a file is updated, only the changed blocks are updated, making it an efficient storage type for applications like databases, enterprise software, or file systems.</p>
+<p>Just as you access block-level storage on your personal computer through your hard drive, EC2 instances also have hard drives, with different types available.</p>
 </section>
-<section id="ec2-instance-savings-plans" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></h2>
-<p>These plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.</p>
-<p>Flexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.</p>
-<p>AWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.</p>
+<section id="instance-stores" class="level3" data-number="14.0.3">
+<h3 data-number="14.0.3" class="anchored" data-anchor-id="instance-stores"><span class="header-section-number">14.0.3</span> Instance stores</h3>
+<p>Instance store volumes behave like physical hard drives. When you launch an EC2 instance, depending on the instance type, it might provide local storage called instance store volumes. These volumes are physically attached to the host on which your EC2 instance is running. You can write to it just like a normal hard drive.</p>
+<p>However, because these volumes are attached to the underlying physical host, all data written to an instance store volume is deleted if you stop or terminate your EC2 instance. This is because the EC2 instance might start up on a different host when restarted, where the original volume does not exist.</p>
+<p>Due to this temporary nature, instance store volumes are useful for data that can be lost without significant consequences, such as temporary files or scratch data.</p>
+<p>An instance store provides temporary block-level storage for an Amazon EC2 instance. This storage has the same lifespan as the instance, meaning data is lost when the instance is terminated.</p>
+<p>The key takeaway is not to write important data to the drives that come with EC2 instances. For persistent storage, Amazon offers a service called Amazon Elastic Block Store (EBS).</p>
+<p>To review an example of how instance stores work, see the steps beloe:</p>
+<p><strong>Step 1:</strong> An Amazon EC2 instance with an attached instance store is running.</p>
+<p><img src="awsInstanceStore-1.png" alt="Instance stores" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p><strong>Step 2:</strong> The instance is stopped or terminated.</p>
+<p><img src="awsInstanceStore-2.png" alt="Instance stores" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p><strong>Step 3:</strong> All data on the attached instance store is deleted.</p>
+<p><img src="awsInstanceStore-3.png" alt="Instance stores" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
 </section>
-<section id="spot-instances" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></h2>
-<p>Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.</p>
+<section id="amazon-ebs-and-snapshots" class="level3" data-number="14.0.4">
+<h3 data-number="14.0.4" class="anchored" data-anchor-id="amazon-ebs-and-snapshots"><span class="header-section-number">14.0.4</span> Amazon EBS and snapshots</h3>
+<p>Amazon EBS allows you to create virtual hard drives, called EBS volumes, which you can attach to your EC2 instances. These volumes are separate from the local instance store volumes and are not tied directly to the host running your EC2 instance. This means that data written to an EBS volume can persist between stops and starts of an EC2 instance.</p>
+<p><img src="EC2-EBS.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>EBS volumes come in various sizes and types. You define the size, type, and configuration of the volume you need, provision it, and attach it to your EC2 instance. Your application can then write to this volume, and the data will remain even if the EC2 instance is stopped and restarted.</p>
+<p>For data protection, EBS allows you to take incremental backups called snapshots. An EBS snapshot is an incremental backup, meaning only the blocks of data that have changed since the most recent snapshot are saved. This is different from full backups, where all data in a storage volume is copied each time a backup occurs.</p>
 </section>
-<section id="dedicated-hosts" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></h2>
-<p>Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.</p>
+<section id="amazon-ebs-snapshots" class="level3" data-number="14.0.5">
+<h3 data-number="14.0.5" class="anchored" data-anchor-id="amazon-ebs-snapshots"><span class="header-section-number">14.0.5</span> Amazon EBS snapshots</h3>
+<img src="EBS-snapshot.png" alt="Amazon EBS and snapshots" style="width:75%; display: block; margin: auto;">
+<p style="text-align: center;">
+Incremental backups of EBS volumes with Amazon EBS snapshots. On Day 1, two volumes are backed up. Day 2 adds one new volume and the new volume is backed up. Day 3 adds two more volumes for a total of five volumes. Only the two new volumes are backed up.
+</p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>Taking regular snapshots of your EBS volumes is crucial to ensure data safety. If a drive becomes corrupted, you can restore data from a snapshot. This provides a reliable backup mechanism, ensuring data persistence and integrity.</p>
 
 
 </section>
@@ -703,13 +778,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="pagination-link" aria-label="EC2 Instance types">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span>
+      <a href="../module-5-notes/1-Introduction-m5.html" class="pagination-link" aria-label="Module 5">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Module 5</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="pagination-link" aria-label="**Scaling Amazon EC2**">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-5-notes/3-Amazon-S3.html" class="pagination-link" aria-label="Amazon Simple Storage Service (Amazon S3)">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

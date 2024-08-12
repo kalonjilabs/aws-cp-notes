@@ -26,6 +26,34 @@ book:
         - module-3-notes/AWS-Global-Infrastructure.qmd
         - module-3-notes/Edge-Locations.qmd
         - module-3-notes/How-to-Provision-AWS .qmd
+
+    - part: module-4-notes/1-Introduction-m4.qmd
+      chapters:
+        - module-4-notes/2-Connectivity-to-AWS.qmd
+        - module-4-notes/3-Subnets-and-NACL.qmd
+        - module-4-notes/4-Global-Networking.qmd
+
+    - part: module-5-notes/1-Introduction-m5.qmd
+      chapters:
+        - module-5-notes/2-Amazon-EBS.qmd
+        - module-5-notes/3-Amazon-S3.qmd
+        - module-5-notes/4-Amazon-EFS.qmd
+        - module-5-notes/5-Amazon-RDS.qmd
+        - module-5-notes/6-Amazon-DynamoDB.qmd
+        - module-5-notes/7-Amazon-Redshift.qmd
+        - module-5-notes/8-AWS-DMS.qmd
+        - module-5-notes/9-Additional_database_service.qmd
+
+    - part: module-6-notes/1-Introduction.qmd
+      chapters:
+        - module-6-notes/1-Introduction.qmd
+        - module-6-notes/2-AWS-sahred.qmd
+        - module-6-notes/3-AWS-permission.qmd
+        - module-6-notes/4-AWS-Organisations.qmd
+        - module-6-notes/5-Compliance.qmd
+        - module-6-notes/6-Denial-of-Service-Attacks.qmd
+        - module-6-notes/7-Additional-Security.qmd
+
 format:
   html:
     theme: cosmo

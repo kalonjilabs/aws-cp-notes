@@ -1,0 +1,20 @@
+# Amazon Elastic File System (Amazon EFS)
+
+It's extremely common for businesses to have shared file systems across their applications. For example, you might have multiple servers running analytics on large amounts of data stored in a shared file system. Traditionally, this data has been hosted on-premises, requiring you to ensure that your storage can handle the data volume, take regular backups, store data redundantly, and manage all the servers hosting that data.
+
+## Understanding file storage
+
+In file storage, multiple clients (such as users, applications, and servers) can access data stored in shared file folders. A storage server uses block storage with a local file system to organize files, and clients access data through file paths. Compared to block storage and object storage, file storage is ideal when many services and resources need to access the same data simultaneously.
+
+## Amazon EFS: A managed file system
+
+Amazon Elastic File System (Amazon EFS) is a scalable file system used with AWS Cloud services and on-premises resources. As you add and remove files, Amazon EFS automatically grows and shrinks without disrupting applications. It can scale on demand to petabytes, allowing multiple instances to access the data simultaneously. With EFS, you don't need to worry about buying hardware or managing the file system's operational aspects. AWS handles scaling and replication, ensuring seamless performance.
+
+## Comparing Amazon EBS and Amazon EFS
+
+You might wonder about the difference between Amazon EBS and Amazon EFS, as both allow you to store files accessible from EC2 instances. The distinction is straightforward:
+
+- **Amazon EBS (Elastic Block Store):** EBS volumes attach to EC2 instances and are an Availability Zone-level resource. Both the EC2 instance and the EBS volume must be in the same Availability Zone. EBS acts like a hard drive where you can save files, run databases, or store applications. However, if you provision a two-terabyte EBS volume and fill it up, it doesn't automatically scale.
+- **Amazon EFS (Elastic File System):** EFS, on the other hand, is a regional service that stores data across multiple Availability Zones. Any EC2 instance in the Region can write to the EFS file system, and it automatically scales as you write more data. EFS allows multiple instances to read and write from it simultaneously, functioning as a true file system for Linux. Additionally, on-premises servers can access Amazon EFS using AWS Direct Connect.
+
+Amazon EFS offers the advantage of being a regional service, enabling concurrent data access from all Availability Zones in the Region where the file system is located. This ensures high availability and durability, making it suitable for applications that require scalable and reliable shared file storage.

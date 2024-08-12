@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 3&nbsp; Amazon EC2 pricing</title>
+<title>AWS Cloud Practitioner Notes - 18&nbsp; Amazon DynamoDB</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-2-notes/Scaling-Amazon-EC2.html" rel="next">
-<link href="../module-2-notes/Amazon-EC2-Instance-Types.html" rel="prev">
+<link href="../module-5-notes/7-Amazon-Redshift.html" rel="next">
+<link href="../module-5-notes/5-Amazon-RDS.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/6-Amazon-DynamoDB.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Module 2: Amazon EC2</span></a>
+ <span class="menu-text">Module 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-3-notes/Introduction-module-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction-module-3.html</span></a>
+ <span class="menu-text">Module 3</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -205,6 +205,147 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-4-notes/1-Introduction-m4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 4</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/4-Global-Networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><strong>Global Networking</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-5-notes/1-Introduction-m5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 5</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/2-Amazon-EBS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/4-Amazon-EFS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/6-Amazon-DynamoDB.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/7-Amazon-Redshift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><strong>Amazon Redshift</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/8-AWS-DMS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/9-Additional_database_service.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">module-6-notes/1-Introduction-m5.qmd</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/1-Introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Module 6</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/2-AWS-sahred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/3-AWS-permission.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/4-AWS-Organisations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/5-Compliance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/6-Denial-of-Service-Attacks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title"><strong>Denial-of-Service Attacks</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/7-Additional-Security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -215,20 +356,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#on-demand-instances" id="toc-on-demand-instances" class="nav-link active" data-scroll-target="#on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></a></li>
-  <li><a href="#reserved-instances" id="toc-reserved-instances" class="nav-link" data-scroll-target="#reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></a></li>
-  <li><a href="#ec2-instance-savings-plans" id="toc-ec2-instance-savings-plans" class="nav-link" data-scroll-target="#ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></a></li>
-  <li><a href="#spot-instances" id="toc-spot-instances" class="nav-link" data-scroll-target="#spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></a></li>
-  <li><a href="#dedicated-hosts" id="toc-dedicated-hosts" class="nav-link" data-scroll-target="#dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></a></li>
+  <li><a href="#amazon-dynamodb" id="toc-amazon-dynamodb" class="nav-link active" data-scroll-target="#amazon-dynamodb"><span class="header-section-number">19</span> Amazon DynamoDB</a>
+  <ul class="collapse">
+  <li><a href="#introduction-to-non-relational-nosql-databases" id="toc-introduction-to-non-relational-nosql-databases" class="nav-link" data-scroll-target="#introduction-to-non-relational-nosql-databases"><span class="header-section-number">19.1</span> Introduction to Non-Relational NoSQL Databases</a>
+  <ul class="collapse">
+  <li><a href="#non-relational-databases" id="toc-non-relational-databases" class="nav-link" data-scroll-target="#non-relational-databases"><span class="header-section-number">19.1.1</span> Non-Relational Databases</a></li>
+  <li><a href="#example-of-non-relational-database" id="toc-example-of-non-relational-database" class="nav-link" data-scroll-target="#example-of-non-relational-database"><span class="header-section-number">19.1.2</span> Example of Non-Relational Database</a></li>
+  </ul></li>
+  <li><a href="#amazon-dynamodb-1" id="toc-amazon-dynamodb-1" class="nav-link" data-scroll-target="#amazon-dynamodb-1"><span class="header-section-number">19.2</span> Amazon DynamoDB</a>
+  <ul class="collapse">
+  <li><a href="#key-features-of-dynamodb" id="toc-key-features-of-dynamodb" class="nav-link" data-scroll-target="#key-features-of-dynamodb"><span class="header-section-number">19.2.1</span> Key Features of DynamoDB</a></li>
+  <li><a href="#querying-dynamodb" id="toc-querying-dynamodb" class="nav-link" data-scroll-target="#querying-dynamodb"><span class="header-section-number">19.2.2</span> Querying DynamoDB</a></li>
+  <li><a href="#use-cases-and-performance" id="toc-use-cases-and-performance" class="nav-link" data-scroll-target="#use-cases-and-performance"><span class="header-section-number">19.2.3</span> Use Cases and Performance</a></li>
+  <li><a href="#comparing-amazon-rds-and-amazon-dynamodb" id="toc-comparing-amazon-rds-and-amazon-dynamodb" class="nav-link" data-scroll-target="#comparing-amazon-rds-and-amazon-dynamodb"><span class="header-section-number">19.2.4</span> Comparing Amazon RDS and Amazon DynamoDB</a></li>
+  <li><a href="#amazon-rds" id="toc-amazon-rds" class="nav-link" data-scroll-target="#amazon-rds"><span class="header-section-number">19.2.5</span> Amazon RDS</a></li>
+  <li><a href="#amazon-dynamodb-2" id="toc-amazon-dynamodb-2" class="nav-link" data-scroll-target="#amazon-dynamodb-2"><span class="header-section-number">19.2.6</span> Amazon DynamoDB</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/6-Amazon-DynamoDB.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></h1>
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></h1>
 </div>
 
 
@@ -245,50 +398,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Amazon EC2 charges you just for the compute time that you use. Amazon EC2 provides a range of price choices for various use cases. For example, if your use case can withstand interruptions, spot instances can help you save. You may also save money by committing early and locking in a minimal level of usage with reserved instances.</p>
-<p>AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model :</p>
-<section id="on-demand-instances" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></h2>
-<p>On-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.</p>
+<section id="amazon-dynamodb" class="level1" data-number="19">
+<h1 data-number="19"><span class="header-section-number">19</span> Amazon DynamoDB</h1>
+<section id="introduction-to-non-relational-nosql-databases" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="introduction-to-non-relational-nosql-databases"><span class="header-section-number">19.1</span> Introduction to Non-Relational NoSQL Databases</h2>
+<p>Non-relational databases, also known as NoSQL databases, provide an alternative to the traditional relational database model by using different structures to organise data. Unlike relational databases that use rows and columns, non-relational databases often utilise key-value pairs. This flexible schema allows for more dynamic and scalable data management, making them suitable for various use cases where performance and flexibility are critical.</p>
+<section id="non-relational-databases" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="non-relational-databases"><span class="header-section-number">19.1.1</span> Non-Relational Databases</h3>
+<p>In a non-relational database, data is stored in tables. Each table contains items (keys), and each item has attributes (values). Attributes can be thought of as different features of your data. Key-value databases are a common type of non-relational database. They allow you to add or remove attributes from items in the table at any time, and not every item needs to have the same attributes.</p>
 </section>
-<section id="reserved-instances" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></h2>
-<p>Reserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.</p>
-<p>There are two available types of Reserved Instances:</p>
+<section id="example-of-non-relational-database" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="example-of-non-relational-database"><span class="header-section-number">19.1.2</span> Example of Non-Relational Database</h3>
+<p>Non-relational databases are particularly useful when dealing with datasets that are less rigid and require high access rates. Traditional SQL databases, with their fixed schemas and performance constraints under stress, might not be the best fit for such scenarios. This is where non-relational databases, such as DynamoDB, excel.</p>
+</section>
+</section>
+<section id="amazon-dynamodb-1" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="amazon-dynamodb-1"><span class="header-section-number">19.2</span> Amazon DynamoDB</h2>
+<p>Amazon DynamoDB is a fully managed, serverless, key-value database service that offers single-digit millisecond performance at any scale. It provides a flexible and scalable solution for applications requiring consistent performance and high throughput.</p>
+<section id="key-features-of-dynamodb" class="level3" data-number="19.2.1">
+<h3 data-number="19.2.1" class="anchored" data-anchor-id="key-features-of-dynamodb"><span class="header-section-number">19.2.1</span> Key Features of DynamoDB</h3>
+<ol type="1">
+<li><strong>Serverless Architecture</strong>: DynamoDB is a serverless database, meaning you do not need to manage the underlying infrastructure. Amazon handles all the server provisioning, patching, and maintenance, allowing you to focus on your application development.</li>
+<li><strong>Scalability</strong>: DynamoDB automatically scales to accommodate changes in data volume and throughput, ensuring consistent performance regardless of database size. This automatic scaling makes it ideal for applications with variable or unpredictable workloads.</li>
+<li><strong>High Availability and Durability</strong>: DynamoDB stores data redundantly across multiple availability zones, mirroring data across multiple drives. This redundancy ensures high availability and durability, reducing the operational burden of managing a highly available database.</li>
+<li><strong>Millisecond Performance</strong>: DynamoDB provides millisecond response times, which is crucial for applications with millions of users and high-performance requirements. This quick response time enhances user experience and application reliability.</li>
+<li><strong>Flexible Schema</strong>: Unlike traditional relational databases, DynamoDB allows you to add or remove attributes from items at any time. This flexibility supports datasets with varying attributes, making it a suitable choice for diverse and evolving data models.</li>
+</ol>
+</section>
+<section id="querying-dynamodb" class="level3" data-number="19.2.2">
+<h3 data-number="19.2.2" class="anchored" data-anchor-id="querying-dynamodb"><span class="header-section-number">19.2.2</span> Querying DynamoDB</h3>
+<p>DynamoDB does not use SQL for querying data. Instead, it relies on a simpler query model based on a subset of attributes designated as keys. This model supports efficient queries focusing on collections of items within a single table rather than complex queries spanning multiple tables.</p>
+</section>
+<section id="use-cases-and-performance" class="level3" data-number="19.2.3">
+<h3 data-number="19.2.3" class="anchored" data-anchor-id="use-cases-and-performance"><span class="header-section-number">19.2.3</span> Use Cases and Performance</h3>
+<p>DynamoDB is purpose-built for specific use cases requiring high scalability and performance. For example, during Prime Day in 2019, DynamoDB handled 7.11 trillion API calls over 48 hours, peaking at 45.4 million requests per second. This level of scalability and performance is achieved without the need for manual database management, showcasing the power and efficiency of DynamoDB.</p>
+</section>
+<section id="comparing-amazon-rds-and-amazon-dynamodb" class="level3" data-number="19.2.4">
+<h3 data-number="19.2.4" class="anchored" data-anchor-id="comparing-amazon-rds-and-amazon-dynamodb"><span class="header-section-number">19.2.4</span> Comparing Amazon RDS and Amazon DynamoDB</h3>
+</section>
+<section id="amazon-rds" class="level3" data-number="19.2.5">
+<h3 data-number="19.2.5" class="anchored" data-anchor-id="amazon-rds"><span class="header-section-number">19.2.5</span> Amazon RDS</h3>
 <ul>
-<li>Standard Reserved Instances</li>
-<li>Convertible Reserved Instances</li>
+<li><strong>Automatic high availability; recovery provided</strong></li>
+<li><strong>Customer ownership of data</strong></li>
+<li><strong>Customer ownership of schema</strong></li>
+<li><strong>Customer control of network</strong></li>
 </ul>
-<p>Standard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.</p>
-<p><strong>Standard Reserved Instances:</strong> This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:</p>
+</section>
+<section id="amazon-dynamodb-2" class="level3" data-number="19.2.6">
+<h3 data-number="19.2.6" class="anchored" data-anchor-id="amazon-dynamodb-2"><span class="header-section-number">19.2.6</span> Amazon DynamoDB</h3>
 <ul>
-<li><strong>Instance type and size:</strong>&nbsp;For example, m5.xlarge</li>
-<li><strong>Platform description (operating system):</strong>&nbsp;For example, Microsoft Windows Server or Red Hat Enterprise Linux</li>
-<li><strong>Tenancy:</strong>&nbsp;Default tenancy or dedicated tenancy</li>
+<li><strong>Key-value</strong></li>
+<li><strong>Massive throughput capabilities</strong></li>
+<li><strong>PB size potential</strong></li>
+<li><strong>Granular API access</strong></li>
 </ul>
-<p>You can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.</p>
-<p><strong>Convertible Reserved Instances:</strong> These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.</p>
-<p>At the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:</p>
-<ul>
-<li>Terminate the instance.</li>
-<li>Purchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).</li>
-</ul>
-</section>
-<section id="ec2-instance-savings-plans" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></h2>
-<p>These plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.</p>
-<p>Flexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.</p>
-<p>AWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.</p>
-</section>
-<section id="spot-instances" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></h2>
-<p>Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.</p>
-</section>
-<section id="dedicated-hosts" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></h2>
-<p>Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -703,13 +871,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="pagination-link" aria-label="EC2 Instance types">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span>
+      <a href="../module-5-notes/5-Amazon-RDS.html" class="pagination-link" aria-label="Amazon Relational Database Service (Amazon RDS)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="pagination-link" aria-label="**Scaling Amazon EC2**">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-5-notes/7-Amazon-Redshift.html" class="pagination-link" aria-label="**Amazon Redshift**">
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><strong>Amazon Redshift</strong></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

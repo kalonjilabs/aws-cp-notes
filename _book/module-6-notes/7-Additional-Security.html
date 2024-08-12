@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 3&nbsp; Amazon EC2 pricing</title>
+<title>AWS Cloud Practitioner Notes - 28&nbsp; Additional Security Services in AWS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-2-notes/Scaling-Amazon-EC2.html" rel="next">
-<link href="../module-2-notes/Amazon-EC2-Instance-Types.html" rel="prev">
+<link href="../module-6-notes/6-Denial-of-Service-Attacks.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">module-6-notes/1-Introduction-m5.qmd</a></li><li class="breadcrumb-item"><a href="../module-6-notes/7-Additional-Security.html"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -132,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Module 2: Amazon EC2</span></a>
+ <span class="menu-text">Module 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -146,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
@@ -179,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-3-notes/Introduction-module-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction-module-3.html</span></a>
+ <span class="menu-text">Module 3</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -205,6 +204,147 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-4-notes/1-Introduction-m4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 4</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/4-Global-Networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><strong>Global Networking</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-5-notes/1-Introduction-m5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 5</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/2-Amazon-EBS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/4-Amazon-EFS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/6-Amazon-DynamoDB.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/7-Amazon-Redshift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><strong>Amazon Redshift</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/8-AWS-DMS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/9-Additional_database_service.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">module-6-notes/1-Introduction-m5.qmd</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/1-Introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Module 6</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/2-AWS-sahred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/3-AWS-permission.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/4-AWS-Organisations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/5-Compliance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/6-Denial-of-Service-Attacks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title"><strong>Denial-of-Service Attacks</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/7-Additional-Security.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -215,20 +355,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#on-demand-instances" id="toc-on-demand-instances" class="nav-link active" data-scroll-target="#on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></a></li>
-  <li><a href="#reserved-instances" id="toc-reserved-instances" class="nav-link" data-scroll-target="#reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></a></li>
-  <li><a href="#ec2-instance-savings-plans" id="toc-ec2-instance-savings-plans" class="nav-link" data-scroll-target="#ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></a></li>
-  <li><a href="#spot-instances" id="toc-spot-instances" class="nav-link" data-scroll-target="#spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></a></li>
-  <li><a href="#dedicated-hosts" id="toc-dedicated-hosts" class="nav-link" data-scroll-target="#dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></a></li>
+  <li><a href="#the-concept-of-encryption" id="toc-the-concept-of-encryption" class="nav-link active" data-scroll-target="#the-concept-of-encryption"><span class="header-section-number">28.0.1</span> The Concept of Encryption</a></li>
+  <li><a href="#encryption-in-aws" id="toc-encryption-in-aws" class="nav-link" data-scroll-target="#encryption-in-aws"><span class="header-section-number">28.0.2</span> Encryption in AWS</a></li>
+  <li><a href="#amazon-inspector" id="toc-amazon-inspector" class="nav-link" data-scroll-target="#amazon-inspector"><span class="header-section-number">28.0.3</span> Amazon Inspector</a></li>
+  <li><a href="#amazon-guardduty" id="toc-amazon-guardduty" class="nav-link" data-scroll-target="#amazon-guardduty"><span class="header-section-number">28.0.4</span> Amazon GuardDuty</a></li>
+  <li><a href="#aws-key-management-service-aws-kms" id="toc-aws-key-management-service-aws-kms" class="nav-link" data-scroll-target="#aws-key-management-service-aws-kms"><span class="header-section-number">28.0.5</span> AWS Key Management Service (AWS KMS)</a></li>
+  <li><a href="#aws-web-application-firewall-waf" id="toc-aws-web-application-firewall-waf" class="nav-link" data-scroll-target="#aws-web-application-firewall-waf"><span class="header-section-number">28.0.6</span> AWS Web Application Firewall (WAF)</a></li>
+  <li><a href="#example-of-aws-waf-in-action" id="toc-example-of-aws-waf-in-action" class="nav-link" data-scroll-target="#example-of-aws-waf-in-action"><span class="header-section-number">28.0.7</span> Example of AWS WAF in Action</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">28.0.8</span> Conclusion</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-6-notes/1-Introduction.html">module-6-notes/1-Introduction-m5.qmd</a></li><li class="breadcrumb-item"><a href="../module-6-notes/7-Additional-Security.html"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></h1>
+<h1 class="title"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></h1>
 </div>
 
 
@@ -245,48 +388,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Amazon EC2 charges you just for the compute time that you use. Amazon EC2 provides a range of price choices for various use cases. For example, if your use case can withstand interruptions, spot instances can help you save. You may also save money by committing early and locking in a minimal level of usage with reserved instances.</p>
-<p>AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model :</p>
-<section id="on-demand-instances" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></h2>
-<p>On-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.</p>
+<section id="the-concept-of-encryption" class="level3" data-number="28.0.1">
+<h3 data-number="28.0.1" class="anchored" data-anchor-id="the-concept-of-encryption"><span class="header-section-number">28.0.1</span> The Concept of Encryption</h3>
+<p>Encryption is a method of securing messages or data so that only authorised parties can access them. Unauthorised parties are therefore unlikely or unable to access the data. Imagine it as a key and door scenario: if you have the key, you can unlock the door; if you don’t, you cannot.</p>
 </section>
-<section id="reserved-instances" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></h2>
-<p>Reserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.</p>
-<p>There are two available types of Reserved Instances:</p>
+<section id="encryption-in-aws" class="level3" data-number="28.0.2">
+<h3 data-number="28.0.2" class="anchored" data-anchor-id="encryption-in-aws"><span class="header-section-number">28.0.2</span> Encryption in AWS</h3>
+<p>At AWS, encryption comes in two variations: encryption at rest and encryption in transit.</p>
 <ul>
-<li>Standard Reserved Instances</li>
-<li>Convertible Reserved Instances</li>
-</ul>
-<p>Standard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.</p>
-<p><strong>Standard Reserved Instances:</strong> This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:</p>
-<ul>
-<li><strong>Instance type and size:</strong>&nbsp;For example, m5.xlarge</li>
-<li><strong>Platform description (operating system):</strong>&nbsp;For example, Microsoft Windows Server or Red Hat Enterprise Linux</li>
-<li><strong>Tenancy:</strong>&nbsp;Default tenancy or dedicated tenancy</li>
-</ul>
-<p>You can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.</p>
-<p><strong>Convertible Reserved Instances:</strong> These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.</p>
-<p>At the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:</p>
-<ul>
-<li>Terminate the instance.</li>
-<li>Purchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).</li>
+<li><strong>Encryption at Rest</strong>: This refers to data being secured while it is stored and not actively moving. For example, server-side encryption at rest is enabled on all DynamoDB table data, helping prevent unauthorised access. DynamoDB’s encryption at rest integrates with AWS Key Management Service (KMS) for managing the encryption key used to encrypt your tables. Without this key, you cannot access your data, so it is vital to keep it safe.</li>
+<li><strong>Encryption in Transit</strong>: This means data is secured while it is moving between two points, such as between an AWS service and a client. For example, when connecting a Redshift instance to a SQL client, secure sockets layer (SSL) connections are used to encrypt data, and service certificates validate and authorise the client. This ensures data is protected while passing between Redshift and the client. Similar functionality exists in numerous other AWS services, such as SQS, S3, and RDS.</li>
 </ul>
 </section>
-<section id="ec2-instance-savings-plans" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></h2>
-<p>These plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.</p>
-<p>Flexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.</p>
-<p>AWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.</p>
+<section id="amazon-inspector" class="level3" data-number="28.0.3">
+<h3 data-number="28.0.3" class="anchored" data-anchor-id="amazon-inspector"><span class="header-section-number">28.0.3</span> Amazon Inspector</h3>
+<p>Amazon Inspector helps improve the security and compliance of your AWS-deployed applications by running automated security assessments against your infrastructure. It checks for deviations from security best practices, exposure of EC2 instances, vulnerabilities, and more. The service consists of three parts:</p>
+<ol type="1">
+<li><strong>Network Configuration Reachability</strong>: Examines the network configurations.</li>
+<li><strong>Amazon Agent</strong>: Installed on EC2 instances to gather data.</li>
+<li><strong>Security Assessment Service</strong>: Analyses data and provides findings.</li>
+</ol>
+<p>To use Amazon Inspector, configure the options, run the service, and it will generate a list of potential security issues. These findings are displayed in the Amazon Inspector console with detailed descriptions and recommendations for remediation. You can also retrieve findings through an API.</p>
 </section>
-<section id="spot-instances" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></h2>
-<p>Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.</p>
+<section id="amazon-guardduty" class="level3" data-number="28.0.4">
+<h3 data-number="28.0.4" class="anchored" data-anchor-id="amazon-guardduty"><span class="header-section-number">28.0.4</span> Amazon GuardDuty</h3>
+<p>Amazon GuardDuty is a threat detection service that continuously analyses metadata from your account and network activity. It utilises AWS CloudTrail events, Amazon VPC Flow Logs, and DNS logs. GuardDuty uses integrated threat intelligence, anomaly detection, and machine learning to identify threats accurately. It runs independently from your other AWS services, ensuring that it does not affect their performance or availability.</p>
+<p><img src="WAF-1.png" alt=" Amazon GuardDuty" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
 </section>
-<section id="dedicated-hosts" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></h2>
-<p>Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.</p>
+<section id="aws-key-management-service-aws-kms" class="level3" data-number="28.0.5">
+<h3 data-number="28.0.5" class="anchored" data-anchor-id="aws-key-management-service-aws-kms"><span class="header-section-number">28.0.5</span> AWS Key Management Service (AWS KMS)</h3>
+<p>AWS Key Management Service (KMS) enables you to perform encryption operations using cryptographic keys, which are random strings of digits used for encrypting and decrypting data. AWS KMS allows you to create, manage, and use cryptographic keys and control their use across various services and applications. You can specify which IAM users and roles can manage keys and even temporarily disable keys to prevent their use. Your keys never leave AWS KMS, ensuring you maintain control.</p>
+</section>
+<section id="aws-web-application-firewall-waf" class="level3" data-number="28.0.6">
+<h3 data-number="28.0.6" class="anchored" data-anchor-id="aws-web-application-firewall-waf"><span class="header-section-number">28.0.6</span> AWS Web Application Firewall (WAF)</h3>
+<p>AWS WAF is a web application firewall that monitors network requests to your web applications. It works with Amazon CloudFront and an Application Load Balancer to block or allow traffic using a web access control list (ACL).</p>
+</section>
+<section id="example-of-aws-waf-in-action" class="level3" data-number="28.0.7">
+<h3 data-number="28.0.7" class="anchored" data-anchor-id="example-of-aws-waf-in-action"><span class="header-section-number">28.0.7</span> Example of AWS WAF in Action</h3>
+<p>Suppose your application is receiving malicious network requests from several IP addresses. You want to prevent these requests but allow legitimate users to access your application. You configure the web ACL to allow all requests except those from the specified IP addresses. When a request comes into AWS WAF, it checks against the rules in the web ACL. If the request does not come from a blocked IP address, it allows access to the application.</p>
+<p><img src="WAF-1.png" alt=" AWS Web Application Firewall" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>If a request comes from one of the blocked IP addresses specified in the web ACL, AWS WAF denies access.</p>
+<p><img src="WAF-2.png" alt=" AWS Web Application Firewall" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="conclusion" class="level3" data-number="28.0.8">
+<h3 data-number="28.0.8" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">28.0.8</span> Conclusion</h3>
+<p>AWS offers a robust set of security services to help protect your applications and data. From encryption and automated security assessments with Amazon Inspector to intelligent threat detection with Amazon GuardDuty, AWS provides tools to enhance your security posture. Understanding and utilising these services ensures that your applications are secure, compliant, and resilient against various threats.</p>
 
 
 </section>
@@ -703,14 +858,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="pagination-link" aria-label="EC2 Instance types">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span>
+      <a href="../module-6-notes/6-Denial-of-Service-Attacks.html" class="pagination-link" aria-label="**Denial-of-Service Attacks**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title"><strong>Denial-of-Service Attacks</strong></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="pagination-link" aria-label="**Scaling Amazon EC2**">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

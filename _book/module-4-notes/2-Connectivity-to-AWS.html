@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 3&nbsp; Amazon EC2 pricing</title>
+<title>AWS Cloud Practitioner Notes - 11&nbsp; Connectivity to AWS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-2-notes/Scaling-Amazon-EC2.html" rel="next">
-<link href="../module-2-notes/Amazon-EC2-Instance-Types.html" rel="prev">
+<link href="../module-4-notes/3-Subnets-and-NACL.html" rel="next">
+<link href="../module-4-notes/1-Introduction-m4.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Introduction to AWS Networking and Security</a></li><li class="breadcrumb-item"><a href="../module-4-notes/2-Connectivity-to-AWS.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-3-notes/Introduction-module-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction-module-3.html</span></a>
+ <span class="menu-text">Module 3: AWS Global Infrastructure</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -205,6 +205,29 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-4-notes/1-Introduction-m4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to AWS Networking and Security</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -215,20 +238,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#on-demand-instances" id="toc-on-demand-instances" class="nav-link active" data-scroll-target="#on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></a></li>
-  <li><a href="#reserved-instances" id="toc-reserved-instances" class="nav-link" data-scroll-target="#reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></a></li>
-  <li><a href="#ec2-instance-savings-plans" id="toc-ec2-instance-savings-plans" class="nav-link" data-scroll-target="#ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></a></li>
-  <li><a href="#spot-instances" id="toc-spot-instances" class="nav-link" data-scroll-target="#spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></a></li>
-  <li><a href="#dedicated-hosts" id="toc-dedicated-hosts" class="nav-link" data-scroll-target="#dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></a></li>
+  <li><a href="#why-a-vpc" id="toc-why-a-vpc" class="nav-link active" data-scroll-target="#why-a-vpc"><span class="header-section-number">11.0.1</span> Why a VPC?</a></li>
+  <li><a href="#the-structure-of-a-vpc" id="toc-the-structure-of-a-vpc" class="nav-link" data-scroll-target="#the-structure-of-a-vpc"><span class="header-section-number">11.0.2</span> The Structure of a VPC</a></li>
+  <li><a href="#the-coffee-shop-analogy" id="toc-the-coffee-shop-analogy" class="nav-link" data-scroll-target="#the-coffee-shop-analogy"><span class="header-section-number">11.0.3</span> The Coffee Shop Analogy</a></li>
+  <li><a href="#internet-gateway" id="toc-internet-gateway" class="nav-link" data-scroll-target="#internet-gateway"><span class="header-section-number">11.0.4</span> Internet Gateway</a></li>
+  <li><a href="#virtual-private-gateway" id="toc-virtual-private-gateway" class="nav-link" data-scroll-target="#virtual-private-gateway"><span class="header-section-number">11.0.5</span> Virtual Private Gateway</a></li>
+  <li><a href="#aws-direct-connect" id="toc-aws-direct-connect" class="nav-link" data-scroll-target="#aws-direct-connect"><span class="header-section-number">11.0.6</span> AWS Direct Connect</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-4-notes/1-Introduction-m4.html">Introduction to AWS Networking and Security</a></li><li class="breadcrumb-item"><a href="../module-4-notes/2-Connectivity-to-AWS.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></h1>
 </div>
 
 
@@ -245,48 +269,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Amazon EC2 charges you just for the compute time that you use. Amazon EC2 provides a range of price choices for various use cases. For example, if your use case can withstand interruptions, spot instances can help you save. You may also save money by committing early and locking in a minimal level of usage with reserved instances.</p>
-<p>AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model :</p>
-<section id="on-demand-instances" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></h2>
-<p>On-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.</p>
+<p>When we talk about connectivity in Amazon Web Services (AWS), we are referring to the different ways in which your resources within the AWS Cloud can communicate with each other, as well as the different ways in which they can connect to the outside world. Connectivity is a fundamental concept in cloud computing because it ensures that the various components of your application or service can interact seamlessly and securely.</p>
+<p>One of the core components that facilitates connectivity within AWS is the Virtual Private Cloud (VPC). But, before we get into what a VPC is and how it works, we should first understand why we need it.</p>
+<section id="why-a-vpc" class="level3" data-number="11.0.1">
+<h3 data-number="11.0.1" class="anchored" data-anchor-id="why-a-vpc"><span class="header-section-number">11.0.1</span> Why a VPC?</h3>
+<p>In traditional IT infrastructures, companies store their applications and data in their own physical data centres. These data centres have network limits and security mechanisms in place to ensure that only permitted users and systems have access to the resources they contain. When migrating to the cloud, companies require the same type of control and security. This is where VPCs come into play.</p>
+<p>A VPC, or Virtual Private Cloud, allows you to build a conceptually isolated area of the AWS Cloud from which you can launch AWS resources in a virtual network that you choose. This isolation provides the essential security and control, similar to that found in a typical data centre, but with the extra benefit of cloud scalability and flexibility.</p>
 </section>
-<section id="reserved-instances" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></h2>
-<p>Reserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.</p>
-<p>There are two available types of Reserved Instances:</p>
-<ul>
-<li>Standard Reserved Instances</li>
-<li>Convertible Reserved Instances</li>
-</ul>
-<p>Standard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.</p>
-<p><strong>Standard Reserved Instances:</strong> This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:</p>
-<ul>
-<li><strong>Instance type and size:</strong>&nbsp;For example, m5.xlarge</li>
-<li><strong>Platform description (operating system):</strong>&nbsp;For example, Microsoft Windows Server or Red Hat Enterprise Linux</li>
-<li><strong>Tenancy:</strong>&nbsp;Default tenancy or dedicated tenancy</li>
-</ul>
-<p>You can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.</p>
-<p><strong>Convertible Reserved Instances:</strong> These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.</p>
-<p>At the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:</p>
-<ul>
-<li>Terminate the instance.</li>
-<li>Purchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).</li>
-</ul>
+<section id="the-structure-of-a-vpc" class="level3" data-number="11.0.2">
+<h3 data-number="11.0.2" class="anchored" data-anchor-id="the-structure-of-a-vpc"><span class="header-section-number">11.0.2</span> The Structure of a VPC</h3>
+<p>A virtual private cloud (VPC) gives you the ability to construct your own private IP range for your Amazon Web Services (AWS) resources. Within your VPC, you may store services such as EC2 instances and ELBs.</p>
+<p>Now you don’t just throw your resources into a VPC and move on. You assign them to distinct subnets. Subnets are chunks of IP addresses in your VPC that enable you to combine resources together. Subnets, along with networking rules we will cover later, control whether resources are either publicly or privately available. There are actually ways you can control what traffic gets into your VPC at all. For some VPCs, you might have internet-facing resources that the public should be able to reach, like a public website.</p>
+<p>However, in other cases, you may have resources that should only be accessible if someone is logged into your private network. This could be internal services, such as an HR application or a backend database. First, let’s look at public-facing resources.</p>
 </section>
-<section id="ec2-instance-savings-plans" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></h2>
-<p>These plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.</p>
-<p>Flexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.</p>
-<p>AWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.</p>
+<section id="the-coffee-shop-analogy" class="level3" data-number="11.0.3">
+<h3 data-number="11.0.3" class="anchored" data-anchor-id="the-coffee-shop-analogy"><span class="header-section-number">11.0.3</span> The Coffee Shop Analogy</h3>
+<p>Imagine your VPC as a coffee shop. Just as a coffee shop needs a way for customers to enter and exit, your VPC needs ways for data to flow in and out. Depending on the type of customers (or data) and their needs, you’ll have different types of entrances.</p>
 </section>
-<section id="spot-instances" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></h2>
-<p>Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.</p>
+<section id="internet-gateway" class="level3" data-number="11.0.4">
+<h3 data-number="11.0.4" class="anchored" data-anchor-id="internet-gateway"><span class="header-section-number">11.0.4</span> Internet Gateway</h3>
+<p>To allow traffic from the public internet to flow into and out of your VPC, you must attach an Internet Gateway (IGW).</p>
+<p>An Internet Gateway is like a doorway that is open to the public. Think of it like a coffee shop. Customers can’t get in and get their coffee without a front door, so we’ll have to install one, and people will be able to enter and exit our cafe through it. In this case, the front door functions similarly to an Internet gateway. Without it, no one may access the resources stored within your VPC.</p>
+<p><img src="igw.png" alt="Internet gateway" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
 </section>
-<section id="dedicated-hosts" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></h2>
-<p>Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.</p>
+<section id="virtual-private-gateway" class="level3" data-number="11.0.5">
+<h3 data-number="11.0.5" class="anchored" data-anchor-id="virtual-private-gateway"><span class="header-section-number">11.0.5</span> Virtual Private Gateway</h3>
+<p>Next, let’s talk about a VPC with all internal private resources. We don’t want just anyone from anywhere to be able to reach these resources. So we don’t want an Internet Gateway attached to our VPC. Instead, we want a private gateway that only allows people in if they are coming from an approved network, not the public internet. This private doorway is called a Virtual Private Gateway, and it allows you to create a VPN connection between a private network, like your on-premises data centre or internal corporate network to your VPC.</p>
+<p>To relate this back to the coffee shop, this would be like having a private bus route going from my building to the coffee shop. If I want to get coffee, I first must badge into the building, thus authenticating my identity, and then I can take the secret bus route to the internal coffee shop that only people from my building can use. So if you want to establish an encrypted VPN connection to your private internal AWS resources, you would need to attach a Virtual Private Gateway to your VPC.</p>
+<p><img src="vpn.png" alt="private gateway" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+</section>
+<section id="aws-direct-connect" class="level3" data-number="11.0.6">
+<h3 data-number="11.0.6" class="anchored" data-anchor-id="aws-direct-connect"><span class="header-section-number">11.0.6</span> AWS Direct Connect</h3>
+<p>Now the problem with our super secret bus route is that it still uses the open road. It’s susceptible to traffic jams and slowdowns caused by the rest of the world going about their business. The same thing is true for VPN connections. They are private and encrypted, but they still use a regular internet connection that has bandwidth that is being shared by many people using the internet.</p>
+<p>So what I’ve done to make things more reliable and less susceptible to slowdowns is I made a totally separate magic doorway that leads directly from the studio into the coffee shop. No one else driving around on the road can slow me down because this is my direct doorway; no one else can use it. What, did you not have a secret magic doorway into your favourite coffee shop? All right, moving on. The point is you still want a private connection, but you want it to be dedicated and shared with no one else. You want the lowest amount of latency possible with the highest amount of security possible.</p>
+<p><img src="direct.png" alt="AWS Direct Connect" style="width:75%; display: block; margin: auto;"></p>
+<p style="text-align: center;">
+<a href="https://explore.skillbuilder.aws/learn/course/134/play/99519/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+<p>With AWS, you can achieve that using what is called AWS Direct Connect. Direct Connect allows you to establish a completely private, dedicated fibre connection from your data centre to AWS. You work with a Direct Connect partner in your area to establish this connection because, like my magic doorway, AWS Direct Connect provides a physical line that connects your network to your AWS VPC. This can help you meet high regulatory and compliance needs, as well as sidestep any potential bandwidth issues. It’s also important to note that one VPC might have multiple types of gateways attached for multiple types of resources all residing in the same VPC, just in different subnets.</p>
 
 
 </section>
@@ -703,13 +729,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="pagination-link" aria-label="EC2 Instance types">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span>
+      <a href="../module-4-notes/1-Introduction-m4.html" class="pagination-link" aria-label="Introduction to AWS Networking and Security">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction to AWS Networking and Security</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="pagination-link" aria-label="**Scaling Amazon EC2**">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-4-notes/3-Subnets-and-NACL.html" class="pagination-link" aria-label="**Subnets and Network Access Control Lists**">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AWS Cloud Practitioner Notes - 3&nbsp; Amazon EC2 pricing</title>
+<title>AWS Cloud Practitioner Notes - 21&nbsp; Amazon DocumentDB</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../module-2-notes/Scaling-Amazon-EC2.html" rel="next">
-<link href="../module-2-notes/Amazon-EC2-Instance-Types.html" rel="prev">
+<link href="../module-6-notes/1-Introduction.html" rel="next">
+<link href="../module-5-notes/8-AWS-DMS.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/9-Additional_database_service.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-2-notes/Module-2-Amazon-EC2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Module 2: Amazon EC2</span></a>
+ <span class="menu-text">Module 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link active">
+  <a href="../module-2-notes/Amazon-EC2-pricing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></span></a>
   </div>
 </li>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../module-3-notes/Introduction-module-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction-module-3.html</span></a>
+ <span class="menu-text">Module 3</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -205,6 +205,147 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-4-notes/1-Introduction-m4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 4</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/2-Connectivity-to-AWS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Connectivity to AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/3-Subnets-and-NACL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Subnets and Network Access Control Lists</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-4-notes/4-Global-Networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><strong>Global Networking</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../module-5-notes/1-Introduction-m5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 5</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/2-Amazon-EBS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Amazon EBS</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/3-Amazon-S3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Amazon Simple Storage Service (Amazon S3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/4-Amazon-EFS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Amazon Elastic File System (Amazon EFS)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/5-Amazon-RDS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Amazon Relational Database Service (Amazon RDS)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/6-Amazon-DynamoDB.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Amazon DynamoDB</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/7-Amazon-Redshift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><strong>Amazon Redshift</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/8-AWS-DMS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-5-notes/9-Additional_database_service.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">module-6-notes/1-Introduction-m5.qmd</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/1-Introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Module 6</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/2-AWS-sahred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><strong>AWS shared responsibility model</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/3-AWS-permission.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">User Permissions and Access</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/4-AWS-Organisations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">AWS Organisations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/5-Compliance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Compliance in AWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/6-Denial-of-Service-Attacks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title"><strong>Denial-of-Service Attacks</strong></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-6-notes/7-Additional-Security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Security Services in AWS</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -215,20 +356,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#on-demand-instances" id="toc-on-demand-instances" class="nav-link active" data-scroll-target="#on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></a></li>
-  <li><a href="#reserved-instances" id="toc-reserved-instances" class="nav-link" data-scroll-target="#reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></a></li>
-  <li><a href="#ec2-instance-savings-plans" id="toc-ec2-instance-savings-plans" class="nav-link" data-scroll-target="#ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></a></li>
-  <li><a href="#spot-instances" id="toc-spot-instances" class="nav-link" data-scroll-target="#spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></a></li>
-  <li><a href="#dedicated-hosts" id="toc-dedicated-hosts" class="nav-link" data-scroll-target="#dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></a></li>
+  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">21.0.1</span> Use Cases:</a></li>
+  <li><a href="#amazon-neptune" id="toc-amazon-neptune" class="nav-link" data-scroll-target="#amazon-neptune"><span class="header-section-number">21.0.2</span> Amazon Neptune</a></li>
+  <li><a href="#use-cases-1" id="toc-use-cases-1" class="nav-link" data-scroll-target="#use-cases-1"><span class="header-section-number">21.0.3</span> Use Cases:</a></li>
+  <li><a href="#amazon-quantum-ledger-database-amazon-qldb" id="toc-amazon-quantum-ledger-database-amazon-qldb" class="nav-link" data-scroll-target="#amazon-quantum-ledger-database-amazon-qldb"><span class="header-section-number">21.0.4</span> Amazon Quantum Ledger Database (Amazon QLDB)</a></li>
+  <li><a href="#use-cases-2" id="toc-use-cases-2" class="nav-link" data-scroll-target="#use-cases-2"><span class="header-section-number">21.0.5</span> Use Cases:</a></li>
+  <li><a href="#amazon-managed-blockchain" id="toc-amazon-managed-blockchain" class="nav-link" data-scroll-target="#amazon-managed-blockchain"><span class="header-section-number">21.0.6</span> Amazon Managed Blockchain</a></li>
+  <li><a href="#use-cases-3" id="toc-use-cases-3" class="nav-link" data-scroll-target="#use-cases-3"><span class="header-section-number">21.0.7</span> Use Cases:</a></li>
+  <li><a href="#amazon-elasticache" id="toc-amazon-elasticache" class="nav-link" data-scroll-target="#amazon-elasticache"><span class="header-section-number">21.0.8</span> Amazon ElastiCache</a></li>
+  <li><a href="#use-cases-4" id="toc-use-cases-4" class="nav-link" data-scroll-target="#use-cases-4"><span class="header-section-number">21.0.9</span> Use Cases:</a></li>
+  <li><a href="#amazon-dynamodb-accelerator-dax" id="toc-amazon-dynamodb-accelerator-dax" class="nav-link" data-scroll-target="#amazon-dynamodb-accelerator-dax"><span class="header-section-number">21.0.10</span> Amazon DynamoDB Accelerator (DAX)</a></li>
+  <li><a href="#use-cases-5" id="toc-use-cases-5" class="nav-link" data-scroll-target="#use-cases-5"><span class="header-section-number">21.0.11</span> Use Cases:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-2-notes/Module-2-Amazon-EC2.html">Module 2: Amazon EC2</a></li><li class="breadcrumb-item"><a href="../module-2-notes/Amazon-EC2-pricing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../module-5-notes/1-Introduction-m5.html">Module 5</a></li><li class="breadcrumb-item"><a href="../module-5-notes/9-Additional_database_service.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Amazon EC2 pricing</strong></span></h1>
+<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Amazon DocumentDB</span></h1>
 </div>
 
 
@@ -245,48 +392,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Amazon EC2 charges you just for the compute time that you use. Amazon EC2 provides a range of price choices for various use cases. For example, if your use case can withstand interruptions, spot instances can help you save. You may also save money by committing early and locking in a minimal level of usage with reserved instances.</p>
-<p>AWS EC2 offers several pricing options to cater to different usage patterns and budgetary requirements. Here’s an overview of each EC2 pricing model :</p>
-<section id="on-demand-instances" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="on-demand-instances"><span class="header-section-number">3.1</span> 1. <strong>On-Demand Instances</strong></h2>
-<p>On-Demand Instances allow you to pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments or upfront payments. This option is ideal for applications with short-term, irregular workloads that cannot be interrupted. For example, they are perfect for developing and testing applications where you don’t know the exact workload in advance.</p>
-</section>
-<section id="reserved-instances" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="reserved-instances"><span class="header-section-number">3.2</span> 2. <strong>Reserved Instances</strong></h2>
-<p>Reserved Instances provide you with the option to reserve EC2 computing capacity for 1 or 3 years, in exchange for a significantly discounted hourly rate (up to 75% compared to On-Demand pricing). This is suitable for applications with steady state or predictable usage and provides budget predictability. A common use case is for databases or enterprise applications where steady usage patterns are anticipated.</p>
-<p>There are two available types of Reserved Instances:</p>
+<p><strong>Amazon DocumentDB</strong> is a managed document database service that supports MongoDB workloads. It is designed to handle, store, and query JSON data efficiently, making it ideal for applications that work with semi-structured data. DocumentDB provides scalability, high availability, and security, while maintaining compatibility with MongoDB drivers and tools.</p>
+<section id="use-cases" class="level3" data-number="21.0.1">
+<h3 data-number="21.0.1" class="anchored" data-anchor-id="use-cases"><span class="header-section-number">21.0.1</span> Use Cases:</h3>
 <ul>
-<li>Standard Reserved Instances</li>
-<li>Convertible Reserved Instances</li>
-</ul>
-<p>Standard Reserved and Convertible Reserved Instances are available for purchase on a 1-year or 3-year basis. The 3-year option provides larger expense savings.</p>
-<p><strong>Standard Reserved Instances:</strong> This choice is appropriate if you are aware of the EC2 instance type and size required for your steady-state applications, as well as the AWS region in which they will be deployed. Reserved instances require that you state the following qualifications:</p>
-<ul>
-<li><strong>Instance type and size:</strong>&nbsp;For example, m5.xlarge</li>
-<li><strong>Platform description (operating system):</strong>&nbsp;For example, Microsoft Windows Server or Red Hat Enterprise Linux</li>
-<li><strong>Tenancy:</strong>&nbsp;Default tenancy or dedicated tenancy</li>
-</ul>
-<p>You can choose an availability zone for your EC2 reserved instances. If you make this specification, you will receive an EC2 capacity reservation. This ensures that your chosen number of EC2 instances are available when you need them.</p>
-<p><strong>Convertible Reserved Instances:</strong> These can be the best option for you if you need to run your EC2 instances across different availability zones or instance types. Note: If you need to be more flexible with how you run your EC2 instances, you have to give up a greater discount.</p>
-<p>At the end of a Reserved Instance period, you can continue to use the Amazon EC2 instance without interruption. However, you are charged on-demand rates until you do any of the following:</p>
-<ul>
-<li>Terminate the instance.</li>
-<li>Purchase a new reserved instance that matches the instance attributes (instance family and size, region, platform, and tenancy).</li>
+<li>Content management systems</li>
+<li>Mobile and web applications</li>
+<li>Catalogues and user profiles</li>
 </ul>
 </section>
-<section id="ec2-instance-savings-plans" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="ec2-instance-savings-plans"><span class="header-section-number">3.3</span> 3. <strong>EC2 Instance Savings Plans</strong></h2>
-<p>These plans provide a cost-saving strategy for Amazon EC2, in which you commit to a set hourly expenditure on EC2 instances within a specific instance family and region for a one- or three-year period. This allows you to save up to 72% compared to the on-demand pricing approach. The agreed-upon pricing applies to consumption up to your commitment level (e.g., $10 per hour), with any further usage charged at standard on-demand rates.</p>
-<p>Flexibility is one of the primary benefits of EC2 Instance Savings Plans. You benefit from decreased costs when using any EC2 instance from the selected instance family in the defined region, regardless of availability zone, instance size, operating system, or tenancy. This flexibility differs from Standard Reserved Instances, which need specified upfront commitments for instance type, size, and other parameters but do not require a fixed number of instances or an EC2 capacity reserve.</p>
-<p>AWS also provides tools such as AWS Cost Explorer to help you manage and optimise your expenditures. This tool helps in analysing your usage and expenditures over time and offers tailored recommendations for savings plans based on your past EC2 usage.</p>
+<section id="amazon-neptune" class="level3" data-number="21.0.2">
+<h3 data-number="21.0.2" class="anchored" data-anchor-id="amazon-neptune"><span class="header-section-number">21.0.2</span> Amazon Neptune</h3>
+<p><strong>Amazon Neptune</strong> is a fully managed graph database service that supports both property graph and RDF graph models. It is designed for applications that require highly connected data and complex queries, such as social networking, recommendation engines, and fraud detection.</p>
 </section>
-<section id="spot-instances" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="spot-instances"><span class="header-section-number">3.4</span> 4. <strong>Spot Instances</strong></h2>
-<p>Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud at steep discounts relative to On-Demand prices, up to 90% off. Spot Instances are perfect for workloads that are flexible in when they can run and can handle interruptions, such as batch data processing, background processing, or optional tasks.</p>
+<section id="use-cases-1" class="level3" data-number="21.0.3">
+<h3 data-number="21.0.3" class="anchored" data-anchor-id="use-cases-1"><span class="header-section-number">21.0.3</span> Use Cases:</h3>
+<ul>
+<li>Social networking applications</li>
+<li>Knowledge graphs</li>
+<li>Fraud detection systems</li>
+</ul>
 </section>
-<section id="dedicated-hosts" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="dedicated-hosts"><span class="header-section-number">3.5</span> 5. <strong>Dedicated Hosts</strong></h2>
-<p>Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. They help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. These are particularly useful for regulatory requirements that may not support multi-tenant virtualization or for running software that has strict licensing terms that require dedicated physical servers.</p>
+<section id="amazon-quantum-ledger-database-amazon-qldb" class="level3" data-number="21.0.4">
+<h3 data-number="21.0.4" class="anchored" data-anchor-id="amazon-quantum-ledger-database-amazon-qldb"><span class="header-section-number">21.0.4</span> Amazon Quantum Ledger Database (Amazon QLDB)</h3>
+<p><strong>Amazon QLDB</strong> is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log. This service is ideal for applications that require an authoritative data source and a complete and verifiable history of changes.</p>
+</section>
+<section id="use-cases-2" class="level3" data-number="21.0.5">
+<h3 data-number="21.0.5" class="anchored" data-anchor-id="use-cases-2"><span class="header-section-number">21.0.5</span> Use Cases:</h3>
+<ul>
+<li>Supply chain tracking</li>
+<li>Financial transaction systems</li>
+<li>Registries and record-keeping</li>
+</ul>
+</section>
+<section id="amazon-managed-blockchain" class="level3" data-number="21.0.6">
+<h3 data-number="21.0.6" class="anchored" data-anchor-id="amazon-managed-blockchain"><span class="header-section-number">21.0.6</span> Amazon Managed Blockchain</h3>
+<p><strong>Amazon Managed Blockchain</strong> is a fully managed service that allows you to create and manage scalable blockchain networks using popular open-source frameworks like Hyperledger Fabric and Ethereum. This service simplifies the setup and management of blockchain networks, making it easier to build applications where multiple parties can execute transactions without a trusted central authority.</p>
+</section>
+<section id="use-cases-3" class="level3" data-number="21.0.7">
+<h3 data-number="21.0.7" class="anchored" data-anchor-id="use-cases-3"><span class="header-section-number">21.0.7</span> Use Cases:</h3>
+<ul>
+<li>Supply chain transparency</li>
+<li>Financial services</li>
+<li>Decentralised applications</li>
+</ul>
+</section>
+<section id="amazon-elasticache" class="level3" data-number="21.0.8">
+<h3 data-number="21.0.8" class="anchored" data-anchor-id="amazon-elasticache"><span class="header-section-number">21.0.8</span> Amazon ElastiCache</h3>
+<p><strong>Amazon ElastiCache</strong> is a fully managed in-memory caching service that supports Redis and Memcached. It is designed to improve the performance of web applications by retrieving data from high throughput and low latency in-memory caches, rather than relying entirely on slower disk-based databases.</p>
+</section>
+<section id="use-cases-4" class="level3" data-number="21.0.9">
+<h3 data-number="21.0.9" class="anchored" data-anchor-id="use-cases-4"><span class="header-section-number">21.0.9</span> Use Cases:</h3>
+<ul>
+<li>Real-time analytics</li>
+<li>Gaming leaderboards</li>
+<li>Session storage</li>
+</ul>
+</section>
+<section id="amazon-dynamodb-accelerator-dax" class="level3" data-number="21.0.10">
+<h3 data-number="21.0.10" class="anchored" data-anchor-id="amazon-dynamodb-accelerator-dax"><span class="header-section-number">21.0.10</span> Amazon DynamoDB Accelerator (DAX)</h3>
+<p><strong>Amazon DynamoDB Accelerator (DAX)</strong> is a fully managed, highly available in-memory cache for DynamoDB that delivers up to a 10x performance improvement – from milliseconds to microseconds – even at millions of requests per second. DAX handles the heavy lifting of cache management, freeing developers from the complexity of designing, deploying, and managing a distributed cache.</p>
+</section>
+<section id="use-cases-5" class="level3" data-number="21.0.11">
+<h3 data-number="21.0.11" class="anchored" data-anchor-id="use-cases-5"><span class="header-section-number">21.0.11</span> Use Cases:</h3>
+<ul>
+<li>High-traffic web applications</li>
+<li>E-commerce applications</li>
+<li>Gaming applications</li>
+</ul>
 
 
 </section>
@@ -703,13 +876,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../module-2-notes/Amazon-EC2-Instance-Types.html" class="pagination-link" aria-label="EC2 Instance types">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">EC2 Instance types</span></span>
+      <a href="../module-5-notes/8-AWS-DMS.html" class="pagination-link" aria-label="AWS DMS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AWS DMS</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../module-2-notes/Scaling-Amazon-EC2.html" class="pagination-link" aria-label="**Scaling Amazon EC2**">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Scaling Amazon EC2</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../module-6-notes/1-Introduction.html" class="pagination-link" aria-label="Module 6">
+        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Module 6</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

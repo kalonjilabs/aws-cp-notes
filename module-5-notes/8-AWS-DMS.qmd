@@ -1,0 +1,32 @@
+# AWS DMS
+
+### AWS Database Migration Service (AWS DMS)
+
+If you have a database that's on-premises or already in the cloud, AWS offers a service called Amazon Database Migration Service (DMS). AWS DMS helps customers migrate existing databases onto AWS in a secure and easy manner. It enables you to migrate data between a source and a target database with minimal downtime, keeping the source database fully operational during the migration. Additionally, the source and target databases don't have to be of the same type.
+
+### Homogeneous Migrations (Same Type Databases)
+
+When both the source and target databases are of the same type, the migration is known as homogeneous. Examples include:
+
+- MySQL to Amazon RDS for MySQL
+- Microsoft SQL Server to Amazon RDS for SQL Server
+- Oracle to Amazon RDS for Oracle
+
+This process is straightforward since the schema structures, data types, and database code are compatible between the source and target databases.
+
+### Heterogeneous Migrations (Different Type Databases)
+
+When the source and target databases are of different types, the migration is known as heterogeneous. This process involves two steps:
+
+1. **Schema Conversion**: Use the AWS Schema Conversion Tool to convert the source schema and database code to match the target database.
+2. **Data Migration**: Use AWS DMS to migrate the data from the source database to the target database.
+
+### Other Use Cases
+
+AWS DMS can also be used for various other purposes, including:
+
+- **Development and Test Migrations**: Migrate a copy of your production database to your development or test environments. This allows you to develop and test against production data without affecting production users. This migration can be done once or continuously.
+- **Database Consolidation**: Consolidate several databases into one central database.
+- **Continuous Replication**: Perform continuous data replication for disaster recovery or because of geographic separation.
+
+AWS DMS makes database migrations efficient and minimises downtime, ensuring a seamless transition for your applications and users.

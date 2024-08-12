@@ -1,0 +1,19 @@
+# Module 4
+# Introduction to AWS Networking and Security
+
+In the age of cloud computing, understanding networking and security is critical. As more and more of our workloads migrate to the cloud, the demand for secure, dependable, and efficient networking has never been higher. This is where Amazon Web Services, a renowned cloud service provider, comes into action.
+
+AWS offers a wide range of services and products for developing and deploying large-scale applications. However, in order to take full advantage of these tools, you must first grasp how AWS networking and security function. This knowledge will enable you to create and deploy powerful, scalable, and secure apps on AWS.
+
+This module is meant to provide you with this crucial knowledge. It serves as the foundation for your journey towards AWS Cloud Practitioner certification.
+
+Here are the learning objectives for this module:
+
+1. Describe the basic concepts of networking.
+2. Describe the difference between public and private networking resources.
+3. Explain a virtual private gateway using a real-life scenario.
+4. Explain a virtual private network (VPN) using a real-life scenario.
+5. Describe the benefit of AWS Direct Connect.
+6. Describe the benefit of hybrid deployments.
+7. Describe the layers of security used in an IT strategy.
+8. Describe the services customers use to interact with the AWS global network.

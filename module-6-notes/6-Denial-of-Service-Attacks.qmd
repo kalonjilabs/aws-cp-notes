@@ -1,0 +1,43 @@
+# **Denial-of-Service Attacks**
+
+Denial-of-Service (DoS) and Distributed Denial-of-Service (DDoS) attacks are significant threats to web applications and infrastructure. These attacks aim to make your website or application unavailable to users by overwhelming it with excessive network traffic. Let’s break down these concepts and explore how AWS can help protect against them.
+
+### What is a Denial-of-Service (DoS) Attack?
+
+A Denial-of-Service (DoS) attack is a deliberate attempt to make a website or application unavailable to users. This is done by flooding the target with excessive network traffic until it becomes overloaded and can no longer respond to legitimate requests. Imagine a prankster calling a coffee shop repeatedly to place fake orders, preventing real customers from getting through. This disruption denies service to actual customers.
+
+<img src="DoS-attack.png" alt=" Denial-of-service attacks " style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+### What is a Distributed Denial-of-Service (DDoS) Attack?
+
+A Distributed Denial-of-Service (DDoS) attack is a more complex version of a DoS attack. In a DDoS attack, multiple sources are used to initiate the attack, making it harder to block. These sources can include multiple infected computers, known as "bots," that send excessive traffic to a website or application simultaneously. This is akin to the prankster enlisting friends to call the coffee shop from different phone numbers, making it nearly impossible to block all the calls.
+
+<img src="DoS-attack-2.png" alt=" Distributed denial-of-service attacks " style="width:75%; display: block; margin: auto;">
+
+<p style="text-align: center;">
+    <a href="https://explore.skillbuilder.aws/learn/course/134/play/136404/aws-cloud-practitioner-essentials">Source: AWS Cloud Practitioner Essentials</a>
+</p>
+
+### Examples of DDoS Attacks
+
+1. **UDP Flood**: This attack leverages the User Datagram Protocol (UDP) by sending a simple request to a server, like the National Weather Service, but with a fake return address (your server’s address). The server then floods your server with massive amounts of data, overwhelming it.
+2. **HTTP Level Attacks**: These attacks mimic normal user behaviour, such as repeated, complicated product searches, coming from an army of zombified bot machines. The sheer volume of requests prevents regular customers from accessing the service.
+3. **Slowloris Attack**: This sophisticated attack involves sending partial HTTP requests. The server holds connections open, waiting for the complete request, thus exhausting its capacity to handle new connections.
+
+### AWS Solutions for Mitigating DDoS Attacks
+
+AWS offers several tools and services to protect against DoS and DDoS attacks:
+
+1. **Security Groups**: These act as virtual firewalls to control inbound and outbound traffic to your instances. They help block unwanted traffic at the network level, making it difficult for low-level network attacks like UDP floods to succeed.
+2. **Elastic Load Balancer (ELB)**: The ELB distributes incoming application traffic across multiple targets, such as EC2 instances. It handles HTTP traffic and waits until a message is complete before passing it to your server. ELB is scalable and operates at the AWS region level, making it challenging for attackers to overwhelm it.
+3. **AWS Shield**: This is a managed DDoS protection service with two levels:
+    - **AWS Shield Standard**: Automatically protects all AWS customers at no cost from the most common DDoS attacks. It uses various analysis techniques to detect and mitigate malicious traffic in real time.
+    - **AWS Shield Advanced**: A paid service that provides enhanced protection, detailed attack diagnostics, and the ability to detect and mitigate sophisticated DDoS attacks. It integrates with services like Amazon CloudFront, Amazon Route 53, and Elastic Load Balancing, and allows custom rules via AWS WAF to tackle complex DDoS threats.
+
+### Conclusion
+
+Denial-of-Service and Distributed Denial-of-Service attacks pose serious threats to the availability of your applications. Understanding these attacks and leveraging AWS tools like Security Groups, Elastic Load Balancer, and AWS Shield can significantly enhance your defence mechanisms. By using these AWS services, you can better protect your applications from disruptions, ensuring continuous and reliable service for your users.
